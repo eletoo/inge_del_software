@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Applicazione{
+gerarchie: List<Gerarchia>
+configuratori: List<Configuratore>
+addConfiguratore(Configuratore): void
+addGerarchia(Gerarchia): void
+printGerarchia(): void
+}
+
+abstract class User{
+username: String
+password: String
+}
+
+class Configuratore{
+createGerarchia(): Gerarchia
+addCampiNativi(): void
+salvaDati(): void
+stampaGerarchie(): void
+stampaDati(): void
+}
+
+class Printer{
+printOnFile(): void
+}
+
+class Gerarchia{
+root: Categoria
+addCategoria(Categoria): void
+}
+
+abstract class Categoria{
+nome: String
+descrizione: String
+campiNativi: HashMap<String,Boolean>
+getNome(): String
+setNome(Nome): void
+getDescrizione(): String
+setDescrizione(String): void
+getCampo(): String
+setCampo(String, Boolean): void
+}
+
+class Foglia
+
+abstract class Nodo{
+categorieFiglie: List<Categoria>
+}
+
+Applicazione "1" o-left- "*" User
+User <|-down- Configuratore
+Printer <.up. Applicazione
+Gerarchia "*" -left-o "1" Applicazione
+Categoria -up- Gerarchia
+Foglia -up-|> Categoria
+Nodo "1" o-down-- "2..*" Categoria
+Nodo -up-|> Categoria
+
+@enduml

@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+:Fruitore: as Admin
+(Accesso fruitore) as (Use1)
+(Creazione fruitore) as (Use2)
+(Gestione informazioni fruitore) as (Use3)
+(Proposta di baratto) as (Use4)
+(Gestione baratto) as (Use5)
+
+Admin --> (Use1)
+Admin --> (Use2)
+(Use1) .right.> (Use2): <<include>>
+(Use2) .left.> (Use1): <<include>>
+(Use1) ..> (Use3): <<include>>
+(Use2) ..> (Use3): <<include>>
+Admin --> (Use4)
+(Use4) .down.> (Use5): <<include>>
+
+
+:Configuratore: as Admin2
+(Accesso configuratore) as (UseC1)
+(Creazione configurazione) as (UseC2)
+
+Admin2 --> (UseC1)
+Admin2 --> (UseC2)
+
+(UseC1) .right.> (UseC2): <<include>>
+(UseC2) .right.> (UseC1): <<include>>
+
+(Gestione configurazione) as (UseC3)
+(UseC1) ..> (UseC3): <<include>>
+(UseC2) ..> (UseC3): <<include>>
+
+(Visualizzazione gerarchie) as (UseC4)
+(Creazione gerarchia) as (UseC5)
+(Aggiunta categoria) as (UseC6)
+(Salvataggio dati) as (UseC7)
+
+(UseC3)..>(UseC4): <<include>>
+(UseC3)..>(UseC5): <<include>>
+(UseC5)..>(UseC6): <<include>>
+(UseC5)..>(UseC7): <<include>>
+
+@enduml
