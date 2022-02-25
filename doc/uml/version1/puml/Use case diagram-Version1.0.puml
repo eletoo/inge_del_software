@@ -3,7 +3,7 @@
 
 :Configuratore: as Admin
 (Accesso configuratore) as (Use1)
-(Creazione configurazione) as (Use2)
+(Creazione configuratore) as (Use2)
 
 Admin ---> (Use1)
 Admin ---> (Use2)
