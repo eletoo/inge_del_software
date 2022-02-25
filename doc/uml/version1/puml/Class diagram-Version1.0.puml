@@ -1,12 +1,12 @@
 @startuml
-'https://plantuml.com/class-diagram
+skinparam ClassAttributeIconSize 0
 
 class Applicazione{
-gerarchie: List<Gerarchia>
-configuratori: List<Configuratore>
-addConfiguratore(Configuratore): void
-addGerarchia(Gerarchia): void
-printGerarchia(): void
+- gerarchie: List<Gerarchia>
+- configuratori: List<Configuratore>
+- addConfiguratore(Configuratore): void
+- addGerarchia(Gerarchia): void
+- printGerarchia(): void
 }
 
 abstract class User{
