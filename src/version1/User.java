@@ -1,19 +1,44 @@
 package version1;
 
+import java.security.*;
+import java.util.*;
+
 public abstract class User {
     private String username;
-    private String password;
+    private String hashedPw;
+    MessageDigest digest;
+
+    {
+        try {
+            digest = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+    }
 
     public User(String _username, String _password){
         this.username=_username;
-        this.password=_password;
+        this.hashedPw =hashPassword(_password);
     }
 
     public String getUsername() {
         return username;
     }
 
-    public String getPassword(){
-        return password;
+    public String getHashedPw(){
+        return hashedPw;
+    }
+
+    private String hashPassword(String pw){
+        byte[] passwordHash = Base64.getEncoder().encode(pw.getBytes());
+        return new String(Base64.getDecoder().decode(passwordHash));
+    }
+
+    public boolean authenticate(String user, String pw){
+        return (this.username==user && this.hashedPw ==hashPassword(pw));
+    }
+
+    public void changePassword(String newpw){
+        this.hashedPw=hashPassword(newpw);
     }
 }

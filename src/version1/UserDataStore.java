@@ -32,7 +32,7 @@ public class UserDataStore {
         return userMap.containsKey(username);
     }
 
-//QUANDO SI USA QUESTO METODO BISOGNA FARE IL CONTROLLO SUL FATTO CHE LO USERNAME NON SIA GIA' STATO USATO!!!
+
     public void registerUser(String username, String password){
         byte[] passwordHash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
         String decoded = new String(Base64.getDecoder().decode(passwordHash));
@@ -61,11 +61,5 @@ public class UserDataStore {
         registerUser(username, password);
     }
 
-    public void changePassword(String username, String oldpw, String newpw){
-        byte[] oldPasswordHash = digest.digest(oldpw.getBytes(StandardCharsets.UTF_8));
-        String decodedOld = new String(Base64.getDecoder().decode(oldPasswordHash));
-        byte[] newPasswordHash = digest.digest(newpw.getBytes(StandardCharsets.UTF_8));
-        String decodedNew = new String(Base64.getDecoder().decode(newPasswordHash));
-        userMap.replace(username, decodedOld, decodedNew);
-    }
+
 }
