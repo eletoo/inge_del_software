@@ -1,12 +1,18 @@
 package version1;
 
-import java.util.HashMap;
+import java.util.*;
 
 public abstract class Categoria {
 
     private String nome;
     private String descrizione;
-    private HashMap<String, Boolean> campiNativi;
+    private Map<String, Boolean> campiNativi;
+
+    public Categoria(String _nome, String _descrizione){
+        this.nome=_nome;
+        this.descrizione=_descrizione;
+        campiNativi = new HashMap<>();
+    }
 
     public String getDescrizione() {
         return descrizione;
@@ -16,7 +22,7 @@ public abstract class Categoria {
         return nome;
     }
 
-    public HashMap<String, Boolean> getCampiNativi() {
+    public Map<String, Boolean> getCampiNativi() {
         return campiNativi;
     }
 
@@ -29,6 +35,19 @@ public abstract class Categoria {
     }
 
     public void setCampiNativi(HashMap<String, Boolean> campiNativi) {
+
         this.campiNativi = campiNativi;
+    }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nNome: "+this.nome);
+        sb.append("\nDescrizione: "+this.descrizione);
+        sb.append("\nCampi nativi:");
+        for (String n: campiNativi.keySet()) {
+            sb.append("\n-> "+n);
+            sb.append(campiNativi.get(n)? " (Obbligatorio)":" (Falcotativo)");
+        }
+        return sb.toString();
     }
 }

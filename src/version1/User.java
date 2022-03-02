@@ -17,8 +17,8 @@ public abstract class User {
     }
 
     public User(String _username, String _password){
-        this.username=_username;
-        this.hashedPw =hashPassword(_password);
+        this.username = _username;
+        this.hashedPw = hashPassword(_password);
     }
 
     public String getUsername() {
@@ -29,16 +29,20 @@ public abstract class User {
         return hashedPw;
     }
 
-    private String hashPassword(String pw){
+    private static String hashPassword(String pw){
         byte[] passwordHash = Base64.getEncoder().encode(pw.getBytes());
         return new String(Base64.getDecoder().decode(passwordHash));
     }
 
-    public boolean authenticate(String user, String pw){
-        return (this.username==user && this.hashedPw ==hashPassword(pw));
+    public boolean authenticate(String pw){
+        return (this.hashedPw == hashPassword(pw));
     }
 
     public void changePassword(String newpw){
-        this.hashedPw=hashPassword(newpw);
+        this.hashedPw = hashPassword(newpw);
+    }
+
+    public void changeUsername(String newUsername){
+        this.username = newUsername;
     }
 }

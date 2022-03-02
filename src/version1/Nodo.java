@@ -3,6 +3,10 @@ package version1;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Nodo extends Categoria{
+public class Nodo extends Categoria{
     private List<Categoria> categorieFiglie = new ArrayList<Categoria>();
+
+    public Nodo(String _nome, String _descrizione) {
+        super(_nome, _descrizione);
+    }
 }

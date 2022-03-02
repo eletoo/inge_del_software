@@ -1,6 +1,5 @@
 package version1;
 
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.security.*;
 
@@ -19,7 +18,7 @@ public class UserDataStore {
         }
     }
 
-    private Map<String, String> userMap = new HashMap<>();
+    private Map<String, User> userMap = new HashMap<>();
 
     public UserDataStore() throws NoSuchAlgorithmException {
     }
@@ -32,11 +31,35 @@ public class UserDataStore {
         return userMap.containsKey(username);
     }
 
+    public void registerNewConfiguratore(String nome, String pw){
+        userMap.put(nome, new Configuratore(nome, pw));
+    }
 
-    public void registerUser(String username, String password){
-        byte[] passwordHash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
-        String decoded = new String(Base64.getDecoder().decode(passwordHash));
-        userMap.put(username, decoded);
+    public void updateUser(String oldname, String newname, String newpw){
+        userMap.get(oldname).changeUsername(newname);
+        userMap.get(oldname).changePassword(newpw);
+    }
+
+    public static String generateRandomPassword(int len) {
+        String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi"
+                   +"jklmnopqrstuvwxyz!@#$%&£";
+        Random rnd = new Random();
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < len; i++){
+            sb.append(chars.charAt(rnd.nextInt(chars.length())));
+        }
+        return sb.toString();
+    }
+
+    public static String generateRandomString(int size) {
+        String rand = "";
+        String chars = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_-.";
+
+        for (int i = 0; i < size; i++) {
+            rand += chars.toCharArray()[new Random().nextInt(chars.length())];
+        }
+
+        return rand;
     }
 
     public boolean isLoginCorrect(String username, String password) {
@@ -46,20 +69,7 @@ public class UserDataStore {
             return false;
         }
 
-        byte[] passwordHash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
-        String decoded = new String(Base64.getDecoder().decode(passwordHash));
-
-        String storedPasswordHash = userMap.get(username);
-
-        return decoded == storedPasswordHash;
+        return userMap.get(username).authenticate(password);
     }
-
-//PROBLEMA: COME GENERARE STRINGHE CASUALI
-    public void addDefaultUser(){
-        String username = "User"+(new Random().nextInt());
-        String password = "asdfghjkl";
-        registerUser(username, password);
-    }
-
 
 }

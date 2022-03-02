@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class MainClass {
 
     public static void main(){
-        Applicazione app = new Applicazione();
+        Controller controller = new Controller();
+
         System.out.println("Seleziona un'opzione: \n1. Accedi\n2. Registrati");
         int val = (new Scanner(System.in)).nextInt();
         switch(val){
