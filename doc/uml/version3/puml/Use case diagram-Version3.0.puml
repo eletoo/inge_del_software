@@ -4,10 +4,19 @@
 (Accesso fruitore) as (UseF1)
 (Creazione fruitore) as (UseF2)
 (Visualizza informazioni app) as (UseF3)
+(Visualizza offerte categoria) as (UseF5)
+(Visualizza offerte personali) as (UseF6)
+(Offerta di baratto) as (UseF7)
+(Modifica stato offerta) as (UseF8)
 
 Admin --> (UseF3)
 Admin --> (UseF1)
 Admin --> (UseF2)
+Admin --> (UseF6)
+Admin --> (UseF5)
+Admin --> (UseF7)
+Admin --> (UseF8)
+
 (UseF1) .right.> (UseF2): <<include>>
 
 
@@ -26,6 +35,8 @@ Admin2 --> (Use3)
 Admin2 -right-> (Use2)
 Admin2 --> (Use1)
 Admin2 --> (Use7)
+Admin2 --> (UseF5)
+
 
 (Use1) ..> (Use2): <<include>>
 (Use5) ..> (Use6): <<include>>

@@ -1,14 +1,16 @@
 package version1;
 
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+import java.util.Map;
 
-//LA CLASSE APPLICAZIONE USA IL CONTROLLER --> DA INSERIRE NELL'UML
 
 public class Controller {
 
     public static final int STD_USERNAME_LEN = 10;
     public static final int STD_PW_LEN = 10;
-    private UserDataStore dataStore;
+    public UserDataStore dataStore;
     private View view = new View();
     private Applicazione app = new Applicazione();
 
@@ -20,7 +22,7 @@ public class Controller {
         }
     }
 
-    public void firstAccessAsConfiguratore() {
+    public void firstAccessAsConfiguratore() throws IOException {
         this.addNewConfiguratore();
         boolean auth;
         String username;
@@ -37,47 +39,61 @@ public class Controller {
         }while(!auth);
     }
 
-    public void secondAccessAsConfiguratore(){
+    public void secondAccessAsConfiguratore(String username) throws IOException {
         boolean auth = false;
-        String username;
-        do {
-            username = view.askUsername();
-            if(dataStore.isUsernameTaken(username)){
-                auth = dataStore.isLoginCorrect(username, view.askPassword());
 
-                if (auth) {
-                    this.useAsConfiguratore();
-                } else {
-                    view.wrongPasswordError();
 
-                    int choice = view.printMenuConfiguratore();
+        if(dataStore.isUsernameTaken(username)){
+            auth = dataStore.isLoginCorrect(username, view.askPassword());
 
-                    switch (choice){
-                        case 1:{
-                            this.firstAccessAsConfiguratore();
-                        }break;
-                        case 2: {
-                            this.secondAccessAsConfiguratore();
-                        }break;
-                        default: view.illicitChoice();
-                    }
+            if (auth) {
+                this.useAsConfiguratore();
+            } else {
+                view.wrongPasswordError();
+
+                int choice = view.printMenuConfiguratore();
+
+                switch (choice){
+                    case 1:{
+                        this.firstAccessAsConfiguratore();
+                    }break;
+                    case 2: {
+                        this.secondAccessAsConfiguratore(username);
+                    }break;
+                    default: view.illicitChoice();
                 }
-            }else{
-                view.wrongUsernameError();
             }
+        }else{
+            view.wrongUsernameError();
+        }
 
-        }while(!auth);
 
     }
 
-    private void useAsConfiguratore() {
+    private void useAsConfiguratore() throws IOException {
         boolean end = false;
         int choice = 0;
         do{
+            var db = new File("./db");
+            assert db.exists() || db.mkdir();
+
+            var gf = new File("./db/gerarchie.dat");
+            var uf = new File("./db/users.dat");
+            if(gf.exists()){
+                ObjectInputStream ois = new ObjectInputStream(new FileInputStream(gf));
+                try {
+                    app.gerarchie = (Map<String, Gerarchia>) ois.readObject();
+                } catch (ClassNotFoundException | IOException e) {
+                    app.gerarchie = new HashMap<>();
+                }
+            } else
+                app.gerarchie = new HashMap<>();
+
             choice = view.selectConfiguratoreAction();
             switch (choice){
                 case 1:{
                     //crea una nuova gerarchia
+
 
                 }break;
                 case 2: {
@@ -88,6 +104,12 @@ public class Controller {
                 }break;
                 case 3: {
                     //salva dati
+
+                    FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/gerarchie.dat"));
+                    ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                    objectOutputStream.writeObject(app.gerarchie);
+                    objectOutputStream.close();
+                    view.salvataggioEseguito();
                 }break;
                 case 4:{
                     //esci
@@ -110,9 +132,11 @@ public class Controller {
         view.communicateCredentials(username, password);
 
         dataStore.registerNewConfiguratore(username, password);
+
+        //dataStore.save(dataStore.getUserMap().get(username));
     }
 
-    public void modifyConfiguratore(String currentUsername){
+    public void modifyConfiguratore(String currentUsername)  {
         view.modifyCredentials();
         String username;
         do{
@@ -126,37 +150,12 @@ public class Controller {
 
         if(password!=null && username!=null){
             dataStore.updateUser(currentUsername, username, password);
+            //dataStore.save(dataStore.getUserMap().get(username));
+            dataStore.save();
         } else{
             view.credentialsError();
         }
+
     }
-
-
-
-/*
-    private Map<String, User> userMap;
-
-    public Controller(){
-        userMap=new HashMap<>();
-    }
-
-    //NON COMUNICA ALL'UTENTE LA PASSWORD DA USARE AL PRIMO ACCESSO
-    //quando si chiama questo metodo bisogna aver generato randomicamente la password all'esterno in modo
-    //da comunicare quella all'utente, poi hasharla e salvarla associata all'username. poi l'utente cambia la password
-    //reinserendo quella di default e quella nuova.
-    public void registerDefaultConfiguratore(String nome, String pw){
-        userMap.put(nome, new Configuratore(nome, pw));
-    }
-
-    public boolean isLoginCorrect(String username, String pw) {
-
-        for (String name: userMap.keySet()) {
-            if(userMap.get(name).authenticate(pw)){
-                return true;
-            }
-        }
-        return false;
-    }
-*/
 
 }

@@ -33,10 +33,10 @@ public class View {
         do{
             System.out.println("Conferma la nuova password: ");
             pw2 = (new Scanner(System.in).next());
-            if(pw.trim() != pw2.trim()){
+            if(!pw.contentEquals(pw2)){
                 System.err.println("Le password non coincidono");
             }
-        }while(pw.trim() != pw2.trim());
+        }while(!pw.contentEquals(pw));
         return pw;
     }
 
@@ -82,5 +82,19 @@ public class View {
 
     public void arrivederci() {
         System.out.println("Grazie di aver usato l'applicazione.\nArrivederci!");
+    }
+
+    public void salvataggioEseguito() {
+        System.out.println("Salvataggio eseguito");
+    }
+
+    public String askDescription() {
+        System.out.println("Inserire la descrizione della categoria: ");
+        return (new Scanner(System.in)).next();
+    }
+
+    public String askCategoryName() {
+        System.out.println("Inserisci il nome della categoria: ");
+        return (new Scanner(System.in)).next();
     }
 }

@@ -1,28 +1,23 @@
 @startuml
-'https://plantuml.com/use-case-diagram
 
-:Configuratore: as Admin
 (Accesso configuratore) as (Use1)
 (Creazione configuratore) as (Use2)
-
-Admin ---> (Use1)
-Admin ---> (Use2)
-
-(Use1) .right.> (Use2): <<include>>
-(Use2) .right.> (Use1): <<include>>
-
-(Gestione configurazione) as (Use3)
-(Use1) ..> (Use3): <<include>>
-(Use2) ..> (Use3): <<include>>
-
+(Salvataggio dati) as (Use3)
 (Visualizzazione gerarchie) as (Use4)
 (Creazione gerarchia) as (Use5)
 (Aggiunta categoria) as (Use6)
-(Salvataggio dati) as (Use7)
 
-(Use3)..>(Use4): <<include>>
-(Use3)..>(Use5): <<include>>
-(Use5)..>(Use6): <<include>>
-(Use5)..>(Use7): <<include>>
+
+
+:Configuratore: as Admin
+Admin --> (Use4)
+Admin --> (Use5)
+Admin -down-> (Use3)
+Admin -right-> (Use2)
+Admin --> (Use1)
+
+(Use1) ..> (Use2): <<include>>
+(Use5) ..> (Use6): <<include>>
+(Use5) ..> (Use3): <<include>>
 
 @enduml

@@ -2,54 +2,84 @@
 skinparam ClassAttributeIconSize 0
 
 class Applicazione{
-- gerarchie: List<Gerarchia>
-- configuratori: List<Configuratore>
-- addConfiguratore(Configuratore): void
++ gerarchie: Map<Gerarchia>
 - addGerarchia(Gerarchia): void
-- printGerarchia(): void
 }
 
 abstract class User{
-username: String
-password: String
+- username: String
+- hashedPassword: String
++ <<constructor>> User(String, String)
 }
 
 class Configuratore{
-createGerarchia(): Gerarchia
-addCampiNativi(): void
-salvaDati(): void
-stampaGerarchie(): void
-stampaDati(): void
++ <<constructor>> Configuratore(String, String)
 }
 
 class Printer{
-printOnFile(): void
++ printOnFile(): void
 }
 
 class Gerarchia{
-root: Categoria
-addCategoria(Categoria): void
+- root: Categoria
++ <<constructor>> Gerarchia(Categoria)
++ addCategoria(Categoria): void
++ getRoot(): Categoria
++ toString(): String
 }
 
 abstract class Categoria{
-nome: String
-descrizione: String
-campiNativi: HashMap<String,Boolean>
-getNome(): String
-setNome(Nome): void
-getDescrizione(): String
-setDescrizione(String): void
-getCampo(): String
-setCampo(String, Boolean): void
+- nome: String
+- descrizione: String
+- campiNativi: Map<String,Boolean>
++ <<constructor>> Categoria(String, String)
++ getNome(): String
++ setNome(Nome): void
++ getDescrizione(): String
++ setDescrizione(String): void
++ getCampiNativi(): Map<String, Boolean>
++ setCampiNativi(Map<String, Boolean>): void
++ toString(): String
 }
 
-class Foglia
-
-abstract class Nodo{
-categorieFiglie: List<Categoria>
+class Foglia{
++ <<constructor>> Foglia(String, String)
 }
 
-Applicazione "1" o-left- "*" User
+class Nodo{
+- categorieFiglie: List<Categoria>
++ <<constructor>> Foglia(String, String)
+}
+
+class View{
++ printMenu(): String
+}
+note left: "La classe View implementa tutti i metodi\nper l' interazione con l'utente.\nQuesti metodi non sono tutti riportati per \nsemplicità di rappresentazione"
+
+
+class Model{
+- userMap: Map<String, User>
++ registraConfiguratore(String, String): void
++ aggiornaCredenziali(String, String, String): void
++ getUserMap(): Map<String, User>
++ isLoginCorrect(String, String): boolean
++ isEmpty(): boolean
+}
+
+class Controller{
+- data: Model
+- view: View
+- app: Applicazione
++ accessAsConfiguratore(): void
++ useAsConfiguratore(): void
++ creaConfiguratore(): void
++ modificaConfiguratore(String): void
+}
+
+class Main{
++ main(String): void
+}
+
 User <|-down- Configuratore
 Printer <.up. Applicazione
 Gerarchia "*" -left-o "1" Applicazione
@@ -57,5 +87,10 @@ Categoria -up- Gerarchia
 Foglia -up-|> Categoria
 Nodo "1" o-down-- "2..*" Categoria
 Nodo -up-|> Categoria
+Model "1" o-- "*" User
+Controller -left- Model
+Controller -right- Applicazione
+Controller -down- View
+Main -- Controller
 
 @enduml

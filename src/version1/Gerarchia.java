@@ -1,6 +1,8 @@
 package version1;
 
-public class Gerarchia {
+import java.io.Serializable;
+
+public class Gerarchia implements Serializable {
     private Categoria root;
 
     public Gerarchia(Categoria root) {
@@ -14,4 +16,5 @@ public class Gerarchia {
     public String toString(){
         return "Gerarchia: "+root.getNome()+root.toString();
     }
+
 }

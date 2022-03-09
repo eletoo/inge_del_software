@@ -1,20 +1,12 @@
 package version1;
 
+import java.io.Serializable;
 import java.security.*;
 import java.util.*;
 
-public abstract class User {
+public abstract class User implements Serializable {
     private String username;
     private String hashedPw;
-    MessageDigest digest;
-
-    {
-        try {
-            digest = MessageDigest.getInstance("SHA-256");
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
 
     public User(String _username, String _password){
         this.username = _username;
@@ -30,12 +22,18 @@ public abstract class User {
     }
 
     private static String hashPassword(String pw){
-        byte[] passwordHash = Base64.getEncoder().encode(pw.getBytes());
-        return new String(Base64.getDecoder().decode(passwordHash));
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            digest.update(pw.getBytes());
+            return new String(Base64.getEncoder().encode(digest.digest()));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
     }
 
     public boolean authenticate(String pw){
-        return (this.hashedPw == hashPassword(pw));
+        return (this.hashedPw.equals(hashPassword(pw)));
     }
 
     public void changePassword(String newpw){

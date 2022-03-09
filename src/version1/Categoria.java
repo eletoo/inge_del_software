@@ -1,8 +1,9 @@
 package version1;
 
+import java.io.Serializable;
 import java.util.*;
 
-public abstract class Categoria {
+public abstract class Categoria implements Serializable {
 
     private String nome;
     private String descrizione;
