@@ -1,46 +1,48 @@
 package version1;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
 public class View {
 
-    public View(){
+    public View() {
     }
 
-    public void modifyCredentials(){
+    public void modifyCredentials() {
         System.out.println("ACCESSO EFFETTUATO\nPersonalizza le tue credenziali:");
     }
 
-    public String askUsername(){
+    public String askUsername() {
         System.out.print("Inserisci il tuo username: ");
         return (new Scanner(System.in).next());
     }
 
-    public String askNewUsername(){
+    public String askNewUsername() {
         System.out.println("Inserisci il nuovo username: ");
         return (new Scanner(System.in).next());
     }
 
-    public String askPassword(){
+    public String askPassword() {
         System.out.print("Inserisci la tua password: ");
         return (new Scanner(System.in).next());
     }
 
-    public String askCustomPassword(){
+    public String askCustomPassword() {
         System.out.println("Inserisci la nuova password: ");
         String pw = (new Scanner(System.in).next());
         String pw2;
-        do{
+        do {
             System.out.println("Conferma la nuova password: ");
             pw2 = (new Scanner(System.in).next());
-            if(!pw.contentEquals(pw2)){
+            if (!pw.contentEquals(pw2)) {
                 System.err.println("Le password non coincidono");
             }
-        }while(!pw.contentEquals(pw));
+        } while (!pw.contentEquals(pw));
         return pw;
     }
 
-    public void credentialsError(){
+    public void credentialsError() {
         System.err.println("Errore nell'inserimento delle credenziali");
     }
 
@@ -49,10 +51,10 @@ public class View {
     }
 
     public void communicateCredentials(String username, String password) {
-        System.out.println("Puoi accedere al tuo profilo usando le seguenti credenziali:\nUsername: "+username+"\nPassword: "+password);
+        System.out.println("Puoi accedere al tuo profilo usando le seguenti credenziali:\nUsername: " + username + "\nPassword: " + password);
     }
 
-    public int printMenuConfiguratore(){
+    public int printMenuConfiguratore() {
         System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
                 "\n1. Crea nuovo configuratore" +
                 "\n2. Accedi al tuo profilo");
@@ -96,5 +98,27 @@ public class View {
     public String askCategoryName() {
         System.out.println("Inserisci il nome della categoria: ");
         return (new Scanner(System.in)).next();
+    }
+
+    public void categoriaGiaEsistente() {
+        System.out.println("ERRORE: Il nome è già stato assegnato a un'altra categoria radice");
+    }
+
+    public String inserisciNomeCampo() {
+        System.out.println("Nome campo: ");
+        return (new Scanner(System.in)).next();
+    }
+
+    public void nomeGiaPresenteNellaGerarchia() {
+        System.out.println("Nome già presente nella gerarchia");
+    }
+
+    public String yesOrNoQuestion(String s) {
+        String ans;
+        do {
+            System.out.println(s);
+            ans = (new Scanner(System.in)).next();
+        } while (!ans.equalsIgnoreCase("y") && !ans.equalsIgnoreCase("n"));
+        return ans;
     }
 }

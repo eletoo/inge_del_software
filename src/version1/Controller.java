@@ -4,12 +4,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
-
+/**
+ * Controller: mette in comunicazione Model (ossia la classe UserDataStore) e View per rispettare il modello MVC
+ *
+ * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
+ */
 public class Controller {
 
     public static final int STD_USERNAME_LEN = 10;
@@ -26,6 +27,13 @@ public class Controller {
         }
     }
 
+    /**
+     * Gestisce il primo accesso come configuratore: richiama il metodo che aggiunge un nuovo profilo configuratore,
+     * richiede l'autenticazione tramite username e password predefiniti, chiama il metodo che permette di modificare
+     * le credenziali dell'utente e il metodo che permette al configuratore di accedere alle funzionalità dell'applicazione.
+     *
+     * @throws IOException eccezione I/O
+     */
     public void firstAccessAsConfiguratore() throws IOException {
         this.addNewConfiguratore();
         boolean auth;
@@ -43,8 +51,17 @@ public class Controller {
         } while (!auth);
     }
 
+    /**
+     * Permette a un utente configuratore di effettuare il login senza creare un nuovo profilo.
+     * Se lo username e la password sono corretti permette di accedere alle funzionalità dell'applicazione, altrimenti
+     * segnala che lo username è inesistente oppure che la password è errata. In caso di password errata permette di
+     * scegliere se ritentare l'accesso con le proprie credenziali oppure creare un nuovo profilo configuratore.
+     *
+     * @param username username dell'utente
+     * @throws IOException eccezione I/O
+     */
     public void secondAccessAsConfiguratore(String username) throws IOException {
-        boolean auth = false;
+        boolean auth;
 
         if (dataStore.isUsernameTaken(username)) {
             auth = dataStore.isLoginCorrect(username, view.askPassword());
@@ -76,6 +93,19 @@ public class Controller {
 
     }
 
+    /**
+     * Permette di utilizzare l'applicazione come configuratore. Carica i dati salvati in modo permanente nell'utilizzo
+     * precedente dell'applicazione; permette di selezionare un'azione da svolgere:
+     * - creare una nuova gerarchia di categorie: richiede il nome della radice (verificando sia unico nell'applicazione),
+     * la descrizione della categoria e richiama i metodi che permettono di inizializzarne i campi nativi e creare
+     * sottocategorie
+     * - visualizzare le gerarchie attualmente presenti: per ogni gerarchia richiama il metodo toString() opportunamente
+     * sovrascritto nella rispettiva classe
+     * - salvare i dati: salva il contenuto delle gerarchie in modo permanente
+     * - uscire
+     *
+     * @throws IOException eccezione I/O
+     */
     private void useAsConfiguratore() throws IOException {
         boolean end = false;
         int choice = 0;
@@ -84,7 +114,7 @@ public class Controller {
             assert db.exists() || db.mkdir();
 
             var gf = new File("./db/gerarchie.dat");
-            var uf = new File("./db/users.dat");
+
             if (gf.exists()) {
                 ObjectInputStream ois = new ObjectInputStream(new FileInputStream(gf));
                 try {
@@ -102,7 +132,7 @@ public class Controller {
 
                     String rootname = view.askCategoryName();
                     if (app.gerarchie.containsKey(rootname)) {
-                        System.out.println("ERRORE: Il nome è già stato assegnato a un'altra categoria radice");
+                        view.categoriaGiaEsistente();
                     } else {
                         String descr = view.askDescription();
                         Foglia root = new Foglia(rootname, descr);
@@ -144,6 +174,13 @@ public class Controller {
         } while (!end);
     }
 
+    /**
+     * Aggiunge alla categoria radice i campi nativi "Stato conservazione" e "Descrizione libera" dotandoli di opportuni
+     * campi che ne indicano la compilazione obbligatoria o meno. Richiama il metodo che permette di aggiungere altri
+     * campi nativi e di ereditare quelli della categoria parent (in questo caso null perché è la radice della gerarchia)
+     *
+     * @param root categoria radice della gerarchia
+     */
     private void generaCampiNativiRadice(Categoria root) {
         CampoNativo statoConservazione = new CampoNativo(true, CampoNativo.Tipo.STRING);
         CampoNativo descrizioneLibera = new CampoNativo(false, CampoNativo.Tipo.STRING);
@@ -153,24 +190,25 @@ public class Controller {
         generaCampiNativi(root, null);
     }
 
+    /**
+     * Genera i campi nativi (chiedendone nome e obbligatorietà) da aggiungere alla categoria c e aggiunge quelli che
+     * essa eredita dalla categoria parent
+     *
+     * @param c      categoria a cui aggiungere i campi nativi ed ereditati
+     * @param parent categoria parent da cui ereditare i campi
+     */
     private void generaCampiNativi(@NotNull Categoria c, Categoria parent) {
         HashMap<String, CampoNativo> campi = new HashMap<>();
 
         String ans;
         do {
-            do {
-                System.out.println("Vuoi inserire un altro campo alla categoria " + c.getNome() + "? (Y/N)");
-                ans = (new Scanner(System.in)).next();
-            } while (!ans.equalsIgnoreCase("y") && !ans.equalsIgnoreCase("n"));
+            ans = view.yesOrNoQuestion("Inserire un altro campo alla categoria " + c.getNome() + "? (Y/N)");
+
             if (ans.equalsIgnoreCase("y")) {
-                System.out.println("Nome campo: ");
-                String nome = (new Scanner(System.in)).next();
+                String nome = view.inserisciNomeCampo();
                 boolean obbligatorio;
-                String ans2;
-                do {
-                    System.out.println("Campo a compilazione obbligatoria? (Y/N)");
-                    ans2 = (new Scanner(System.in)).next();
-                } while (!ans.equalsIgnoreCase("y") && !ans.equalsIgnoreCase("n"));
+                String ans2 = view.yesOrNoQuestion("Campo a compilazione obbligatoria? (Y/N)");
+
                 if (ans2.equalsIgnoreCase("y")) {
                     obbligatorio = true;
                 } else {
@@ -195,7 +233,7 @@ public class Controller {
      * @param searchname nome della categoria da aggiungere alla gerarchia
      * @return true se il nome della nuova categoria è già usato all'interno della gerarchia
      */
-    private boolean isNameTaken(Categoria root, String searchname) {
+    private boolean isNameTaken(@NotNull Categoria root, String searchname) {
         if (root.getNome().equalsIgnoreCase(searchname)) {
             return true;
         }
@@ -209,12 +247,15 @@ public class Controller {
         return false;
     }
 
-    private void generaSottocategorie(Categoria root) {
-        String ans;
-        do {
-            System.out.println("Vuoi inserire (almeno 2) sottocategorie alla categoria " + root.getNome() + "? (Y/N)");
-            ans = (new Scanner(System.in)).next();
-        } while (!ans.equalsIgnoreCase("y") && !ans.equalsIgnoreCase("n"));
+    /**
+     * Se l'utente lo richiede, aggiunge almeno due sottocategorie a quella passata come parametro, assicurandosi che
+     * non ci siano omonime nella stessa gerarchia. Per ognuna delle categorie figlie così generate invoca ricorsivamente
+     * se stesso per eventualmente generare sue sottocategorie.
+     *
+     * @param root categoria di cui si vogliono generare le sottocategorie
+     */
+    private void generaSottocategorie(@NotNull Categoria root) {
+        String ans = view.yesOrNoQuestion("Vuoi inserire (almeno 2) sottocategorie alla categoria " + root.getNome() + "? (Y/N)");
 
         if (ans.equalsIgnoreCase("y")) {
             ArrayList<Categoria> figlie = new ArrayList<>();
@@ -228,12 +269,7 @@ public class Controller {
             //chiede se inserire altre categorie figlie
             String ans2;
             do {
-
-                do {
-                    System.out.println("Inserire altre categorie figlie di " + root.getNome() + "? (Y/N)");
-                    ans2 = (new Scanner(System.in)).next();
-                } while (!ans2.equalsIgnoreCase("y") && !ans2.equalsIgnoreCase("n"));
-
+                ans2 = view.yesOrNoQuestion("Inserire altre categorie figlie di " + root.getNome() + "? (Y/N)");
                 if (ans.equalsIgnoreCase("y")) {
                     addCategoriaWithoutDoubles(root, figlie);
                 }
@@ -250,7 +286,8 @@ public class Controller {
 
     /**
      * aggiunge una nuova categoria Foglia alle categorie figlie della categoria denominata rootname assicurandosi che
-     * non ci siano altre categorie nella stessa gerarchia aventi lo stesso nome
+     * non ci siano altre categorie nella stessa gerarchia aventi lo stesso nome. Richiede che vengano anche impostati
+     * i campi nativi della nuova categoria aggiunta.
      *
      * @param root   nome della categoria radice della gerarchia a cui apparterrà la nuova categoria e su cui fare il
      *               controllo di unicità del nome
@@ -265,11 +302,16 @@ public class Controller {
                 figlie.add(f);
                 generaCampiNativi(f, root);
             } else {
-                System.out.println("Nome già presente nella gerarchia");
+                view.nomeGiaPresenteNellaGerarchia();
             }
         } while (isNameTaken(root, name1));
     }
 
+    /**
+     * Genera una stringa casuale da comunicare all'utente come username assicurandosi che non ci sia un utente omonimo
+     * già registrato. Genera una stringa casuale da usare come password. Comunica le credenziali all'utente e invoca
+     * un metodo per registrarlo nel dataStore
+     */
     private void addNewConfiguratore() {
         String username;
         do {
@@ -283,6 +325,12 @@ public class Controller {
         dataStore.registerNewConfiguratore(username, password);
     }
 
+    /**
+     * Permette all'utente configuratore di nome currentUsername di modificare le proprie credenziali, assicurandosi che
+     * il nuovo username custom non sia già usato da altri utenti.
+     *
+     * @param currentUsername username corrente dell'utente configuratore
+     */
     public void modifyConfiguratore(String currentUsername) {
         view.modifyCredentials();
         String username;
@@ -297,7 +345,6 @@ public class Controller {
 
         if (password != null && username != null) {
             dataStore.updateUser(currentUsername, username, password);
-            //dataStore.save(dataStore.getUserMap().get(username));
             dataStore.save();
         } else {
             view.credentialsError();
