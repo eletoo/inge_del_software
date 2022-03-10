@@ -10,4 +10,13 @@ public class Nodo extends Categoria{
         super(_nome, _descrizione);
         categorieFiglie = new ArrayList<>();
     }
+
+    public void addCategorieFiglie(ArrayList<Categoria> figlie){
+        categorieFiglie = figlie;
+    }
+
+    public List<Categoria> getCategorieFiglie(){
+        return categorieFiglie;
+    }
+
 }

@@ -12,7 +12,7 @@
 :Configuratore: as Admin
 Admin --> (Use4)
 Admin --> (Use5)
-Admin -down-> (Use3)
+Admin --> (Use3)
 Admin -right-> (Use2)
 Admin --> (Use1)
 

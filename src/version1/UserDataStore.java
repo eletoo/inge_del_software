@@ -42,7 +42,8 @@ public class UserDataStore implements Serializable{
         userMap.remove(oldname);
     }
 
-    public static String generateRandomPassword(int len) {
+    public static @org.jetbrains.annotations.NotNull
+    String generateRandomPassword(int len) {
         String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi"
                    +"jklmnopqrstuvwxyz!@#$%&£";
         Random rnd = new Random();
