@@ -19,4 +19,11 @@ public class Nodo extends Categoria{
         return categorieFiglie;
     }
 
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        for (Categoria c: categorieFiglie) {
+            sb.append(c.toString());
+        }
+        return sb.toString();
+    }
 }

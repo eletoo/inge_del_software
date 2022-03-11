@@ -57,7 +57,6 @@ public class Controller {
      * segnala che lo username è inesistente oppure che la password è errata. In caso di password errata permette di
      * scegliere se ritentare l'accesso con le proprie credenziali oppure creare un nuovo profilo configuratore.
      *
-     * @param username username dell'utente
      * @throws IOException eccezione I/O
      */
     public void secondAccessAsConfiguratore(String username) throws IOException {
@@ -70,27 +69,30 @@ public class Controller {
                 this.useAsConfiguratore();
             } else {
                 view.wrongPasswordError();
-
-                int choice = view.printMenuConfiguratore();
-
-                switch (choice) {
-                    case 1: {
-                        this.firstAccessAsConfiguratore();
-                    }
-                    break;
-                    case 2: {
-                        this.secondAccessAsConfiguratore(username);
-                    }
-                    break;
-                    default:
-                        view.illicitChoice();
-                }
+                riproponiAccesso();
             }
         } else {
             view.wrongUsernameError();
+            riproponiAccesso();
         }
 
 
+    }
+
+    public void riproponiAccesso() throws IOException {
+        int choice = view.printMenuConfiguratore();
+        switch (choice) {
+            case 1: {
+                this.firstAccessAsConfiguratore();
+            }
+            break;
+            case 2: {
+                this.secondAccessAsConfiguratore(view.askUsername());
+            }
+            break;
+            default:
+                view.illicitChoice();
+        }
     }
 
     /**
@@ -139,6 +141,8 @@ public class Controller {
                         app.gerarchie.put(rootname, new Gerarchia(root));
                         generaCampiNativiRadice(root);
                         generaSottocategorie(root);
+                        view.yesOrNoQuestion("Salvare la gerarchia creata?");
+                        salvaDati();
                     }
 
                 }
@@ -148,17 +152,19 @@ public class Controller {
 
                     for (String r : app.gerarchie.keySet()) {
                         System.out.println(app.gerarchie.get(r).toString());
+                        if (app.gerarchie.get(r).getRoot() instanceof Nodo) {
+                            for (Categoria c : ((Nodo) app.gerarchie.get(r).getRoot()).getCategorieFiglie()) {
+                                System.out.println(c.toString());
+                            }
+                        }
+
                     }
                 }
                 break;
                 case 3: {
                     //salva dati
 
-                    FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/gerarchie.dat"));
-                    ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                    objectOutputStream.writeObject(app.gerarchie);
-                    objectOutputStream.close();
-                    view.salvataggioEseguito();
+                    salvaDati();
                 }
                 break;
                 case 4: {
@@ -172,6 +178,14 @@ public class Controller {
                     view.illicitChoice();
             }
         } while (!end);
+    }
+
+    private void salvaDati() throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/gerarchie.dat"));
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        objectOutputStream.writeObject(app.gerarchie);
+        objectOutputStream.close();
+        view.salvataggioEseguito();
     }
 
     /**
@@ -258,22 +272,19 @@ public class Controller {
         String ans = view.yesOrNoQuestion("Vuoi inserire (almeno 2) sottocategorie alla categoria " + root.getNome() + "? (Y/N)");
 
         if (ans.equalsIgnoreCase("y")) {
-            ArrayList<Categoria> figlie = new ArrayList<>();
-            addCategoriaWithoutDoubles(root, figlie);
-            addCategoriaWithoutDoubles(root, figlie);
 
             //la categoria madre diventa un nodo
             Nodo nodo = new Nodo(root.getNome(), root.getDescrizione());
             app.gerarchie.put(root.getNome(), new Gerarchia(nodo));
 
+            ArrayList<Categoria> figlie = new ArrayList<>();
+            figlie = addCategoriaWithoutDoubles(nodo, figlie);
+            figlie = addCategoriaWithoutDoubles(nodo, figlie);
+
             //chiede se inserire altre categorie figlie
-            String ans2;
-            do {
-                ans2 = view.yesOrNoQuestion("Inserire altre categorie figlie di " + root.getNome() + "? (Y/N)");
-                if (ans.equalsIgnoreCase("y")) {
-                    addCategoriaWithoutDoubles(root, figlie);
-                }
-            } while (ans2.equalsIgnoreCase("y"));
+            while (view.yesOrNoQuestion("Inserire altre categorie figlie di " + nodo.getNome() + "? (Y/N)").equalsIgnoreCase("y")) {
+                figlie = addCategoriaWithoutDoubles(nodo, figlie);
+            }
 
             nodo.addCategorieFiglie(figlie);
 
@@ -293,7 +304,7 @@ public class Controller {
      *               controllo di unicità del nome
      * @param figlie lista delle categorie figlie a cui aggiungere la nuova categoria
      */
-    private void addCategoriaWithoutDoubles(Categoria root, ArrayList<Categoria> figlie) {
+    private ArrayList<Categoria> addCategoriaWithoutDoubles(Categoria root, ArrayList<Categoria> figlie) {
         String name1;
         do {
             name1 = view.askCategoryName();
@@ -305,6 +316,7 @@ public class Controller {
                 view.nomeGiaPresenteNellaGerarchia();
             }
         } while (isNameTaken(root, name1));
+        return figlie;
     }
 
     /**

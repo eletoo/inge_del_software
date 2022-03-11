@@ -1,11 +1,13 @@
 package version1;
 
+import java.io.Serializable;
+
 /**
  * CampoNativo: tiene traccia dell'obbligatorietà di compilazione del campo e del tipo
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
-public class CampoNativo {
+public class CampoNativo implements Serializable {
 
     private boolean obbligatorio;
     private Tipo type;

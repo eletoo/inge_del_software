@@ -20,7 +20,7 @@ public class View {
 
     public String askNewUsername() {
         System.out.println("Inserisci il nuovo username: ");
-        return (new Scanner(System.in).next());
+        return (new Scanner(System.in).nextLine());
     }
 
     public String askPassword() {
@@ -92,12 +92,12 @@ public class View {
 
     public String askDescription() {
         System.out.println("Inserire la descrizione della categoria: ");
-        return (new Scanner(System.in)).next();
+        return (new Scanner(System.in)).nextLine();
     }
 
     public String askCategoryName() {
         System.out.println("Inserisci il nome della categoria: ");
-        return (new Scanner(System.in)).next();
+        return (new Scanner(System.in)).nextLine();
     }
 
     public void categoriaGiaEsistente() {
@@ -106,7 +106,7 @@ public class View {
 
     public String inserisciNomeCampo() {
         System.out.println("Nome campo: ");
-        return (new Scanner(System.in)).next();
+        return (new Scanner(System.in)).nextLine();
     }
 
     public void nomeGiaPresenteNellaGerarchia() {
