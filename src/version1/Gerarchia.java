@@ -13,8 +13,19 @@ public class Gerarchia implements Serializable {
         return root;
     }
 
-    public String toString(){
-        return "Gerarchia: "+root.getNome()+root.toString();
+    public String toString() {
+        return "\n\nGerarchia: " + root.getNome();
+    }
+
+    public void replaceCategoria(Categoria toReplace, Nodo newCat) {
+        if (toReplace instanceof Foglia && toReplace.getNome().equals(newCat.getNome())) {
+            toReplace = newCat;
+        } else {
+            Nodo nodo = (Nodo) toReplace;
+            for (int i = 0; i < nodo.getCategorieFiglie().size(); i++) {
+                replaceCategoria(nodo.getCategorieFiglie().get(i), newCat);
+            }
+        }
     }
 
 }

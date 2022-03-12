@@ -48,7 +48,7 @@ public class Main {
                 }
                 break;
                 case 3: {
-                    System.out.println("Arrivederci!");
+                    System.out.println("Grazie di aver usato l'applicazione.\nArrivederci!");
                 }
                 break;
                 default:

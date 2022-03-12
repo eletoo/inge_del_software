@@ -77,7 +77,7 @@ public abstract class Categoria implements Serializable {
      *
      * @param campi campi della categoria
      */
-    public void setCampiNativi(HashMap<String, CampoNativo> campi) {
+    public void setCampiNativi(Map<String, CampoNativo> campi) {
 
         this.campiNativi = campi;
     }
@@ -89,7 +89,7 @@ public abstract class Categoria implements Serializable {
      */
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\nNome: " + this.nome);
+        sb.append("\n\nNome: " + this.nome);
         sb.append("\nDescrizione: " + this.descrizione);
         sb.append("\nCampi nativi:");
         for (String n : campiNativi.keySet()) {

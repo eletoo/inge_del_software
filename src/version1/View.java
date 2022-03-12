@@ -83,7 +83,7 @@ public class View {
     }
 
     public void arrivederci() {
-        System.out.println("Grazie di aver usato l'applicazione.\nArrivederci!");
+        System.out.println("Arrivederci!");
     }
 
     public void salvataggioEseguito() {

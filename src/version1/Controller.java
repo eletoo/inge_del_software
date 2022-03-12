@@ -140,9 +140,10 @@ public class Controller {
                         Foglia root = new Foglia(rootname, descr);
                         app.gerarchie.put(rootname, new Gerarchia(root));
                         generaCampiNativiRadice(root);
-                        generaSottocategorie(root);
-                        view.yesOrNoQuestion("Salvare la gerarchia creata?");
-                        salvaDati();
+                        generaSottocategorie(root, root);
+                        if (view.yesOrNoQuestion("Salvare la gerarchia creata?").equalsIgnoreCase("y")) {
+                            salvaDati();
+                        }
                     }
 
                 }
@@ -152,11 +153,7 @@ public class Controller {
 
                     for (String r : app.gerarchie.keySet()) {
                         System.out.println(app.gerarchie.get(r).toString());
-                        if (app.gerarchie.get(r).getRoot() instanceof Nodo) {
-                            for (Categoria c : ((Nodo) app.gerarchie.get(r).getRoot()).getCategorieFiglie()) {
-                                System.out.println(c.toString());
-                            }
-                        }
+                        System.out.println(app.gerarchie.get(r).getRoot().toString());
 
                     }
                 }
@@ -201,7 +198,9 @@ public class Controller {
         HashMap<String, CampoNativo> campi = new HashMap<>();
         campi.put("Stato Conservazione", statoConservazione);
         campi.put("Descrizione Libera", descrizioneLibera);
+        root.setCampiNativi(campi);
         generaCampiNativi(root, null);
+
     }
 
     /**
@@ -236,6 +235,7 @@ public class Controller {
         if (parent != null) {
             campi.putAll(parent.getCampiNativi());
         }
+
         c.setCampiNativi(campi);
     }
 
@@ -266,16 +266,20 @@ public class Controller {
      * non ci siano omonime nella stessa gerarchia. Per ognuna delle categorie figlie così generate invoca ricorsivamente
      * se stesso per eventualmente generare sue sottocategorie.
      *
-     * @param root categoria di cui si vogliono generare le sottocategorie
+     * @param root     categoria di cui si vogliono generare le sottocategorie
+     * @param treeRoot categoria radice della gerarchia di appartenenza di root
      */
-    private void generaSottocategorie(@NotNull Categoria root) {
+    private void generaSottocategorie(@NotNull Categoria root, Categoria treeRoot) {
         String ans = view.yesOrNoQuestion("Vuoi inserire (almeno 2) sottocategorie alla categoria " + root.getNome() + "? (Y/N)");
 
         if (ans.equalsIgnoreCase("y")) {
 
             //la categoria madre diventa un nodo
             Nodo nodo = new Nodo(root.getNome(), root.getDescrizione());
-            app.gerarchie.put(root.getNome(), new Gerarchia(nodo));
+            //app.gerarchie.put(root.getNome(), new Gerarchia(nodo));
+            nodo.setCampiNativi(root.getCampiNativi());
+            //i campi nativi vengono cancellati perché creiamo un nuovo oggetto nodo con campi nativi vuoti
+            app.gerarchie.get(treeRoot.getNome()).replaceCategoria(root, nodo);
 
             ArrayList<Categoria> figlie = new ArrayList<>();
             figlie = addCategoriaWithoutDoubles(nodo, figlie);
@@ -290,7 +294,7 @@ public class Controller {
 
             //per ognuna delle categorie figlie genera eventuali sottocategorie
             for (int i = 0; i < figlie.size(); i++) {
-                generaSottocategorie(figlie.get(i));
+                generaSottocategorie(figlie.get(i), treeRoot);
             }
         }
     }
