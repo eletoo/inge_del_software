@@ -1,4 +1,4 @@
-package version1;
+package it.unibs.ingsw;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -19,7 +19,7 @@ public class Controller {
     private View view = new View();
     private Applicazione app = new Applicazione();
 
-    {
+    public Controller() {
         try {
             dataStore = new UserDataStore();
         } catch (NoSuchAlgorithmException e) {
@@ -110,7 +110,7 @@ public class Controller {
      */
     private void useAsConfiguratore() throws IOException {
         boolean end = false;
-        int choice = 0;
+        String choice = "0";
         do {
             var db = new File("./db");
             assert db.exists() || db.mkdir();
@@ -129,7 +129,7 @@ public class Controller {
 
             choice = view.selectConfiguratoreAction();
             switch (choice) {
-                case 1: {
+                case "1": {
                     //crea una nuova gerarchia
 
                     String rootname = view.askCategoryName();
@@ -137,10 +137,33 @@ public class Controller {
                         view.categoriaGiaEsistente();
                     } else {
                         String descr = view.askDescription();
-                        Foglia root = new Foglia(rootname, descr);
+                        Categoria root = new Foglia(rootname, descr);
+                        //root.setCampiNativi(generaCampiNativiRadice());
+                        root.setCampiNativi(generaCampiNativi(root, null));
+
+                        //Se la struttura non è valida l'utente dovrà proseguire nell'aggiunta al fine di renderla tale (oppure se ha sbagliato si attacca e ricomincia)
+                        //altrimenti chiediamo se vuole aggiungere una categoria
+                        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]").equalsIgnoreCase("y")) {
+                            view.message("N.B. Ogni categoria nodo deve avere almeno due sotto-categorie");
+                            CategoriaEntry padre = view.findCategory(root); //Prompt per l'utente in modo che scelga una categoria
+
+                            if (padre.getCat() == root) //se la categoria è la root (stessa istanza)
+                                root = padre.asNode(); //setto la root uguale a se stessa ma come nodo
+                            else {
+                                padre.asNode(); //faccio sì che la categoria scelta diventi nodo e venga aggiornato il padre.
+                            }
+
+                            String name = view.askCategoryName(); //penso si spieghi da solo...
+                            if (!root.isNameTaken(name)) {
+                                String desc = view.askDescription();
+                                var cat = new Foglia(name, desc);
+                                cat.setCampiNativi(generaCampiNativi(cat, padre.getCat()));
+                                ((Nodo) padre.getCat()).addChild(cat);
+                            } else
+                                view.message("Nome già in uso");
+                        }
+
                         app.gerarchie.put(rootname, new Gerarchia(root));
-                        generaCampiNativiRadice(root);
-                        generaSottocategorie(root, root);
                         if (view.yesOrNoQuestion("Salvare la gerarchia creata?").equalsIgnoreCase("y")) {
                             salvaDati();
                         }
@@ -148,23 +171,22 @@ public class Controller {
 
                 }
                 break;
-                case 2: {
+                case "2": {
                     //visualizza gerarchie
 
                     for (String r : app.gerarchie.keySet()) {
                         System.out.println(app.gerarchie.get(r).toString());
                         System.out.println(app.gerarchie.get(r).getRoot().toString());
-
                     }
                 }
                 break;
-                case 3: {
+                case "3": {
                     //salva dati
 
                     salvaDati();
                 }
                 break;
-                case 4: {
+                case "4": {
                     //esci
 
                     end = true;
@@ -189,18 +211,14 @@ public class Controller {
      * Aggiunge alla categoria radice i campi nativi "Stato conservazione" e "Descrizione libera" dotandoli di opportuni
      * campi che ne indicano la compilazione obbligatoria o meno. Richiama il metodo che permette di aggiungere altri
      * campi nativi e di ereditare quelli della categoria parent (in questo caso null perché è la radice della gerarchia)
-     *
-     * @param root categoria radice della gerarchia
      */
-    private void generaCampiNativiRadice(Categoria root) {
+    private Map<String, CampoNativo> generaCampiNativiRadice() {
         CampoNativo statoConservazione = new CampoNativo(true, CampoNativo.Tipo.STRING);
         CampoNativo descrizioneLibera = new CampoNativo(false, CampoNativo.Tipo.STRING);
-        HashMap<String, CampoNativo> campi = new HashMap<>();
+        Map<String, CampoNativo> campi = new HashMap<>();
         campi.put("Stato Conservazione", statoConservazione);
         campi.put("Descrizione Libera", descrizioneLibera);
-        root.setCampiNativi(campi);
-        generaCampiNativi(root, null);
-
+        return campi;
     }
 
     /**
@@ -210,12 +228,19 @@ public class Controller {
      * @param c      categoria a cui aggiungere i campi nativi ed ereditati
      * @param parent categoria parent da cui ereditare i campi
      */
-    private void generaCampiNativi(@NotNull Categoria c, Categoria parent) {
-        HashMap<String, CampoNativo> campi = new HashMap<>();
+    private @NotNull Map<String, CampoNativo> generaCampiNativi(@NotNull Categoria c, Categoria parent) {
+        Map<String, CampoNativo> campi = new HashMap<>();
+
+        if (parent == null) {
+            //campi.putAll(parent.getCampiNativi());
+            campi.putAll(generaCampiNativiRadice());
+        } else {
+            campi.putAll(parent.getCampiNativi());
+        }
 
         String ans;
         do {
-            ans = view.yesOrNoQuestion("Inserire un altro campo alla categoria " + c.getNome() + "? (Y/N)");
+            ans = view.yesOrNoQuestion("Inserire un altro campo descrittivo alla categoria " + c.getNome() + "? (Y/N)");
 
             if (ans.equalsIgnoreCase("y")) {
                 String nome = view.inserisciNomeCampo();
@@ -232,11 +257,7 @@ public class Controller {
             }
         } while (!ans.equalsIgnoreCase("n"));
 
-        if (parent != null) {
-            campi.putAll(parent.getCampiNativi());
-        }
-
-        c.setCampiNativi(campi);
+        return campi;
     }
 
     /**

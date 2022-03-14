@@ -1,4 +1,4 @@
-package version1;
+package it.unibs.ingsw;
 
 import java.io.Serializable;
 import java.util.*;
@@ -97,5 +97,60 @@ public abstract class Categoria implements Serializable {
             sb.append(campiNativi.get(n).isObbligatorio() ? " (Obbligatorio)" : " (Falcotativo)");
         }
         return sb.toString();
+    }
+
+    /**
+     * Ritorna true se e solo se il nome passato è presente all'interno della struttura della categoria
+     *
+     * @param name nome
+     * @return true se il nome è già stato utilizzato
+     */
+    public boolean isNameTaken(String name) {
+        return isNameTaken(this, name);
+    }
+
+    /**
+     * Funzione ricorsiva che computa per ogni livello (DFS) se il nome è stato utilizzato o meno.
+     *
+     * @param c    categoria in esame
+     * @param name nome
+     * @return .
+     */
+    private static boolean isNameTaken(Categoria c, String name) {
+        if (name.equals(c.nome))
+            return true;
+
+        if (c instanceof Nodo)
+            for (var child : ((Nodo) c).getCategorieFiglie())
+                if (isNameTaken(child, name))
+                    return true;
+        return false;
+    }
+
+    /**
+     * @return true se le condizioni di struttura sono rispettate (se ha dei figli devono essercene almeno due)
+     */
+    public boolean isStructureValid() {
+        return isStructureValid(this);
+    }
+
+    /**
+     * funzione ricorsiva (DFS) per la validazione della struttura
+     *
+     * @param c
+     * @return
+     */
+    private static boolean isStructureValid(Categoria c) {
+        if (c instanceof Foglia)
+            return true;
+
+        if (c instanceof Nodo) {
+            if (((Nodo) c).getCategorieFiglie().size() < 2)
+                return false;
+            for (var child : ((Nodo) c).getCategorieFiglie())
+                if (!isStructureValid(child))
+                    return false;
+        }
+        return true;
     }
 }

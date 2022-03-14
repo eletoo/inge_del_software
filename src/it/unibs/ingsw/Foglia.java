@@ -1,12 +1,12 @@
-package version1;
+package it.unibs.ingsw;
 
-public class Foglia extends Categoria{
+public class Foglia extends Categoria {
 
     public Foglia(String _nome, String _descrizione) {
         super(_nome, _descrizione);
     }
 
-    public String toString(){
+    public String toString() {
         return super.toString();
     }
 }

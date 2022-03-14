@@ -1,9 +1,6 @@
-package version1;
+package it.unibs.ingsw;
 
 import java.io.*;
-import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -12,12 +9,12 @@ public class Main {
         Controller controller = new Controller();
         View view = new View();
 
-        int val;
+        String val;
         do {
             System.out.println("Seleziona un'opzione: \n1. Accedi\n2. Registrati\n3. Esci");
-            val = (new Scanner(System.in)).nextInt();
+            val = (new Scanner(System.in)).next();
             switch (val) {
-                case 1: {
+                case "1": {
                     controller.dataStore.load();
                     if (controller.dataStore.isEmpty()) {
                         controller.firstAccessAsConfiguratore();
@@ -35,7 +32,7 @@ public class Main {
                     }
                 }
                 break;
-                case 2: {
+                case "2": {
                     System.out.println("Seleziona la modalità con cui vuoi registrarti:\n1.Configuratore");
                     switch ((new Scanner(System.in)).nextInt()) {
                         case 1: {
@@ -47,7 +44,7 @@ public class Main {
                     }
                 }
                 break;
-                case 3: {
+                case "3": {
                     System.out.println("Grazie di aver usato l'applicazione.\nArrivederci!");
                 }
                 break;
@@ -56,7 +53,7 @@ public class Main {
 
             }
 
-        } while (val != 3);
+        } while (!val.contentEquals("3"));
 
 
     }
