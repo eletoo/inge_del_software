@@ -1,18 +1,28 @@
 package it.unibs.ingsw;
 
 import java.io.*;
-import java.util.Scanner;
 
+/**
+ * Classe contenente il metodo main
+ *
+ * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
+ */
 public class Main {
 
+    /**
+     * Permette all'utente di scegliere se accedere, registrarsi ex novo o uscire dall'applicazione ed esegue le azioni
+     * relative.
+     *
+     * @param args .
+     * @throws IOException eccezione I/O
+     */
     public static void main(String args[]) throws IOException {
         Controller controller = new Controller();
         View view = new View();
 
         String val;
         do {
-            System.out.println("Seleziona un'opzione: \n1. Accedi\n2. Registrati\n3. Esci");
-            val = (new Scanner(System.in)).next();
+            val = view.in("Seleziona un'opzione: \n1. Accedi\n2. Registrati\n3. Esci");
             switch (val) {
                 case "1": {
                     controller.dataStore.load();
@@ -25,36 +35,35 @@ public class Main {
                                 controller.secondAccessAsConfiguratore(username);
                             }
                         } else {
-                            view.wrongUsernameError();
-                            controller.riproponiAccesso();
+                            view.errorMessage(View.ErrorMessage.E_UNREGISTERED_USER);
+                            controller.redoAccess();
                         }
 
                     }
                 }
                 break;
                 case "2": {
-                    System.out.println("Seleziona la modalità con cui vuoi registrarti:\n1.Configuratore");
-                    switch ((new Scanner(System.in)).nextInt()) {
-                        case 1: {
+                    String choice = view.in("Seleziona la modalità con cui vuoi registrarti:\n1.Configuratore");
+                    switch (choice) {
+                        case "1": {
                             controller.firstAccessAsConfiguratore();
                         }
                         break;
                         default:
-                            System.err.println("ERRORE: Azione non consentita");
+                            view.errorMessage(View.ErrorMessage.E_UNAUTHORIZED_CHOICE);
                     }
                 }
                 break;
                 case "3": {
-                    System.out.println("Grazie di aver usato l'applicazione.\nArrivederci!");
+                    view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);
                 }
                 break;
                 default:
-                    System.err.println("ERRORE: Azione non consentita");
+                    view.errorMessage(View.ErrorMessage.E_UNAUTHORIZED_CHOICE);
 
             }
 
         } while (!val.contentEquals("3"));
-
 
     }
 

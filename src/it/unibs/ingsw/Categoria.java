@@ -1,12 +1,14 @@
 package it.unibs.ingsw;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.Serializable;
 import java.util.*;
 
 /**
- * Categoria: classe astratta, tiene traccia di nome, descrizione e campi nativi della categoria
+ * Categoria: classe astratta, tiene traccia di nome, descrizione e campi nativi della categoria.
  * N.B. Per "campi nativi" si intendono sia i campi nativi della categoria sia i campi che essa poi eventualmente
- * erediterà dalla categoria genitore. Sono stati chiamati tutti direttamente "campi nativi" per semplicità di
+ * ereditera' dalla categoria genitore. Sono stati chiamati tutti direttamente "campi nativi" per semplicita' di
  * comprensione
  */
 public abstract class Categoria implements Serializable {
@@ -28,8 +30,6 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * Ritorna la descrizione della categoria
-     *
      * @return descrizione della categoria
      */
     public String getDescrizione() {
@@ -37,8 +37,6 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * Ritorna il nome della categoria
-     *
      * @return nome della categoria
      */
     public String getNome() {
@@ -46,8 +44,6 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * Ritorna la mappa contenente i campi nativi
-     *
      * @return mappa dei campi nativi
      */
     public Map<String, CampoNativo> getCampiNativi() {
@@ -55,27 +51,21 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * Imposta la descrizione della categoria
-     *
-     * @param descrizione descrizione della categoria
+     * @param descrizione descrizione da dare alla categoria
      */
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
 
     /**
-     * Imposta il nome della categoria
-     *
-     * @param nome nome della categoria
+     * @param nome nome da dare alla categoria
      */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
     /**
-     * Imposta i campi della categoria
-     *
-     * @param campi campi della categoria
+     * @param campi campi da assegnare alla categoria
      */
     public void setCampiNativi(Map<String, CampoNativo> campi) {
 
@@ -85,7 +75,7 @@ public abstract class Categoria implements Serializable {
     /**
      * Override del metodo toString() per consentire la stampa del contenuto della categoria.
      *
-     * @return stringa contenente nome, descrizione, elenco dei campi e obbligatorietà di ciascuno di essi
+     * @return stringa contenente nome, descrizione, elenco dei campi e obbligatorieta' di ciascuno di essi
      */
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -100,7 +90,7 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * Ritorna true se e solo se il nome passato è presente all'interno della struttura della categoria
+     * Ritorna true se e solo se il nome passato a' presente all'interno della struttura della categoria.
      *
      * @param name nome
      * @return true se il nome è già stato utilizzato
@@ -110,13 +100,13 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * Funzione ricorsiva che computa per ogni livello (DFS) se il nome è stato utilizzato o meno.
+     * Funzione ricorsiva che computa per ogni livello se il nome e' stato utilizzato o meno.
      *
      * @param c    categoria in esame
      * @param name nome
-     * @return .
+     * @return true se name e' il nome della categoria o di uno dei suoi figli
      */
-    private static boolean isNameTaken(Categoria c, String name) {
+    private static boolean isNameTaken(@NotNull Categoria c, @NotNull String name) {
         if (name.equals(c.nome))
             return true;
 
@@ -135,10 +125,10 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * funzione ricorsiva (DFS) per la validazione della struttura
+     * Funzione ricorsiva per la validazione della struttura di una categoria.
      *
-     * @param c
-     * @return
+     * @param c categoria di cui validare la struttura
+     * @return true se e' una foglia o se e' un nodo con almeno due figli con struttura valida
      */
     private static boolean isStructureValid(Categoria c) {
         if (c instanceof Foglia)

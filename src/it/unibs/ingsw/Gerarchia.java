@@ -2,30 +2,33 @@ package it.unibs.ingsw;
 
 import java.io.Serializable;
 
+/**
+ * Tiene traccia della categoria radice
+ *
+ * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
+ */
 public class Gerarchia implements Serializable {
     private Categoria root;
 
+    /**
+     * Costruttore.
+     */
     public Gerarchia(Categoria root) {
         this.root = root;
     }
 
+    /**
+     * @return categoria radice
+     */
     public Categoria getRoot() {
         return root;
     }
 
+    /**
+     * @return stringa descrittiva della gerarchia
+     */
     public String toString() {
         return "\n\nGerarchia: " + root.getNome();
-    }
-
-    public void replaceCategoria(Categoria toReplace, Nodo newCat) {
-        if (toReplace instanceof Foglia && toReplace.getNome().equals(newCat.getNome())) {
-            toReplace = newCat;
-        } else {
-            Nodo nodo = (Nodo) toReplace;
-            for (int i = 0; i < nodo.getCategorieFiglie().size(); i++) {
-                replaceCategoria(nodo.getCategorieFiglie().get(i), newCat);
-            }
-        }
     }
 
 }

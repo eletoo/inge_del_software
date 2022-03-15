@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 /**
- * Controller: mette in comunicazione Model (ossia la classe UserDataStore) e View per rispettare il modello MVC
+ * Controller: mette in comunicazione Model (ossia la classe {@link UserDataStore}) e {@link View} per rispettare il modello MVC.
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
@@ -19,6 +19,9 @@ public class Controller {
     private View view = new View();
     private Applicazione app = new Applicazione();
 
+    /**
+     * Costruttore.
+     */
     public Controller() {
         try {
             dataStore = new UserDataStore();
@@ -30,7 +33,7 @@ public class Controller {
     /**
      * Gestisce il primo accesso come configuratore: richiama il metodo che aggiunge un nuovo profilo configuratore,
      * richiede l'autenticazione tramite username e password predefiniti, chiama il metodo che permette di modificare
-     * le credenziali dell'utente e il metodo che permette al configuratore di accedere alle funzionalità dell'applicazione.
+     * le credenziali dell'utente e il metodo che permette al configuratore di accedere alle funzionalita' dell'applicazione.
      *
      * @throws IOException eccezione I/O
      */
@@ -43,18 +46,18 @@ public class Controller {
             auth = dataStore.isLoginCorrect(username, view.askPassword());
 
             if (auth) {
-                this.modifyConfiguratore(username);
+                this.customizeConfiguratore(username);
                 this.useAsConfiguratore();
             } else {
-                view.credentialsError();
+                view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
             }
         } while (!auth);
     }
 
     /**
      * Permette a un utente configuratore di effettuare il login senza creare un nuovo profilo.
-     * Se lo username e la password sono corretti permette di accedere alle funzionalità dell'applicazione, altrimenti
-     * segnala che lo username è inesistente oppure che la password è errata. In caso di password errata permette di
+     * Se lo username e la password sono corretti permette di accedere alle funzionalita' dell'applicazione, altrimenti
+     * segnala che lo username e' inesistente oppure che la password e' errata. In caso di credenziale errata permette di
      * scegliere se ritentare l'accesso con le proprie credenziali oppure creare un nuovo profilo configuratore.
      *
      * @throws IOException eccezione I/O
@@ -68,39 +71,42 @@ public class Controller {
             if (auth) {
                 this.useAsConfiguratore();
             } else {
-                view.wrongPasswordError();
-                riproponiAccesso();
+                view.errorMessage(View.ErrorMessage.E_WRONG_PASSWORD);
+                this.redoAccess();
             }
         } else {
-            view.wrongUsernameError();
-            riproponiAccesso();
+            view.errorMessage(View.ErrorMessage.E_UNREGISTERED_USER);
+            this.redoAccess();
         }
 
 
     }
 
-    public void riproponiAccesso() throws IOException {
-        int choice = view.printMenuConfiguratore();
+    /**
+     * Permette all'utente o di creare un nuovo profilo oppure di ritentare l'accesso con le proprie credenziali.
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void redoAccess() throws IOException {
+        String choice = view.chooseFromMenuConfiguratore();
         switch (choice) {
-            case 1: {
+            case "1": {
                 this.firstAccessAsConfiguratore();
             }
             break;
-            case 2: {
+            case "2": {
                 this.secondAccessAsConfiguratore(view.askUsername());
             }
             break;
             default:
-                view.illicitChoice();
+                view.errorMessage(View.ErrorMessage.E_ILLICIT_CHOICE);
         }
     }
 
     /**
      * Permette di utilizzare l'applicazione come configuratore. Carica i dati salvati in modo permanente nell'utilizzo
      * precedente dell'applicazione; permette di selezionare un'azione da svolgere:
-     * - creare una nuova gerarchia di categorie: richiede il nome della radice (verificando sia unico nell'applicazione),
-     * la descrizione della categoria e richiama i metodi che permettono di inizializzarne i campi nativi e creare
-     * sottocategorie
+     * - creare una nuova gerarchia di categorie
      * - visualizzare le gerarchie attualmente presenti: per ogni gerarchia richiama il metodo toString() opportunamente
      * sovrascritto nella rispettiva classe
      * - salvare i dati: salva il contenuto delle gerarchie in modo permanente
@@ -112,107 +118,101 @@ public class Controller {
         boolean end = false;
         String choice = "0";
         do {
-            var db = new File("./db");
-            assert db.exists() || db.mkdir();
-
-            var gf = new File("./db/gerarchie.dat");
-
-            if (gf.exists()) {
-                ObjectInputStream ois = new ObjectInputStream(new FileInputStream(gf));
-                try {
-                    app.gerarchie = (Map<String, Gerarchia>) ois.readObject();
-                } catch (ClassNotFoundException | IOException e) {
-                    app.gerarchie = new HashMap<>();
-                }
-            } else
-                app.gerarchie = new HashMap<>();
+            //carica i dati salvati in precedenza
+            app.prepareDirectoryStructure();
 
             choice = view.selectConfiguratoreAction();
             switch (choice) {
                 case "1": {
                     //crea una nuova gerarchia
 
-                    String rootname = view.askCategoryName();
-                    if (app.gerarchie.containsKey(rootname)) {
-                        view.categoriaGiaEsistente();
-                    } else {
-                        String descr = view.askDescription();
-                        Categoria root = new Foglia(rootname, descr);
-                        //root.setCampiNativi(generaCampiNativiRadice());
-                        root.setCampiNativi(generaCampiNativi(root, null));
-
-                        //Se la struttura non è valida l'utente dovrà proseguire nell'aggiunta al fine di renderla tale (oppure se ha sbagliato si attacca e ricomincia)
-                        //altrimenti chiediamo se vuole aggiungere una categoria
-                        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]").equalsIgnoreCase("y")) {
-                            view.message("N.B. Ogni categoria nodo deve avere almeno due sotto-categorie");
-                            CategoriaEntry padre = view.findCategory(root); //Prompt per l'utente in modo che scelga una categoria
-
-                            if (padre.getCat() == root) //se la categoria è la root (stessa istanza)
-                                root = padre.asNode(); //setto la root uguale a se stessa ma come nodo
-                            else {
-                                padre.asNode(); //faccio sì che la categoria scelta diventi nodo e venga aggiornato il padre.
-                            }
-
-                            String name = view.askCategoryName(); //penso si spieghi da solo...
-                            if (!root.isNameTaken(name)) {
-                                String desc = view.askDescription();
-                                var cat = new Foglia(name, desc);
-                                cat.setCampiNativi(generaCampiNativi(cat, padre.getCat()));
-                                ((Nodo) padre.getCat()).addChild(cat);
-                            } else
-                                view.message("Nome già in uso");
-                        }
-
-                        app.gerarchie.put(rootname, new Gerarchia(root));
-                        if (view.yesOrNoQuestion("Salvare la gerarchia creata?").equalsIgnoreCase("y")) {
-                            salvaDati();
-                        }
-                    }
-
+                    this.createNewHierarchy();
                 }
                 break;
                 case "2": {
                     //visualizza gerarchie
 
-                    for (String r : app.gerarchie.keySet()) {
-                        System.out.println(app.gerarchie.get(r).toString());
-                        System.out.println(app.gerarchie.get(r).getRoot().toString());
+                    for (String r : app.getHierarchies().keySet()) {
+                        System.out.println(app.getHierarchy(r).toString());
+                        System.out.println(app.getHierarchy(r).getRoot().toString());
                     }
                 }
                 break;
                 case "3": {
                     //salva dati
 
-                    salvaDati();
+                    app.saveData();
+                    view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
                 }
                 break;
                 case "4": {
                     //esci
 
                     end = true;
-                    view.arrivederci();
+                    view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);
                 }
                 break;
                 default:
-                    view.illicitChoice();
+                    view.errorMessage(View.ErrorMessage.E_ILLICIT_CHOICE);
             }
         } while (!end);
     }
 
-    private void salvaDati() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/gerarchie.dat"));
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-        objectOutputStream.writeObject(app.gerarchie);
-        objectOutputStream.close();
-        view.salvataggioEseguito();
+    /**
+     * Crea una nuova gerarchia: chiede il nome della radice, verifica che non esista una gerarchia con radice omonima,
+     * chiede la descrizione e imposta i campi nativi della radice.
+     * Se la struttura della categoria creata non e' valida oppure l'utente vuole aggiungere delle sottocategorie
+     * viene chiesto all'utente a che categoria aggiungere sottocategorie (almeno due) e nome, descrizione ed eventuali
+     * nuovi campi nativi per ognuna di esse.
+     *
+     * @throws IOException eccezione I/O
+     */
+    private void createNewHierarchy() throws IOException {
+        String rootname = view.askCategoryName();
+        if (app.isHierarchyNameTaken(rootname)) {
+            view.errorMessage(View.ErrorMessage.E_EXISTING_ROOT_CATEGORY);
+            return;
+        }
+        String descr = view.askDescription();
+        Categoria root = new Foglia(rootname, descr);
+        root.setCampiNativi(generaCampiNativi(root, null));
+
+        //Se la struttura non è valida l'utente dovrà proseguire nell'aggiunta al fine di renderla tale (oppure se ha sbagliato ricomincia)
+        //altrimenti chiediamo se vuole aggiungere una categoria
+        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]").equalsIgnoreCase("y")) {
+            view.interactionMessage(View.InteractionMessage.AT_LEAST_TWO_CHILDREN);
+            CategoriaEntry padre = view.findCategory(root); //Prompt per l'utente in modo che scelga una categoria
+
+            if (padre.getCat() == root) //se la categoria è la root (stessa istanza)
+                root = padre.asNode(); //setto la root uguale a se stessa ma come nodo
+            else {
+                padre.asNode(); //faccio sì che la categoria scelta diventi nodo e venga aggiornato il padre.
+            }
+
+            String name = view.askCategoryName();
+            if (!root.isNameTaken(name)) {
+                String desc = view.askDescription();
+                var cat = new Foglia(name, desc);
+                cat.setCampiNativi(generaCampiNativi(cat, padre.getCat()));
+                ((Nodo) padre.getCat()).addChild(cat);
+            } else
+                view.errorMessage(View.ErrorMessage.E_EXISTING_NAME_IN_HIERARCHY);
+        }
+
+        app.addGerarchia(rootname, new Gerarchia(root));
+        if (view.yesOrNoQuestion("Salvare la gerarchia creata?").equalsIgnoreCase("y")) {
+            app.saveData();
+            view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
+        }
     }
 
     /**
-     * Aggiunge alla categoria radice i campi nativi "Stato conservazione" e "Descrizione libera" dotandoli di opportuni
-     * campi che ne indicano la compilazione obbligatoria o meno. Richiama il metodo che permette di aggiungere altri
-     * campi nativi e di ereditare quelli della categoria parent (in questo caso null perché è la radice della gerarchia)
+     * Restituisce i campi nativi da assegnare alla categoria radice dotandoli di opportuni valori che ne indicano
+     * la compilazione obbligatoria o meno.
+     *
+     * @return campi da assegnare alla categoria radice
      */
-    private Map<String, CampoNativo> generaCampiNativiRadice() {
+    private @NotNull Map<String, CampoNativo> generaCampiNativiRadice() {
         CampoNativo statoConservazione = new CampoNativo(true, CampoNativo.Tipo.STRING);
         CampoNativo descrizioneLibera = new CampoNativo(false, CampoNativo.Tipo.STRING);
         Map<String, CampoNativo> campi = new HashMap<>();
@@ -222,17 +222,17 @@ public class Controller {
     }
 
     /**
-     * Genera i campi nativi (chiedendone nome e obbligatorietà) da aggiungere alla categoria c e aggiunge quelli che
+     * Genera i campi nativi (chiedendone nome e obbligatorieta') da aggiungere alla categoria c e aggiunge quelli che
      * essa eredita dalla categoria parent
      *
      * @param c      categoria a cui aggiungere i campi nativi ed ereditati
      * @param parent categoria parent da cui ereditare i campi
+     * @return campi nativi
      */
     private @NotNull Map<String, CampoNativo> generaCampiNativi(@NotNull Categoria c, Categoria parent) {
         Map<String, CampoNativo> campi = new HashMap<>();
 
         if (parent == null) {
-            //campi.putAll(parent.getCampiNativi());
             campi.putAll(generaCampiNativiRadice());
         } else {
             campi.putAll(parent.getCampiNativi());
@@ -243,7 +243,7 @@ public class Controller {
             ans = view.yesOrNoQuestion("Inserire un altro campo descrittivo alla categoria " + c.getNome() + "? (Y/N)");
 
             if (ans.equalsIgnoreCase("y")) {
-                String nome = view.inserisciNomeCampo();
+                String nome = view.insertFieldName();
                 boolean obbligatorio;
                 String ans2 = view.yesOrNoQuestion("Campo a compilazione obbligatoria? (Y/N)");
 
@@ -261,92 +261,8 @@ public class Controller {
     }
 
     /**
-     * verifica se il nome della categoria da aggiungere è già presente all'interno della gerarchia di appartenenza della
-     * nuova categoria
-     *
-     * @param root       nome della categoria parent
-     * @param searchname nome della categoria da aggiungere alla gerarchia
-     * @return true se il nome della nuova categoria è già usato all'interno della gerarchia
-     */
-    private boolean isNameTaken(@NotNull Categoria root, String searchname) {
-        if (root.getNome().equalsIgnoreCase(searchname)) {
-            return true;
-        }
-        if (root instanceof Nodo) {
-            for (Categoria child : ((Nodo) root).getCategorieFiglie()) {
-                if (isNameTaken(child, searchname)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Se l'utente lo richiede, aggiunge almeno due sottocategorie a quella passata come parametro, assicurandosi che
-     * non ci siano omonime nella stessa gerarchia. Per ognuna delle categorie figlie così generate invoca ricorsivamente
-     * se stesso per eventualmente generare sue sottocategorie.
-     *
-     * @param root     categoria di cui si vogliono generare le sottocategorie
-     * @param treeRoot categoria radice della gerarchia di appartenenza di root
-     */
-    private void generaSottocategorie(@NotNull Categoria root, Categoria treeRoot) {
-        String ans = view.yesOrNoQuestion("Vuoi inserire (almeno 2) sottocategorie alla categoria " + root.getNome() + "? (Y/N)");
-
-        if (ans.equalsIgnoreCase("y")) {
-
-            //la categoria madre diventa un nodo
-            Nodo nodo = new Nodo(root.getNome(), root.getDescrizione());
-            //app.gerarchie.put(root.getNome(), new Gerarchia(nodo));
-            nodo.setCampiNativi(root.getCampiNativi());
-            //i campi nativi vengono cancellati perché creiamo un nuovo oggetto nodo con campi nativi vuoti
-            app.gerarchie.get(treeRoot.getNome()).replaceCategoria(root, nodo);
-
-            ArrayList<Categoria> figlie = new ArrayList<>();
-            figlie = addCategoriaWithoutDoubles(nodo, figlie);
-            figlie = addCategoriaWithoutDoubles(nodo, figlie);
-
-            //chiede se inserire altre categorie figlie
-            while (view.yesOrNoQuestion("Inserire altre categorie figlie di " + nodo.getNome() + "? (Y/N)").equalsIgnoreCase("y")) {
-                figlie = addCategoriaWithoutDoubles(nodo, figlie);
-            }
-
-            nodo.addCategorieFiglie(figlie);
-
-            //per ognuna delle categorie figlie genera eventuali sottocategorie
-            for (int i = 0; i < figlie.size(); i++) {
-                generaSottocategorie(figlie.get(i), treeRoot);
-            }
-        }
-    }
-
-    /**
-     * aggiunge una nuova categoria Foglia alle categorie figlie della categoria denominata rootname assicurandosi che
-     * non ci siano altre categorie nella stessa gerarchia aventi lo stesso nome. Richiede che vengano anche impostati
-     * i campi nativi della nuova categoria aggiunta.
-     *
-     * @param root   nome della categoria radice della gerarchia a cui apparterrà la nuova categoria e su cui fare il
-     *               controllo di unicità del nome
-     * @param figlie lista delle categorie figlie a cui aggiungere la nuova categoria
-     */
-    private ArrayList<Categoria> addCategoriaWithoutDoubles(Categoria root, ArrayList<Categoria> figlie) {
-        String name1;
-        do {
-            name1 = view.askCategoryName();
-            if (!isNameTaken(root, name1)) {
-                Foglia f = new Foglia(name1, view.askDescription());
-                figlie.add(f);
-                generaCampiNativi(f, root);
-            } else {
-                view.nomeGiaPresenteNellaGerarchia();
-            }
-        } while (isNameTaken(root, name1));
-        return figlie;
-    }
-
-    /**
      * Genera una stringa casuale da comunicare all'utente come username assicurandosi che non ci sia un utente omonimo
-     * già registrato. Genera una stringa casuale da usare come password. Comunica le credenziali all'utente e invoca
+     * gia' registrato. Genera una stringa casuale da usare come password. Comunica le credenziali all'utente e invoca
      * un metodo per registrarlo nel dataStore
      */
     private void addNewConfiguratore() {
@@ -364,17 +280,17 @@ public class Controller {
 
     /**
      * Permette all'utente configuratore di nome currentUsername di modificare le proprie credenziali, assicurandosi che
-     * il nuovo username custom non sia già usato da altri utenti.
+     * il nuovo username custom non sia gia' usato da altri utenti.
      *
      * @param currentUsername username corrente dell'utente configuratore
      */
-    public void modifyConfiguratore(String currentUsername) {
-        view.modifyCredentials();
+    public void customizeConfiguratore(String currentUsername) {
+        view.interactionMessage(View.InteractionMessage.CUSTOMIZE_CREDENTIALS);
         String username;
         do {
             username = view.askNewUsername();
             if (dataStore.isUsernameTaken(username)) {
-                view.usernameTakenError();
+                view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
             }
         } while (dataStore.isUsernameTaken(username));
 
@@ -384,7 +300,7 @@ public class Controller {
             dataStore.updateUser(currentUsername, username, password);
             dataStore.save();
         } else {
-            view.credentialsError();
+            view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
         }
 
     }
