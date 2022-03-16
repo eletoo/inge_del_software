@@ -171,11 +171,12 @@ public class UserDataStore implements Serializable {
         if (uf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(uf));
             try {
-                this.setUserMap((Map<String, User>) ois.readObject());
+                setUserMap((Map<String, User>) ois.readObject());
             } catch (ClassNotFoundException | IOException e) {
-                this.setUserMap(new HashMap<>());
+                setUserMap(new HashMap<>());
             }
         } else
-            this.setUserMap(new HashMap<>());
+            setUserMap(new HashMap<>());
     }
+
 }

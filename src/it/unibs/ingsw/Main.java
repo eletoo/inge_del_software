@@ -25,6 +25,7 @@ public class Main {
             val = view.in("Seleziona un'opzione: \n1. Accedi\n2. Registrati\n3. Esci");
             switch (val) {
                 case "1": {
+                    //controller.load();
                     controller.dataStore.load();
                     if (controller.dataStore.isEmpty()) {
                         controller.firstAccessAsConfiguratore();

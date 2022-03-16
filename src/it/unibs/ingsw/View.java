@@ -110,7 +110,7 @@ public class View {
      * @param err messaggio di errore
      */
     public void errorMessage(@NotNull ErrorMessage err) {
-        System.out.println(err.getMessage());
+        System.err.println(err.getMessage());
     }
 
     /**
