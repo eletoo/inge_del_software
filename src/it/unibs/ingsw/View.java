@@ -120,8 +120,12 @@ public class View {
      * @return stringa inserita dall'utente
      */
     public String in(String prompt) {
-        System.out.println(prompt);
-        return new Scanner(System.in).next();
+        String s = null;
+        while(s == null || s.equalsIgnoreCase("")){
+            System.out.println(prompt);
+            s = new Scanner(System.in).next();
+        }
+        return s;
     }
 
     /**
@@ -131,8 +135,12 @@ public class View {
      * @return riga inserita dall'utente
      */
     public String inLine(String prompt) {
-        System.out.println(prompt);
-        return new Scanner(System.in).nextLine();
+        String s = null;
+        while(s == null || s.equalsIgnoreCase("")){
+            System.out.println(prompt);
+            s = new Scanner(System.in).nextLine();
+        }
+        return s;
     }
 
     /**
@@ -168,8 +176,8 @@ public class View {
      */
     public String chooseFromMenuConfiguratore() {
         System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
-                "\n1. Crea nuovo configuratore" +
-                "\n2. Accedi al tuo profilo");
+                "\n1. Registrati" +
+                "\n2. Accedi");
         return (new Scanner(System.in)).next();
     }
 
@@ -183,7 +191,7 @@ public class View {
                 "\n1. Crea una nuova gerarchia" +
                 "\n2. Visualizza il contenuto delle gerarchie attualmente presenti nel sistema" +
                 "\n3. Salva" +
-                "\n4. Esci");
+                "\n4. Logout");
         return (new Scanner(System.in)).next();
     }
 
@@ -191,7 +199,8 @@ public class View {
      * @return descrizione della categoria inserita dall'utente
      */
     public String askDescription() {
-        return inLine("Inserire la descrizione della categoria: ");
+        System.out.println("Inserire la descrizione della categoria: ");
+        return new Scanner(System.in).nextLine();
     }
 
     /**
@@ -260,10 +269,10 @@ public class View {
     /**
      * Ottiene una lista di {@link CategoriaEntry} a partire da una categoria radice.
      *
-     * @param root categoria radice
-     * @param padre categoria padre
+     * @param root    categoria radice
+     * @param padre   categoria padre
      * @param choices lista di categorie
-     * @param prefix prefisso
+     * @param prefix  prefisso
      * @return lista di categorie
      */
     private @NotNull List<CategoriaEntry> getCategoriesAsList(Categoria root, Nodo padre, @NotNull List<CategoriaEntry> choices, String prefix) {

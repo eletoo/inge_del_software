@@ -72,34 +72,9 @@ public class Controller {
                 this.useAsConfiguratore();
             } else {
                 view.errorMessage(View.ErrorMessage.E_WRONG_PASSWORD);
-                this.redoAccess();
             }
         } else {
             view.errorMessage(View.ErrorMessage.E_UNREGISTERED_USER);
-            this.redoAccess();
-        }
-
-
-    }
-
-    /**
-     * Permette all'utente o di creare un nuovo profilo oppure di ritentare l'accesso con le proprie credenziali.
-     *
-     * @throws IOException eccezione I/O
-     */
-    public void redoAccess() throws IOException {
-        String choice = view.chooseFromMenuConfiguratore();
-        switch (choice) {
-            case "1": {
-                this.firstAccessAsConfiguratore();
-            }
-            break;
-            case "2": {
-                this.secondAccessAsConfiguratore(view.askUsername());
-            }
-            break;
-            default:
-                view.errorMessage(View.ErrorMessage.E_ILLICIT_CHOICE);
         }
     }
 
@@ -200,7 +175,7 @@ public class Controller {
         }
 
         app.addGerarchia(rootname, new Gerarchia(root));
-        if (view.yesOrNoQuestion("Salvare la gerarchia creata?").equalsIgnoreCase("y")) {
+        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
             app.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
         }
