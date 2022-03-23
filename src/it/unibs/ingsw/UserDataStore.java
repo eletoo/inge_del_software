@@ -57,6 +57,18 @@ public class UserDataStore implements Serializable {
      */
     public void registerNewConfiguratore(String nome, String pw) {
         userMap.put(nome, new Configuratore(nome, pw));
+        this.save();
+    }
+
+    /**
+     * Aggiunge un nuovo utente Fruitore alla userMap
+     *
+     * @param nome nome utente
+     * @param pw   password in chiaro
+     */
+    public void registerNewFruitore(String nome, String pw) {
+        userMap.put(nome, new Fruitore(nome, pw));
+        this.save();
     }
 
     /**
@@ -71,6 +83,7 @@ public class UserDataStore implements Serializable {
         userMap.get(oldname).changePassword(newpw);
         userMap.put(newname, userMap.get(oldname));
         userMap.remove(oldname);
+        this.save();
     }
 
     /**
@@ -146,7 +159,7 @@ public class UserDataStore implements Serializable {
     /**
      * Salva il contenuto della userMap in modo permanente
      */
-    public void save() {
+    private void save() {
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
         try {

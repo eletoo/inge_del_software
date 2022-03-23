@@ -11,6 +11,7 @@ import java.util.*;
 public class Applicazione {
 
     private Map<String, Gerarchia> hierarchies;
+    private InfoScambio informazioni;
 
     /**
      * Costruttore.
@@ -39,6 +40,9 @@ public class Applicazione {
         return hierarchies.containsKey(name);
     }
 
+    /**
+     * @return le gerarchie contenute nell'applicazione
+     */
     public Map<String, Gerarchia> getHierarchies() {
         return hierarchies;
     }
@@ -75,6 +79,18 @@ public class Applicazione {
     }
 
     /**
+     * Salva in modo persistente le informazioni relative a luoghi e orari per l'effettuazione degli scambi
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void saveInfo() throws IOException {
+        FileOutputStream fos = new FileOutputStream(new File("./db/info.dat"));
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(this.informazioni);
+        oos.close();
+    }
+
+    /**
      * Carica il contenuto delle gerarchie salvato in modo permanente all'utilizzo precedente dell'applicazione.
      *
      * @throws IOException eccezione I/O
@@ -84,16 +100,57 @@ public class Applicazione {
         assert db.exists() || db.mkdir();
 
         var gf = new File("./db/gerarchie.dat");
-
         if (gf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(gf));
             try {
                 this.setHierarchies((Map<String, Gerarchia>) ois.readObject());
             } catch (ClassNotFoundException | IOException e) {
                 this.setHierarchies(new HashMap<>());
+
             }
-        } else
+        } else {
             this.setHierarchies(new HashMap<>());
+        }
+
     }
 
+    /**
+     * Carica le informazioni relative a luoghi e orari per l'effettuazione degli scambi salvate in modo permanente
+     * all'utilizzo precedente dell'applicazione
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void prepareInfoStructure() throws IOException {
+        var db = new File("./db");
+        assert db.exists() || db.mkdir();
+
+        var info = new File("./db/info.dat");
+        if (info.exists()) {
+            ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream(info));
+            try {
+                this.setInfoScambio((InfoScambio) ois2.readObject());
+            } catch (ClassNotFoundException | IOException e) {
+                this.setInfoScambio(null);
+            }
+        } else {
+
+            this.setInfoScambio(null);
+        }
+    }
+
+    /**
+     * Imposta le informazioni su luoghi e orari per l'effettuazione degli scambi
+     *
+     * @param info informazioni da impostare
+     */
+    public void setInfoScambio(InfoScambio info) {
+        this.informazioni = info;
+    }
+
+    /**
+     * @return informazioni su luoghi e orari per l'effettuazione degli scambi
+     */
+    public InfoScambio getInformazioni() {
+        return this.informazioni;
+    }
 }

@@ -28,7 +28,7 @@ public class Gerarchia implements Serializable {
      * @return stringa descrittiva della gerarchia
      */
     public String toString() {
-        return "\n\nGerarchia: " + root.getNome();
+        return "\n\nGerarchia: " + root.getNome() + "\nDescrizione: "+root.getDescrizione();
     }
 
 }

@@ -33,6 +33,8 @@ public class Main {
                         if (controller.dataStore.isUsernameTaken(username)) {
                             if (controller.dataStore.getUserMap().get(username) instanceof Configuratore) {
                                 controller.secondAccessAsConfiguratore(username);
+                            } else if (controller.dataStore.getUserMap().get(username) instanceof Fruitore) {
+                                controller.secondAccessAsFruitore(username);
                             }
                         } else {
                             view.errorMessage(View.ErrorMessage.E_UNREGISTERED_USER);
@@ -41,10 +43,14 @@ public class Main {
                 }
                 break;
                 case "2": {
-                    String choice = view.in("Seleziona la modalità con cui vuoi registrarti:\n1.Configuratore");
+                    String choice = view.in("Seleziona la modalità con cui vuoi registrarti:\n1. Configuratore\n2. Fruitore");
                     switch (choice) {
                         case "1": {
                             controller.firstAccessAsConfiguratore();
+                        }
+                        break;
+                        case "2": {
+                            controller.firstAccessAsFruitore();
                         }
                         break;
                         default:

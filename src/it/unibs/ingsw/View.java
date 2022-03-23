@@ -23,7 +23,9 @@ public class View {
         EXIT_MESSAGE("Arrivederci!"),
         SAVED_CORRECTLY("Salvataggio eseguito"),
         AT_LEAST_TWO_CHILDREN("N.B. Ogni categoria nodo deve avere almeno due sotto-categorie"),
-        CHOOSE_CATEGORY("Scegliere una categoria");
+        CHOOSE_CATEGORY("Scegliere una categoria"),
+        EXCHANGE_HOURS_EVERY_30_MINS("Gli scambi potranno avvenire allo scoccare dell'ora o della mezz'ora all'interno della fascia oraria specificata"),
+        NO_INFO_YET("Non sono ancora presenti informazioni relative agli scambi");
 
         private String message;
 
@@ -71,6 +73,59 @@ public class View {
     }
 
     /**
+     * Richiede la piazza all'utente
+     *
+     * @return piazza inserita dall'utente
+     */
+    public String askPiazza() {
+        return inLine("Piazza (N.B. Non modificabile in futuro): ");
+    }
+
+    /**
+     * Richiede il luogo in cui puo' avvenire uno scambio
+     *
+     * @return luogo inserito dall'utente
+     */
+    public String askLuogo() {
+        return inLine("Luogo: ");
+    }
+
+    /**
+     * Richiede il giorno in cui puo' avvenire uno scambio
+     *
+     * @return giorno inserito dall'utente
+     */
+    public Giorno askGiorno() {
+        String giorno = inLine("Giorno: ");
+        for (Giorno g : Giorno.values()) {
+            if (giorno.equalsIgnoreCase(g.getGiorno()) || g.getGiorno().toUpperCase().startsWith(giorno.toString().toUpperCase())) {
+                return g;
+            }
+        }
+        errorMessage(ErrorMessage.E_INVALID_DAY);
+        return null;
+    }
+
+    /**
+     * Richiede l'inserimento di un numero non negativo, stampando un messaggio di richiesta
+     *
+     * @param msg messaggio
+     * @return valore inserito dall'utente
+     */
+    public int askNonNegativeNum(String msg) {
+        while (true) {
+            try {
+                System.out.println(msg);
+                int num = new Scanner(System.in).nextInt();
+                if (num >= 0)
+                    return num;
+            } catch (NumberFormatException e) {
+                errorMessage(ErrorMessage.E_WRONG_FORMAT);
+            }
+        }
+    }
+
+    /**
      * Presenta all'utente un messaggio
      *
      * @param text testo del messaggio
@@ -91,7 +146,11 @@ public class View {
         E_ILLICIT_CHOICE("Opzione non consentita"),
         E_EXISTING_ROOT_CATEGORY("ERRORE: Il nome è già stato assegnato a un'altra categoria radice"),
         E_EXISTING_NAME_IN_HIERARCHY("Nome già presente nella gerarchia"),
-        E_UNAUTHORIZED_CHOICE("ERRORE: Azione non consentita");
+        E_UNAUTHORIZED_CHOICE("ERRORE: Azione non consentita"),
+        E_WRONG_FORMAT("ERRORE: formato errato, inserire un numero"),
+        E_INVALID_DAY("ERRORE: giorno non valido"),
+        E_INVALID_TIME("ERRORE: uno degli orari inseriti non è valido"),
+        E_INVALID_TIME_RANGE("ERRORE: intervallo orario invalido");
 
         private String message;
 
@@ -121,7 +180,7 @@ public class View {
      */
     public String in(String prompt) {
         String s = null;
-        while(s == null || s.equalsIgnoreCase("")){
+        while (s == null || s.equalsIgnoreCase("")) {
             System.out.println(prompt);
             s = new Scanner(System.in).next();
         }
@@ -136,7 +195,7 @@ public class View {
      */
     public String inLine(String prompt) {
         String s = null;
-        while(s == null || s.equalsIgnoreCase("")){
+        while (s == null || s.equalsIgnoreCase("")) {
             System.out.println(prompt);
             s = new Scanner(System.in).nextLine();
         }
@@ -170,18 +229,6 @@ public class View {
     }
 
     /**
-     * Chiede se si vuole creare un nuovo configuratore o accedere a un profilo esistente
-     *
-     * @return scelta dell'utente
-     */
-    public String chooseFromMenuConfiguratore() {
-        System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
-                "\n1. Registrati" +
-                "\n2. Accedi");
-        return (new Scanner(System.in)).next();
-    }
-
-    /**
      * Chiede che azione vuole compiere il configuratore
      *
      * @return scelta dell'utente
@@ -191,7 +238,20 @@ public class View {
                 "\n1. Crea una nuova gerarchia" +
                 "\n2. Visualizza il contenuto delle gerarchie attualmente presenti nel sistema" +
                 "\n3. Salva" +
-                "\n4. Logout");
+                "\n4. Configura informazioni di scambio" +
+                "\n5. Logout");
+        return (new Scanner(System.in)).next();
+    }
+
+    /**
+     * Chiede che azione vuole compiere il fruitore
+     *
+     * @return scelta dell'utente
+     */
+    public String selectFruitoreAction() {
+        System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
+                "\n1. Visualizza il contenuto dell'applicazione e le informazioni di scambio" +
+                "\n2. Logout");
         return (new Scanner(System.in)).next();
     }
 

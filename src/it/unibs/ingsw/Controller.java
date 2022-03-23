@@ -57,8 +57,7 @@ public class Controller {
     /**
      * Permette a un utente configuratore di effettuare il login senza creare un nuovo profilo.
      * Se lo username e la password sono corretti permette di accedere alle funzionalita' dell'applicazione, altrimenti
-     * segnala che lo username e' inesistente oppure che la password e' errata. In caso di credenziale errata permette di
-     * scegliere se ritentare l'accesso con le proprie credenziali oppure creare un nuovo profilo configuratore.
+     * segnala che lo username e' inesistente oppure che la password e' errata.
      *
      * @throws IOException eccezione I/O
      */
@@ -79,12 +78,100 @@ public class Controller {
     }
 
     /**
+     * Gestisce il primo accesso come fruitore: richiede all'utente username e password personalizzati,
+     * registra il nuovo profilo utente e permette l'utilizzo dell'applicazione.
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void firstAccessAsFruitore() throws IOException {
+        String username = view.askUsername();
+        while (dataStore.isUsernameTaken(username)) {
+            view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
+            username = view.askUsername();
+        }
+
+        String password = view.askPassword();
+
+        dataStore.registerNewFruitore(username, password);
+
+        this.useAsFruitore();
+    }
+
+    /**
+     * Permette a un utente fruitore di effettuare il login senza creare un nuovo profilo.
+     * Se lo username e la password sono corretti permette di accedere alle funzionalita' dell'applicazione, altrimenti
+     * segnala che lo username e' inesistente oppure che la password e' errata.
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void secondAccessAsFruitore(String username) throws IOException {
+        boolean auth;
+
+        if (dataStore.isUsernameTaken(username)) {
+            auth = dataStore.isLoginCorrect(username, view.askPassword());
+
+            if (auth) {
+                this.useAsFruitore();
+            } else {
+                view.errorMessage(View.ErrorMessage.E_WRONG_PASSWORD);
+            }
+        } else {
+            view.errorMessage(View.ErrorMessage.E_UNREGISTERED_USER);
+        }
+    }
+
+    /**
+     * Permette di utilizzare l'applicazione come fruitore. Carica i dati salvati in modo permanente nell'utilizzo
+     * precedente dell'applicazione; permette di selezionare un'azione da svolgere:
+     * - visualizzare nome e descrizione delle gerarchie presenti nel sistema e le informazioni relative a luoghi
+     * e orari per l'effettuazione degli scambi
+     * - uscire
+     *
+     * @throws IOException eccezione I/O
+     */
+    private void useAsFruitore() throws IOException {
+        boolean end = false;
+        String choice = "0";
+        do {
+            //carica i dati salvati in precedenza
+            app.prepareDirectoryStructure();
+            app.prepareInfoStructure();
+
+            choice = view.selectFruitoreAction();
+            switch (choice) {
+                case "1": {
+                    //visualizza contenuto gerarchie e informazioni applicazione
+
+                    for (String r : app.getHierarchies().keySet()) {
+                        System.out.println(app.getHierarchy(r).toString());
+                    }
+                    if (app.getInformazioni() != null)
+                        System.out.println(app.getInformazioni().toString());
+                    else
+                        view.interactionMessage(View.InteractionMessage.NO_INFO_YET);
+                }
+                break;
+                case "2": {
+                    //esci
+
+                    end = true;
+                    view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);
+                }
+                break;
+                default:
+                    view.errorMessage(View.ErrorMessage.E_ILLICIT_CHOICE);
+            }
+        } while (!end);
+    }
+
+    /**
      * Permette di utilizzare l'applicazione come configuratore. Carica i dati salvati in modo permanente nell'utilizzo
      * precedente dell'applicazione; permette di selezionare un'azione da svolgere:
      * - creare una nuova gerarchia di categorie
      * - visualizzare le gerarchie attualmente presenti: per ogni gerarchia richiama il metodo toString() opportunamente
      * sovrascritto nella rispettiva classe
      * - salvare i dati: salva il contenuto delle gerarchie in modo permanente
+     * - configurare le informazioni di scambio
      * - uscire
      *
      * @throws IOException eccezione I/O
@@ -95,6 +182,7 @@ public class Controller {
         do {
             //carica i dati salvati in precedenza
             app.prepareDirectoryStructure();
+            app.prepareInfoStructure();
 
             choice = view.selectConfiguratoreAction();
             switch (choice) {
@@ -121,6 +209,14 @@ public class Controller {
                 }
                 break;
                 case "4": {
+                    //configura informazioni di scambio
+
+                    app.setInfoScambio(new InfoScambio(app, view));
+                    app.saveInfo();
+                    view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
+                }
+                break;
+                case "5": {
                     //esci
 
                     end = true;
@@ -132,6 +228,7 @@ public class Controller {
             }
         } while (!end);
     }
+
 
     /**
      * Crea una nuova gerarchia: chiede il nome della radice, verifica che non esista una gerarchia con radice omonima,
@@ -273,12 +370,8 @@ public class Controller {
 
         if (password != null && username != null) {
             dataStore.updateUser(currentUsername, username, password);
-            dataStore.save();
         } else {
             view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
         }
-
     }
-
-
 }
