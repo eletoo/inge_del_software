@@ -20,12 +20,11 @@ public class InfoScambio implements Serializable {
     /**
      * Costruttore
      */
-    public InfoScambio(Applicazione app, View view) {
-        piazza = null;
+    public InfoScambio(@NotNull Applicazione app, View view) {
         luoghi = new ArrayList<>();
         giorni = new ArrayList<>();
         intervalliOrari = new ArrayList<>();
-        scadenza = 0;
+
         this.configureExchangeSettings(app, view);
     }
 
@@ -39,21 +38,22 @@ public class InfoScambio implements Serializable {
         sb.append(piazza);
         sb.append("\nLuoghi: ");
         for (int i = 0; i < luoghi.size(); i++) {
-            sb.append("\n");
+            sb.append("\n -> ");
             sb.append(luoghi.get(i));
         }
         sb.append("\nGiorni: ");
         for (int i = 0; i < giorni.size(); i++) {
-            sb.append("\n");
             sb.append(giorni.get(i));
+            if (i < giorni.size() - 1)
+                sb.append(", ");
         }
         sb.append("\nIntervalli Orari: ");
         for (int i = 0; i < intervalliOrari.size(); i++) {
-            sb.append("\n");
             sb.append(intervalliOrari.get(i).toString());
+            if (i < intervalliOrari.size() - 1)
+                sb.append(", ");
         }
-        sb.append("\nScadenza:");
-        sb.append(scadenza);
+        sb.append("\nScadenza offerte dopo " + scadenza + " giorni");
         return sb.toString();
     }
 
@@ -101,30 +101,14 @@ public class InfoScambio implements Serializable {
         while (this.intervalliOrari.isEmpty() || view.yesOrNoQuestion("Inserire un altra fascia oraria per lo scambio? [Y/N]").equalsIgnoreCase("y")) {
             view.interactionMessage(View.InteractionMessage.EXCHANGE_HOURS_EVERY_30_MINS);
             //chiede l'orario di inizio
-            Orario start;
-            int startHour;
-            int startMin;
-            do {
-                startHour = view.askNonNegativeNum("Ora di inizio [hh] [00-23]: ");
-                startMin = view.askNonNegativeNum("Minuti di inizio [mm] [00 o 30]: ");
-                start = new Orario(startHour, startMin);
-                if (!start.isValid(startHour, startMin))
-                    view.errorMessage(View.ErrorMessage.E_INVALID_TIME);
-            } while (!start.isValid(startHour, startMin));
+            Orario start = new Orario();
+            start = start.askOrario(Orario.StartOrEnd.START, view);
             //chiede l'orario di fine
-            Orario end;
-            int endHour;
-            int endMin;
-            do {
-                endHour = view.askNonNegativeNum("Ora di fine [hh] [00-23]: ");
-                endMin = view.askNonNegativeNum("Minuti di fine [mm] [00 o 30]: ");
-                end = new Orario(endHour, endMin);
-                if (!end.isValid(endHour, endMin))
-                    view.errorMessage(View.ErrorMessage.E_INVALID_TIME);
-            } while (!end.isValid(endHour, endMin));
+            Orario end = new Orario();
+            end = end.askOrario(Orario.StartOrEnd.END, view);
 
             IntervalloOrario intervallo = new IntervalloOrario(start, end);
-            if (intervallo.isValidRange(start, end))
+            if (intervallo.isValidRange() && intervallo.isNewRange(intervalliOrari))
                 this.intervalliOrari.add(intervallo);
             else
                 view.errorMessage(View.ErrorMessage.E_INVALID_TIME_RANGE);
@@ -138,7 +122,9 @@ public class InfoScambio implements Serializable {
      */
     private void configureDays(View view) {
         while (this.giorni.isEmpty() || view.yesOrNoQuestion("Inserire un altro giorno per lo scambio? [Y/N]").equalsIgnoreCase("y")) {
-            this.giorni.add(view.askGiorno());
+            Giorno g = view.askGiorno();
+            if (g != null)
+                this.giorni.add(g);
         }
     }
 

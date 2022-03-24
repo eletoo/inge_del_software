@@ -7,7 +7,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 /**
- * Controller: mette in comunicazione Model (ossia la classe {@link UserDataStore}) e {@link View} per rispettare il modello MVC.
+ * Controller: gestisce l'accesso degli utenti e l'interazione con l'applicazione mettendo in comunicazione {@link UserDataStore},
+ * {@link View} e {@link Applicazione}
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
@@ -90,7 +91,7 @@ public class Controller {
             username = view.askUsername();
         }
 
-        String password = view.askPassword();
+        String password = view.askCustomPassword();
 
         dataStore.registerNewFruitore(username, password);
 
@@ -211,7 +212,15 @@ public class Controller {
                 case "4": {
                     //configura informazioni di scambio
 
-                    app.setInfoScambio(new InfoScambio(app, view));
+                    if(app.getInformazioni()==null){
+                        app.setInfoScambio(new InfoScambio(app, view));
+                    }else{
+                        view.interactionMessage(View.InteractionMessage.CURRENT_INFO);
+                        System.out.println(app.getInformazioni().toString());
+                        if(view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")){
+                            app.setInfoScambio(new InfoScambio(app, view));
+                        }
+                    }
                     app.saveInfo();
                     view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
                 }

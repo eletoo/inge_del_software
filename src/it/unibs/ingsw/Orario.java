@@ -1,5 +1,7 @@
 package it.unibs.ingsw;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.Serializable;
 
 /**
@@ -20,6 +22,12 @@ public class Orario implements Serializable {
     public Orario(int hour, int minutes) {
         this.hour = hour;
         this.minutes = minutes;
+    }
+
+    /**
+     * Costruttore
+     */
+    public Orario() {
     }
 
     /**
@@ -58,5 +66,57 @@ public class Orario implements Serializable {
      */
     public int getHour() {
         return hour;
+    }
+
+    /**
+     * StartOrEnd: enum che tiene traccia del fatto che un orario sia di inizio o di fine di un intervallo
+     */
+    public static enum StartOrEnd {
+        START("inizio"), END("fine");
+
+        private String startOrEnd;
+
+        StartOrEnd(String startOrEnd) {
+            this.startOrEnd = startOrEnd;
+        }
+
+        public String getStartOrEnd() {
+            return this.startOrEnd;
+        }
+    }
+
+    /**
+     * Chiede di inserire un orario nel formato hh:mm, verificandone la validita'.
+     *
+     * @param startOrEnd posizione dell'orario all'inizio o alla fine dell'intervallo
+     * @param view       view
+     * @return orario (di inizio o di fine dell'intervallo a seconda di quanto specificato nei parametri) inserito dall'utente
+     */
+    public Orario askOrario(@NotNull StartOrEnd startOrEnd, @NotNull View view) {
+        Orario hour;
+        int h;
+        int m;
+        do {
+            h = view.askNonNegativeNum("Ora di " + startOrEnd.getStartOrEnd() + " [hh] [00-23]: ");
+            m = view.askNonNegativeNum("Minuti di " + startOrEnd.getStartOrEnd() + " [mm] [00 o 30]: ");
+            hour = new Orario(h, m);
+            if (!hour.isValid(h, m))
+                view.errorMessage(View.ErrorMessage.E_INVALID_TIME);
+        } while (!hour.isValid(h, m));
+        return hour;
+    }
+
+    /**
+     * Verifica se l'orario e' successivo a quello passato come parametro. Se gli orari sono uguali ritorna false.
+     *
+     * @param o orario da confrontare
+     * @return true se l'orario su cui e' chiamato il metodo e' successivo all'orario passato come parametro
+     */
+    public boolean isLaterThan(@NotNull Orario o) {
+        if (this.getHour() > o.getHour())
+            return true;
+        if (this.getHour() == o.getHour() && this.getMinutes() > o.getMinutes())
+            return true;
+        return false;
     }
 }

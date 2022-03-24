@@ -86,7 +86,7 @@ public class Applicazione {
     public void saveInfo() throws IOException {
         FileOutputStream fos = new FileOutputStream(new File("./db/info.dat"));
         ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(this.informazioni);
+        oos.writeObject(this.getInformazioni());
         oos.close();
     }
 

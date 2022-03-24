@@ -25,7 +25,8 @@ public class View {
         AT_LEAST_TWO_CHILDREN("N.B. Ogni categoria nodo deve avere almeno due sotto-categorie"),
         CHOOSE_CATEGORY("Scegliere una categoria"),
         EXCHANGE_HOURS_EVERY_30_MINS("Gli scambi potranno avvenire allo scoccare dell'ora o della mezz'ora all'interno della fascia oraria specificata"),
-        NO_INFO_YET("Non sono ancora presenti informazioni relative agli scambi");
+        NO_INFO_YET("Non sono ancora presenti informazioni relative agli scambi"),
+        CURRENT_INFO("\nAttualmente sono presenti le seguenti informazioni di scambio: ");
 
         private String message;
 
@@ -114,12 +115,13 @@ public class View {
      */
     public int askNonNegativeNum(String msg) {
         while (true) {
+            int num = -1;
             try {
                 System.out.println(msg);
-                int num = new Scanner(System.in).nextInt();
+                num = new Scanner(System.in).nextInt();
                 if (num >= 0)
                     return num;
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException | IllegalFormatException | InputMismatchException e) {
                 errorMessage(ErrorMessage.E_WRONG_FORMAT);
             }
         }

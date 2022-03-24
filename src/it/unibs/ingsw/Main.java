@@ -64,11 +64,7 @@ public class Main {
                 break;
                 default:
                     view.errorMessage(View.ErrorMessage.E_UNAUTHORIZED_CHOICE);
-
             }
-
         } while (!val.contentEquals("3"));
-
     }
-
 }

@@ -7,7 +7,7 @@ import java.util.*;
 import java.security.*;
 
 /**
- * UserDataStore: Model dell'applicazione, contiene tutti i dati degli utenti
+ * UserDataStore: classe che contiene tutti i dati degli utenti
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
