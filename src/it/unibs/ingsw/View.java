@@ -98,12 +98,17 @@ public class View {
      */
     public Giorno askGiorno() {
         String giorno = inLine("Giorno: ");
+        LinkedList<Giorno> list = new LinkedList<>();
         for (Giorno g : Giorno.values()) {
             if (giorno.equalsIgnoreCase(g.getGiorno()) || g.getGiorno().toUpperCase().startsWith(giorno.toString().toUpperCase())) {
-                return g;
+                list.add(g);
             }
         }
+
+        if(list.size()==1)
+            return list.get(0);
         errorMessage(ErrorMessage.E_INVALID_DAY);
+
         return null;
     }
 
@@ -150,7 +155,7 @@ public class View {
         E_EXISTING_NAME_IN_HIERARCHY("Nome già presente nella gerarchia"),
         E_UNAUTHORIZED_CHOICE("ERRORE: Azione non consentita"),
         E_WRONG_FORMAT("ERRORE: formato errato, inserire un numero"),
-        E_INVALID_DAY("ERRORE: giorno non valido"),
+        E_INVALID_DAY("ERRORE: giorno non valido o ambiguo"),
         E_INVALID_TIME("ERRORE: uno degli orari inseriti non è valido"),
         E_INVALID_TIME_RANGE("ERRORE: intervallo orario invalido");
 
