@@ -62,10 +62,9 @@ public class IntervalloOrario implements Serializable {
      */
     @Contract(pure = true)
     private boolean overlaps(@NotNull IntervalloOrario b) {
-        if (this.start == b.start || this.end == b.end) //i due intervalli iniziano o finiscono nello stesso momento
+        if (this.start.equals(b.start) || this.end.equals(b.end)) //i due intervalli iniziano o finiscono nello stesso momento
             return true;
         if (b.start.isLaterThan(this.start) && !b.start.isLaterThan(this.end)) //B inizia dopo l'inizio di A ma prima della fine di A
-
             return true;
         return false;
     }

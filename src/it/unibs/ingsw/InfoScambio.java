@@ -108,7 +108,7 @@ public class InfoScambio implements Serializable {
             end = end.askOrario(Orario.StartOrEnd.END, view);
 
             IntervalloOrario intervallo = new IntervalloOrario(start, end);
-            if (intervallo.isValidRange() && intervallo.isNewRange(intervalliOrari))
+            if (intervallo.isValidRange() && intervallo.isNewRange(this.intervalliOrari))
                 this.intervalliOrari.add(intervallo);
             else
                 view.errorMessage(View.ErrorMessage.E_INVALID_TIME_RANGE);
@@ -123,7 +123,7 @@ public class InfoScambio implements Serializable {
     private void configureDays(View view) {
         while (this.giorni.isEmpty() || view.yesOrNoQuestion("Inserire un altro giorno per lo scambio? [Y/N]").equalsIgnoreCase("y")) {
             Giorno g = view.askGiorno();
-            if (g != null)
+            if (g != null && !this.giorni.contains(g))
                 this.giorni.add(g);
         }
     }

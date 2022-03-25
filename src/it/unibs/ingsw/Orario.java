@@ -3,6 +3,7 @@ package it.unibs.ingsw;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Orario: classe che gestisce le informazioni relative a un orario
@@ -118,5 +119,29 @@ public class Orario implements Serializable {
         if (this.getHour() == o.getHour() && this.getMinutes() > o.getMinutes())
             return true;
         return false;
+    }
+
+    /**
+     * Verifica se due orari sono lo stesso orario
+     *
+     * @param o orario da confrontare
+     * @return true se gli orari sono gli stessi
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Orario orario = (Orario) o;
+        return hour == orario.hour && minutes == orario.minutes;
+    }
+
+    /**
+     * Override del metodo hashCode() della classe Object
+     *
+     * @return hashCode
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(hour, minutes);
     }
 }
