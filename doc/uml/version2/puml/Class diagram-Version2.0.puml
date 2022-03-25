@@ -1,0 +1,271 @@
+@startuml
+skinparam ClassAttributeIconSize 0
+
+class Applicazione{
+- hierarchies: Map<String, Gerarchia>
++ <<constructor>> Applicazione()
++ addGerarchia(String, Gerarchia): void
++ isHierarchyNameTaken(String): boolean
++ getHierarchies(): Map<String, Gerarchia>
++ setHierarchies(Map<String, Gerarchia>): void
++ getHierarchy(String): Gerarchia
++ saveData(): void
++ prepareDirectoryStructure(): void
++ prepareInfoStructure(): void
++ setInfoScambio(InfoScambio): void
++ getInformazioni(): InfoScambio
++ createNewHierarchy(View): void
+}
+
+class CampoNativo{
+- obbligatorio: boolean
+- type: Tipo
++ <<constructor>> CampoNativo
++ isObbligatorio(): boolean
++ getType(): Tipo
+}
+
+enum Tipo{
+STRING
+}
+
+abstract class User{
+- username: String
+- hashedPw: String
++ <<constructor>> User(String, String)
++ getUsername(): String
++ getHashedPw(): String
+- {static}hashPassword(String): String
++ authenticate(String): boolean
++ changePassword(String): void
++ changeUsername(String): void
+}
+
+class Configuratore{
++ <<constructor>> Configuratore(String, String)
+}
+
+class Fruitore{
++ <<constructor>> Fruitore(String, String)
+}
+
+class Gerarchia{
+- root: Categoria
++ <<constructor>> Gerarchia(Categoria)
++ getRoot(): Categoria
++ toString(): String
+}
+
+enum Giorno{
+LUNEDI
+MARTEDI
+MERCOLEDI
+GIOVEDI
+VENERDI
+SABATO
+DOMENICA
+- giorno: String
+<<constructor>> Giorno(String)
++ getGiorno(): String
+}
+
+class InfoScambio{
+- piazza: String
+- luoghi: List<String>
+- giorni: List<Giorno>
+- intervalliOrari: List<IntervalloOrario>
+- scadenza: int
++ <<constructor>> InfoScambio(Applicazione, View)
++ toString(): String
++ getPiazza(): String
+- configureExchangeSettings(Applicazione, View): void
+- configureExpiration(View): void
+- configureTimeRange(View): void
+- configureDays(View): void
+- configurePlaces(View): void
+- configurePiazza(Applicazione, View): void
+}
+
+class IntervalloOrario{
+- start: Orario
+- end: Orario
++ <<constructor>> IntervalloOrario(Orario, Orario)
++ isValidRange(): boolean
++ isNewRange(List<IntervalloOrario>): boolean
+- overlaps(IntervalloOrario): boolean
++ toString(): String
+}
+
+abstract class Categoria{
+- nome: String
+- descrizione: String
+- campiNativi: Map<String, CampoNativo>
++ <<constructor>> Categoria(String, String)
++ getNome(): String
++ setNome(Nome): void
++ getDescrizione(): String
++ setDescrizione(String): void
++ getCampiNativi(): Map<String, CampoNativo>
++ setCampiNativi(Map<String, CampoNativo>): void
++ toString(): String
++ isNameTaken(String): boolean
+- {static}isNameTaken(Categoria, String): boolean
++ isStructureValid(): boolean
+- {static}isStructureValid(Categoria): boolean
+- generaCampiNativiRadice(): Map<String, CampoNativo>
++ generaCampiNativi(Categoria, View): Map<String, CampoNativo>
+}
+
+class CategoriaEntry{
+- cat: Categoria
+- father: Nodo
+- displayName: String
++ <<constructor>> CategoriaEntry
++ getCat(): Categoria
++ getFather(): Nodo
++ getDisplayName(): String
++ {static}catAsNode(Categoria): Nodo
++ asNode(): Nodo
+}
+
+class Foglia{
++ <<constructor>> Foglia(String, String)
++ toString(): String
+}
+
+class Nodo{
+- categorieFiglie: List<Categoria>
++ <<constructor>> Nodo(String, String)
++ getCategorieFiglie(): List<Categoria>
++ removeChild(Categoria): void
++ addChild(Categoria): void
++ toString(): String
+}
+
+class Orario{
+- hour: int
+- miuntes: int
++ <<constructor>> Orario(int, int)
++ <<constructor>> Orario()
++ toString(): String
++ isValid(int, int): boolean
++ getMinutes(): int
++ getHour(): int
++ askOrario(StartOrEnd, View): Orario
++ isLaterThan(Orario): boolean
++ equals(Object): boolean
++ hashCode(): int
+}
+
+enum StartOrEnd{
+START
+END
+- startOrEnd: String
+<<constructor>> StartOrEnd(String)
++ toString(): String
+}
+
+class View{
++ <<constructor>> View()
++ interacrionMessage(InteractionMessage): void
++ askUsername(): String
++ askNewUsername(): String
++ askPassword(): String
++ askPiazza(): String
++ askLuogo(): String
++ askGiorno(): Giorno
++ askNonNegativeNum(String): int
++ message(String): void
++ errorMessage(ErrorMessage): void
++ in(String): String
++ inLine(String): String
++ askCustomPassword(): String
++ communicateCredentials(String, String): void
++ selectConfiguratoreAction(): String
++ selectFruitoreAction(): String
++ askDescription(): String
++ askCategoryName(): String
++ insertFieldName(): String
++ yesOrNoQuestion(String): String
++ findCategory(Categoria): CategoriaEntry
+- getCategorieAsList(Categoria): List<CategoriaEntry>
+- getCategorieAsList(Categoria, Nodo, List<CategoriaEntry>, String): List<CategoriaEntry>
+}
+
+enum ErrorMessage{
+E_CREDENTIALS_ERROR
+E_DIFFERENT_PASSWORDS
+E_USERNAME_TAKEN
+E_UNREGISTERED_USER
+E_WRONG_PASSWORD
+E_ILLICIT_CHOICE
+E_EXISTING_ROOT_CATEGORY
+E_EXISTING_NAME_IN_HIERARCHY
+E_UNAUTHORIZED_CHOICE
+E_WRONG_FORMAT
+E_INVALID_DAY
+E_INVALID_TIME
+E_INVALID_TIME_RANGE
+
+- message: String
+<<constructor>> ErrorMessage(String)
++ getMessage(): String
+}
+
+enum InteractionMessage{
+CUSTOMIZE_CREDENTIALS
+EXIT_MESSAGE
+SAVED_CORRECTLY
+AT_LEAST_TWO_CHILDREN
+CHOOSE_CATEGORY
+EXCHANGE_HOURS_EVERY_30_MINS
+NO_INFO_YET
+CURRENT_INFO
+
+- message: String
+<<constructor>> InteractionMessage(String)
++ getMessage(): String
+}
+
+class UserDataStore{
+- {static}instance: UserDataStore
+- userMap: Map<String, User>
++ <<constructor>> UserDataStore()
++ {static}getInstance(): UserDataStore
++ isUsernameTaken(String): boolean
++ registerNewConfiguratore(String, String): void
++ updateUser(String, String, String): void
+- {static}generateRandomPassword(int): String
+- {static}generateRandomString(int): String
++ isLoginCorrect(String, String): boolean
++ isEmpty(): boolean
++ getUserMap(): Map<String, User>
++ setUserMap(Map<String, User>): void
++ addNewConfiguratore(View): void
++ customizeConfiguratore(String, View): void
++ save(): void
++ load(): void
+}
+
+class Controller{
+- dataStore: UserDataStore
+- view: View
+- app: Applicazione
++ <<constructor>> Controller()
++ firstAccessAsConfiguratore(): void
++ secondAccessAsConfiguratore(String): void
++ firstAccessAsFruitore(): void
++ secondAccessAsFruitore(): void
+- useAsFruitore(): void
+- useAsConfiguratore(): void
+}
+
+class Main{
++ main(String): void
+}
+
+CampoNativo +-- Tipo
+View +-- InteractionMessage
+View +-- ErrorMessage
+Orario +-- StartOrEnd
+@enduml

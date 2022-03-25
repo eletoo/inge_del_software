@@ -3,7 +3,7 @@ package it.unibs.ingsw;
 import java.io.Serializable;
 
 /**
- * Tiene traccia della categoria radice
+ * Gerarchia: classe che tiene traccia della categoria radice di una gerarchia
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */

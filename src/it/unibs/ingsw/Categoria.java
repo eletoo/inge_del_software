@@ -143,4 +143,57 @@ public abstract class Categoria implements Serializable {
         }
         return true;
     }
+
+    /**
+     * Restituisce i campi nativi da assegnare alla categoria radice dotandoli di opportuni valori che ne indicano
+     * la compilazione obbligatoria o meno.
+     *
+     * @return campi da assegnare alla categoria radice
+     */
+    private @NotNull Map<String, CampoNativo> generaCampiNativiRadice() {
+        CampoNativo statoConservazione = new CampoNativo(true, CampoNativo.Tipo.STRING);
+        CampoNativo descrizioneLibera = new CampoNativo(false, CampoNativo.Tipo.STRING);
+        Map<String, CampoNativo> campi = new HashMap<>();
+        campi.put("Stato Conservazione", statoConservazione);
+        campi.put("Descrizione Libera", descrizioneLibera);
+        return campi;
+    }
+
+    /**
+     * Genera i campi nativi (chiedendone nome e obbligatorieta') da aggiungere alla categoria c e aggiunge quelli che
+     * essa eredita dalla categoria parent
+     *
+     * @param parent categoria parent da cui ereditare i campi
+     * @return campi nativi
+     */
+    public @NotNull Map<String, CampoNativo> generaCampiNativi(Categoria parent, View view) {
+        Map<String, CampoNativo> campi = new HashMap<>();
+
+        if (parent == null) {
+            campi.putAll(generaCampiNativiRadice());
+        } else {
+            campi.putAll(parent.getCampiNativi());
+        }
+
+        String ans;
+        do {
+            ans = view.yesOrNoQuestion("Inserire un altro campo descrittivo alla categoria " + this.getNome() + "? (Y/N)");
+
+            if (ans.equalsIgnoreCase("y")) {
+                String nome = view.insertFieldName();
+                boolean obbligatorio;
+                String ans2 = view.yesOrNoQuestion("Campo a compilazione obbligatoria? (Y/N)");
+
+                if (ans2.equalsIgnoreCase("y")) {
+                    obbligatorio = true;
+                } else {
+                    obbligatorio = false;
+                }
+                CampoNativo nuovo = new CampoNativo(obbligatorio, CampoNativo.Tipo.STRING);
+                campi.put(nome, nuovo);
+            }
+        } while (!ans.equalsIgnoreCase("n"));
+
+        return campi;
+    }
 }

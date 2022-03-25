@@ -13,6 +13,8 @@ import java.security.*;
  */
 public class UserDataStore implements Serializable {
 
+    public static final int STD_USERNAME_LEN = 10;
+    public static final int STD_PW_LEN = 10;
     private static UserDataStore instance;
 
     static {
@@ -157,6 +159,50 @@ public class UserDataStore implements Serializable {
     }
 
     /**
+     * Genera una stringa casuale da comunicare all'utente come username assicurandosi che non ci sia un utente omonimo
+     * gia' registrato. Genera una stringa casuale da usare come password. Comunica le credenziali all'utente e invoca
+     * un metodo per registrarlo nel dataStore
+     */
+    public void addNewConfiguratore(@NotNull View view) {
+        String username;
+        do {
+            username = this.generateRandomString(STD_USERNAME_LEN);
+        } while (this.isUsernameTaken(username));
+
+        String password = this.generateRandomPassword(STD_PW_LEN);
+
+        view.communicateCredentials(username, password);
+
+        this.registerNewConfiguratore(username, password);
+    }
+
+    /**
+     * Permette all'utente configuratore di nome currentUsername di modificare le proprie credenziali, assicurandosi che
+     * il nuovo username custom non sia gia' usato da altri utenti.
+     *
+     * @param currentUsername username corrente dell'utente configuratore
+     */
+    public void customizeConfiguratore(String currentUsername, @NotNull View view) {
+        view.interactionMessage(View.InteractionMessage.CUSTOMIZE_CREDENTIALS);
+        String username;
+        do {
+            username = view.askNewUsername();
+            if (this.isUsernameTaken(username)) {
+                view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
+            }
+        } while (this.isUsernameTaken(username));
+
+        String password = view.askCustomPassword();
+
+        if (password != null && username != null) {
+            this.updateUser(currentUsername, username, password);
+        } else {
+            view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
+        }
+    }
+
+
+    /**
      * Salva il contenuto della userMap in modo permanente
      */
     private void save() {
@@ -191,5 +237,4 @@ public class UserDataStore implements Serializable {
         } else
             setUserMap(new HashMap<>());
     }
-
 }

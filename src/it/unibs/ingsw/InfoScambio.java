@@ -43,7 +43,7 @@ public class InfoScambio implements Serializable {
         }
         sb.append("\nGiorni: ");
         for (int i = 0; i < giorni.size(); i++) {
-            sb.append(giorni.get(i));
+            sb.append(giorni.get(i).getGiorno());
             if (i < giorni.size() - 1)
                 sb.append(", ");
         }

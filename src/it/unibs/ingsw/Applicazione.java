@@ -1,5 +1,7 @@
 package it.unibs.ingsw;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.*;
 import java.util.*;
 
@@ -152,5 +154,53 @@ public class Applicazione {
      */
     public InfoScambio getInformazioni() {
         return this.informazioni;
+    }
+
+    /**
+     * Crea una nuova gerarchia: chiede il nome della radice, verifica che non esista una gerarchia con radice omonima,
+     * chiede la descrizione e imposta i campi nativi della radice.
+     * Se la struttura della categoria creata non e' valida oppure l'utente vuole aggiungere delle sottocategorie
+     * viene chiesto all'utente a che categoria aggiungere sottocategorie (almeno due) e nome, descrizione ed eventuali
+     * nuovi campi nativi per ognuna di esse.
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void createNewHierarchy(@NotNull View view) throws IOException {
+        String rootname = view.askCategoryName();
+        if (this.isHierarchyNameTaken(rootname)) {
+            view.errorMessage(View.ErrorMessage.E_EXISTING_ROOT_CATEGORY);
+            return;
+        }
+        String descr = view.askDescription();
+        Categoria root = new Foglia(rootname, descr);
+        root.setCampiNativi(root.generaCampiNativi(null, view));
+
+        //Se la struttura non è valida l'utente dovrà proseguire nell'aggiunta al fine di renderla tale (oppure se ha sbagliato ricomincia)
+        //altrimenti chiediamo se vuole aggiungere una categoria
+        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]").equalsIgnoreCase("y")) {
+            view.interactionMessage(View.InteractionMessage.AT_LEAST_TWO_CHILDREN);
+            CategoriaEntry padre = view.findCategory(root); //Prompt per l'utente in modo che scelga una categoria
+
+            if (padre.getCat() == root) //se la categoria è la root (stessa istanza)
+                root = padre.asNode(); //setto la root uguale a se stessa ma come nodo
+            else {
+                padre.asNode(); //faccio sì che la categoria scelta diventi nodo e venga aggiornato il padre.
+            }
+
+            String name = view.askCategoryName();
+            if (!root.isNameTaken(name)) {
+                String desc = view.askDescription();
+                var cat = new Foglia(name, desc);
+                cat.setCampiNativi(cat.generaCampiNativi(padre.getCat(), view));
+                ((Nodo) padre.getCat()).addChild(cat);
+            } else
+                view.errorMessage(View.ErrorMessage.E_EXISTING_NAME_IN_HIERARCHY);
+        }
+
+        this.addGerarchia(rootname, new Gerarchia(root));
+        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
+            this.saveData();
+            view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
+        }
     }
 }
