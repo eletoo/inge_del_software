@@ -170,18 +170,6 @@ public class View {
     }
 
     /**
-     * Chiede se si vuole creare un nuovo configuratore o accedere a un profilo esistente
-     *
-     * @return scelta dell'utente
-     */
-    public String chooseFromMenuConfiguratore() {
-        System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
-                "\n1. Registrati" +
-                "\n2. Accedi");
-        return (new Scanner(System.in)).next();
-    }
-
-    /**
      * Chiede che azione vuole compiere il configuratore
      *
      * @return scelta dell'utente

@@ -7,12 +7,14 @@ import java.util.*;
 import java.security.*;
 
 /**
- * UserDataStore: Model dell'applicazione, contiene tutti i dati degli utenti
+ * UserDataStore: classe che contiene tutti i dati degli utenti
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
 public class UserDataStore implements Serializable {
 
+    private static final int STD_USERNAME_LEN = 10;
+    private static final int STD_PW_LEN = 10;
     private static UserDataStore instance;
 
     static {
@@ -79,7 +81,7 @@ public class UserDataStore implements Serializable {
      * @param len lunghezza della password
      * @return password
      */
-    public static @NotNull String generateRandomPassword(int len) {
+    private static @NotNull String generateRandomPassword(int len) {
         String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi"
                 + "jklmnopqrstuvwxyz!@#$%&£";
         Random rnd = new Random();
@@ -96,7 +98,7 @@ public class UserDataStore implements Serializable {
      * @param size lunghezza dello username
      * @return username
      */
-    public static String generateRandomString(int size) {
+    private static String generateRandomString(int size) {
         String rand = "";
         String chars = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_-.";
 
@@ -113,7 +115,6 @@ public class UserDataStore implements Serializable {
      * @return true se username e password sono registrati e sono stati inseriti correttamente
      */
     public boolean isLoginCorrect(String username, String password) {
-
         //utente non registrato
         if (!userMap.containsKey(username)) {
             return false;
@@ -141,6 +142,49 @@ public class UserDataStore implements Serializable {
      */
     public void setUserMap(Map<String, User> usermap) {
         this.userMap = usermap;
+    }
+
+    /**
+     * Genera una stringa casuale da comunicare all'utente come username assicurandosi che non ci sia un utente omonimo
+     * gia' registrato. Genera una stringa casuale da usare come password. Comunica le credenziali all'utente e invoca
+     * un metodo per registrarlo nel dataStore
+     *
+     * @param view view
+     */
+    public void addNewConfiguratore(@NotNull View view) {
+        String username;
+        do {
+            username = this.generateRandomString(STD_USERNAME_LEN);
+        } while (this.isUsernameTaken(username));
+        String password = this.generateRandomPassword(STD_PW_LEN);
+        view.communicateCredentials(username, password);
+        this.registerNewConfiguratore(username, password);
+    }
+
+    /**
+     * Permette all'utente configuratore di nome currentUsername di modificare le proprie credenziali, assicurandosi che
+     * il nuovo username custom non sia gia' usato da altri utenti.
+     *
+     * @param currentUsername username corrente dell'utente configuratore
+     * @param view            view
+     */
+    public void customizeConfiguratore(String currentUsername, @NotNull View view) {
+        view.interactionMessage(View.InteractionMessage.CUSTOMIZE_CREDENTIALS);
+        String username;
+        do {
+            username = view.askNewUsername();
+            if (this.isUsernameTaken(username)) {
+                view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
+            }
+        } while (this.isUsernameTaken(username));
+        String password = view.askCustomPassword();
+
+        if (password != null && username != null) {
+            this.updateUser(currentUsername, username, password);
+            this.save();
+        } else {
+            view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
+        }
     }
 
     /**

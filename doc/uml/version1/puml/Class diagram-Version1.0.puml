@@ -2,7 +2,7 @@
 skinparam ClassAttributeIconSize 0
 
 class Applicazione{
-+ gerarchie: Map<Gerarchia>
++ gerarchie: Map<String, Gerarchia>
 - addGerarchia(Gerarchia): void
 }
 
