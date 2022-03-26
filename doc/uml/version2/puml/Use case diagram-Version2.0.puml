@@ -3,7 +3,7 @@
 :Fruitore: as Admin
 (Accesso fruitore) as (UseF1)
 (Creazione fruitore) as (UseF2)
-(Visualizza informazioni app) as (UseF3)
+(Visualizzazione informazioni app) as (UseF3)
 
 Admin --> (UseF3)
 Admin --> (UseF1)
@@ -17,7 +17,7 @@ Admin --> (UseF2)
 (Visualizzazione gerarchie) as (Use4)
 (Creazione gerarchia) as (Use5)
 (Aggiunta categoria) as (Use6)
-(Configura parametri) as (Use7)
+(Configurazione parametri) as (Use7)
 
 :Configuratore: as Admin2
 Admin2 --> (Use4)
