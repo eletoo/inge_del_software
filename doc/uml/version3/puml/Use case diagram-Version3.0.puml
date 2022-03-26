@@ -9,16 +9,15 @@
 (Offerta di baratto) as (UseF7)
 (Modifica stato offerta) as (UseF8)
 
-Admin --> (UseF3)
-Admin --> (UseF1)
-Admin --> (UseF2)
-Admin --> (UseF6)
+Admin -left-> (UseF3)
+Admin -up-> (UseF1)
+Admin -up-> (UseF2)
+Admin -right-> (UseF6)
 Admin --> (UseF5)
 Admin --> (UseF7)
 Admin --> (UseF8)
 
 (UseF1) .right.> (UseF2): <<include>>
-
 
 (Accesso configuratore) as (Use1)
 (Creazione configuratore) as (Use2)
@@ -29,12 +28,12 @@ Admin --> (UseF8)
 (Configura parametri) as (Use7)
 
 :Configuratore: as Admin2
-Admin2 --> (Use4)
+Admin2 -left-> (Use4)
 Admin2 --> (Use5)
 Admin2 --> (Use3)
 Admin2 -right-> (Use2)
-Admin2 --> (Use1)
-Admin2 --> (Use7)
+Admin2 -up-> (Use1)
+Admin2 -up-> (Use7)
 Admin2 --> (UseF5)
 
 
