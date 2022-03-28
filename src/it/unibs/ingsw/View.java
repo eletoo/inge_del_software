@@ -26,7 +26,8 @@ public class View {
         CHOOSE_CATEGORY("Scegliere una categoria"),
         EXCHANGE_HOURS_EVERY_30_MINS("Gli scambi potranno avvenire allo scoccare dell'ora o della mezz'ora all'interno della fascia oraria specificata"),
         NO_INFO_YET("Non sono ancora presenti informazioni relative agli scambi"),
-        CURRENT_INFO("\nAttualmente sono presenti le seguenti informazioni di scambio: ");
+        CURRENT_INFO("\nAttualmente sono presenti le seguenti informazioni di scambio: "),
+        NO_HIERARCHIES_YET("Non sono ancora presenti gerarchie all'interno dell'applicazione");
 
         private String message;
 

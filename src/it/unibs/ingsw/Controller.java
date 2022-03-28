@@ -141,6 +141,9 @@ public class Controller {
                 case "1": {
                     //visualizza contenuto gerarchie e informazioni applicazione
 
+                    if(app.getHierarchies().isEmpty()){
+                        view.interactionMessage(View.InteractionMessage.NO_HIERARCHIES_YET);
+                    }
                     for (String r : app.getHierarchies().keySet()) {
                         System.out.println(app.getHierarchy(r).toString());
                     }
