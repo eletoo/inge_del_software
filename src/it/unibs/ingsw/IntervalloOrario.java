@@ -27,14 +27,14 @@ public class IntervalloOrario implements Serializable {
     }
 
     /**
-     * Verifica che un intervallo orario sia valido (i.e. se non ha durata negativa o nulla)
+     * Verifica che un intervallo orario sia valido (i.e. se non ha durata negativa)
      *
      * @return true se l'intervalllo orario e' valido
      */
     public boolean isValidRange() {
         if (this.start.getHour() < this.end.getHour())
             return true;
-        else if (this.start.getHour() == this.end.getHour() && this.start.getMinutes() < this.end.getMinutes())
+        else if (this.start.getHour() == this.end.getHour() && this.start.getMinutes() <= this.end.getMinutes())
             return true;
         return false;
     }

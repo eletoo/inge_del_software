@@ -51,7 +51,8 @@ public class Orario implements Serializable {
         if (h >= 0 && h <= 23)
             if (m == 0 || m == 30)
                 return true;
-
+        if (h == 24 && m == 0)
+            return true;
         return false;
     }
 
@@ -108,15 +109,15 @@ public class Orario implements Serializable {
     }
 
     /**
-     * Verifica se l'orario e' successivo a quello passato come parametro. Se gli orari sono uguali ritorna false.
+     * Verifica se l'orario e' successivo a quello passato come parametro. Se gli orari sono uguali ritorna true.
      *
      * @param o orario da confrontare
-     * @return true se l'orario su cui e' chiamato il metodo e' successivo all'orario passato come parametro
+     * @return true se l'orario su cui e' chiamato il metodo e' uguale o successivo all'orario passato come parametro
      */
     public boolean isLaterThan(@NotNull Orario o) {
         if (this.getHour() > o.getHour())
             return true;
-        if (this.getHour() == o.getHour() && this.getMinutes() > o.getMinutes())
+        if (this.getHour() == o.getHour() && this.getMinutes() >= o.getMinutes())
             return true;
         return false;
     }

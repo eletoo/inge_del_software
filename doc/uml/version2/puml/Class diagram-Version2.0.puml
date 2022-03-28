@@ -67,6 +67,7 @@ DOMENICA
 - giorno: String
 <<constructor>> Giorno(String)
 + getGiorno(): String
++ getUnaccentedGiorno(): String
 }
 
 class InfoScambio{
@@ -221,6 +222,7 @@ CHOOSE_CATEGORY
 EXCHANGE_HOURS_EVERY_30_MINS
 NO_INFO_YET
 CURRENT_INFO
+NO_HIERARCHIES_YET
 
 - message: String
 <<constructor>> InteractionMessage(String)

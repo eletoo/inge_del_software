@@ -1,5 +1,8 @@
 package it.unibs.ingsw;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.io.Serializable;
 
 /**
@@ -30,5 +33,13 @@ public enum Giorno implements Serializable {
      */
     public String getGiorno() {
         return this.giorno;
+    }
+
+    /**
+     * @return nome del giorno della settimana senza accento
+     */
+    @Contract(pure = true)
+    public @NotNull String getUnaccentedGiorno(){
+        return this.giorno.replace("ì", "i");
     }
 }

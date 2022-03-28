@@ -101,12 +101,14 @@ public class View {
         String giorno = inLine("Giorno: ");
         LinkedList<Giorno> list = new LinkedList<>();
         for (Giorno g : Giorno.values()) {
-            if (giorno.equalsIgnoreCase(g.getGiorno()) || g.getGiorno().toUpperCase().startsWith(giorno.toString().toUpperCase())) {
+            if (giorno.equalsIgnoreCase(g.getGiorno())
+                    || giorno.equalsIgnoreCase(g.getUnaccentedGiorno())
+                    || g.getGiorno().toUpperCase().startsWith(giorno.toUpperCase())) {
                 list.add(g);
             }
         }
 
-        if(list.size()==1)
+        if (list.size() == 1)
             return list.get(0);
         errorMessage(ErrorMessage.E_INVALID_DAY);
 
