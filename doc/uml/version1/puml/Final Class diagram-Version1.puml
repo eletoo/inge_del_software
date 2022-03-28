@@ -182,4 +182,36 @@ class Main{
 CampoNativo +-- Tipo
 View +-- InteractionMessage
 View +-- ErrorMessage
+View ..> CategoriaEntry
+View ..> Nodo
+Applicazione ..> CategoriaEntry
+Applicazione ..> View
+Applicazione ..> Nodo
+Main ..> View
+View ..> Categoria
+UserDataStore ..> View
+UserDataStore ..> Configuratore
+Main ..> User
+Main ..> Configuratore
+Main ..> Controller
+Main ..> UserDataStore
+Controller ..> Gerarchia
+Controller ..> Categoria
+Applicazione ..> Categoria
+Applicazione ..> Foglia
+UserDataStore --> "0.. * "  User
+Controller --> "0.. 1 " UserDataStore
+Controller --> "0.. 1 " View
+Controller --> "0.. 1 " Applicazione
+UserDataStore --> "0.. 1 " UserDataStore
+CategoriaEntry --> "0.. 1 " Categoria
+CategoriaEntry --> "0.. 1 " Nodo
+Categoria --> "0.. * " CampoNativo
+Gerarchia --> "0.. 1 " Categoria
+Applicazione --> "0.. * " Gerarchia
+Nodo --> "0.. * " Categoria
+Categoria <|-- Nodo
+Categoria <|-- Foglia
+User <|-- Configuratore
+
 @enduml
