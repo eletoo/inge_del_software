@@ -177,6 +177,25 @@ public class UserDataStore implements Serializable {
     }
 
     /**
+     * Chiede username all'utente fruitore, se esiste gia' un utente omonimo ritorna false, altrimenti chiede la password,
+     * registra l'utente Fruitore e ritorna true.
+     *
+     * @param view view
+     * @return true se è stato aggiunto un nuovo profilo fruitore al dataStore
+     */
+    public boolean addedNewFruitore(@NotNull View view) {
+        String username = view.askUsername();
+        while (this.isUsernameTaken(username)) {
+            view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
+            return false;
+        }
+        String password = view.askCustomPassword();
+
+        this.registerNewFruitore(username, password);
+        return true;
+    }
+
+    /**
      * Permette all'utente configuratore di nome currentUsername di modificare le proprie credenziali, assicurandosi che
      * il nuovo username custom non sia gia' usato da altri utenti.
      *

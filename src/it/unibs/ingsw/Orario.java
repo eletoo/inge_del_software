@@ -99,7 +99,7 @@ public class Orario implements Serializable {
         int h;
         int m;
         do {
-            h = view.askNonNegativeNum("Ora di " + startOrEnd.getStartOrEnd() + " [hh] [00-23]: ");
+            h = view.askNonNegativeNum("Ora di " + startOrEnd.getStartOrEnd() + " [hh] [00-24]: ");
             m = view.askNonNegativeNum("Minuti di " + startOrEnd.getStartOrEnd() + " [mm] [00 o 30]: ");
             hour = new Orario(h, m);
             if (!hour.isValid(h, m))

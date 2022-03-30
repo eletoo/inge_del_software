@@ -244,7 +244,7 @@ class UserDataStore{
 + getUserMap(): Map<String, User>
 + setUserMap(Map<String, User>): void
 + addNewConfiguratore(View): void
-+ addedNewFruitore(View): boolean
++ addedNewFruitore(View): void
 + customizeConfiguratore(String, View): void
 + save(): void
 + load(): void
@@ -271,31 +271,9 @@ CampoNativo +-- Tipo
 View +-- InteractionMessage
 View +-- ErrorMessage
 Orario +-- StartOrEnd
-View ..> CategoriaEntry
-View ..> Nodo
-Applicazione ..> CategoriaEntry
-Applicazione ..> View
-Applicazione ..> Nodo
 Main ..> View
-View ..> Categoria
-UserDataStore ..> View
-UserDataStore ..> Configuratore
-Main ..> User
-Main ..> Configuratore
 Main ..> Controller
 Main ..> UserDataStore
-Controller ..> Gerarchia
-Controller ..> Categoria
-Applicazione ..> Categoria
-Applicazione ..> Foglia
-Main ..> Fruitore
-UserDataStore ..>Fruitore
-Controller ..> InfoScambio
-InfoScambio ..> View
-View ..> Giorno
-IntervalloOrario ..> Orario
-InfoScambio ..> Orario
-Orario ..> View
 UserDataStore --> "0.. * "  User
 Controller --> "0.. 1 " UserDataStore
 Controller --> "0.. 1 " View
@@ -315,5 +293,6 @@ Categoria <|-- Nodo
 Categoria <|-- Foglia
 User <|-- Configuratore
 User <|-- Fruitore
+
 
 @enduml

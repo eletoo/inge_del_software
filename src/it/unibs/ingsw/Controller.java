@@ -83,17 +83,8 @@ public class Controller {
      * @throws IOException eccezione I/O
      */
     public void firstAccessAsFruitore() throws IOException {
-        String username = view.askUsername();
-        while (dataStore.isUsernameTaken(username)) {
-            view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
-            username = view.askUsername();
-        }
-
-        String password = view.askCustomPassword();
-
-        dataStore.registerNewFruitore(username, password);
-
-        this.useAsFruitore();
+        if(dataStore.addedNewFruitore(view))
+            this.useAsFruitore();
     }
 
     /**
@@ -143,10 +134,13 @@ public class Controller {
 
                     if(app.getHierarchies().isEmpty()){
                         view.interactionMessage(View.InteractionMessage.NO_HIERARCHIES_YET);
+                    }else{
+                        System.out.println("GERARCHIE:");
                     }
                     for (String r : app.getHierarchies().keySet()) {
                         System.out.println(app.getHierarchy(r).toString());
                     }
+                    System.out.println();
                     if (app.getInformazioni() != null)
                         System.out.println(app.getInformazioni().toString());
                     else

@@ -18,7 +18,7 @@ class OrarioTest {
         assertTrue(o1.isValid(o1.getHour(), o1.getMinutes()));
         assertFalse(o2.isValid(o2.getHour(), o2.getMinutes()));
         assertTrue(o3.isValid(o3.getHour(), o3.getMinutes()));
-        assertFalse(o4.isValid(o4.getHour(), o4.getMinutes()));
+        assertTrue(o4.isValid(o4.getHour(), o4.getMinutes()));
         assertTrue(o5.isValid(o5.getHour(), o5.getMinutes()));
     }
 }
