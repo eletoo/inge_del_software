@@ -4,6 +4,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
+import java.util.function.Function;
 
 /**
  * View: gestisce l'interazione con l'utente
@@ -13,6 +14,61 @@ import java.util.*;
 public class View {
 
     public View() {
+    }
+
+    /**
+     * Richiama il metodo showList() specificando una funzione da eseguire sulla lista
+     *
+     * @param list lista
+     * @param <T>
+     */
+    public <T> void showList(@NotNull List<T> list) {
+        this.showList(list, null);
+    }
+
+    /**
+     * Mostra la lista passata come parametro applicando la funzione function su ogni suo elemento
+     *
+     * @param list     lista
+     * @param function funzione
+     * @param <T>      tipo della lista
+     */
+    public <T> void showList(@NotNull List<T> list, Function<T, String> function) {
+        list.forEach(e ->
+                this.message(function == null ? e.toString() : function.apply(e))
+        );
+    }
+
+    /**
+     * Permette di selezionare un elemento da un elenco
+     *
+     * @param selections lista da cui selezionare l'elemento
+     * @param function   funzione da applicare agli elementi della lista
+     * @param <T>        tipo della lista
+     * @return elemento selezionato
+     */
+    public <T> T choose(@NotNull List<T> selections, Function<T, String> function) {
+        this.message("Selezionare un indice.");
+        int i = 0;
+        for (var o : selections)
+            this.message(i++ + ") " + (function == null ? o.toString() : function.apply(o)));
+
+        int input = -1;
+        while ((input = this.inInteger()) < 0 || input >= selections.size()) ;
+        return selections.get(input);
+    }
+
+    /**
+     * @return numero intero inserito dall'utente
+     */
+    private int inInteger() {
+        while (true) {
+            try {
+                return new Scanner(System.in).nextInt();
+            } catch (NumberFormatException e) {
+                this.errorMessage(ErrorMessage.E_INVALID_INPUT);
+            }
+        }
     }
 
     /**
@@ -155,12 +211,15 @@ public class View {
         E_WRONG_PASSWORD("Password errata"),
         E_ILLICIT_CHOICE("Opzione non consentita"),
         E_EXISTING_ROOT_CATEGORY("ERRORE: Il nome è già stato assegnato a un'altra categoria radice"),
-        E_EXISTING_NAME_IN_HIERARCHY("Nome già presente nella gerarchia"),
+        E_EXISTING_NAME_IN_HIERARCHY("ERRORE: Nome già presente nella gerarchia"),
         E_UNAUTHORIZED_CHOICE("ERRORE: Azione non consentita"),
         E_WRONG_FORMAT("ERRORE: formato errato, inserire un numero"),
         E_INVALID_DAY("ERRORE: giorno non valido o ambiguo"),
         E_INVALID_TIME("ERRORE: uno degli orari inseriti non è valido"),
-        E_INVALID_TIME_RANGE("ERRORE: intervallo orario invalido");
+        E_INVALID_TIME_RANGE("ERRORE: intervallo orario invalido"),
+        E_INVALID_INPUT("ERRORE: Input invalido"),
+        E_NO_CATEGORIES("Non ci sono categorie selezionabili"),
+        E_NO_OFFERS("Non ci sono offerte selezionabili");
 
         private String message;
 
@@ -249,7 +308,8 @@ public class View {
                 "\n2. Visualizza il contenuto delle gerarchie attualmente presenti nel sistema" +
                 "\n3. Salva" +
                 "\n4. Configura informazioni di scambio" +
-                "\n5. Logout");
+                "\n5. Visualizza offerte" +
+                "\n6. Logout");
         return (new Scanner(System.in)).next();
     }
 
@@ -261,7 +321,11 @@ public class View {
     public String selectFruitoreAction() {
         System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
                 "\n1. Visualizza il contenuto dell'applicazione e le informazioni di scambio" +
-                "\n2. Logout");
+                "\n2. Visualizza offerte personali" +
+                "\n3. Visualizza offerte per categoria" +
+                "\n4. Crea offerta" +
+                "\n5. Ritira offerta" +
+                "\n6. Logout");
         return (new Scanner(System.in)).next();
     }
 

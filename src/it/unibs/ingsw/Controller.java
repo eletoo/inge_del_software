@@ -1,10 +1,7 @@
 package it.unibs.ingsw;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
-import java.util.*;
 
 /**
  * Controller: gestisce l'accesso degli utenti e l'interazione con l'applicazione mettendo in comunicazione {@link UserDataStore},
@@ -46,7 +43,7 @@ public class Controller {
 
             if (auth) {
                 dataStore.customizeConfiguratore(username, view);
-                this.useAsConfiguratore();
+                this.useAsConfiguratore((Configuratore) dataStore.getUserMap().get(username));
             } else {
                 view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
             }
@@ -63,11 +60,11 @@ public class Controller {
     public void secondAccessAsConfiguratore(String username) throws IOException {
         boolean auth;
 
-        if (dataStore.isUsernameTaken(username)) {
+        if (dataStore.isUsernameTaken(username) && dataStore.getUserMap().get(username) instanceof Configuratore) {
             auth = dataStore.isLoginCorrect(username, view.askPassword());
 
             if (auth) {
-                this.useAsConfiguratore();
+                this.useAsConfiguratore((Configuratore) dataStore.getUserMap().get(username));
             } else {
                 view.errorMessage(View.ErrorMessage.E_WRONG_PASSWORD);
             }
@@ -83,8 +80,9 @@ public class Controller {
      * @throws IOException eccezione I/O
      */
     public void firstAccessAsFruitore() throws IOException {
-        if(dataStore.addedNewFruitore(view))
-            this.useAsFruitore();
+        var user = dataStore.addedNewFruitore(view);
+        if (user != null)
+            this.useAsFruitore(user);
     }
 
     /**
@@ -100,8 +98,8 @@ public class Controller {
         if (dataStore.isUsernameTaken(username)) {
             auth = dataStore.isLoginCorrect(username, view.askPassword());
 
-            if (auth) {
-                this.useAsFruitore();
+            if (auth && dataStore.getUserMap().get(username) instanceof Fruitore) {
+                this.useAsFruitore((Fruitore) dataStore.getUserMap().get(username));
             } else {
                 view.errorMessage(View.ErrorMessage.E_WRONG_PASSWORD);
             }
@@ -115,26 +113,32 @@ public class Controller {
      * precedente dell'applicazione; permette di selezionare un'azione da svolgere:
      * - visualizzare nome e descrizione delle gerarchie presenti nel sistema e le informazioni relative a luoghi
      * e orari per l'effettuazione degli scambi
+     * - visualizzare le offerte personali
+     * - visualizzare le offerte per categoria
+     * - creare un'offerta
+     * - ritirare un'offerta
      * - uscire
      *
+     * @param fruitore utente fruitore
      * @throws IOException eccezione I/O
      */
-    private void useAsFruitore() throws IOException {
+    private void useAsFruitore(Fruitore fruitore) throws IOException {
         boolean end = false;
         String choice = "0";
         do {
             //carica i dati salvati in precedenza
             app.prepareDirectoryStructure();
             app.prepareInfoStructure();
+            app.prepareOffersStructure();
 
             choice = view.selectFruitoreAction();
             switch (choice) {
                 case "1": {
                     //visualizza contenuto gerarchie e informazioni applicazione
 
-                    if(app.getHierarchies().isEmpty()){
+                    if (app.getHierarchies().isEmpty()) {
                         view.interactionMessage(View.InteractionMessage.NO_HIERARCHIES_YET);
-                    }else{
+                    } else {
                         System.out.println("GERARCHIE:");
                     }
                     for (String r : app.getHierarchies().keySet()) {
@@ -148,8 +152,27 @@ public class Controller {
                 }
                 break;
                 case "2": {
+                    // visualizza offerte personali
+                    Offerta.viewPersonalOffers(fruitore, app, view);
+                }
+                break;
+                case "3": {
+                    // visualizza offerte per categoria
+                    Offerta.viewOffersByCategory(app, view);
+                }
+                break;
+                case "4": {
+                    // crea offerta
+                    Offerta.createOffer(app, view, fruitore);
+                }
+                break;
+                case "5": {
+                    // ritira offerta
+                    Offerta.undoOffer(app, view, fruitore);
+                }
+                break;
+                case "6": {
                     //esci
-
                     end = true;
                     view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);
                 }
@@ -168,29 +191,30 @@ public class Controller {
      * sovrascritto nella rispettiva classe
      * - salvare i dati: salva il contenuto delle gerarchie in modo permanente
      * - configurare le informazioni di scambio
+     * - visualizzare le offerte per categoria
      * - uscire
      *
+     * @param configuratore utente configuratore
      * @throws IOException eccezione I/O
      */
-    private void useAsConfiguratore() throws IOException {
+    private void useAsConfiguratore(Configuratore configuratore) throws IOException {
         boolean end = false;
         String choice = "0";
         do {
             //carica i dati salvati in precedenza
             app.prepareDirectoryStructure();
             app.prepareInfoStructure();
+            app.prepareOffersStructure();
 
             choice = view.selectConfiguratoreAction();
             switch (choice) {
                 case "1": {
                     //crea una nuova gerarchia
-
                     app.createNewHierarchy(view);
                 }
                 break;
                 case "2": {
                     //visualizza gerarchie
-
                     for (String r : app.getHierarchies().keySet()) {
                         System.out.println(app.getHierarchy(r).toString());
                         System.out.println(app.getHierarchy(r).getRoot().toString());
@@ -199,20 +223,20 @@ public class Controller {
                 break;
                 case "3": {
                     //salva dati
-
                     app.saveData();
+                    app.saveInfo();
+                    app.saveOfferte();
                     view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
                 }
                 break;
                 case "4": {
                     //configura informazioni di scambio
-
-                    if(app.getInformazioni()==null){
+                    if (app.getInformazioni() == null) {
                         app.setInfoScambio(new InfoScambio(app, view));
-                    }else{
+                    } else {
                         view.interactionMessage(View.InteractionMessage.CURRENT_INFO);
                         System.out.println(app.getInformazioni().toString());
-                        if(view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")){
+                        if (view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")) {
                             app.setInfoScambio(new InfoScambio(app, view));
                         }
                     }
@@ -221,8 +245,12 @@ public class Controller {
                 }
                 break;
                 case "5": {
+                    //mostra offerte per categoria
+                    Offerta.viewOffersByCategory(app, view);
+                }
+                break;
+                case "6": {
                     //esci
-
                     end = true;
                     view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);
                 }

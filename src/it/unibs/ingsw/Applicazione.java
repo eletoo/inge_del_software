@@ -1,12 +1,16 @@
 package it.unibs.ingsw;
 
+import it.unibs.ingsw.exceptions.RequiredConstraintFailureException;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
- * Applicazione: gestisce una mappa che associa a ogni nome della categoria radice la propria gerarchia.
+ * Applicazione: gestisce una mappa che associa a ogni nome della categoria radice la propria gerarchia,
+ * un oggetto {@link InfoScambio} che contiene le informazioni di scambio e una lista di oggetti {@link Offerta}
+ * che contiene le offerte presenti nell'applicazione.
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
@@ -14,12 +18,28 @@ public class Applicazione {
 
     private Map<String, Gerarchia> hierarchies;
     private InfoScambio informazioni;
+    private List<Offerta> offerte;
 
     /**
      * Costruttore.
      */
     public Applicazione() {
         hierarchies = new HashMap<>();
+        offerte = new LinkedList<>();
+    }
+
+    /**
+     * @return offerte
+     */
+    public List<Offerta> getOfferte() {
+        return offerte;
+    }
+
+    /**
+     * @param offerte lista di offerte con cui impostare il valore del campo offerte
+     */
+    public void setOfferte(List<Offerta> offerte) {
+        this.offerte = offerte;
     }
 
     /**
@@ -202,5 +222,76 @@ public class Applicazione {
             this.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
         }
+    }
+
+    /**
+     * Carica le informazioni relative alle offerte di scambio salvate in modo permanente all'utilizzo precedente
+     * dell'applicazione
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void prepareOffersStructure() throws IOException {
+        var db = new File("./db");
+        assert db.exists() || db.mkdir();
+
+        var of = new File("./db/offerte.dat");
+        if (of.exists()) {
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(of));
+            try {
+                this.setOfferte((List<Offerta>) ois.readObject());
+            } catch (ClassNotFoundException | IOException e) {
+                this.setOfferte(new LinkedList<>());
+            }
+        } else {
+            this.setOfferte(new LinkedList<>());
+        }
+    }
+
+    /**
+     * Restituisce la lista di offerte associate a una categoria foglia
+     *
+     * @param categoria categoria di cui si ricercano le offerte
+     * @return lista di offerte associate alla categoria passata come parametro
+     */
+    public List<Offerta> getOfferte(Foglia categoria) {
+        return this.offerte.stream().filter(e -> e.getCategoria().equals(categoria)).collect(Collectors.toList());
+    }
+
+    /**
+     * Restituisce la lista di offerte associate a un utente fruitore
+     *
+     * @param utente utente di cui si ricercano le offerte
+     * @return lista di offerte associate all'utente passato come parametro
+     */
+    public List<Offerta> getOfferte(Fruitore utente) {
+        return this.offerte.stream().filter(e -> e.getProprietario().equals(utente)).collect(Collectors.toList());
+    }
+
+    /**
+     * Aggiunge l'offerta passata come parametro alle offerte, assicurandosi che siano presenti tutti i campi obbligatori
+     *
+     * @param o offerta da aggiungere alle offerte dell'applicazione
+     * @throws RequiredConstraintFailureException eccezione: non e' presente un campo che era obbligatorio
+     */
+    public void addOfferta(@NotNull Offerta o) throws RequiredConstraintFailureException {
+        //controllo campi obbligatori
+        for (var field : o.getCategoria().getCampiNativi().entrySet()) {
+            if (field.getValue().isObbligatorio() && !o.getValoreCampi().containsKey(field.getKey()))
+                throw new RequiredConstraintFailureException();
+        }
+
+        this.offerte.add(o);
+    }
+
+    /**
+     * Salva in modo permanente in un file le offerte introdotte nell'applicazione
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void saveOfferte() throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/offerte.dat"));
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        objectOutputStream.writeObject(this.getOfferte());
+        objectOutputStream.close();
     }
 }

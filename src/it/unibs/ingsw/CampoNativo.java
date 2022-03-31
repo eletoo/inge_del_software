@@ -1,6 +1,7 @@
 package it.unibs.ingsw;
 
 import java.io.Serializable;
+import java.util.function.Function;
 
 /**
  * CampoNativo: tiene traccia dell'obbligatorietà di compilazione del campo e del tipo.
@@ -27,7 +28,26 @@ public class CampoNativo implements Serializable {
      * Enum dei possibili tipi dei campi.
      */
     public static enum Tipo {
-        STRING
+        STRING((s) -> {
+            assert s instanceof String;
+            return s;
+        }, (o) -> o.toString() );
+
+        private Function<String, Object> des;
+        private Function<Object, String> ser;
+
+        Tipo(Function<String, Object> des, Function<Object, String> ser) {
+            this.des = des;
+            this.ser = ser;
+        }
+
+        public String serialize(Object o){
+            return this.ser.apply(o);
+        }
+
+        public Object deserialize(String o){
+            return this.des.apply(o);
+        }
     }
 
     /**

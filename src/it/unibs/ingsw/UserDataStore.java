@@ -68,9 +68,10 @@ public class UserDataStore implements Serializable {
      * @param nome nome utente
      * @param pw   password in chiaro
      */
-    public void registerNewFruitore(String nome, String pw) {
+    public Fruitore registerNewFruitore(String nome, String pw) {
         userMap.put(nome, new Fruitore(nome, pw));
         this.save();
+        return (Fruitore) userMap.get(nome);
     }
 
     /**
@@ -183,16 +184,15 @@ public class UserDataStore implements Serializable {
      * @param view view
      * @return true se è stato aggiunto un nuovo profilo fruitore al dataStore
      */
-    public boolean addedNewFruitore(@NotNull View view) {
+    public Fruitore addedNewFruitore(@NotNull View view) {
         String username = view.askUsername();
         while (this.isUsernameTaken(username)) {
             view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
-            return false;
+            return null;
         }
         String password = view.askCustomPassword();
 
-        this.registerNewFruitore(username, password);
-        return true;
+        return this.registerNewFruitore(username, password);
     }
 
     /**

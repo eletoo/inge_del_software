@@ -17,6 +17,36 @@ public abstract class User implements Serializable {
     private String hashedPw;
 
     /**
+     * @return stringa contenente lo username dell'utente
+     */
+    @Override
+    public String toString() {
+        return username;
+    }
+
+    /**
+     * Override del metodo equals()
+     * @param o oggetto con cui effettuare il confronto
+     * @return true se gli oggetti hanno stesso username
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(username, user.username);
+    }
+
+    /**
+     * Override del metodo hashCode()
+     * @return hashCode dell'oggetto
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(username);
+    }
+
+    /**
      * Costruttore: salva la password dopo l'hashing
      *
      * @param _username username

@@ -196,4 +196,35 @@ public abstract class Categoria implements Serializable {
 
         return campi;
     }
+
+    /**
+     * Override del metodo equals()
+     *
+     * @param o oggetto con cui effettuare il confronto
+     * @return true se gli oggetti sono uguali, cioè hanno stesso nome e descrizione
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Categoria categoria = (Categoria) o;
+        return Objects.equals(nome, categoria.nome) && Objects.equals(descrizione, categoria.descrizione);
+    }
+
+    /**
+     * Override del metodo hashCode()
+     *
+     * @return hashCode dell'oggetto
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, descrizione, campiNativi);
+    }
+
+    /**
+     * @return stringa contenente una breve descrizione della categoria (solo nome)
+     */
+    public String toShortString() {
+        return "Categoria " + nome;
+    }
 }
