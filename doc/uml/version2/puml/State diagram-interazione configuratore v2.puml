@@ -1,0 +1,18 @@
+@startuml
+
+scale 350 width
+[*] --> CreazioneProfilo : Primo accesso
+CreazioneProfilo --> MenuPrincipale: Cambio credenziali
+[*] --> MenuPrincipale: Accesso\ngenerico
+MenuPrincipale -left-> SalvataggioDati: Richiesta\nsalvataggio\ndati
+MenuPrincipale --> VisualizzazioneGerarchie: Richiesta\nvisualizzazione\ngerarchie
+SalvataggioDati --> MenuPrincipale: Success
+VisualizzazioneGerarchie -right-> MenuPrincipale: Success
+MenuPrincipale --> CreazioneGerarchia: Richiesta\ncreazione\ngerarchia
+CreazioneGerarchia --> MenuPrincipale: Success
+MenuPrincipale --> ImpostazioneParametri: Richiesta\nimpostazione\nparametri
+ImpostazioneParametri --> MenuPrincipale: Success
+
+MenuPrincipale -right-> [*]: Esci
+
+@enduml

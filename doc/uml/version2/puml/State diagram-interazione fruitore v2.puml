@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 350 width
+[*] --> CreazioneProfilo : Primo accesso
+CreazioneProfilo --> MenuPrincipale: Accesso all'applicazione
+[*] --> MenuPrincipale: Accesso\ngenerico
+MenuPrincipale --> VisualizzazioneInformazioni: Richiesta\nvisualizzazione\ninfo
+VisualizzazioneInformazioni --> MenuPrincipale: Success
+
+MenuPrincipale -right-> [*]: Esci
+
+@enduml
