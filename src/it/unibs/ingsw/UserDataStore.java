@@ -94,7 +94,7 @@ public class UserDataStore implements Serializable {
      * @param len lunghezza della password
      * @return password
      */
-    public static @NotNull String generateRandomPassword(int len) {
+    private static @NotNull String generateRandomPassword(int len) {
         String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi"
                 + "jklmnopqrstuvwxyz!@#$%&£";
         Random rnd = new Random();
@@ -111,7 +111,7 @@ public class UserDataStore implements Serializable {
      * @param size lunghezza dello username
      * @return username
      */
-    public static String generateRandomString(int size) {
+    private static String generateRandomString(int size) {
         String rand = "";
         String chars = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_-.";
 
