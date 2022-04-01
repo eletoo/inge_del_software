@@ -3,6 +3,7 @@ skinparam ClassAttributeIconSize 0
 
 class Applicazione{
 - hierarchies: Map<String, Gerarchia>
+- informazioni: InfoScambio
 + <<constructor>> Applicazione()
 + addGerarchia(String, Gerarchia): void
 + isHierarchyNameTaken(String): boolean
@@ -147,7 +148,6 @@ class Orario{
 - hour: int
 - minutes: int
 + <<constructor>> Orario(int, int)
-+ <<constructor>> Orario()
 + toString(): String
 + isValid(int, int): boolean
 + getMinutes(): int
@@ -236,6 +236,7 @@ class UserDataStore{
 + {static}getInstance(): UserDataStore
 + isUsernameTaken(String): boolean
 + registerNewConfiguratore(String, String): void
++ registerNewFruitore(String, String): void
 + updateUser(String, String, String): void
 - {static}generateRandomPassword(int): String
 - {static}generateRandomString(int): String
@@ -244,7 +245,7 @@ class UserDataStore{
 + getUserMap(): Map<String, User>
 + setUserMap(Map<String, User>): void
 + addNewConfiguratore(View): void
-+ addedNewFruitore(View): void
++ addedNewFruitore(View): boolean
 + customizeConfiguratore(String, View): void
 + save(): void
 + load(): void
@@ -257,7 +258,7 @@ class Controller{
 + <<constructor>> Controller()
 + firstAccessAsConfiguratore(): void
 + secondAccessAsConfiguratore(String): void
-+ firstAccessAsFruitore(): void
++ firstAccessAsFruitore(String): void
 + secondAccessAsFruitore(): void
 - useAsFruitore(): void
 - useAsConfiguratore(): void
