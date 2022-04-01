@@ -19,6 +19,7 @@ public class Applicazione {
     private Map<String, Gerarchia> hierarchies;
     private InfoScambio informazioni;
     private List<Offerta> offerte;
+    private ArrayList<Scambio> scambi = new ArrayList<>();
 
     /**
      * Costruttore.
@@ -26,6 +27,14 @@ public class Applicazione {
     public Applicazione() {
         hierarchies = new HashMap<>();
         offerte = new LinkedList<>();
+    }
+
+    public ArrayList<Scambio> getScambi() {
+        return scambi;
+    }
+
+    public void addScambio(Scambio s){
+        scambi.add(s);
     }
 
     /**

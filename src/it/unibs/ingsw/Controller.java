@@ -2,6 +2,7 @@ package it.unibs.ingsw;
 
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 
 /**
  * Controller: gestisce l'accesso degli utenti e l'interazione con l'applicazione mettendo in comunicazione {@link UserDataStore},
@@ -14,6 +15,7 @@ public class Controller {
     public UserDataStore dataStore;
     private View view = new View();
     private Applicazione app = new Applicazione();
+
 
     /**
      * Costruttore.
@@ -154,6 +156,7 @@ public class Controller {
                 case "2": {
                     // visualizza offerte personali
                     Offerta.viewPersonalOffers(fruitore, app, view);
+                    Offerta.managePersonalOffers(app, view, fruitore, app.getScambi());
                 }
                 break;
                 case "3": {
@@ -172,6 +175,12 @@ public class Controller {
                 }
                 break;
                 case "6": {
+                    //crea proposta di scambio
+                    app.addScambio(new Scambio(app, view));
+                    //TODO: salvare gli scambi in modo permanente
+                }
+                break;
+                case "8": {
                     //esci
                     end = true;
                     view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);

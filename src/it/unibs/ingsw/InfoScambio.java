@@ -152,4 +152,22 @@ public class InfoScambio implements Serializable {
         }
     }
 
+    /**
+     * @return scadenza
+     */
+    public int getScadenza(){
+        return this.scadenza;
+    }
+
+    public List<String> getLuoghi() {
+        return luoghi;
+    }
+
+    public List<Giorno> getGiorni() {
+        return giorni;
+    }
+
+    public List<IntervalloOrario> getIntervalliOrari() {
+        return intervalliOrari;
+    }
 }
