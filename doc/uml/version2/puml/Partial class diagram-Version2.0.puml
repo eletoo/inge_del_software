@@ -145,14 +145,14 @@ class Nodo{
 
 class Orario{
 - hour: int
-- miuntes: int
+- minutes: int
 + <<constructor>> Orario(int, int)
 + <<constructor>> Orario()
 + toString(): String
 + isValid(int, int): boolean
 + getMinutes(): int
 + getHour(): int
-+ askOrario(StartOrEnd, View): Orario
++ {static}askOrario(StartOrEnd, View): Orario
 + isLaterThan(Orario): boolean
 + equals(Object): boolean
 + hashCode(): int

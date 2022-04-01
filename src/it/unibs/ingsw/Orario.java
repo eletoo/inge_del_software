@@ -26,12 +26,6 @@ public class Orario implements Serializable {
     }
 
     /**
-     * Costruttore
-     */
-    public Orario() {
-    }
-
-    /**
      * @return stringa contenente la descrizione dell'orario nel formato hh:mm
      */
     public String toString() {
@@ -94,7 +88,7 @@ public class Orario implements Serializable {
      * @param view       view
      * @return orario (di inizio o di fine dell'intervallo a seconda di quanto specificato nei parametri) inserito dall'utente
      */
-    public Orario askOrario(@NotNull StartOrEnd startOrEnd, @NotNull View view) {
+    public static Orario askOrario(@NotNull StartOrEnd startOrEnd, @NotNull View view) {
         Orario hour;
         int h;
         int m;

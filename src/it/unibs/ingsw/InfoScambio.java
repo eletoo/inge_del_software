@@ -101,11 +101,9 @@ public class InfoScambio implements Serializable {
         while (this.intervalliOrari.isEmpty() || view.yesOrNoQuestion("Inserire un altra fascia oraria per lo scambio? [Y/N]").equalsIgnoreCase("y")) {
             view.interactionMessage(View.InteractionMessage.EXCHANGE_HOURS_EVERY_30_MINS);
             //chiede l'orario di inizio
-            Orario start = new Orario();
-            start = start.askOrario(Orario.StartOrEnd.START, view);
+            Orario start = Orario.askOrario(Orario.StartOrEnd.START, view);
             //chiede l'orario di fine
-            Orario end = new Orario();
-            end = end.askOrario(Orario.StartOrEnd.END, view);
+            Orario end = Orario.askOrario(Orario.StartOrEnd.END, view);
 
             IntervalloOrario intervallo = new IntervalloOrario(start, end);
             if (intervallo.isValidRange() && intervallo.isNewRange(this.intervalliOrari))
