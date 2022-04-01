@@ -325,7 +325,8 @@ public class View {
                 "\n3. Visualizza offerte per categoria" +
                 "\n4. Crea offerta" +
                 "\n5. Ritira offerta" +
-                "\n6. Logout");
+                "\n6. Crea proposta di scambio"+
+                "\n7. Logout");
         return (new Scanner(System.in)).next();
     }
 

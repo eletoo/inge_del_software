@@ -60,7 +60,6 @@ public class Offerta implements Serializable {
     }
 
     /**
-     *
      * @return proprietario dell'offerta
      */
     public Fruitore getProprietario() {
@@ -86,7 +85,7 @@ public class Offerta implements Serializable {
         sb.append("\n\tStato > " + stato);
         sb.append("\n\tCampi > ");
         for (var valCampo : valoreCampi.entrySet()) {
-            sb.append("\n\t\t" + valCampo.getKey() + "> " + valCampo.getValue());
+            sb.append("\n\t\t").append(valCampo.getKey()).append("> ").append(valCampo.getValue());
         }
         sb.append("\n");
         return sb.toString();
@@ -97,12 +96,16 @@ public class Offerta implements Serializable {
      */
     public static enum StatoOfferta {
         APERTA,
-        RITIRATA
+        RITIRATA,
+        ACCOPPIATA,
+        SELEZIONATA,
+        IN_SCAMBIO
     }
 
     /**
      * Crea una lista di offerte presenti nella categoria selezionata dall'utente da mostrare attraverso la View
-     * @param app applicazione
+     *
+     * @param app  applicazione
      * @param view view
      */
     public static void viewOffersByCategory(@NotNull Applicazione app, View view) {
@@ -118,10 +121,37 @@ public class Offerta implements Serializable {
     }
 
     /**
+     * @return true se un'offerta non e' stata selezionata per uno scambio (i.e. e' un'offerta aperta)
+     */
+    public boolean isAvailableOffer() {
+        return this.stato == StatoOfferta.APERTA;
+    }
+
+    public static void managePersonalOffers(@NotNull Applicazione app, @NotNull View view, Fruitore fruitore, @NotNull List<Scambio> scambi) {
+        var selectedOffers = app.getOfferte(fruitore)
+                .stream()
+                .filter(e -> e.getStato() == StatoOfferta.SELEZIONATA)
+                .collect(Collectors.toList());
+
+        //TODO: problema: se l'utente non vuole selezionare nessuna offerta dall'elenco deve poter uscire dal choose
+        var toManage = view.choose(selectedOffers.stream().collect(Collectors.toList()), null);
+
+        //il filtraggio dovrebbe restituire al più un'offerta perché possono essere selezionate per gli scambi solo le offerte
+        //aperte e una volta selezionate per uno scambio cambiano stato
+        //
+        //in sostanza getScambio dovrebbe restituire un solo scambio in quanto un'offerta una volta selezionata per uno scambio
+        //cambia stato e non diventa più disponibile per essere selezionata per altri scambi
+        scambi.stream().filter(e -> e.getScambio(toManage).isValidExchange(app)).forEach(e -> e.manageExchange(view, app));
+
+        //TODO: se lo scambio non è valido bisogna cambiare lo stato delle offerte e cancellare lo scambio
+    }
+
+    /**
      * Mostra la lista di offerte personali relative a un utente
+     *
      * @param fruitore utente di cui visualizzare le offerte
-     * @param app applicazione
-     * @param view view
+     * @param app      applicazione
+     * @param view     view
      */
     public static void viewPersonalOffers(Fruitore fruitore, @NotNull Applicazione app, @NotNull View view) {
         view.showList(app.getOfferte(fruitore));
@@ -129,9 +159,10 @@ public class Offerta implements Serializable {
 
     /**
      * Permette all'utente di scegliere una categoria foglia da una gerarchia
+     *
      * @param prompt prompt da fornire all'utente
-     * @param view view
-     * @param app applicazione
+     * @param view   view
+     * @param app    applicazione
      * @return categoria foglia selezionata dall'utente
      */
     private static Foglia chooseLeaf(String prompt, @NotNull View view, @NotNull Applicazione app) {
@@ -155,8 +186,9 @@ public class Offerta implements Serializable {
     /**
      * Permette di creare un'offerta indicando la categoria foglia di appartenenza, il nome dell'offerta e il valore dei
      * campi nativi (obbligatori e facoltativi)
-     * @param app applicazione
-     * @param view view
+     *
+     * @param app      applicazione
+     * @param view     view
      * @param fruitore utente fruitore
      * @throws IOException eccezione I/O
      */
@@ -183,9 +215,10 @@ public class Offerta implements Serializable {
 
     /**
      * Permette l'inserimento del valore di un campo
+     *
      * @param offer offerta
      * @param field campo da compilare
-     * @param view view
+     * @param view  view
      */
     private static void inputField(@NotNull Offerta offer, Map.@NotNull Entry<String, CampoNativo> field, @NotNull View view) {
         offer.getValoreCampi()
@@ -199,8 +232,9 @@ public class Offerta implements Serializable {
 
     /**
      * Permette di selezionare un'offerta da ritirare e modificarne lo stato opportunamente
-     * @param app applicazione
-     * @param view view
+     *
+     * @param app      applicazione
+     * @param view     view
      * @param fruitore fruitore
      * @throws IOException eccezione I/O
      */
