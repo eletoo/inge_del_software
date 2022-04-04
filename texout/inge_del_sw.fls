@@ -1,0 +1,745 @@
+PWD c:/Users/Elena Tonini/OneDrive/Desktop/Latex/inge_del_sw
+INPUT c:/texlive/2021/texmf.cnf
+INPUT c:/texlive/2021/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/Elena Tonini/OneDrive/Desktop/Latex/inge_del_sw/inge_del_sw.tex
+OUTPUT texout/inge_del_sw.log
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel-italian/italian.ldf
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel-italian/italian.ldf
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel-italian/italian.ldf
+INPUT c:/texlive/2021/texmf-dist/tex/generic/babel-italian/italian.ldf
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/atveryend/atveryend.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT texout/inge_del_sw.aux
+INPUT texout/inge_del_sw.aux
+INPUT texout/inge_del_sw.aux
+OUTPUT texout/inge_del_sw.aux
+INPUT c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+OUTPUT texout/inge_del_sw.pdf
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+OUTPUT texout/inge_del_sw.out
+INPUT c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT texout/inge_del_sw.toc
+INPUT texout/inge_del_sw.toc
+INPUT texout/inge_del_sw.toc
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+OUTPUT texout/inge_del_sw.toc
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./specifiche.tex
+INPUT specifiche.tex
+INPUT ./specifiche.tex
+INPUT specifiche.tex
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./Versione1/usecases.tex
+INPUT Versione1/usecases.tex
+INPUT ./Versione1/usecases.tex
+INPUT Versione1/usecases.tex
+INPUT ./Versione1/UseCases/accessoConfiguratore.tex
+INPUT Versione1/UseCases/accessoConfiguratore.tex
+INPUT ./Versione1/UseCases/accessoConfiguratore.tex
+INPUT Versione1/UseCases/accessoConfiguratore.tex
+INPUT ./Versione1/UseCases/creazioneConfiguratore.tex
+INPUT Versione1/UseCases/creazioneConfiguratore.tex
+INPUT ./Versione1/UseCases/creazioneConfiguratore.tex
+INPUT Versione1/UseCases/creazioneConfiguratore.tex
+INPUT ./Versione1/UseCases/creazioneGerarchia.tex
+INPUT Versione1/UseCases/creazioneGerarchia.tex
+INPUT ./Versione1/UseCases/creazioneGerarchia.tex
+INPUT Versione1/UseCases/creazioneGerarchia.tex
+INPUT ./Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT ./Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT ./Versione1/UseCases/aggiuntaCategoria.tex
+INPUT Versione1/UseCases/aggiuntaCategoria.tex
+INPUT ./Versione1/UseCases/aggiuntaCategoria.tex
+INPUT Versione1/UseCases/aggiuntaCategoria.tex
+INPUT ./Versione1/UseCases/salvataggioDati.tex
+INPUT Versione1/UseCases/salvataggioDati.tex
+INPUT ./Versione1/UseCases/salvataggioDati.tex
+INPUT Versione1/UseCases/salvataggioDati.tex
+INPUT ./images//imagesV1/Use case diagram-Version 1.0.png
+INPUT ./images//imagesV1/Use case diagram-Version 1.0.png
+INPUT ./images//imagesV1/Use case diagram-Version 1.0.png
+INPUT ./images//imagesV1/Use case diagram-Version 1.0.png
+INPUT ./images//imagesV1/Use case diagram-Version 1.0.png
+INPUT ./Versione1/classdiagram.tex
+INPUT Versione1/classdiagram.tex
+INPUT ./Versione1/classdiagram.tex
+INPUT Versione1/classdiagram.tex
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
+INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
+INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
+INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
+INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
+INPUT ./images//imagesV1/Class diagram-Version1.0.png
+INPUT ./images//imagesV1/Class diagram-Version1.0.png
+INPUT ./images//imagesV1/Class diagram-Version1.0.png
+INPUT ./images//imagesV1/Class diagram-Version1.0.png
+INPUT ./images//imagesV1/Class diagram-Version1.0.png
+INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
+INPUT ./Versione1/behaviourdiagrams.tex
+INPUT Versione1/behaviourdiagrams.tex
+INPUT ./Versione1/behaviourdiagrams.tex
+INPUT Versione1/behaviourdiagrams.tex
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
+INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
+INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
+INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
+INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
+INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
+INPUT ./Versione2/usecases.tex
+INPUT Versione2/usecases.tex
+INPUT ./Versione2/usecases.tex
+INPUT Versione2/usecases.tex
+INPUT ./Versione1/UseCases/accessoConfiguratore.tex
+INPUT Versione1/UseCases/accessoConfiguratore.tex
+INPUT ./Versione1/UseCases/accessoConfiguratore.tex
+INPUT Versione1/UseCases/accessoConfiguratore.tex
+INPUT ./Versione1/UseCases/creazioneConfiguratore.tex
+INPUT Versione1/UseCases/creazioneConfiguratore.tex
+INPUT ./Versione1/UseCases/creazioneConfiguratore.tex
+INPUT Versione1/UseCases/creazioneConfiguratore.tex
+INPUT ./Versione1/UseCases/creazioneGerarchia.tex
+INPUT Versione1/UseCases/creazioneGerarchia.tex
+INPUT ./Versione1/UseCases/creazioneGerarchia.tex
+INPUT Versione1/UseCases/creazioneGerarchia.tex
+INPUT ./Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT ./Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT Versione1/UseCases/visualizzazioneGerarchie.tex
+INPUT ./Versione1/UseCases/aggiuntaCategoria.tex
+INPUT Versione1/UseCases/aggiuntaCategoria.tex
+INPUT ./Versione1/UseCases/aggiuntaCategoria.tex
+INPUT Versione1/UseCases/aggiuntaCategoria.tex
+INPUT ./Versione1/UseCases/salvataggioDati.tex
+INPUT Versione1/UseCases/salvataggioDati.tex
+INPUT ./Versione1/UseCases/salvataggioDati.tex
+INPUT Versione1/UseCases/salvataggioDati.tex
+INPUT ./Versione2/Use Cases/configurazioneParametri.tex
+INPUT Versione2/Use Cases/configurazioneParametri.tex
+INPUT ./Versione2/Use Cases/configurazioneParametri.tex
+INPUT Versione2/Use Cases/configurazioneParametri.tex
+INPUT ./Versione2/Use Cases/creazioneFruitore.tex
+INPUT Versione2/Use Cases/creazioneFruitore.tex
+INPUT ./Versione2/Use Cases/creazioneFruitore.tex
+INPUT Versione2/Use Cases/creazioneFruitore.tex
+INPUT ./Versione2/Use Cases/accessoFruitore.tex
+INPUT Versione2/Use Cases/accessoFruitore.tex
+INPUT ./Versione2/Use Cases/accessoFruitore.tex
+INPUT Versione2/Use Cases/accessoFruitore.tex
+INPUT ./Versione2/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione2/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione2/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione2/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./images//imagesV2/Use case diagram-Version2.0.png
+INPUT ./images//imagesV2/Use case diagram-Version2.0.png
+INPUT ./images//imagesV2/Use case diagram-Version2.0.png
+INPUT ./images//imagesV2/Use case diagram-Version2.0.png
+INPUT ./images//imagesV2/Use case diagram-Version2.0.png
+INPUT ./Versione2/classdiagram.tex
+INPUT Versione2/classdiagram.tex
+INPUT ./Versione2/classdiagram.tex
+INPUT Versione2/classdiagram.tex
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./Versione2/behaviourdiagrams.tex
+INPUT Versione2/behaviourdiagrams.tex
+INPUT ./Versione2/behaviourdiagrams.tex
+INPUT Versione2/behaviourdiagrams.tex
+INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
+INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
+INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
+INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
+INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
+INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
+INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
+INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
+INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
+INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
+INPUT texout/inge_del_sw.aux
+INPUT texout/inge_del_sw.out
+INPUT texout/inge_del_sw.out
+INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb

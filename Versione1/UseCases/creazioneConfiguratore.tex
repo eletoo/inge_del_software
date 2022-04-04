@@ -1,0 +1,53 @@
+Nella Tabella \ref{tab:Use Case 1.2} è riportato il caso d'uso testuale relativo alla creazione di un nuovo profilo configuratore: l'utente riceve la comunicazione delle proprie credenziali temporanee, accede al proprio profilo e modifica le proprie credenziali a piacere (rispettando il vincolo relativo all'univocità dello username).
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{l|l}
+        \hline
+        Nome & Creazione configuratore \\
+        \hline
+        Attore & Configuratore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{l}
+                 1. Vengono comunicate all'utente le credenziali (username e password)\\ provvisorie con cui effettuare il primo accesso\\
+                 Postcondizione: viene creato un profilo configuratore con le credenziali\\provvisorie comunicate all'utente al punto 1\\
+                 2. L'utente inserisce le credenziali provvisorie\\
+                 Precondizione: le credenziali inserite sono corrette\\
+                 3. L'utente personalizza il proprio username\\
+                 Precondizione: lo username personalizzato non è associato ad alcun\\profilo\\
+                 4. L'utente personalizza la propria password\\
+                 Postcondizione: vengono modificate le credenziali associate al profilo\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                 Precondizione: la creazione del profilo non è andata a buon fine\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                 Precondizione: le credenziali inserite sono errate\\
+                 3.a Viene segnalato all'utente un errore\\
+                 3.b Torna al punto 2
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                 Precondizione: lo username personalizzato è già associato a un profilo\\
+                 4.a. Viene segnalato all'utente un errore\\
+                 Torna al punto 3
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                 Precondizione: la modifica delle credenziali non è andata a buon fine\\
+                 Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Creazione Configuratore}
+    \label{tab:Use Case 1.2}
+\end{table}

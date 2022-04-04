@@ -1,0 +1,37 @@
+Nella Tabella \ref{tab:Use Case 1.5} è riportato il caso d'uso testuale relativo all'aggiunta di una categoria a una gerarchia; si tratta di un caso d'uso incluso in quello relativo alla creazione di una gerarchia.
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{l|l}
+        \hline
+        Nome & Aggiunta categoria \\
+        \hline
+        Attore & Configuratore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{l}
+                 1. L'utente inserisce il nome della categoria da creare\\
+                 Precondizione: il nome inserito è unico all'interno della gerarchia di\\appartenenza della categoria\\
+                 2. L'utente inserisce la descrizione facoltativa della categoria. \\
+                 3. L'utente inserisce eventuali altri campi nativi e specifica se sono a\\ compilazione obbligatoria o facoltativa\\
+                 Postcondizione: viene creata una nuova categoria con le caratteristiche\\specificate\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                Precondizione: il nome inserito non è unico all'interno della gerarchia di\\ appartenenza della categoria\\
+                2.a. Viene segnalato all'utente un errore\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                Precondizione: la creazione della categoria non va a buon fine\\
+                Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Aggiunta categoria}
+    \label{tab:Use Case 1.5}
+\end{table}

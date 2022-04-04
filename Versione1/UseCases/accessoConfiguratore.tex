@@ -1,0 +1,36 @@
+Nella Tabella \ref{tab:Use Case 1.1} è riportato il caso d'uso testuale relativo all'accesso dell'utente configuratore al proprio profilo: l'utente interagisce con l'applicazione inserendo il proprio username e password; in questo caso d'uso, pertanto, è incluso il caso d'uso "Creazione configuratore" che viene invocato nella situazione in cui non esista ancora alcun utente o in cui un utente decida di non voler ritentare l'accesso a seguito dell'inserimento di credenziali errate ma piuttosto di creare un nuovo profilo.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{l|l}
+        \hline
+        Nome & Accesso configuratore \\
+        \hline
+        Attore & Configuratore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{l}
+                Precondizione: esiste almeno un profilo Configuratore già registrato\\
+                 1. L'utente inserisce le proprie credenziali\\
+                 Postcondizione: le credenziali inserite sono corrette e l'utente ha\\accesso all'applicazione\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo &
+            \begin{tabular}{l}
+                Precondizione: non esiste alcun profilo già registrato\\
+                1.a. $\langle\langle$include$\rangle\rangle$ Creazione Configuratore\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                 Precondizione: le credenziali inserite sono errate\\
+                 2. Viene segnalato all'utente un errore\\ 
+                Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Accesso Configuratore}
+    \label{tab:Use Case 1.1}
+\end{table}

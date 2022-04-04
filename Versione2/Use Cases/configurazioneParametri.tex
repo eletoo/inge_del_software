@@ -1,0 +1,43 @@
+Nella tabella \ref{tab:Use Case 2.1} è riportato il caso d'uso testuale relativo all'impostazione da parte dell'utente Configuratore dei parametri e delle informazioni di scambio.
+Le informazioni vengono salvate in modo permanente, in modo da consentirne la lettura ed eventuale modifica ad accessi successivi.
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{l|l}
+        \hline
+        Nome & Configurazione parametri \\
+        \hline
+        Attore & Configuratore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{l}
+                 Precondizione: non sono presenti informazioni di scambio nell'applicazione\\
+                 1. L’utente inserisce il parametro “Piazza”, ossia la città in cui avvengono\\ gli scambi; viene segnalato che tale informazione non\\sarà più modificabile in futuro.\\
+                 2. L'utente inserisce almeno un luogo in cui tali scambi sono effettuati.\\
+                 3. L'utente inserisce almeno un giorno della settimana in cui gli scambi\\possono avere luogo.\\
+                 4. L'utente inserisce almeno un intervallo orario entro cui effettuare gli\\scambi.\\
+                 5. L'utente inserisce la scadenza, ossia il numero massimo di giorni entro\\cui un fruitore può accettare una
+                 proposta di scambio avanzata da un\\altro fruitore.\\
+                 6. Viene data conferma all'utente che i dati sono stati salvati correttamente\\
+                 Fine                 
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                Precondizione: sono presenti informazioni di scambio nell'applicazione\\
+                1.a. Vengono presentate all'utente le informazioni di scambio attualmente\\presenti\\
+                Precondizione: l'utente conferma di voler modificare le informazioni presenti\\
+                Torna al punto 2
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                Precondizione: l'utente sceglie di non modificare le informazioni presenti\\
+                2.a.a Viene data conferma all'utente che i dati sono stati salvati\\correttamente\\
+                Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Configurazione parametri}
+    \label{tab:Use Case 2.1}
+\end{table}

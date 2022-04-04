@@ -1,0 +1,36 @@
+Nella Tabella \ref{tab:Use Case 2.2} è riportato il caso d'uso testuale relativo alla creazione di un nuovo profilo fruitore: l'utente interagisce con l'applicazione inserendo il proprio username e password.
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{l|l}
+        \hline
+        Nome & Creazione fruitore \\
+        \hline
+        Attore & Fruitore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{l}
+                1. L’utente inserisce il proprio username\\
+                Precondizione: lo username inserito dall’utente non è presente nel sistema\\
+                2. L'utente inserisce la password da associare allo username appena\\inserito.\\
+                Postcondizione: viene creato un nuovo profilo fruitore.\\
+                Fine              
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                 Precondizione: Lo username inserito dall'utente è già presente nel sistema\\
+                 2.a. Viene segnalato che è già presente un profilo assegnato allo username\\appena inserito\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{l}
+                 Precondizione: il profilo non viene creato correttamente\\
+                 Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Creazione Fruitore}
+    \label{tab:Use Case 2.2}
+\end{table}
