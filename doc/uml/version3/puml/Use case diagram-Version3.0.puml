@@ -17,8 +17,6 @@ Admin --> (UseF5)
 Admin --> (UseF7)
 Admin --> (UseF8)
 
-(UseF1) .right.> (UseF2): <<include>>
-
 (Accesso configuratore) as (Use1)
 (Creazione configuratore) as (Use2)
 (Salvataggio dati) as (Use3)
