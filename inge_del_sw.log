@@ -1,0 +1,1047 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.4.4)  5 APR 2022 21:17
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/Users/mattiapavlovic/Desktop/UNI/Terzo anno/Ingegneria del software/Documentazione_progetto/inge_del_software/inge_del_sw.tex"
+(/Users/mattiapavlovic/Desktop/UNI/Terzo anno/Ingegneria del software/Documentazione_progetto/inge_del_software/inge_del_sw.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2022/02/26 3.73 The Babel package
+\babel@savecnt=\count194
+\U@D=\dimen139
+\l@unhyphenated=\language1
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count195
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-italian/italian.ldf
+Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Italian' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 21.
+
+\it@lettering=\count196
+\it@doublequoteactive=\count197
+\it@ISOcompliance=\count198
+)) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count199
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count266
+\Gm@cntv=\count267
+\c@Gm@tempcnt=\count268
+\Gm@bindingoffset=\dimen140
+\Gm@wd@mp=\dimen141
+\Gm@odd@mp=\dimen142
+\Gm@even@mp=\dimen143
+\Gm@layoutwidth=\dimen144
+\Gm@layoutheight=\dimen145
+\Gm@layouthoffset=\dimen146
+\Gm@layoutvoffset=\dimen147
+\Gm@dimlist=\toks17
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.cfg)) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen148
+)) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen149
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count269
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count270
+\leftroot@=\count271
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count272
+\DOTSCASE@=\count273
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen150
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count274
+\c@MaxMatrixCols=\count275
+\dotsspace@=\muskip16
+\c@parentequation=\count276
+\dspbrk@lvl=\count277
+\tag@help=\toks19
+\row@=\count278
+\column@=\count279
+\maxfields@=\count280
+\andhelp@=\toks20
+\eqnshift@=\dimen151
+\alignsep@=\dimen152
+\tagshift@=\dimen153
+\tagwidth@=\dimen154
+\totwidth@=\dimen155
+\lineht@=\dimen156
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen159
+\Hy@linkcounter=\count281
+\Hy@pagecounter=\count282
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count283
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4018.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count284
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen160
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count285
+\Field@Width=\dimen161
+\Fld@charsize=\dimen162
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring ON on input line 6045.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count286
+\c@Item=\count287
+\c@Hfootnote=\count288
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count289
+\c@bookmark@seq@number=\count290
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip52
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count291
+\l__pdf_internal_box=\box52
+) (inge_del_sw.aux
+
+LaTeX Warning: Label `fig:Simplified Class Diagram' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.1' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.2' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.3' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.4' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.5' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.6' multiply defined.
+
+
+LaTeX Warning: Label `fig:Class Diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:Simplified Class Diagram' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.1' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.2' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.3' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.4' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.5' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 1.6' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 2.1' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 2.2' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 2.3' multiply defined.
+
+
+LaTeX Warning: Label `tab:Use Case 2.4' multiply defined.
+
+)
+\openout1 = `inge_del_sw.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Info: Redefining \it@ocap on input line 18.
+LaTeX Info: Redefining \it@ccap on input line 18.
+
+
+File italian.ldf warning: 
+italian.ldf    With OT1 encoding guillemets are poorly faked
+italian.ldf    Use T1 encoding
+italian.ldf    or specify a font with command \CaporaliFrom
+italian.ldf    See the documentation concerning the babel-italian typesetting 
+italian.ldf    on input line 18.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=49.79231pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count292
+\scratchdimen=\dimen163
+\scratchbox=\box53
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen164
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks24
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+)
+Package hyperref Info: Link coloring ON on input line 18.
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count298
+)
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
+ (inge_del_sw.out) (inge_del_sw.out)
+\@outlinefile=\write3
+\openout3 = `inge_del_sw.out'.
+
+ [1
+
+{/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}] (inge_del_sw.toc)
+\tf@toc=\write4
+\openout4 = `inge_del_sw.toc'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 \chapter
+             {Specifiche tecniche} [1
+
+]
+Capitolo 1.
+(specifiche.tex
+Overfull \hbox (12.39468pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/10 (non vuoto) di categorie. L'applicazione puo essere adottata da varie organizzazioni, che sovrintendono
+ []
+
+
+Overfull \hbox (9.45947pt too wide) in paragraph at lines 26--27
+[]\OT1/cmr/m/n/10 Una categoria puo articolarsi in due o piu (sotto)categorie, a loro volta suddivisibili ricorsivamente,
+ []
+
+[2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
+
+ []
+
+
+Overfull \hbox (0.68169pt too wide) in paragraph at lines 66--67
+[]\OT1/cmr/m/n/10 Supponendo che un fruitore intenda proporre il baratto di un articolo appartenente alla categoria
+ []
+
+[3]
+Overfull \hbox (4.79265pt too wide) in paragraph at lines 87--88
+[]\OT1/cmr/m/n/10 Nell'ambito della sessione aperta al primo accesso egli dovra immediatamente scegliere credenziali
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+Overfull \hbox (8.76495pt too wide) in paragraph at lines 128--129
+[]\OT1/cmr/m/n/10 Le informazioni circa la categoria di appartenenza di tale articolo e il contenuto della pubblicazione
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+[6]
+Overfull \hbox (12.51497pt too wide) in paragraph at lines 179--180
+\OT1/cmr/m/n/10 interna sia progettata in modo da ridurre gli effetti collaterali e lo sforzo connesso al cambiamento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Overfull \hbox (6.65378pt too wide) in paragraph at lines 193--194
+\OT1/cmr/m/n/10 frutto di un esercizio, necessariamente di dimensioni limitate, e non e destinata a essere effettivamente
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+Overfull \hbox (1.09827pt too wide) in paragraph at lines 204--208
+[]\OT1/cmr/m/n/10 L'interpretazione relativa alle \credenziali predefinite" comunicate a ciascun nuovo configuratore
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--215
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
+
+ []
+
+
+Overfull \hbox (19.0694pt too wide) in paragraph at lines 220--221
+[]\OT1/cmr/m/n/10 I requisiti (funzionali e non) delle cinque versioni dell'applicazione da realizzare sono deliberatamente
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+
+ []
+
+[8]
+Overfull \hbox (2.5149pt too wide) in paragraph at lines 229--230
+\OT1/cmr/m/n/10 integrazioni/modifiche apportate ai casi d'uso (testuali e grafici) della versione precedente
+ []
+
+
+Overfull \hbox (14.76399pt too wide) in paragraph at lines 231--232
+[]\OT1/cmr/m/n/10 diagrammi UML comportamentali (opzionali), e qualsiasi altra specifica ritenuta opportuna; 
+ []
+
+) [9]
+Capitolo 2.
+(Versione1/usecases.tex (Versione1/introTables.tex
+Overfull \hbox (15.6261pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/10 da parte dell'utente configuratore: l'utente, dopo aver effettuato l'accesso, interagisce con l'applicazione
+ []
+
+[10
+
+])
+Overfull \hbox (28.56952pt too wide) in paragraph at lines 8--9
+[]\OT1/cmr/m/n/10 In Figura [][]2.1[][] e riportato il diagramma UML dei casi d'uso relativo alla prima versione dell'applicazione.
+ []
+
+<./images//imagesV1/Use case diagram-Version 1.0.png, id=211, 783.92876pt x 325.215pt>
+File: ./images//imagesV1/Use case diagram-Version 1.0.png Graphic file (type png)
+<use ./images//imagesV1/Use case diagram-Version 1.0.png>
+Package pdftex.def Info: ./images//imagesV1/Use case diagram-Version 1.0.png  used on input line 22.
+(pdftex.def)             Requested size: 384.1096pt x 159.35178pt.
+) (Versione1/classdiagram.tex [11 <./images//imagesV1/Use case diagram-Version 1.0.png (PNG copy)>]
+Overfull \hbox (2.26434pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
+ []
+
+<./images//imagesV1/Initial class diagram - Version 1.0.png, id=222, 1236.62pt x 896.34875pt>
+File: ./images//imagesV1/Initial class diagram - Version 1.0.png Graphic file (type png)
+<use ./images//imagesV1/Initial class diagram - Version 1.0.png>
+Package pdftex.def Info: ./images//imagesV1/Initial class diagram - Version 1.0.png  used on input line 18.
+(pdftex.def)             Requested size: 426.79135pt x 309.35007pt.
+<./images//imagesV1/Class diagram-Version1.0.png, id=223, 2825.55624pt x 3513.125pt>
+File: ./images//imagesV1/Class diagram-Version1.0.png Graphic file (type png)
+<use ./images//imagesV1/Class diagram-Version1.0.png>
+Package pdftex.def Info: ./images//imagesV1/Class diagram-Version1.0.png  used on input line 24.
+(pdftex.def)             Requested size: 426.79135pt x 530.64482pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./images//imagesV1/Initial class diagram - Version 1.0.png (PNG copy)>] [13 <./images//imagesV1/Class diagram-Version1.0.png (PNG copy)>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 50.
+
+<./images//imagesV1/Class diagram simplified-Version1.0.png, id=237, 2082.78125pt x 2733.21124pt>
+File: ./images//imagesV1/Class diagram simplified-Version1.0.png Graphic file (type png)
+<use ./images//imagesV1/Class diagram simplified-Version1.0.png>
+Package pdftex.def Info: ./images//imagesV1/Class diagram simplified-Version1.0.png  used on input line 52.
+(pdftex.def)             Requested size: 426.79135pt x 560.0617pt.
+) (Versione1/behaviourdiagrams.tex [14] [15 <./images//imagesV1/Class diagram simplified-Version1.0.png (PNG copy)>]
+Overfull \hbox (41.48723pt too wide) in paragraph at lines 7--9
+\OT1/cmr/m/n/10 l'interazione dell'utente con l'applicazione per consentire all'utente Configuratore di accedere all'applicazione. 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 29.
+
+<./images//imagesV1/Sequence diagram-Accesso configuratore.png, id=248, 579.16376pt x 872.25874pt>
+File: ./images//imagesV1/Sequence diagram-Accesso configuratore.png Graphic file (type png)
+<use ./images//imagesV1/Sequence diagram-Accesso configuratore.png>
+Package pdftex.def Info: ./images//imagesV1/Sequence diagram-Accesso configuratore.png  used on input line 31.
+(pdftex.def)             Requested size: 256.07741pt x 385.67168pt.
+[16] [17 <./images//imagesV1/Sequence diagram-Accesso configuratore.png (PNG copy)>]
+<./images//imagesV1/State diagram - Ciclo di vita del configuratore.png, id=275, 709.65125pt x 735.74875pt>
+File: ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png Graphic file (type png)
+<use ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png>
+Package pdftex.def Info: ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png  used on input line 42.
+(pdftex.def)             Requested size: 298.75264pt x 309.7421pt.
+) (Versione1/table.tex [18 <./images//imagesV1/State diagram - Ciclo di vita del configuratore.png (PNG copy)>] (Versione1/UseCases/accessoConfiguratore.tex) (Versione1/UseCases/creazioneConfiguratore.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (5.90382pt too wide) in paragraph at lines 4--50
+ [][] 
+ []
+
+) (Versione1/UseCases/creazioneGerarchia.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (11.32054pt too wide) in paragraph at lines 5--51
+ [][] 
+ []
+
+) (Versione1/UseCases/visualizzazioneGerarchie.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (7.9315pt too wide) in paragraph at lines 4--17
+ [][] 
+ []
+
+) (Versione1/UseCases/aggiuntaCategoria.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (12.37611pt too wide) in paragraph at lines 4--34
+ [][] 
+ []
+
+) (Versione1/UseCases/salvataggioDati.tex
+Overfull \hbox (4.87613pt too wide) in paragraph at lines 5--25
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)) [19] [20] [21] (Versione2/usecases.tex (Versione2/introTables.tex (Versione1/introTables.tex
+Overfull \hbox (15.6261pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/10 da parte dell'utente configuratore: l'utente, dopo aver effettuato l'accesso, interagisce con l'applicazione
+ []
+
+) [22
+
+])
+<./images//imagesV2/Use case diagram-Version2.0.png, id=316, 1067.99pt x 438.63875pt>
+File: ./images//imagesV2/Use case diagram-Version2.0.png Graphic file (type png)
+<use ./images//imagesV2/Use case diagram-Version2.0.png>
+Package pdftex.def Info: ./images//imagesV2/Use case diagram-Version2.0.png  used on input line 36.
+(pdftex.def)             Requested size: 384.1096pt x 157.75587pt.
+) (Versione2/classdiagram.tex
+Overfull \hbox (2.98721pt too wide) in paragraph at lines 2--3
+\OT1/cmr/m/n/10 In questa sezione sono stati riportati due diagrammi delle classi: il primo, in Figura [][]2.13[][], rappresenta
+ []
+
+[23]
+Overfull \hbox (2.26434pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
+ []
+
+<./images//imagesV2/Class diagram-Version2.0.png, id=328, 1880.02374pt x 2914.89pt>
+File: ./images//imagesV2/Class diagram-Version2.0.png Graphic file (type png)
+<use ./images//imagesV2/Class diagram-Version2.0.png>
+Package pdftex.def Info: ./images//imagesV2/Class diagram-Version2.0.png  used on input line 22.
+(pdftex.def)             Requested size: 426.79135pt x 661.69301pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (24.20001pt too wide) in paragraph at lines 30--31
+\OT1/cmr/m/n/10 relativamente alle informazioni private degli utenti. La classe \OT1/cmtt/m/n/10 User \OT1/cmr/m/n/10 e dotata di metodi per l'autenticazione
+ []
+
+[24 <./images//imagesV2/Use case diagram-Version2.0.png (PNG copy)>]
+
+LaTeX Warning: Text page 25 contains only floats.
+
+[25 <./images//imagesV2/Class diagram-Version2.0.png (PNG copy)>]
+Overfull \hbox (5.20866pt too wide) in paragraph at lines 50--51
+[]\OT1/cmr/m/n/10 La classe \OT1/cmtt/m/n/10 InfoScambio \OT1/cmr/m/n/10 gestisce le informazioni di scambio che devono essere impostate dall'utente
+ []
+
+<./images//imagesV2/Partial class diagram-Version2.0.png, id=340, 1672.2475pt x 1912.14375pt>
+File: ./images//imagesV2/Partial class diagram-Version2.0.png Graphic file (type png)
+<use ./images//imagesV2/Partial class diagram-Version2.0.png>
+Package pdftex.def Info: ./images//imagesV2/Partial class diagram-Version2.0.png  used on input line 58.
+(pdftex.def)             Requested size: 426.79135pt x 488.01328pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (Versione2/behaviourdiagrams.tex [26] [27 <./images//imagesV2/Partial class diagram-Version2.0.png (PNG copy)>]
+<./images//imagesV2/State diagram-interazione configuratore v2.png, id=351, 1693.32625pt x 1275.76625pt>
+File: ./images//imagesV2/State diagram-interazione configuratore v2.png Graphic file (type png)
+<use ./images//imagesV2/State diagram-interazione configuratore v2.png>
+Package pdftex.def Info: ./images//imagesV2/State diagram-interazione configuratore v2.png  used on input line 14.
+(pdftex.def)             Requested size: 298.75264pt x 225.07283pt.
+<./images//imagesV2/State diagram-interazione fruitore v2.png, id=353, 478.78876pt x 686.565pt>
+File: ./images//imagesV2/State diagram-interazione fruitore v2.png Graphic file (type png)
+<use ./images//imagesV2/State diagram-interazione fruitore v2.png>
+Package pdftex.def Info: ./images//imagesV2/State diagram-interazione fruitore v2.png  used on input line 24.
+(pdftex.def)             Requested size: 213.39273pt x 294.48387pt.
+) (Versione2/table.tex [28 <./images//imagesV2/State diagram-interazione configuratore v2.png (PNG copy)>] (Versione1/UseCases/accessoConfiguratore.tex) (Versione1/UseCases/creazioneConfiguratore.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (5.90382pt too wide) in paragraph at lines 4--50
+ [][] 
+ []
+
+) (Versione1/UseCases/creazioneGerarchia.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (11.32054pt too wide) in paragraph at lines 5--51
+ [][] 
+ []
+
+) (Versione1/UseCases/visualizzazioneGerarchie.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (7.9315pt too wide) in paragraph at lines 4--17
+ [][] 
+ []
+
+) (Versione1/UseCases/aggiuntaCategoria.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (12.37611pt too wide) in paragraph at lines 4--34
+ [][] 
+ []
+
+) (Versione1/UseCases/salvataggioDati.tex
+Overfull \hbox (4.87613pt too wide) in paragraph at lines 5--25
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (Versione2/Use Cases/configurazioneParametri.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (31.01506pt too wide) in paragraph at lines 4--39
+ [][] 
+ []
+
+) (Versione2/Use Cases/creazioneFruitore.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (20.48717pt too wide) in paragraph at lines 4--33
+ [][] 
+ []
+
+) (Versione2/Use Cases/accessoFruitore.tex
+Overfull \hbox (20.34828pt too wide) in paragraph at lines 4--35
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (Versione2/Use Cases/visualizzazioneInfoApp.tex
+Overfull \hbox (24.43175pt too wide) in paragraph at lines 4--25
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)) [29 <./images//imagesV2/State diagram-interazione fruitore v2.png (PNG copy)>] [30] [31] [32] [33] [34] (Versione3/usecases.tex (Versione3/introTables.tex (Versione2/introTables.tex (Versione1/introTables.tex
+Overfull \hbox (15.6261pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/10 da parte dell'utente configuratore: l'utente, dopo aver effettuato l'accesso, interagisce con l'applicazione
+ []
+
+) [35
+
+]))
+Overfull \hbox (29.6806pt too wide) in paragraph at lines 18--19
+[]\OT1/cmr/m/n/10 In Figura [][]2.12[][] e riportato il diagramma UML dei casi d'uso relativo alla terza versione dell'applicazione.
+ []
+
+[36]
+<./images//imagesV3/Use case diagram-Version3.0.png, id=424, 1195.46625pt x 451.6875pt>
+File: ./images//imagesV3/Use case diagram-Version3.0.png Graphic file (type png)
+<use ./images//imagesV3/Use case diagram-Version3.0.png>
+Package pdftex.def Info: ./images//imagesV3/Use case diagram-Version3.0.png  used on input line 40.
+(pdftex.def)             Requested size: 426.79222pt x 170.71947pt.
+) (Versione3/classdiagrams.tex
+Overfull \hbox (2.98721pt too wide) in paragraph at lines 2--3
+\OT1/cmr/m/n/10 In questa sezione sono stati riportati due diagrammi delle classi: il primo, in Figura [][]2.13[][], rappresenta
+ []
+
+[37 <./images//imagesV3/Use case diagram-Version3.0.png (PNG copy)>]
+Overfull \hbox (2.26434pt too wide) in paragraph at lines 19--20
+\OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
+ []
+
+<./images//imagesV3/Class Diagram - Versione 3.png, id=431, 2776.3725pt x 3164.82375pt>
+File: ./images//imagesV3/Class Diagram - Versione 3.png Graphic file (type png)
+<use ./images//imagesV3/Class Diagram - Versione 3.png>
+Package pdftex.def Info: ./images//imagesV3/Class Diagram - Versione 3.png  used on input line 23.
+(pdftex.def)             Requested size: 455.24408pt x 518.93788pt.
+
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 23--24
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (24.20001pt too wide) in paragraph at lines 31--32
+\OT1/cmr/m/n/10 relativamente alle informazioni private degli utenti. La classe \OT1/cmtt/m/n/10 User \OT1/cmr/m/n/10 e dotata di metodi per l'autenticazione
+ []
+
+[38]
+Overfull \hbox (5.20866pt too wide) in paragraph at lines 51--52
+[]\OT1/cmr/m/n/10 La classe \OT1/cmtt/m/n/10 InfoScambio \OT1/cmr/m/n/10 gestisce le informazioni di scambio che devono essere impostate dall'utente
+ []
+
+[39 <./images//imagesV3/Class Diagram - Versione 3.png (PNG copy)>]
+<./images//imagesV3/Vers3Parziale.png, id=440, 1973.3725pt x 2037.6125pt>
+File: ./images//imagesV3/Vers3Parziale.png Graphic file (type png)
+<use ./images//imagesV3/Vers3Parziale.png>
+Package pdftex.def Info: ./images//imagesV3/Vers3Parziale.png  used on input line 61.
+(pdftex.def)             Requested size: 455.24408pt x 470.04013pt.
+
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 61--62
+ [][] 
+ []
+
+) (Versione3/behaviourdiagrams.tex [40 <./images//imagesV3/Vers3Parziale.png (PNG copy)>]
+<./images//imagesV3/State Diagram Configuratore - Versione 3.0.png, id=446, 751.80875pt x 398.48875pt>
+File: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png Graphic file (type png)
+<use ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png>
+Package pdftex.def Info: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png  used on input line 13.
+(pdftex.def)             Requested size: 1503.6138pt x 796.97556pt.
+
+Overfull \hbox (28.45012pt too wide) in paragraph at lines 13--14
+ [][] 
+ []
+
+<./images//imagesV3/State Diagram Fruitore - Versione 3.0.png, id=448, 752.8125pt x 269.005pt>
+File: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png Graphic file (type png)
+<use ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png>
+Package pdftex.def Info: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png  used on input line 23.
+(pdftex.def)             Requested size: 1505.6213pt x 538.00867pt.
+
+Overfull \hbox (28.46059pt too wide) in paragraph at lines 23--24
+ [][] 
+ []
+
+) (Versione3/table.tex [41 <./images//imagesV3/State Diagram Configuratore - Versione 3.0.png (PNG copy)>] (Versione1/UseCases/accessoConfiguratore.tex) (Versione1/UseCases/creazioneConfiguratore.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (5.90382pt too wide) in paragraph at lines 4--50
+ [][] 
+ []
+
+) (Versione1/UseCases/creazioneGerarchia.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (11.32054pt too wide) in paragraph at lines 5--51
+ [][] 
+ []
+
+) (Versione1/UseCases/visualizzazioneGerarchie.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (7.9315pt too wide) in paragraph at lines 4--17
+ [][] 
+ []
+
+) (Versione1/UseCases/aggiuntaCategoria.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (12.37611pt too wide) in paragraph at lines 4--34
+ [][] 
+ []
+
+) (Versione1/UseCases/salvataggioDati.tex
+Overfull \hbox (4.87613pt too wide) in paragraph at lines 5--25
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (Versione2/Use Cases/configurazioneParametri.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (31.01506pt too wide) in paragraph at lines 4--39
+ [][] 
+ []
+
+) (Versione2/Use Cases/creazioneFruitore.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+
+Overfull \hbox (20.48717pt too wide) in paragraph at lines 4--33
+ [][] 
+ []
+
+) (Versione2/Use Cases/accessoFruitore.tex
+Overfull \hbox (20.34828pt too wide) in paragraph at lines 4--35
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (Versione2/Use Cases/visualizzazioneInfoApp.tex
+Overfull \hbox (24.43175pt too wide) in paragraph at lines 4--25
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (Versione3/Use Cases/modificaStatoOfferta.tex
+Overfull \hbox (52.98721pt too wide) in paragraph at lines 4--29
+ [][] 
+ []
+
+) (Versione3/Use Cases/offertaBaratto.tex
+Overfull \hbox (59.48723pt too wide) in paragraph at lines 4--37
+ [][] 
+ []
+
+) (Versione3/Use Cases/visualizzaOfferteCategoria.tex
+Overfull \hbox (40.43158pt too wide) in paragraph at lines 4--18
+ [][] 
+ []
+
+) (Versione3/Use Cases/visualizzazioneOffertePersonali.tex
+Overfull \hbox (38.32059pt too wide) in paragraph at lines 4--17
+ [][] 
+ []
+
+)) [42 <./images//imagesV3/State Diagram Fruitore - Versione 3.0.png (PNG copy)>] [43] [44] [45] [46] [47] [48] [49] [50] (inge_del_sw.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `inge_del_sw.out' has not changed.
+(rerunfilecheck)             Checksum: 4562C085AC668C02BA18FA7E69C1A27D;4084.
+ ) 
+Here is how much of TeX's memory you used:
+ 11172 strings out of 480517
+ 195811 string characters out of 2893286
+ 512562 words of memory out of 3000000
+ 28696 multiletter control sequences out of 15000+600000
+ 476703 words of font info for 54 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 60i,15n,63p,1094b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on inge_del_sw.pdf (51 pages, 4331992 bytes).
+PDF statistics:
+ 566 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 305 words of extra memory for PDF output out of 10000 (max. 10000000)
+

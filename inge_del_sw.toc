@@ -1,0 +1,30 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Specifiche tecniche}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Specifiche}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Generalità}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Versioni}{4}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Versione 1}{4}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Versione 2}{4}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Versione 3}{5}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Versione 4}{5}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Versione 5}{7}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Requisiti non funzionali}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Nota}{7}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Richieste}{9}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Documentazione}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Versione 1}{10}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Casi d'uso}{10}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Diagramma UML delle classi}{12}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Diagrammi UML comportamentali}{16}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Tabelle dei casi d'uso testuali}{19}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Versione 2}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Casi d'uso}{22}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Diagramma UML delle classi}{24}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Diagrammi UML comportamentali}{27}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Tabelle dei casi d'uso testuali}{29}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Versione 3}{35}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Casi d'uso}{35}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Diagramma UML delle classi}{37}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Diagrammi UML comportamentali}{41}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Tabelle dei casi d'uso testuali}{42}{subsection.2.3.4}%
