@@ -99,7 +99,8 @@ public class Offerta implements Serializable {
         RITIRATA,
         ACCOPPIATA,
         SELEZIONATA,
-        IN_SCAMBIO
+        IN_SCAMBIO,
+        CHIUSA
     }
 
     /**
@@ -127,25 +128,6 @@ public class Offerta implements Serializable {
         return this.stato == StatoOfferta.APERTA;
     }
 
-    public static void managePersonalOffers(@NotNull Applicazione app, @NotNull View view, Fruitore fruitore, @NotNull List<Scambio> scambi) {
-        var selectedOffers = app.getOfferte(fruitore)
-                .stream()
-                .filter(e -> e.getStato() == StatoOfferta.SELEZIONATA)
-                .collect(Collectors.toList());
-
-        //TODO: problema: se l'utente non vuole selezionare nessuna offerta dall'elenco deve poter uscire dal choose
-        var toManage = view.choose(selectedOffers.stream().collect(Collectors.toList()), null);
-
-        //il filtraggio dovrebbe restituire al più un'offerta perché possono essere selezionate per gli scambi solo le offerte
-        //aperte e una volta selezionate per uno scambio cambiano stato
-        //
-        //in sostanza getScambio dovrebbe restituire un solo scambio in quanto un'offerta una volta selezionata per uno scambio
-        //cambia stato e non diventa più disponibile per essere selezionata per altri scambi
-        scambi.stream().filter(e -> e.getScambio(toManage).isValidExchange(app)).forEach(e -> e.manageExchange(view, app));
-
-        //TODO: se lo scambio non è valido bisogna cambiare lo stato delle offerte e cancellare lo scambio
-    }
-
     /**
      * Mostra la lista di offerte personali relative a un utente
      *
@@ -155,6 +137,22 @@ public class Offerta implements Serializable {
      */
     public static void viewPersonalOffers(Fruitore fruitore, @NotNull Applicazione app, @NotNull View view) {
         view.showList(app.getOfferte(fruitore));
+    }
+
+    /**
+     * Visualizza le offerte di una categoria foglia specificata dall'utente
+     *
+     * @param app applicazione
+     * @param view view
+     * @param s stato delle offerte da visualizzare
+     */
+    public static void viewOffers(@NotNull Applicazione app, @NotNull View view, StatoOfferta s) {
+        Foglia leaf = chooseLeaf("Selezionare una categoria di cui visualizzare le offerte: ", view, app);
+        view.showList(app
+                .getOfferte()
+                .stream()
+                .filter(e -> e.getCategoria().equals(leaf) && e.getStato().equals(s))
+                .collect(Collectors.toList()));
     }
 
     /**

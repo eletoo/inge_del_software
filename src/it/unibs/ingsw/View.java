@@ -309,7 +309,9 @@ public class View {
                 "\n3. Salva" +
                 "\n4. Configura informazioni di scambio" +
                 "\n5. Visualizza offerte" +
-                "\n6. Logout");
+                "\n6. Visualizza offerte in scambio" +
+                "\n7. Visualizza offerte chiuse" +
+                "\n8. Logout");
         return (new Scanner(System.in)).next();
     }
 
@@ -325,8 +327,9 @@ public class View {
                 "\n3. Visualizza offerte per categoria" +
                 "\n4. Crea offerta" +
                 "\n5. Ritira offerta" +
-                "\n6. Crea proposta di scambio"+
-                "\n7. Logout");
+                "\n6. Crea proposta di scambio" +
+                "\n7. Visualizza ultimi messaggi scambiati relativi ai tuoi scambi" +
+                "\n8. Logout");
         return (new Scanner(System.in)).next();
     }
 

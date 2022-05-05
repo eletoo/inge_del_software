@@ -33,8 +33,12 @@ public class Applicazione {
         return scambi;
     }
 
-    public void addScambio(Scambio s){
+    public void addScambio(Scambio s) {
         scambi.add(s);
+    }
+
+    public void removeScambio(Scambio s) {
+        scambi.remove(s);
     }
 
     /**
@@ -49,6 +53,14 @@ public class Applicazione {
      */
     public void setOfferte(List<Offerta> offerte) {
         this.offerte = offerte;
+    }
+
+    public Offerta getOfferta(Offerta off) {
+        for (var o : this.offerte) {
+            if(o.equals(off))
+                return o;
+        }
+        return null;
     }
 
     /**
@@ -302,5 +314,9 @@ public class Applicazione {
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getOfferte());
         objectOutputStream.close();
+    }
+
+    public List<Scambio> getValidExchanges(@NotNull List<Scambio> scambi) {
+        return scambi.stream().filter(e -> e.isValidExchange(this)).collect(Collectors.toList());
     }
 }

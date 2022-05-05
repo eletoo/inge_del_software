@@ -2,7 +2,6 @@ package it.unibs.ingsw;
 
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 
 /**
  * Controller: gestisce l'accesso degli utenti e l'interazione con l'applicazione mettendo in comunicazione {@link UserDataStore},
@@ -133,6 +132,11 @@ public class Controller {
             app.prepareInfoStructure();
             app.prepareOffersStructure();
 
+            //gestisce le offerte di scambio prima ancora di selezionare altre azioni
+            Scambio.manageExchanges(app, view, fruitore);
+            Scambio.manageOwnExchanges(app, view, fruitore);
+
+            //seleziona un'azione da compiere
             choice = view.selectFruitoreAction();
             switch (choice) {
                 case "1": {
@@ -156,7 +160,6 @@ public class Controller {
                 case "2": {
                     // visualizza offerte personali
                     Offerta.viewPersonalOffers(fruitore, app, view);
-                    Offerta.managePersonalOffers(app, view, fruitore, app.getScambi());
                 }
                 break;
                 case "3": {
@@ -176,8 +179,13 @@ public class Controller {
                 break;
                 case "6": {
                     //crea proposta di scambio
-                    app.addScambio(new Scambio(app, view));
+                    app.addScambio(new Scambio(app, view, fruitore));
                     //TODO: salvare gli scambi in modo permanente
+                }
+                break;
+                case "7": {
+                    //visualizza l'ultimo messaggio inviato dall'autore dello scambio
+                    Scambio.viewLastMessageByAuthor(fruitore, app, view);
                 }
                 break;
                 case "8": {
@@ -259,6 +267,16 @@ public class Controller {
                 }
                 break;
                 case "6": {
+                    //visualizza offerte in scambio di una categoria foglia
+                    Offerta.viewOffers(app, view, Offerta.StatoOfferta.IN_SCAMBIO);
+                }
+                break;
+                case "7": {
+                    //visualizza offerte chiuse di una categoria foglia
+                    Offerta.viewOffers(app, view, Offerta.StatoOfferta.CHIUSA);
+                }
+                break;
+                case "8": {
                     //esci
                     end = true;
                     view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);
