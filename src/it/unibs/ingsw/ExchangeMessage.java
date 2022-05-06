@@ -1,6 +1,8 @@
 package it.unibs.ingsw;
 
-public class ExchangeMessage {
+import java.io.Serializable;
+
+public class ExchangeMessage implements Serializable {
 
     private String message;
     private Fruitore author;

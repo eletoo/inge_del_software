@@ -126,15 +126,14 @@ public class Controller {
     private void useAsFruitore(Fruitore fruitore) throws IOException {
         boolean end = false;
         String choice = "0";
+
+        //gestisce le offerte di scambio prima ancora di selezionare altre azioni
+        Scambio.manageExchanges(app, view, fruitore);
+        Scambio.manageOwnExchanges(app, view, fruitore);
+
         do {
             //carica i dati salvati in precedenza
-            app.prepareDirectoryStructure();
-            app.prepareInfoStructure();
-            app.prepareOffersStructure();
-
-            //gestisce le offerte di scambio prima ancora di selezionare altre azioni
-            Scambio.manageExchanges(app, view, fruitore);
-            Scambio.manageOwnExchanges(app, view, fruitore);
+            this.prepareStructures();
 
             //seleziona un'azione da compiere
             choice = view.selectFruitoreAction();
@@ -179,8 +178,22 @@ public class Controller {
                 break;
                 case "6": {
                     //crea proposta di scambio
-                    app.addScambio(new Scambio(app, view, fruitore));
-                    //TODO: salvare gli scambi in modo permanente
+                    if (app.getHierarchies().isEmpty()) {
+                        view.errorMessage(View.ErrorMessage.E_NO_CATEGORIES);
+                        break;
+                    }
+
+                    if (app.getInformazioni() == null) {
+                        view.errorMessage(View.ErrorMessage.E_NO_INFO);
+                        break;
+                    }
+
+                    var sc = Scambio.createExchange(app, view, fruitore);
+                    if(sc != null) {
+                        app.addScambio(sc);
+                        app.saveExchanges();
+                    }
+
                 }
                 break;
                 case "7": {
@@ -198,6 +211,18 @@ public class Controller {
                     view.errorMessage(View.ErrorMessage.E_ILLICIT_CHOICE);
             }
         } while (!end);
+    }
+
+    /**
+     * Prepara le strutture dati caricando eventuali dati gia' salvati
+     *
+     * @throws IOException eccezione
+     */
+    private void prepareStructures() throws IOException {
+        app.prepareDirectoryStructure();
+        app.prepareInfoStructure();
+        app.prepareOffersStructure();
+        app.prepareExchangesStructure();
     }
 
     /**
@@ -219,9 +244,7 @@ public class Controller {
         String choice = "0";
         do {
             //carica i dati salvati in precedenza
-            app.prepareDirectoryStructure();
-            app.prepareInfoStructure();
-            app.prepareOffersStructure();
+            this.prepareStructures();
 
             choice = view.selectConfiguratoreAction();
             switch (choice) {
@@ -243,6 +266,7 @@ public class Controller {
                     app.saveData();
                     app.saveInfo();
                     app.saveOfferte();
+                    app.saveExchanges();
                     view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
                 }
                 break;

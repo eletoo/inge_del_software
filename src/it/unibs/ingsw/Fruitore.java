@@ -18,4 +18,5 @@ public class Fruitore extends User implements Serializable {
     }
 
 
+
 }

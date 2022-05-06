@@ -4,6 +4,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -55,6 +56,13 @@ public class IntervalloOrario implements Serializable {
     }
 
     /**
+     * @return orario di inizio di un intervallo
+     */
+    public Orario getStart() {
+        return start;
+    }
+
+    /**
      * Verifica se due intervalli orari si sovrappongono
      *
      * @param b intervallo con cui controllare la sovrapposizione
@@ -74,6 +82,30 @@ public class IntervalloOrario implements Serializable {
      */
     public String toString() {
         return start.toString() + "-" + end.toString();
+    }
+
+    /**
+     * @return l'elenco di tutti gli orari (uno ogni mezz'ora) contenuti in un intervallo orario
+     */
+    public List<Orario> getSingoliOrari() {
+        List<Orario> orari = new LinkedList<>();
+        orari.add(this.start);
+        Orario o = this.start;
+        while (this.end.isLaterThan(o)) {
+            if (o.getMinutes() + 30 == 60) {
+                if (o.getHour() + 1 <= 24) {
+                    o.setHour(o.getHour() + 1);
+                } else
+                    o.setHour(00);
+
+                o.setMinutes(00);
+            } else
+                o.setMinutes(o.getMinutes() + 30);
+
+            if (this.end.isLaterThan(o))
+                orari.add(o);
+        }
+        return orari;
     }
 
 }

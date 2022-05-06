@@ -1,50 +1,70 @@
 package it.unibs.ingsw;
 
-import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.function.Function;
-import java.util.stream.Collectors;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
 
 public class Scambio implements Serializable {
-
-    //TODO: l'autore di una proposta in scambio può ritirarla o una volta che è in scambio non è più ritirabile?
 
     private Fruitore author;
     private Offerta ownOffer;
     private Offerta selectedOffer;
-    private ExchangeMessage message;
+    private ExchangeMessage message = new ExchangeMessage(null, null);
     private LocalDateTime dateTime;
     private ExchangeMessage lastAuthorMsg;
 
-    public Scambio(Applicazione app, View view, Fruitore autore) {
-        this.author = autore;
-        this.createExchange(app, view);
+    /**
+     * Costruttore
+     *
+     * @param app      applicazione
+     * @param own      offerta accoppiata
+     * @param selected offerta selezionata
+     */
+    private Scambio(@NotNull View view, @NotNull Applicazione app, @NotNull Offerta own, @NotNull Offerta selected) {
+        this.ownOffer = own;
+        this.selectedOffer = selected;
+
+        app.getOfferta(this.ownOffer).setStato(Offerta.StatoOfferta.ACCOPPIATA);
+        app.getOfferta(this.selectedOffer).setStato(Offerta.StatoOfferta.SELEZIONATA);
+
+        this.author = own.getProprietario();
+        this.dateTime = LocalDateTime.now();
+        suggestMeeting(view, app, own.getProprietario());
     }
 
-    private void createExchange(@NotNull Applicazione app, @NotNull View view) {
-        this.ownOffer = view.choose(app.getOfferte(author)
+    /**
+     * Crea una proposta di scambio tra due offerte, facendo selezionare le due offerte, modificandone lo stato e impostando
+     * la data di creazione dell'offerta di scambio
+     *
+     * @param app  applicazione
+     * @param view view
+     */
+    public static @Nullable Scambio createExchange(@NotNull Applicazione app, @NotNull View view, @NotNull Fruitore author) {
+        view.message("Seleziona una tua offerta da scambiare: ");
+        var ownOffer = view.choose(app.getOfferte(author)
                 .stream()
                 .filter(e -> e.isAvailableOffer())
                 .collect(Collectors.toList()), null);
 
-        this.selectedOffer = view.choose(app.getOfferte(this.ownOffer.getCategoria())
+        view.message("Seleziona un'offerta con cui scambiare il tuo prodotto: ");
+        var possible_offers = app.getOfferte(ownOffer.getCategoria())
                 .stream()
-                .filter(e -> (this.ownOffer.getProprietario() != e.getProprietario()))
+                .filter(e -> !ownOffer.getProprietario().equals(e.getProprietario()))
                 .filter(e -> e.isAvailableOffer())
-                .collect(Collectors.toList()), null);
+                .collect(Collectors.toList());
 
-//TODO: non so se cambia il valore dello stato solo nell'oggetto o nell'app intera
-        if (this.ownOffer != null && this.selectedOffer != null) {
-            app.getOfferta(this.ownOffer).setStato(Offerta.StatoOfferta.ACCOPPIATA);
-            //this.ownOffer.setStato(Offerta.StatoOfferta.ACCOPPIATA);
-            app.getOfferta(this.selectedOffer).setStato(Offerta.StatoOfferta.SELEZIONATA);
-            //this.selectedOffer.setStato(Offerta.StatoOfferta.SELEZIONATA);
+        if (possible_offers.isEmpty()) {
+            view.errorMessage(View.ErrorMessage.E_NO_OFFERS);
+            return null;
         }
-        this.message = null;
-        this.lastAuthorMsg = null;
-        this.dateTime = LocalDateTime.now();
+
+        var selectedOffer = view.choose(possible_offers, null);
+
+        return new Scambio(view, app, ownOffer, selectedOffer);
     }
 
     /**
@@ -52,11 +72,13 @@ public class Scambio implements Serializable {
      * @return true se lo scambio a' ancora valido, cioe' non e' ancora stata superata la scadenza
      */
     public boolean isValidExchange(@NotNull Applicazione app) {
+        //riga di test per verificare il funzionamento corretto del timer
+        //return LocalDateTime.now().isBefore(this.dateTime.plusSeconds(app.getInformazioni().getScadenza()));
         return LocalDateTime.now().isBefore(this.dateTime.plusDays(app.getInformazioni().getScadenza()));
     }
 
     /**
-     * gestisce il singolo scambio: se non e' ancora presente alcuna informazione chiede all'utente di impostarle,
+     * Gestisce il singolo scambio: se non e' ancora presente alcuna informazione chiede all'utente di impostarle,
      * altrimenti chiede se accettare l'appuntamento proposto o proporne uno alternativo
      *
      * @param view view
@@ -82,7 +104,7 @@ public class Scambio implements Serializable {
     }
 
     /**
-     * chiede all'utente le informazioni per un appuntamento per lo scambio
+     * Chiede all'utente le informazioni per un appuntamento per lo scambio
      *
      * @param view view
      * @param app  applicazione
@@ -93,8 +115,12 @@ public class Scambio implements Serializable {
         sb.append("\n\nInformazioni appuntamento per lo scambio:");
         sb.append("\nLuogo: " + view.choose(app.getInformazioni().getLuoghi(), null));
         sb.append("\nGiorno: " + view.choose(app.getInformazioni().getGiorni(), null));
-        sb.append("\nOrario: " + view.choose(app.getInformazioni().getIntervalliOrari(), null));
-        //TODO: posso selezionare l'intervallo o il singolo orario al suo interno?
+
+        List<Orario> orari = new LinkedList<>();
+        app.getInformazioni().getIntervalliOrari().stream().forEach(e -> orari.addAll(e.getSingoliOrari()));
+        //todo: getSingoliOrari non fa quello che dovrebbe
+        sb.append("\nOrario: " + view.choose(orari, null));
+
         this.message.setMessage(sb.toString());
         this.message.setAuthor(f);
 
@@ -117,15 +143,7 @@ public class Scambio implements Serializable {
     }
 
     /**
-     * @return l'ultimo messaggio inviato dall'autore di uno scambio
-     */
-    public ExchangeMessage getLastAuthorMsg() {
-        return this.lastAuthorMsg;
-    }
-
-
-    /**
-     * gestisce le offerte di scambio di cui l'utente e' destinatario
+     * Gestisce le offerte di scambio di cui l'utente e' destinatario
      *
      * @param app  applicazione
      * @param view view
@@ -142,7 +160,7 @@ public class Scambio implements Serializable {
     }
 
     /**
-     * gestisce le offerte di scambio di cui l'utente e' autore
+     * Gestisce le offerte di scambio di cui l'utente e' autore
      *
      * @param app    applicazione
      * @param view   view
@@ -160,7 +178,7 @@ public class Scambio implements Serializable {
     }
 
     /**
-     * gestisce le offerte di scambio di un utente
+     * Gestisce le offerte di scambio di un utente
      *
      * @param app               applicazione
      * @param view              view
@@ -172,35 +190,45 @@ public class Scambio implements Serializable {
      */
     private static void manage(@NotNull Applicazione app, View view, String noExchanges, String existingExchanges, String selectExchange, Fruitore f, Function<Scambio, Fruitore> predicate) {
         //gestione scambi validi
-        var userExchanges = app
-                .getValidExchanges(app.getScambi())
-                .stream()
-                .filter(e -> predicate.apply(e).equals(f))
-                .collect(Collectors.toList());
+        List<Scambio> userExchanges;
+        if (app.getScambi() == null)
+            userExchanges = new ArrayList<>();
+        else
+            userExchanges = app
+                    .getValidExchanges(app.getScambi())
+                    .stream()
+                    .filter(e -> predicate.apply(e).equals(f))
+                    .collect(Collectors.toList());
 
         if (userExchanges.isEmpty())
             view.message(noExchanges);
 
         while (!userExchanges.isEmpty()) {
+            Scambio toAccept;
             view.message(existingExchanges);
             view.showList(userExchanges.stream().collect(Collectors.toList()));
             if (view.yesOrNoQuestion(selectExchange).equalsIgnoreCase("y")) {
-                var toAccept = view.choose(userExchanges.stream().collect(Collectors.toList()), null);
+                toAccept = view.choose(userExchanges.stream().collect(Collectors.toList()), null);
                 toAccept.manageExchange(view, app, f);
             } else {
                 return;
             }
+            userExchanges.remove(toAccept);
+            //todo: se a un certo punto spariscono gli userExchange è colpa della riga sopra
         }
         //gestione scambi invalidi
         manageInvalidExchanges(app);
     }
 
     /**
-     * gestisce le offerte di scambio invalide, cioe' scadute
+     * Gestisce le offerte di scambio invalide, cioe' scadute
      *
      * @param app
      */
     private static void manageInvalidExchanges(@NotNull Applicazione app) {
+        if (app.getScambi() == null)
+            return;
+
         app.getScambi()
                 .stream()
                 .filter(e -> !e.isValidExchange(app))
@@ -229,18 +257,20 @@ public class Scambio implements Serializable {
     }
 
     /**
-     * visualizza l'ultimo messaggio da parte dell'autore di uno scambio
+     * Visualizza l'ultimo messaggio da parte dell'autore di uno scambio
      *
      * @param f    autore
      * @param app  applicazione
      * @param view view
      */
     public static void viewLastMessageByAuthor(Fruitore f, @NotNull Applicazione app, @NotNull View view) {
+        if (app.getScambi() == null)
+            return;
+
         view.showList(app.getScambi()
                 .stream()
                 .filter(e -> e.getAuthor().equals(f))
                 .collect(Collectors.toList()), Scambio::getLastAuthorMsgString
         );
     }
-
 }

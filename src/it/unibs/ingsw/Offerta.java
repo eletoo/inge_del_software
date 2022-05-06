@@ -142,17 +142,21 @@ public class Offerta implements Serializable {
     /**
      * Visualizza le offerte di una categoria foglia specificata dall'utente
      *
-     * @param app applicazione
+     * @param app  applicazione
      * @param view view
-     * @param s stato delle offerte da visualizzare
+     * @param s    stato delle offerte da visualizzare
      */
     public static void viewOffers(@NotNull Applicazione app, @NotNull View view, StatoOfferta s) {
-        Foglia leaf = chooseLeaf("Selezionare una categoria di cui visualizzare le offerte: ", view, app);
-        view.showList(app
-                .getOfferte()
-                .stream()
-                .filter(e -> e.getCategoria().equals(leaf) && e.getStato().equals(s))
-                .collect(Collectors.toList()));
+        if (app.getHierarchies().size() == 0)
+            view.errorMessage(View.ErrorMessage.E_NO_CATEGORIES);
+        else {
+            Foglia leaf = chooseLeaf("Selezionare una categoria di cui visualizzare le offerte: ", view, app);
+            view.showList(app
+                    .getOfferte()
+                    .stream()
+                    .filter(e -> e.getCategoria().equals(leaf) && e.getStato().equals(s))
+                    .collect(Collectors.toList()));
+        }
     }
 
     /**
@@ -191,24 +195,26 @@ public class Offerta implements Serializable {
      * @throws IOException eccezione I/O
      */
     public static void createOffer(@NotNull Applicazione app, View view, Fruitore fruitore) throws IOException {
-        if (app.getHierarchies().isEmpty())
+        if (app.getHierarchies().isEmpty()) {
             view.errorMessage(View.ErrorMessage.E_NO_CATEGORIES);
-        else {
-            var cat = chooseLeaf("Selezionare una categoria dove pubblicare l'offerta", view, app);
-            var offer = new Offerta(view.inLine("Nome: "), cat, fruitore, Offerta.StatoOfferta.APERTA);
-            for (var field : cat.getCampiNativi().entrySet()) {
-                if (field.getValue().isObbligatorio())
-                    inputField(offer, field, view);
-                else if (view.yesOrNoQuestion("Configurare un valore per " + field.getKey() + "? [Y/N]").equalsIgnoreCase("y"))
-                    inputField(offer, field, view);
-            }
-            try {
-                app.addOfferta(offer);
-            } catch (RequiredConstraintFailureException e) {
-                e.printStackTrace(); //should not happen
-            }
-            app.saveOfferte();
+            return;
         }
+
+        var cat = chooseLeaf("Selezionare una categoria dove pubblicare l'offerta", view, app);
+        var offer = new Offerta(view.inLine("Nome: "), cat, fruitore, Offerta.StatoOfferta.APERTA);
+        for (var field : cat.getCampiNativi().entrySet()) {
+            if (field.getValue().isObbligatorio())
+                inputField(offer, field, view);
+            else if (view.yesOrNoQuestion("Configurare un valore per " + field.getKey() + "? [Y/N]").equalsIgnoreCase("y"))
+                inputField(offer, field, view);
+        }
+        try {
+            app.addOfferta(offer);
+        } catch (RequiredConstraintFailureException e) {
+            e.printStackTrace(); //should not happen
+        }
+        app.saveOfferte();
+
     }
 
     /**
@@ -237,7 +243,11 @@ public class Offerta implements Serializable {
      * @throws IOException eccezione I/O
      */
     public static void undoOffer(@NotNull Applicazione app, View view, Fruitore fruitore) throws IOException {
-        var user_offers = app.getOfferte(fruitore).stream().filter(e -> e.getStato() == Offerta.StatoOfferta.APERTA).collect(Collectors.toList());
+        var user_offers = app
+                .getOfferte(fruitore)
+                .stream()
+                .filter(e -> e.getStato() == Offerta.StatoOfferta.APERTA)
+                .collect(Collectors.toList());
         if (user_offers.isEmpty()) {
             view.errorMessage(View.ErrorMessage.E_NO_OFFERS);
         } else {

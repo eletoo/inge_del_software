@@ -219,7 +219,8 @@ public class View {
         E_INVALID_TIME_RANGE("ERRORE: intervallo orario invalido"),
         E_INVALID_INPUT("ERRORE: Input invalido"),
         E_NO_CATEGORIES("Non ci sono categorie selezionabili"),
-        E_NO_OFFERS("Non ci sono offerte selezionabili");
+        E_NO_OFFERS("Non ci sono offerte selezionabili"),
+        E_NO_INFO("Non sono ancora state impostate le informazioni di scambio -- Contattare un amministratore");
 
         private String message;
 
@@ -328,7 +329,7 @@ public class View {
                 "\n4. Crea offerta" +
                 "\n5. Ritira offerta" +
                 "\n6. Crea proposta di scambio" +
-                "\n7. Visualizza ultimi messaggi scambiati relativi ai tuoi scambi" +
+                "\n7. Visualizza ultimi messaggi relativi ai tuoi scambi" +
                 "\n8. Logout");
         return (new Scanner(System.in)).next();
     }

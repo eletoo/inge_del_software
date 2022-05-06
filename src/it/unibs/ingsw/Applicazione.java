@@ -19,7 +19,7 @@ public class Applicazione {
     private Map<String, Gerarchia> hierarchies;
     private InfoScambio informazioni;
     private List<Offerta> offerte;
-    private ArrayList<Scambio> scambi = new ArrayList<>();
+    private List<Scambio> scambi;
 
     /**
      * Costruttore.
@@ -27,9 +27,10 @@ public class Applicazione {
     public Applicazione() {
         hierarchies = new HashMap<>();
         offerte = new LinkedList<>();
+        scambi = new LinkedList<>();
     }
 
-    public ArrayList<Scambio> getScambi() {
+    public List<Scambio> getScambi() {
         return scambi;
     }
 
@@ -56,11 +57,10 @@ public class Applicazione {
     }
 
     public Offerta getOfferta(Offerta off) {
-        for (var o : this.offerte) {
-            if(o.equals(off))
-                return o;
-        }
-        return null;
+
+        if(this.offerte.contains(off))
+            return this.offerte.get(this.offerte.indexOf(off));
+        return null;//todo: non dovrebbe restituire null perché crea problemi quando si chiama manageExchange
     }
 
     /**
@@ -316,7 +316,51 @@ public class Applicazione {
         objectOutputStream.close();
     }
 
+    /**
+     * @param scambi scambi salvati nell'applicazione
+     * @return scambi validi (non ancora scaduti)
+     */
     public List<Scambio> getValidExchanges(@NotNull List<Scambio> scambi) {
         return scambi.stream().filter(e -> e.isValidExchange(this)).collect(Collectors.toList());
+    }
+
+    /**
+     * @param s scambi con cui inizializzare il campo scambi
+     */
+    private void setScambi(List<Scambio> s) {
+        this.scambi = s;
+    }
+
+    /**
+     * Carica il contenuto del file salvato contenente la lista degli scambi salvati in precedenza
+     * @throws IOException eccezione
+     */
+    public void prepareExchangesStructure() throws IOException {
+        var db = new File("./db");
+        assert db.exists() || db.mkdir();
+
+        var exchanges = new File("./db/scambi.dat");
+        if (exchanges.exists()) {
+            ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream(exchanges));
+            try {
+                this.setScambi((List<Scambio>) ois2.readObject());
+            } catch (ClassNotFoundException | IOException e) {
+                this.setScambi(new LinkedList<>());
+            }
+        } else {
+            this.setScambi(new LinkedList<>());
+        }
+    }
+
+    /**
+     * Salva le proposte di scambio
+     *
+     * @throws IOException eccezione
+     */
+    public void saveExchanges() throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/scambi.dat"));
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        objectOutputStream.writeObject(this.getScambi());
+        objectOutputStream.close();
     }
 }

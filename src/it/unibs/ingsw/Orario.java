@@ -35,7 +35,7 @@ public class Orario implements Serializable {
     }
 
     /**
-     * Verifica la validita' di un orario (i.e. se l'ora e' compresa tra 0 e 23 e se i minuti sono 00 o 30)
+     * Verifica la validita' di un orario (i.e. se l'ora e' compresa tra 0 e 23 e se i minuti sono 00 o 30 oppure se sono le 24:00)
      *
      * @param h ora
      * @param m minuti
@@ -62,6 +62,24 @@ public class Orario implements Serializable {
      */
     public int getHour() {
         return hour;
+    }
+
+    /**
+     * Imposta l'ora di un orario
+     *
+     * @param hour ora
+     */
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    /**
+     * Imposta i minuti di un orario
+     *
+     * @param minutes minuti
+     */
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
     }
 
     /**
