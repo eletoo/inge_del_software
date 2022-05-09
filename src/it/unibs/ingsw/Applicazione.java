@@ -49,6 +49,7 @@ public class Applicazione {
         return offerte;
     }
 
+
     /**
      * @param offerte lista di offerte con cui impostare il valore del campo offerte
      */
@@ -57,10 +58,10 @@ public class Applicazione {
     }
 
     public Offerta getOfferta(Offerta off) {
-
-        if(this.offerte.contains(off))
-            return this.offerte.get(this.offerte.indexOf(off));
-        return null;//todo: non dovrebbe restituire null perché crea problemi quando si chiama manageExchange
+        //if(this.offerte.contains(off))
+        //   return this.offerte.get(this.offerte.indexOf(off));
+        assert this.offerte.contains(off): "FUUUCK";
+        return off;//todo: non dovrebbe restituire null perché crea problemi quando si chiama manageExchange
     }
 
     /**
@@ -288,6 +289,10 @@ public class Applicazione {
         return this.offerte.stream().filter(e -> e.getProprietario().equals(utente)).collect(Collectors.toList());
     }
 
+    public List<Offerta> getOfferte(Fruitore utente, Offerta.StatoOfferta stato) {
+        return this.offerte.stream().filter(e -> e.getProprietario().equals(utente)).filter(e -> e.getStato().equals(stato)).collect(Collectors.toList());
+    }
+
     /**
      * Aggiunge l'offerta passata come parametro alle offerte, assicurandosi che siano presenti tutti i campi obbligatori
      *
@@ -358,6 +363,7 @@ public class Applicazione {
      * @throws IOException eccezione
      */
     public void saveExchanges() throws IOException {
+        this.saveOfferte();
         FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/scambi.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getScambi());

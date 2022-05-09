@@ -2,6 +2,7 @@ package it.unibs.ingsw;
 
 import org.jetbrains.annotations.*;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -44,17 +45,21 @@ public class Scambio implements Serializable {
      * @param view view
      */
     public static @Nullable Scambio createExchange(@NotNull Applicazione app, @NotNull View view, @NotNull Fruitore author) {
+        if (app.getOfferte(author, Offerta.StatoOfferta.APERTA).isEmpty()) {
+            view.errorMessage(View.ErrorMessage.E_NO_OFFERS);
+            return null;
+        }
+
         view.message("Seleziona una tua offerta da scambiare: ");
         var ownOffer = view.choose(app.getOfferte(author)
                 .stream()
-                .filter(e -> e.isAvailableOffer())
+                .filter(Offerta::isAvailableOffer)
                 .collect(Collectors.toList()), null);
 
-        view.message("Seleziona un'offerta con cui scambiare il tuo prodotto: ");
         var possible_offers = app.getOfferte(ownOffer.getCategoria())
                 .stream()
                 .filter(e -> !ownOffer.getProprietario().equals(e.getProprietario()))
-                .filter(e -> e.isAvailableOffer())
+                .filter(Offerta::isAvailableOffer)
                 .collect(Collectors.toList());
 
         if (possible_offers.isEmpty()) {
@@ -62,6 +67,7 @@ public class Scambio implements Serializable {
             return null;
         }
 
+        view.message("Seleziona un'offerta con cui scambiare il tuo prodotto: ");
         var selectedOffer = view.choose(possible_offers, null);
 
         return new Scambio(view, app, ownOffer, selectedOffer);
@@ -74,7 +80,8 @@ public class Scambio implements Serializable {
     public boolean isValidExchange(@NotNull Applicazione app) {
         //riga di test per verificare il funzionamento corretto del timer
         //return LocalDateTime.now().isBefore(this.dateTime.plusSeconds(app.getInformazioni().getScadenza()));
-        return LocalDateTime.now().isBefore(this.dateTime.plusDays(app.getInformazioni().getScadenza()));
+        return LocalDateTime.now().isBefore(this.dateTime.plusDays(app.getInformazioni().getScadenza()))
+                && (this.ownOffer.getStato() != Offerta.StatoOfferta.CHIUSA && this.selectedOffer.getStato() != Offerta.StatoOfferta.CHIUSA);
     }
 
     /**
@@ -84,12 +91,13 @@ public class Scambio implements Serializable {
      * @param view view
      * @param app  applicazione
      */
-    public void manageExchange(@NotNull View view, @NotNull Applicazione app, Fruitore f) {
+    public void manageExchange(@NotNull View view, @NotNull Applicazione app, Fruitore f){
         if (this.message == null) {
             suggestMeeting(view, app, f);
 
             app.getOfferta(this.selectedOffer).setStato(Offerta.StatoOfferta.IN_SCAMBIO);
             app.getOfferta(this.ownOffer).setStato(Offerta.StatoOfferta.IN_SCAMBIO);
+            return;
         } else {
             view.message(this.message.getMessage());
             if (view.yesOrNoQuestion("\nAccettare l'appuntamento? [Y/N]").equalsIgnoreCase("y")) {
@@ -118,11 +126,9 @@ public class Scambio implements Serializable {
 
         List<Orario> orari = new LinkedList<>();
         app.getInformazioni().getIntervalliOrari().stream().forEach(e -> orari.addAll(e.getSingoliOrari()));
-        //todo: getSingoliOrari non fa quello che dovrebbe
         sb.append("\nOrario: " + view.choose(orari, null));
 
         this.message.setMessage(sb.toString());
-        this.message.setAuthor(f);
 
         if (this.author.equals(f))
             this.lastAuthorMsg = this.message;
@@ -148,8 +154,9 @@ public class Scambio implements Serializable {
      * @param app  applicazione
      * @param view view
      * @param dest utente destinatario
+     * @throws IOException eccezione
      */
-    public static void manageExchanges(@NotNull Applicazione app, @NotNull View view, Fruitore dest) {
+    public static void manageExchanges(@NotNull Applicazione app, @NotNull View view, Fruitore dest) throws IOException {
         manage(app,
                 view,
                 "Non hai nessuna nuova proposta di scambio\n",
@@ -165,8 +172,9 @@ public class Scambio implements Serializable {
      * @param app    applicazione
      * @param view   view
      * @param author utente autore
+     * @throws IOException eccezione
      */
-    public static void manageOwnExchanges(@NotNull Applicazione app, @NotNull View view, Fruitore author) {
+    public static void manageOwnExchanges(@NotNull Applicazione app, @NotNull View view, Fruitore author) throws IOException {
         manage(app,
                 view,
                 "\n\nNon hai nessun'altra proposta di scambio arretrata\n",
@@ -174,7 +182,6 @@ public class Scambio implements Serializable {
                 "Selezionare uno scambio da gestire dalla lista? [Y/N]",
                 author,
                 Scambio::getAuthor);
-
     }
 
     /**
@@ -187,8 +194,9 @@ public class Scambio implements Serializable {
      * @param selectExchange    richiesta di selezione di uno scambio da una lista
      * @param f                 utente fruitore
      * @param predicate         predicato da applicare a un oggetto Scambio per selezionare gli scambi con un determinato autore o destinatario
+     * @throws IOException eccezione
      */
-    private static void manage(@NotNull Applicazione app, View view, String noExchanges, String existingExchanges, String selectExchange, Fruitore f, Function<Scambio, Fruitore> predicate) {
+    private static void manage(@NotNull Applicazione app, View view, String noExchanges, String existingExchanges, String selectExchange, Fruitore f, Function<Scambio, Fruitore> predicate) throws IOException {
         //gestione scambi validi
         List<Scambio> userExchanges;
         if (app.getScambi() == null)
@@ -206,15 +214,16 @@ public class Scambio implements Serializable {
         while (!userExchanges.isEmpty()) {
             Scambio toAccept;
             view.message(existingExchanges);
-            view.showList(userExchanges.stream().collect(Collectors.toList()));
+            view.showList(userExchanges);
             if (view.yesOrNoQuestion(selectExchange).equalsIgnoreCase("y")) {
-                toAccept = view.choose(userExchanges.stream().collect(Collectors.toList()), null);
+                toAccept = view.choose(userExchanges, null);
                 toAccept.manageExchange(view, app, f);
             } else {
                 return;
             }
             userExchanges.remove(toAccept);
-            //todo: se a un certo punto spariscono gli userExchange è colpa della riga sopra
+            app.saveExchanges();
+            app.saveOfferte();
         }
         //gestione scambi invalidi
         manageInvalidExchanges(app);
@@ -225,7 +234,7 @@ public class Scambio implements Serializable {
      *
      * @param app
      */
-    private static void manageInvalidExchanges(@NotNull Applicazione app) {
+    private static void manageInvalidExchanges(@NotNull Applicazione app) throws IOException {
         if (app.getScambi() == null)
             return;
 
@@ -237,6 +246,8 @@ public class Scambio implements Serializable {
                     app.getOfferta(e.selectedOffer).setStato(Offerta.StatoOfferta.APERTA);
                     app.removeScambio(e);
                 });
+        app.saveExchanges();
+        app.saveOfferte();
     }
 
     /**

@@ -90,18 +90,21 @@ public class IntervalloOrario implements Serializable {
     public List<Orario> getSingoliOrari() {
         List<Orario> orari = new LinkedList<>();
         orari.add(this.start);
-        Orario o = this.start;
+        int h = this.start.getHour();
+        int m = this.start.getMinutes();
+        Orario o = new Orario(h, m);
         while (this.end.isLaterThan(o)) {
-            if (o.getMinutes() + 30 == 60) {
-                if (o.getHour() + 1 <= 24) {
-                    o.setHour(o.getHour() + 1);
-                } else
-                    o.setHour(00);
+            if (o.getMinutes() == 30) {
+                if (o.getHour() <= 23)
+                    h = h + 1;
+                else
+                    h = 0;
 
-                o.setMinutes(00);
+                m = 0;
             } else
-                o.setMinutes(o.getMinutes() + 30);
+                m = 30;
 
+            o = new Orario(h, m);
             if (this.end.isLaterThan(o))
                 orari.add(o);
         }

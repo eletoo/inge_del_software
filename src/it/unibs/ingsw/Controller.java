@@ -192,8 +192,8 @@ public class Controller {
                     if(sc != null) {
                         app.addScambio(sc);
                         app.saveExchanges();
+                        app.saveOfferte();
                     }
-
                 }
                 break;
                 case "7": {

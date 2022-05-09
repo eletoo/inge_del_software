@@ -217,6 +217,19 @@ public class Offerta implements Serializable {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Offerta offerta = (Offerta) o;
+        return Objects.equals(name, offerta.name) && Objects.equals(categoria, offerta.categoria) && Objects.equals(proprietario, offerta.proprietario) && stato == offerta.stato && Objects.equals(valoreCampi, offerta.valoreCampi);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, categoria, proprietario, stato, valoreCampi);
+    }
+
     /**
      * Permette l'inserimento del valore di un campo
      *

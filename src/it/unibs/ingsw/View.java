@@ -48,6 +48,7 @@ public class View {
      * @return elemento selezionato
      */
     public <T> T choose(@NotNull List<T> selections, Function<T, String> function) {
+        assert selections.size() > 0;
         this.message("Selezionare un indice.");
         int i = 0;
         for (var o : selections)
@@ -65,7 +66,7 @@ public class View {
         while (true) {
             try {
                 return new Scanner(System.in).nextInt();
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException|InputMismatchException e) {
                 this.errorMessage(ErrorMessage.E_INVALID_INPUT);
             }
         }
