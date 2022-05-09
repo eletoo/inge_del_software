@@ -1,29 +1,28 @@
-
 \begin{table}[h]
     \centering
-    \begin{tabular}{l|l}
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
         \hline
         Nome & Accesso configuratore \\
         \hline
         Attore & Configuratore \\
         \hline
         Scenario principale & 
-            \begin{tabular}{l}
+            \begin{tabular}{p{10cm}}
                 Precondizione: esiste almeno un profilo Configuratore già registrato\\
                  1. L'utente inserisce le proprie credenziali\\
-                 Postcondizione: le credenziali inserite sono corrette e l'utente ha\\accesso all'applicazione\\
+                 Postcondizione: le credenziali inserite sono corrette e l'utente ha accesso all'applicazione\\
                  Fine
             \end{tabular}\\
         \hline
         Scenario alternativo &
-            \begin{tabular}{l}
+            \begin{tabular}{p{10cm}}
                 Precondizione: non esiste alcun profilo già registrato\\
                 1.a. $\langle\langle$include$\rangle\rangle$ Creazione Configuratore\\
                 Fine
             \end{tabular}\\
         \hline
         Scenario alternativo & 
-            \begin{tabular}{l}
+            \begin{tabular}{p{10cm}}
                  Precondizione: le credenziali inserite sono errate\\
                  2. Viene segnalato all'utente un errore\\ 
                 Fine

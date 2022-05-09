@@ -1,39 +1,30 @@
 
 \begin{table}[tp]
     \centering
-    \begin{tabular}{l|l}
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
         \hline
-        Nome & Offerte di baratto \\
+        Nome & Creazione Offerta \\
         \hline
         Attore & Fruitore \\
         \hline
         Scenario principale & 
-            \begin{tabular}{l}
-                1. L’applicazione presenta all'utente una schermata in cui gli viene richiesto di\\ compilare il campo nativo “Stato di Conservazione” che impone al fruitore di\\ comunicare lo stato di conservazione e usura in cui si trova l’articolo proposto\\ in baratto.\\
-                2. Precondizione: l’utente ha compilato il campo nativo obbligatorio “Stato di\\ Conservazione". Il sistema presenta una schermata in cui richiede all'utente se è\\ interessato ad inserire una descrizione del prodotto da barattare nel campo nativo\\ “Descrizione Libera”.\\
-                3. Precondizione: l’utente ha deciso se inserire o meno una descrizione dell’articolo\\ da barattare.\\ Il sistema presenta all’utente un elenco di tutte le categorie foglia memorizzate\\ dall’applicazione stessa, richiedendo all’utente stesso di scegliere a quale categoria\\ foglia appartiene il prodotto che si intende barattare.\\
-                4. Precondizione: l’utente ha selezionato la categoria foglia di suo interesse.\\
-                L’applicazione presenta all’utente una schermata in cui dovrà compilare i campi\\ informativi inerenti alla categoria scelta.\\
-                5. Precondizione: tutti i campi obbligatori richiesti sono stati compilati.\\
-                L’applicazione conferma all’utente che l’offerta è stata approvata e i dati inerenti\\ ad essa sono stati salvati correttamente.\\                                
-
+            \begin{tabular}{p{10cm}}
+                Precondizione: esiste almeno una categoria a cui associare l'offerta
+                1. L'utente seleziona la categoria in cui pubblicare l'offerta\\
+                2. L'utente inserisce un nome da assegnare all'offerta\\
+                3. L'utente compila i campi descrittivi obbligatori e sceglie se compilare anche quelli facoltativi\\
+                Postcondizione: viene salvata la nuova offerta\\
                 Fine
             \end{tabular}\\
         \hline
         Scenario alternativo &
-            \begin{tabular}{l}
-                2.1. l’utente nega di voler modificare lo stato dell’offerta.\\ Il sistema presenta all’utente un messaggio in cui conferma che l’offerta è aperta.\\ Il nuovo stato offerta viene salvato.\\
+            \begin{tabular}{p{10cm}}
+                Precondizione: non esistono categorie a cui associare l'offerta\\
+                1.a. Viene segnalato un errore\\
                 Fine
             \end{tabular}\\
         \hline
-        Scenario alternativo & 
-            \begin{tabular}{l}
-                3.1 Precondizione: L’utente non ha inserito il campo obbligatorio “Stato di\\ Conservazione”.\\ 
-                Il sistema segnala l’errore.\\
-                Torna al punto 2\\
-            \end{tabular}\\
-        \hline
     \end{tabular}
-    \caption{Caso d'uso: Offerte di Baratto}
-    \label{tab:Use Case 3.2}
+    \caption{Caso d'uso: Creazione Offerta}
+    \label{tab:Use Case 3.12}
 \end{table}

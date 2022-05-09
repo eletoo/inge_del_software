@@ -1,0 +1,36 @@
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Aggiunta categoria \\
+        \hline
+        Attore & Configuratore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                 1. L'utente inserisce il nome della categoria da creare\\
+                 Precondizione: il nome inserito è unico all'interno della gerarchia di appartenenza della categoria\\
+                 2. L'utente inserisce la descrizione facoltativa della categoria. \\
+                 3. L'utente inserisce eventuali altri campi nativi e specifica se sono a compilazione obbligatoria o facoltativa\\
+                 Postcondizione: viene creata una nuova categoria con le caratteristiche specificate\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: il nome inserito non è unico all'interno della gerarchia di appartenenza della categoria\\
+                2.a. Viene segnalato all'utente un errore\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: la creazione della categoria non va a buon fine\\
+                Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Aggiunta categoria}
+    \label{tab:Use Case 2.5}
+\end{table}

@@ -2,47 +2,47 @@
 \begin{table}[!]
     \centering
      \setlength{\leftmargini}{0.4cm}
-    \begin{tabular}{l|l}
+     \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
         \hline
         Nome & Creazione gerarchia\\
         \hline
         Attore & Configuratore\\
         \hline
         Scenario principale & 
-            \begin{tabular}{l}
+            \begin{tabular}{p{10cm}}
                 1. L'utente inserisce il nome della categoria radice\\
-                Precondizione: il nome inserito è unico nell'insieme delle radici delle\\gerarchie\\
-                2. L'utente inserisce descrizione della categoria radice ed eventuali\\campi nativi\\
-                Precondizione: l'utente chiede di aggiungere un'altra categoria alla\\gerarchia\\
-                3. Viene segnalato all'utente che ogni categoria nodo deve avere almeno\\due sottocategorie, poi l'utente seleziona la categoria a cui aggiungere\\la sottocategoria\\
+                Precondizione: il nome inserito è unico nell'insieme delle radici delle gerarchie\\
+                2. L'utente inserisce descrizione della categoria radice ed eventuali campi nativi\\
+                Precondizione: l'utente chiede di aggiungere un'altra categoria alla gerarchia\\
+                3. Viene segnalato all'utente che ogni categoria nodo deve avere almeno due sottocategorie, poi l'utente seleziona la categoria a cui aggiungere la sottocategoria\\
                 4. $\langle \langle$include$\rangle \rangle$ Aggiunta categoria\\
-                Precondizione: ogni categoria nodo della gerarchia contiene almeno\\due sottocategorie\\
+                Precondizione: ogni categoria nodo della gerarchia contiene almeno due sottocategorie\\
                 5. Precondizione: l'utente conferma di voler salvare i dati inseriti\\
                 6. $\langle \langle$include$\rangle \rangle$ Salvataggio dati\\
                 Fine
             \end{tabular}\\
         \hline
         Scenario alternativo & 
-             \begin{tabular}{l}
-                Precondizione: il nome inserito non è unico nell'insieme delle radici\\delle gerarchie\\
+             \begin{tabular}{p{10cm}}
+                Precondizione: il nome inserito non è unico nell'insieme delle radici delle gerarchie\\
                 2.a. Viene segnalato un errore all'utente\\
                 Fine
             \end{tabular}\\
         \hline
         Scenario alternativo & 
-             \begin{tabular}{l}
-                Precondizione: l'utente non vuole aggiungere un'altra categoria alla\\gerarchia\\
+             \begin{tabular}{p{10cm}}
+                Precondizione: l'utente non vuole aggiungere un'altra categoria alla gerarchia\\
                 Torna al punto 5
             \end{tabular}\\
         \hline
         Scenario alternativo & 
-             \begin{tabular}{l}
-                Precondizione: almeno una categoria nodo non contiene almeno due\\sottocategorie\\
+             \begin{tabular}{p{10cm}}
+                Precondizione: almeno una categoria nodo non contiene almeno due sottocategorie\\
                 Torna al punto 3
             \end{tabular}\\
         \hline
         Scenario alternativo & 
-             \begin{tabular}{l}
+             \begin{tabular}{p{10cm}}
                 Precondizione: l'utente conferma di non voler salvare i dati inseriti\\
                 Fine
             \end{tabular}\\
