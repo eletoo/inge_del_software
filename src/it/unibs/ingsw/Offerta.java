@@ -222,7 +222,7 @@ public class Offerta implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Offerta offerta = (Offerta) o;
-        return Objects.equals(name, offerta.name) && Objects.equals(categoria, offerta.categoria) && Objects.equals(proprietario, offerta.proprietario) && stato == offerta.stato && Objects.equals(valoreCampi, offerta.valoreCampi);
+        return Objects.equals(name, offerta.name) && Objects.equals(categoria, offerta.categoria) && Objects.equals(proprietario, offerta.proprietario) && Objects.equals(valoreCampi, offerta.valoreCampi);
     }
 
     @Override

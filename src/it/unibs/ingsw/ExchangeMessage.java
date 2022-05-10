@@ -2,29 +2,49 @@ package it.unibs.ingsw;
 
 import java.io.Serializable;
 
+/**
+ * Classe che gestisce un messaggio associato a uno scambio
+ *
+ * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
+ */
 public class ExchangeMessage implements Serializable {
 
     private String message;
     private Fruitore author;
 
-    public ExchangeMessage(String message, Fruitore fruitore){
+    /**
+     * Costruttore
+     */
+    public ExchangeMessage(String message, Fruitore fruitore) {
         this.message = message;
         this.author = fruitore;
     }
 
-    public String getMessage(){
+    /**
+     * @return messaggio
+     */
+    public String getMessage() {
         return this.message;
     }
 
-    public Fruitore getAuthor(){
+    /**
+     * @return autore del messaggio
+     */
+    public Fruitore getAuthor() {
         return this.author;
     }
 
-    public void setMessage(String message){
+    /**
+     * @param message messaggio da impostare
+     */
+    public void setMessage(String message) {
         this.message = message;
     }
 
-    public void setAuthor(Fruitore f){
+    /**
+     * @param f autore da impostare
+     */
+    public void setAuthor(Fruitore f) {
         this.author = f;
     }
 }

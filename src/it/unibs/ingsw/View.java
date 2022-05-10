@@ -34,9 +34,7 @@ public class View {
      * @param <T>      tipo della lista
      */
     public <T> void showList(@NotNull List<T> list, Function<T, String> function) {
-        list.forEach(e ->
-                this.message(function == null ? e.toString() : function.apply(e))
-        );
+        list.forEach(e -> this.message(function == null ? e.toString() : function.apply(e)));
     }
 
     /**
@@ -49,7 +47,7 @@ public class View {
      */
     public <T> T choose(@NotNull List<T> selections, Function<T, String> function) {
         assert selections.size() > 0;
-        this.message("Selezionare un indice.");
+        this.message("\nSelezionare un indice.");
         int i = 0;
         for (var o : selections)
             this.message(i++ + ") " + (function == null ? o.toString() : function.apply(o)));
@@ -66,7 +64,7 @@ public class View {
         while (true) {
             try {
                 return new Scanner(System.in).nextInt();
-            } catch (NumberFormatException|InputMismatchException e) {
+            } catch (NumberFormatException | InputMismatchException e) {
                 this.errorMessage(ErrorMessage.E_INVALID_INPUT);
             }
         }
@@ -76,15 +74,15 @@ public class View {
      * Enum per la gestione dei messaggi di interazione con l'utente
      */
     public static enum InteractionMessage {
-        CUSTOMIZE_CREDENTIALS("ACCESSO EFFETTUATO\nPersonalizza le tue credenziali:"),
-        EXIT_MESSAGE("Arrivederci!"),
-        SAVED_CORRECTLY("Salvataggio eseguito"),
-        AT_LEAST_TWO_CHILDREN("N.B. Ogni categoria nodo deve avere almeno due sotto-categorie"),
-        CHOOSE_CATEGORY("Scegliere una categoria"),
-        EXCHANGE_HOURS_EVERY_30_MINS("Gli scambi potranno avvenire allo scoccare dell'ora o della mezz'ora all'interno della fascia oraria specificata"),
-        NO_INFO_YET("Non sono ancora presenti informazioni relative agli scambi"),
+        CUSTOMIZE_CREDENTIALS("\nACCESSO EFFETTUATO\nPersonalizza le tue credenziali:"),
+        EXIT_MESSAGE("\nArrivederci"),
+        SAVED_CORRECTLY("\nSalvataggio eseguito"),
+        AT_LEAST_TWO_CHILDREN("\nN.B. Ogni categoria nodo deve avere almeno due sotto-categorie"),
+        CHOOSE_CATEGORY("\nScegliere una categoria"),
+        EXCHANGE_HOURS_EVERY_30_MINS("\nGli scambi potranno avvenire allo scoccare dell'ora o della mezz'ora all'interno della fascia oraria specificata"),
         CURRENT_INFO("\nAttualmente sono presenti le seguenti informazioni di scambio: "),
-        NO_HIERARCHIES_YET("Non sono ancora presenti gerarchie all'interno dell'applicazione");
+        CHOOSE_OFFER("\nSeleziona una tua offerta da scambiare: "),
+        CHOOSE_OTHER_OFFER("\nSeleziona un'offerta con cui scambiare il tuo prodotto: ");
 
         private String message;
 
@@ -221,7 +219,9 @@ public class View {
         E_INVALID_INPUT("ERRORE: Input invalido"),
         E_NO_CATEGORIES("Non ci sono categorie selezionabili"),
         E_NO_OFFERS("Non ci sono offerte selezionabili"),
-        E_NO_INFO("Non sono ancora state impostate le informazioni di scambio -- Contattare un amministratore");
+        E_NO_INFO("Non sono ancora state impostate le informazioni di scambio -- Contattare un amministratore"),
+        NO_INFO_YET("Non sono ancora presenti informazioni relative agli scambi"),
+        NO_HIERARCHIES_YET("Non sono ancora presenti gerarchie all'interno dell'applicazione");
 
         private String message;
 
@@ -296,7 +296,7 @@ public class View {
      * @param password password
      */
     public void communicateCredentials(String username, String password) {
-        System.out.println("Puoi accedere al tuo profilo usando le seguenti credenziali:\nUsername: " + username + "\nPassword: " + password);
+        System.out.println("\nPuoi accedere al tuo profilo usando le seguenti credenziali:\nUsername: " + username + "\nPassword: " + password);
     }
 
     /**
@@ -305,7 +305,7 @@ public class View {
      * @return scelta dell'utente
      */
     public String selectConfiguratoreAction() {
-        System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
+        System.out.println("\nInserisci il numero corrispondente all'azione che vuoi eseguire:" +
                 "\n1. Crea una nuova gerarchia" +
                 "\n2. Visualizza il contenuto delle gerarchie attualmente presenti nel sistema" +
                 "\n3. Salva" +
@@ -323,7 +323,7 @@ public class View {
      * @return scelta dell'utente
      */
     public String selectFruitoreAction() {
-        System.out.println("Inserisci il numero corrispondente all'azione che vuoi eseguire:" +
+        System.out.println("\nInserisci il numero corrispondente all'azione che vuoi eseguire:" +
                 "\n1. Visualizza il contenuto dell'applicazione e le informazioni di scambio" +
                 "\n2. Visualizza offerte personali" +
                 "\n3. Visualizza offerte per categoria" +

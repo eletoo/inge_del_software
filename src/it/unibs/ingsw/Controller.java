@@ -44,7 +44,7 @@ public class Controller {
 
             if (auth) {
                 dataStore.customizeConfiguratore(username, view);
-                this.useAsConfiguratore((Configuratore) dataStore.getUserMap().get(username));
+                this.useAsConfiguratore();
             } else {
                 view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
             }
@@ -65,7 +65,7 @@ public class Controller {
             auth = dataStore.isLoginCorrect(username, view.askPassword());
 
             if (auth) {
-                this.useAsConfiguratore((Configuratore) dataStore.getUserMap().get(username));
+                this.useAsConfiguratore();
             } else {
                 view.errorMessage(View.ErrorMessage.E_WRONG_PASSWORD);
             }
@@ -118,6 +118,8 @@ public class Controller {
      * - visualizzare le offerte per categoria
      * - creare un'offerta
      * - ritirare un'offerta
+     * - creare una proposta di scambio
+     * - visualizzare l'ultimo messaggio inviato dalla controparte in uno scambio
      * - uscire
      *
      * @param fruitore utente fruitore
@@ -127,14 +129,14 @@ public class Controller {
         boolean end = false;
         String choice = "0";
 
+        //carica i dati salvati in precedenza
+        this.prepareStructures();
+
         //gestisce le offerte di scambio prima ancora di selezionare altre azioni
         Scambio.manageExchanges(app, view, fruitore);
         Scambio.manageOwnExchanges(app, view, fruitore);
 
         do {
-            //carica i dati salvati in precedenza
-            this.prepareStructures();
-
             //seleziona un'azione da compiere
             choice = view.selectFruitoreAction();
             switch (choice) {
@@ -142,7 +144,7 @@ public class Controller {
                     //visualizza contenuto gerarchie e informazioni applicazione
 
                     if (app.getHierarchies().isEmpty()) {
-                        view.interactionMessage(View.InteractionMessage.NO_HIERARCHIES_YET);
+                        view.errorMessage(View.ErrorMessage.NO_HIERARCHIES_YET);
                     } else {
                         System.out.println("GERARCHIE:");
                     }
@@ -153,7 +155,7 @@ public class Controller {
                     if (app.getInformazioni() != null)
                         System.out.println(app.getInformazioni().toString());
                     else
-                        view.interactionMessage(View.InteractionMessage.NO_INFO_YET);
+                        view.errorMessage(View.ErrorMessage.NO_INFO_YET);
                 }
                 break;
                 case "2": {
@@ -198,7 +200,7 @@ public class Controller {
                 break;
                 case "7": {
                     //visualizza l'ultimo messaggio inviato dall'autore dello scambio
-                    Scambio.viewLastMessageByAuthor(fruitore, app, view);
+                    Scambio.viewLastMessageByCounterpart(fruitore, app, view);
                 }
                 break;
                 case "8": {
@@ -234,12 +236,13 @@ public class Controller {
      * - salvare i dati: salva il contenuto delle gerarchie in modo permanente
      * - configurare le informazioni di scambio
      * - visualizzare le offerte per categoria
+     * - visualizzare le offerte in scambio di una categoria foglia
+     * - visualizzare le offerte chiuse di una categoria foglia
      * - uscire
      *
-     * @param configuratore utente configuratore
      * @throws IOException eccezione I/O
      */
-    private void useAsConfiguratore(Configuratore configuratore) throws IOException {
+    private void useAsConfiguratore() throws IOException {
         boolean end = false;
         String choice = "0";
         do {
@@ -277,7 +280,7 @@ public class Controller {
                     } else {
                         view.interactionMessage(View.InteractionMessage.CURRENT_INFO);
                         System.out.println(app.getInformazioni().toString());
-                        if (view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")) {
+                        if (view.yesOrNoQuestion("\nSovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")) {
                             app.setInfoScambio(new InfoScambio(app, view));
                         }
                     }
