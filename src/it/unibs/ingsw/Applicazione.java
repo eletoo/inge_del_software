@@ -30,14 +30,23 @@ public class Applicazione {
         scambi = new LinkedList<>();
     }
 
+    /**
+     * @return scambi
+     */
     public List<Scambio> getScambi() {
         return scambi;
     }
 
+    /**
+     * @param s scambio da aggiungere alla lista
+     */
     public void addScambio(Scambio s) {
         scambi.add(s);
     }
 
+    /**
+     * @param s scambio da rimuovere dalla lista
+     */
     public void removeScambio(Scambio s) {
         scambi.remove(s);
     }
@@ -57,11 +66,14 @@ public class Applicazione {
         this.offerte = offerte;
     }
 
+    /**
+     * @param off offerta da restituire
+     * @return offerta cercata all'interno dell'applicazione
+     */
     public Offerta getOfferta(Offerta off) {
-        //if(this.offerte.contains(off))
-        //   return this.offerte.get(this.offerte.indexOf(off));
-        assert this.offerte.contains(off): "FUUUCK";
-        return off;//todo: non dovrebbe restituire null perché crea problemi quando si chiama manageExchange
+        if (this.offerte.contains(off))
+            return this.offerte.get(this.offerte.indexOf(off));
+        throw new RuntimeException("ERROR"); //should not happen
     }
 
     /**
@@ -235,8 +247,7 @@ public class Applicazione {
                 var cat = new Foglia(name, desc);
                 cat.setCampiNativi(cat.generaCampiNativi(padre.getCat(), view));
                 ((Nodo) padre.getCat()).addChild(cat);
-            } else
-                view.errorMessage(View.ErrorMessage.E_EXISTING_NAME_IN_HIERARCHY);
+            } else view.errorMessage(View.ErrorMessage.E_EXISTING_NAME_IN_HIERARCHY);
         }
 
         this.addGerarchia(rootname, new Gerarchia(root));
@@ -289,8 +300,19 @@ public class Applicazione {
         return this.offerte.stream().filter(e -> e.getProprietario().equals(utente)).collect(Collectors.toList());
     }
 
+    /**
+     * Restituisce la lista di offerte associate a un utente fruitore e aventi uno specifico stato
+     *
+     * @param utente utente di cui si cercano le offerte
+     * @param stato  stato delle offerte da restituire
+     * @return lista di offerte dell'utente passato come parametro aventi lo stato cercato
+     */
     public List<Offerta> getOfferte(Fruitore utente, Offerta.StatoOfferta stato) {
-        return this.offerte.stream().filter(e -> e.getProprietario().equals(utente)).filter(e -> e.getStato().equals(stato)).collect(Collectors.toList());
+        return this.offerte
+                .stream()
+                .filter(e -> e.getProprietario().equals(utente))
+                .filter(e -> e.getStato().equals(stato))
+                .collect(Collectors.toList());
     }
 
     /**
@@ -338,6 +360,7 @@ public class Applicazione {
 
     /**
      * Carica il contenuto del file salvato contenente la lista degli scambi salvati in precedenza
+     *
      * @throws IOException eccezione
      */
     public void prepareExchangesStructure() throws IOException {
