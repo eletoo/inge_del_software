@@ -82,7 +82,7 @@ public class Offerta implements Serializable {
         sb.append("Offerta " + name);
         sb.append("\n\tCategoria > " + categoria.toShortString());
         sb.append("\n\tProprietario > " + proprietario.getUsername());
-        sb.append("\n\tStato > " + stato);
+        sb.append("\n\tStato > " + stato.getStato());
         sb.append("\n\tCampi > ");
         for (var valCampo : valoreCampi.entrySet()) {
             sb.append("\n\t\t").append(valCampo.getKey()).append("> ").append(valCampo.getValue());
@@ -95,12 +95,22 @@ public class Offerta implements Serializable {
      * StatoOfferta: enum che tiene traccia dello stato dell'offerta
      */
     public static enum StatoOfferta {
-        APERTA,
-        RITIRATA,
-        ACCOPPIATA,
-        SELEZIONATA,
-        IN_SCAMBIO,
-        CHIUSA
+        APERTA("APERTA"),
+        RITIRATA("RITIRATA"),
+        ACCOPPIATA("ACCOPPIATA"),
+        SELEZIONATA("SELEZIONATA"),
+        IN_SCAMBIO("IN SCAMBIO"),
+        CHIUSA("CHIUSA");
+
+        private String stato;
+
+        StatoOfferta(String stato) {
+            this.stato = stato;
+        }
+
+        public String getStato() {
+            return stato;
+        }
     }
 
     /**
