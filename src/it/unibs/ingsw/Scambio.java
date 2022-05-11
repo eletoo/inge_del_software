@@ -226,7 +226,7 @@ public class Scambio implements Serializable {
                 userExchanges.remove(toAccept);
                 app.saveExchanges();
             } else {
-                return;
+                break;
             }
         }
         //gestione scambi invalidi
