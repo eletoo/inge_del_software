@@ -147,8 +147,10 @@ public class Applicazione {
         if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
             this.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
+            return;
         }
+
+        this.getHierarchies().remove(rootname);
+
     }
-
-
 }
