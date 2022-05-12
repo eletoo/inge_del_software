@@ -8,6 +8,11 @@ import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
+/**
+ * Classe che gestisce uno scambio
+ *
+ * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
+ */
 public class Scambio implements Serializable {
 
     private Offerta ownOffer;
