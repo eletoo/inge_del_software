@@ -313,7 +313,9 @@ public class View {
                 "\n5. Visualizza offerte" +
                 "\n6. Visualizza offerte in scambio" +
                 "\n7. Visualizza offerte chiuse" +
-                "\n8. Logout");
+                "\n8. Configura gerarchie da file"+
+                "\n9. Configura informazioni di scambio da file" +
+                "\n10. Logout");
         return (new Scanner(System.in)).next();
     }
 

@@ -1,5 +1,6 @@
 package it.unibs.ingsw;
 
+import com.google.gson.Gson;
 import it.unibs.ingsw.exceptions.RequiredConstraintFailureException;
 import org.jetbrains.annotations.NotNull;
 
@@ -254,7 +255,29 @@ public class Applicazione {
         if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
             this.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
+            return;
         }
+
+        this.removeGerarchia(this.getHierarchies().get(rootname));
+    }
+
+    public void importHierarchy(@NotNull View view) throws IOException {
+        Gson gson = new Gson();
+        //todo: rendere possibile la modifica da parte dell'utente del path del file
+        Gerarchia h = gson.fromJson(new FileReader("./db/jsonFiles/gerarchie.json"), Gerarchia.class);
+        this.addGerarchia(h.getRoot().getNome(), h);
+
+        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
+            this.saveData();
+            view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
+            return;
+        }
+
+        this.removeGerarchia(h);
+    }
+
+    private void removeGerarchia(Gerarchia h) {
+        this.hierarchies.remove(h);
     }
 
     /**

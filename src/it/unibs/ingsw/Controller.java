@@ -1,5 +1,7 @@
 package it.unibs.ingsw;
 
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
 
@@ -237,6 +239,8 @@ public class Controller {
      * - visualizzare le offerte per categoria
      * - visualizzare le offerte in scambio di una categoria foglia
      * - visualizzare le offerte chiuse di una categoria foglia
+     * - configurare le gerarchie da file
+     * - configurare le impostazioni di scambio da file
      * - uscire
      *
      * @throws IOException eccezione I/O
@@ -303,6 +307,16 @@ public class Controller {
                 }
                 break;
                 case "8": {
+                    //configura le gerarchie da file
+                    app.importHierarchy(this.view);
+                }
+                break;
+                case "9": {
+                    //configura le impostazioni di scambio da file
+
+                }
+                break;
+                case "10": {
                     //esci
                     end = true;
                     view.interactionMessage(View.InteractionMessage.EXIT_MESSAGE);
