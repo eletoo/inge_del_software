@@ -1,0 +1,27 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Visualizzazione offerte chiuse \\
+        \hline
+        Attore & Configuratore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: esiste almeno una categoria all’interno dell’applicazione\\
+                 1. L’utente seleziona la categoria foglia di cui visualizzare le offerte il cui stato è \textit{Chiusa} da un elenco\\
+                 2. Viene visualizzato l’elenco delle offerte il cui stato è Chiusa inerenti alla categoria selezionata al punto 1 e vengono riportate tutte le informazioni a corredo delle stesse\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo &
+            \begin{tabular}{p{10cm}}
+                Precondizione: non è presente alcuna categoria all’interno dell’applicazione\\
+                1.a. Viene segnalato all’utente un errore\\
+                Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Visualizzazione Offerte Chiuse}
+    \label{tab:Use Case 4.15}
+\end{table}

@@ -1,0 +1,46 @@
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Proposta scambio \\
+        \hline
+        Attore & Fruitore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: esiste almeno una categoria selezionabile all’interno dell’applicazione \\
+                Precondizione: sono già state impostate le informazioni di scambio \\
+                Precondizione: l’utente fruitore possiede almeno un’offerta aperta \\
+                1. L’utente seleziona la propria offerta aperta da scambiare\\
+                Precondizione: esiste almeno un’offerta aperta nella stessa categoria foglia di quella selezionata al punto 1 non appartenente all’utente fruitore\\
+                2. L’utente seleziona un’offerta aperta nella stessa categoria foglia di quella selezionata al punto 1 che non sia di sua proprietà; la Proposta Aperta relativa all’utente passa nello stato di Offerta Accoppiata, mentre la Proposta Aperta selezionata dall’utente passa nello stato di Offerta Selezionata\\
+                Postcondizione: viene creato un oggetto Scambio che tiene traccia dell’associazione tra le due offerte\\
+                Fine              
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: non c’è alcuna categoria selezionabile all’interno dell’applicazione\\
+                 1.a. Viene segnalato all’utente un errore\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: non sono ancora state impostate le informazioni di scambio\\
+                 1.a. Viene segnalato all’utente un errore\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: non esiste alcuna offerta aperta nella stessa categoria foglia di quella selezionata al punto 1 non appartenente all’utente fruitore\\
+                 2.a. Viene segnalato all’utente un errore\\
+                 Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Proposta Scambio}
+    \label{tab:Use Case 4.16}
+\end{table}

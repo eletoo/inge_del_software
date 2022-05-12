@@ -1,0 +1,37 @@
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Accesso fruitore \\
+        \hline
+        Attore & Fruitore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                1. L’utente inserisce il proprio username\\
+                Precondizione: lo username inserito dall’utente è già presente nel sistema\\
+                2. L’utente inserisce la propria password\\
+                Precondizione: la password inserita è corretta\\
+                3. Il fruitore ha accesso all’applicazione\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo &
+            \begin{tabular}{p{10cm}}
+                Precondizione: lo username inserito dall’utente non è presente nel sistema\\
+                2.a. Viene segnalato un errore\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: la password inserita è errata\\
+                 3.a. Viene segnalato all'utente un errore\\ 
+                Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Accesso Fruitore}
+    \label{tab:Use Case 4.9}
+\end{table}
