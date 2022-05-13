@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1652343551 "/Users/mattiapavlovic/Desktop/UNI/Terzo anno/Ingegneria del software/Documentazione_progetto/inge_del_software/inge_del_sw.tex" "inge_del_sw.pdf" "inge_del_sw" 1652343552
+["pdflatex"] 1652433841 "/Users/mattiapavlovic/Desktop/UNI/Terzo anno/Ingegneria del software/Documentazione_progetto/inge_del_software/inge_del_sw.tex" "inge_del_sw.pdf" "inge_del_sw" 1652433842
   "/Users/mattiapavlovic/Desktop/UNI/Terzo anno/Ingegneria del software/Documentazione_progetto/inge_del_software/inge_del_sw.tex" 1652199623 1249 d8c96b129140d633fb39b1d55369e735 ""
   "/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1649103460 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "/Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1649086455 11548 7aa93de1dd6dfe33fb419ef54b293960 ""
@@ -150,8 +150,8 @@
   "Versione4/Use Cases/visualizzazioneOfferteChiuse.tex" 1652304374 1180 867bb1622ed953bbadf1fbd3586c7e5c ""
   "Versione4/Use Cases/visualizzazioneOffertePersonali.tex" 1652198916 611 87c48cb15b0d1648299b14f08a354129 ""
   "Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex" 1652301056 1003 7c0fb2dc1892a24675dc7e01eebbb950 ""
-  "Versione4/behaviourdiagrams.tex" 1652304196 2908 4f63028d747232b6247d01f2493b5da8 ""
-  "Versione4/classdiagrams.tex" 1652304107 7331 37820cf18fb0792d17f9b6f3ddae42d7 ""
+  "Versione4/behaviourdiagrams.tex" 1652433840 2911 17521ff96afcfb3df29d8762fae6599b ""
+  "Versione4/classdiagrams.tex" 1652433524 7333 cf73436f4801e497e82e908bd460f88b ""
   "Versione4/introTables.tex" 1652302631 5631 ba8d04e40afec10fdf645dbc71129b0c ""
   "Versione4/table.tex" 1652302420 1067 acaea7b3655ab791e8f87d559737d8e6 ""
   "Versione4/usecases.tex" 1652304261 3804 5d8b2596c5b21a9c45cf41bbc8ec99e9 ""
@@ -171,11 +171,15 @@
   "images//imagesV3/State Diagram Fruitore - Versione 3.0.png" 1649103855 34051 ff2bb15ed6809900b9e5c0e4eaf55255 ""
   "images//imagesV3/Use case diagram-Version3.0.png" 1652098699 70815 6292a27b2178585a53bea0d129528618 ""
   "images//imagesV3/Vers3Parziale.png" 1649102137 396524 cdb04dc514e8425bbe0041619bd825de ""
+  "images//imagesV4/Class Diagram - Versione 4.0.png" 1652433333 870567 2ca3d22460c738e1f375d6ce7a54ee12 ""
+  "images//imagesV4/State Diagram Configuratore - Versione 4.0.png" 1652433371 49188 50be72e27d09106e9e6ef103f9ee0fd2 ""
+  "images//imagesV4/State Diagram Fruitore - Versione 4.0.png" 1652433355 109471 b262a13551cc63a183c8cd2dcb927c94 ""
   "images//imagesV4/Use case diagram-Version4.0.png" 1652299449 109286 45c9d06d0cd391810c10c11f1624f3ad ""
-  "inge_del_sw.aux" 1652343552 22428 3bd939619e064545af287795b2dc2b6b "pdflatex"
-  "inge_del_sw.out" 1652343552 4950 5c90e8444190244ae0246faaa207670e "pdflatex"
+  "images//imagesV4/Vers4Parziale.png" 1652433343 448003 bcc5b0ed3c65134a5014fc00b3b8ce11 ""
+  "inge_del_sw.aux" 1652433842 22428 3bd939619e064545af287795b2dc2b6b "pdflatex"
+  "inge_del_sw.out" 1652433842 4950 5c90e8444190244ae0246faaa207670e "pdflatex"
   "inge_del_sw.tex" 1652199623 1249 d8c96b129140d633fb39b1d55369e735 ""
-  "inge_del_sw.toc" 1652343552 2836 7830ed0dc6bd265216ae93593eb2e73a "pdflatex"
+  "inge_del_sw.toc" 1652433842 2836 7830ed0dc6bd265216ae93593eb2e73a "pdflatex"
   "specifiche.tex" 1649084681 24525 5ac66370546242f2be1dd25c9d8f8f94 ""
   (generated)
   "inge_del_sw.aux"

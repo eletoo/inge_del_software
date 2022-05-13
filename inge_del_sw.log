@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.4.4)  12 MAY 2022 10:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.4.4)  13 MAY 2022 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -948,10 +948,11 @@ Overfull \hbox (2.26434pt too wide) in paragraph at lines 21--22
 \OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
  []
 
-File: ./images//imagesV3/Class Diagram - Versione 3.png Graphic file (type png)
-<use ./images//imagesV3/Class Diagram - Versione 3.png>
-Package pdftex.def Info: ./images//imagesV3/Class Diagram - Versione 3.png  used on input line 25.
-(pdftex.def)             Requested size: 455.24408pt x 518.93788pt.
+<./images//imagesV4/Class Diagram - Versione 4.0.png, id=578, 3099.58pt x 3482.00874pt>
+File: ./images//imagesV4/Class Diagram - Versione 4.0.png Graphic file (type png)
+<use ./images//imagesV4/Class Diagram - Versione 4.0.png>
+Package pdftex.def Info: ./images//imagesV4/Class Diagram - Versione 4.0.png  used on input line 25.
+(pdftex.def)             Requested size: 455.24408pt x 511.3869pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
  [][] 
@@ -965,41 +966,43 @@ Overfull \hbox (24.20001pt too wide) in paragraph at lines 33--34
 \OT1/cmr/m/n/10 relativamente alle informazioni private degli utenti. La classe \OT1/cmtt/m/n/10 User \OT1/cmr/m/n/10 e dotata di metodi per l'autenticazione
  []
 
-[56]
+[56 <./images//imagesV4/Class Diagram - Versione 4.0.png (PNG copy)>]
 Overfull \hbox (5.20866pt too wide) in paragraph at lines 53--54
 []\OT1/cmr/m/n/10 La classe \OT1/cmtt/m/n/10 InfoScambio \OT1/cmr/m/n/10 gestisce le informazioni di scambio che devono essere impostate dall'utente
  []
 
-[57]
-File: ./images//imagesV3/Vers3Parziale.png Graphic file (type png)
-<use ./images//imagesV3/Vers3Parziale.png>
-Package pdftex.def Info: ./images//imagesV3/Vers3Parziale.png  used on input line 67.
-(pdftex.def)             Requested size: 455.24408pt x 470.04013pt.
+<./images//imagesV4/Vers4Parziale.png, id=589, 2379.89125pt x 2037.6125pt>
+File: ./images//imagesV4/Vers4Parziale.png Graphic file (type png)
+<use ./images//imagesV4/Vers4Parziale.png>
+Package pdftex.def Info: ./images//imagesV4/Vers4Parziale.png  used on input line 67.
+(pdftex.def)             Requested size: 455.24408pt x 389.76208pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
-) (Versione4/behaviourdiagrams.tex [58]
-File: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png Graphic file (type png)
-<use ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png>
-Package pdftex.def Info: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png  used on input line 13.
-(pdftex.def)             Requested size: 1503.6138pt x 796.97556pt.
+[57]) (Versione4/behaviourdiagrams.tex [58 <./images//imagesV4/Vers4Parziale.png (PNG copy)>]
+<./images//imagesV4/State Diagram Configuratore - Versione 4.0.png, id=599, 953.5625pt x 314.17375pt>
+File: ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png Graphic file (type png)
+<use ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png>
+Package pdftex.def Info: ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png  used on input line 13.
+(pdftex.def)             Requested size: 1907.12036pt x 628.34595pt.
 
-Overfull \hbox (28.45012pt too wide) in paragraph at lines 13--14
+Overfull \hbox (28.45447pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-File: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png Graphic file (type png)
-<use ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png>
-Package pdftex.def Info: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png  used on input line 23.
-(pdftex.def)             Requested size: 1505.6213pt x 538.00867pt.
+<./images//imagesV4/State Diagram Fruitore - Versione 4.0.png, id=601, 2007.5pt x 523.9575pt>
+File: ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png Graphic file (type png)
+<use ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png>
+Package pdftex.def Info: ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png  used on input line 23.
+(pdftex.def)             Requested size: 455.22131pt x 156.48491pt.
 
-Overfull \hbox (28.46059pt too wide) in paragraph at lines 23--24
+Overfull \hbox (28.42996pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
-) (Versione4/table.tex [59] (Versione4/Use Cases/accessoConfiguratore.tex
+) (Versione4/table.tex [59 <./images//imagesV4/State Diagram Configuratore - Versione 4.0.png (PNG copy)>] (Versione4/Use Cases/accessoConfiguratore.tex
 Underfull \hbox (badness 2384) in paragraph at lines 12--13
 []\OT1/cmr/m/n/10 Precondizione: esiste almeno un profilo Configuratore gia
  []
@@ -1132,22 +1135,22 @@ Underfull \hbox (badness 1226) in paragraph at lines 13--14
 []\OT1/cmr/m/n/10 2. Viene salvato un messaggio contenente le informazioni
  []
 
-)) [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] (inge_del_sw.aux)
+)) [60 <./images//imagesV4/State Diagram Fruitore - Versione 4.0.png (PNG copy)>] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] (inge_del_sw.aux)
 Package rerunfilecheck Info: File `inge_del_sw.out' has not changed.
 (rerunfilecheck)             Checksum: 5C90E8444190244AE0246FAAA207670E;4950.
  ) 
 Here is how much of TeX's memory you used:
- 11408 strings out of 480517
- 205901 string characters out of 2893286
+ 11440 strings out of 480517
+ 207659 string characters out of 2893286
  545251 words of memory out of 3000000
- 28830 multiletter control sequences out of 15000+600000
+ 28858 multiletter control sequences out of 15000+600000
  476703 words of font info for 54 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  60i,19n,63p,1094b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on inge_del_sw.pdf (71 pages, 4492245 bytes).
+Output written on inge_del_sw.pdf (71 pages, 5962642 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
+ 736 PDF objects out of 1000 (max. 8388607)
  195 named destinations out of 1000 (max. 500000)
- 350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 370 words of extra memory for PDF output out of 10000 (max. 10000000)
 

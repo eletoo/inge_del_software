@@ -903,26 +903,38 @@ INPUT ./Versione4/classdiagrams.tex
 INPUT Versione4/classdiagrams.tex
 INPUT ./Versione4/classdiagrams.tex
 INPUT Versione4/classdiagrams.tex
-INPUT ./images//imagesV3/Class Diagram - Versione 3.png
-INPUT ./images//imagesV3/Class Diagram - Versione 3.png
-INPUT images//imagesV3/Class Diagram - Versione 3.png
-INPUT ./images//imagesV3/Class Diagram - Versione 3.png
-INPUT ./images//imagesV3/Vers3Parziale.png
-INPUT ./images//imagesV3/Vers3Parziale.png
-INPUT images//imagesV3/Vers3Parziale.png
-INPUT ./images//imagesV3/Vers3Parziale.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
 INPUT ./Versione4/behaviourdiagrams.tex
 INPUT Versione4/behaviourdiagrams.tex
 INPUT ./Versione4/behaviourdiagrams.tex
 INPUT Versione4/behaviourdiagrams.tex
-INPUT ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png
-INPUT ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png
-INPUT images//imagesV3/State Diagram Configuratore - Versione 3.0.png
-INPUT ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png
-INPUT ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png
-INPUT ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png
-INPUT images//imagesV3/State Diagram Fruitore - Versione 3.0.png
-INPUT ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
 INPUT ./Versione4/table.tex
 INPUT Versione4/table.tex
 INPUT ./Versione4/table.tex
