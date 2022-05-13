@@ -221,14 +221,17 @@ public class View {
         E_NO_OFFERS("Non ci sono offerte selezionabili"),
         E_NO_INFO("Non sono ancora state impostate le informazioni di scambio -- Contattare un amministratore"),
         NO_INFO_YET("Non sono ancora presenti informazioni relative agli scambi"),
-        NO_HIERARCHIES_YET("Non sono ancora presenti gerarchie all'interno dell'applicazione");
+        NO_HIERARCHIES_YET("Non sono ancora presenti gerarchie all'interno dell'applicazione"),
+        E_INVALID_FILE_CONTENT("File di configurazione inesistente o corrotto");
 
         private String message;
 
+        @Contract(pure = true)
         ErrorMessage(String message) {
             this.message = message;
         }
 
+        @Contract(pure = true)
         public String getMessage() {
             return this.message;
         }

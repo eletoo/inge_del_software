@@ -16,11 +16,25 @@ public class CampoNativo implements Serializable {
     /**
      * Costruttore.
      *
-     * @param obbligatorio true se il campo è a compilazione obbligatoria
-     * @param type         tipo del campo (di default è String)
+     * @param obbligatorio true se il campo e' a compilazione obbligatoria
+     * @param type         tipo del campo (di default e' String)
      */
     public CampoNativo(boolean obbligatorio, Tipo type) {
         this.obbligatorio = obbligatorio;
+        this.type = type;
+    }
+
+    /**
+     * @param obbligatorio true se il campo nativo e' a compilazione obbligatoria
+     */
+    public void setObbligatorio(boolean obbligatorio) {
+        this.obbligatorio = obbligatorio;
+    }
+
+    /**
+     * @param type tipo del campo nativo (di default e' String)
+     */
+    public void setType(Tipo type) {
         this.type = type;
     }
 
@@ -31,7 +45,7 @@ public class CampoNativo implements Serializable {
         STRING((s) -> {
             assert s instanceof String;
             return s;
-        }, (o) -> o.toString() );
+        }, (o) -> o.toString());
 
         private Function<String, Object> des;
         private Function<Object, String> ser;
@@ -41,11 +55,11 @@ public class CampoNativo implements Serializable {
             this.ser = ser;
         }
 
-        public String serialize(Object o){
+        public String serialize(Object o) {
             return this.ser.apply(o);
         }
 
-        public Object deserialize(String o){
+        public Object deserialize(String o) {
             return this.des.apply(o);
         }
     }

@@ -1,7 +1,5 @@
 package it.unibs.ingsw;
 
-import com.google.gson.Gson;
-
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
 
@@ -287,7 +285,8 @@ public class Controller {
                             app.setInfoScambio(new InfoScambio(app, view));
                         }
                     }
-                    app.saveInfo();
+                    app.saveInfo();//se non modifico le informazioni di scambio e conf.json è corrotto/incompleto qui viene
+                    //sovrascritto con le informazioni correnti complete e non modificate
                     view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
                 }
                 break;
@@ -308,12 +307,12 @@ public class Controller {
                 break;
                 case "8": {
                     //configura le gerarchie da file
-                    app.importHierarchy(this.view);
+                    app.importHierarchiesFromFile(this.view);
                 }
                 break;
                 case "9": {
                     //configura le impostazioni di scambio da file
-
+                    app.importInfoFromFile(this.view);
                 }
                 break;
                 case "10": {

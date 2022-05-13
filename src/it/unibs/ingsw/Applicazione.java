@@ -1,21 +1,26 @@
 package it.unibs.ingsw;
 
-import com.google.gson.Gson;
+import com.google.gson.*;
 import it.unibs.ingsw.exceptions.RequiredConstraintFailureException;
-import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.*;
 
 import java.io.*;
+import java.nio.file.*;
 import java.util.*;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 /**
  * Applicazione: gestisce una mappa che associa a ogni nome della categoria radice la propria gerarchia,
- * un oggetto {@link InfoScambio} che contiene le informazioni di scambio e una lista di oggetti {@link Offerta}
- * che contiene le offerte presenti nell'applicazione.
+ * un oggetto {@link InfoScambio} che contiene le informazioni di scambio, una lista di oggetti {@link Offerta}
+ * che contiene le offerte presenti nell'applicazione e una lista di offetti {@link Scambio} che contiene gli scambi
+ * introdotti dagli utenti nell'applicazione.
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
 public class Applicazione {
+
+    public static final String DB_JSON_FILES = "./db/jsonFiles/";
+    public static final String DB_JSON_CONF_FILE = "./db/conf/conf.json";
 
     private Map<String, Gerarchia> hierarchies;
     private InfoScambio informazioni;
@@ -29,52 +34,6 @@ public class Applicazione {
         hierarchies = new HashMap<>();
         offerte = new LinkedList<>();
         scambi = new LinkedList<>();
-    }
-
-    /**
-     * @return scambi
-     */
-    public List<Scambio> getScambi() {
-        return scambi;
-    }
-
-    /**
-     * @param s scambio da aggiungere alla lista
-     */
-    public void addScambio(Scambio s) {
-        scambi.add(s);
-    }
-
-    /**
-     * @param s scambio da rimuovere dalla lista
-     */
-    public void removeScambio(Scambio s) {
-        scambi.remove(s);
-    }
-
-    /**
-     * @return offerte
-     */
-    public List<Offerta> getOfferte() {
-        return offerte;
-    }
-
-
-    /**
-     * @param offerte lista di offerte con cui impostare il valore del campo offerte
-     */
-    public void setOfferte(List<Offerta> offerte) {
-        this.offerte = offerte;
-    }
-
-    /**
-     * @param off offerta da restituire
-     * @return offerta cercata all'interno dell'applicazione
-     */
-    public Offerta getOfferta(Offerta off) {
-        if (this.offerte.contains(off))
-            return this.offerte.get(this.offerte.indexOf(off));
-        throw new RuntimeException("ERROR"); //should not happen
     }
 
     /**
@@ -124,7 +83,9 @@ public class Applicazione {
     }
 
     /**
-     * Salva in modo permanente il contenuto delle gerarchie
+     * Salva in modo permanente il contenuto delle gerarchie.
+     * Sovrascrive con l'attuale contenuto delle gerarchie il contenuto dei file .json utilizzabili per la
+     * configurazione delle gerarchie
      *
      * @throws IOException eccezione I/O
      */
@@ -133,18 +94,9 @@ public class Applicazione {
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getHierarchies());
         objectOutputStream.close();
-    }
-
-    /**
-     * Salva in modo persistente le informazioni relative a luoghi e orari per l'effettuazione degli scambi
-     *
-     * @throws IOException eccezione I/O
-     */
-    public void saveInfo() throws IOException {
-        FileOutputStream fos = new FileOutputStream(new File("./db/info.dat"));
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(this.getInformazioni());
-        oos.close();
+        for (Gerarchia h : this.getHierarchies().values()) {
+            this.printHierarchyOnFile(h);
+        }
     }
 
     /**
@@ -169,6 +121,86 @@ public class Applicazione {
             this.setHierarchies(new HashMap<>());
         }
 
+    }
+
+    /**
+     * Salva in modo persistente le informazioni relative a luoghi e orari per l'effettuazione degli scambi.
+     * Sovrascrive il contenuto del file conf.json con il contenuto delle attuali informazioni di scambio.
+     *
+     * @throws IOException eccezione I/O
+     */
+    public void saveInfo() throws IOException {
+        FileOutputStream fos = new FileOutputStream(new File("./db/info.dat"));
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(this.getInformazioni());
+        oos.close();
+        this.printInfoOnFile(this.getInformazioni());
+    }
+
+    /**
+     * Importa il contenuto di un file di configurazione delle informazioni di scambio, comunicando un errore
+     * qualora il file sia inesistente o nel formato errato
+     *
+     * @throws IOException eccezione
+     */
+    public void importInfoFromFile(View view) throws IOException {
+        Path p = Paths.get(DB_JSON_CONF_FILE);
+
+        if (!p.toFile().exists()) {
+            view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
+            return;
+        }
+
+        Reader reader = Files.newBufferedReader(p);
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.create();
+        InfoScambio info = gson.fromJson(reader, InfoScambio.class);
+
+        if (info.getPiazza().isEmpty() || info.getPiazza() == null) {
+            view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
+            return;
+        }
+
+        if (info.getIntervalliOrari().isEmpty()) {
+            view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
+            return;
+        }
+
+        if (info.getScadenza() <= 0) {
+            view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
+            return;
+        }
+
+        if (info.getGiorni().isEmpty()) {
+            view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
+            return;
+        }
+
+        if (info.getLuoghi().isEmpty()) {
+            view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
+            return;
+        }
+
+        this.setInfoScambio(info);
+
+        this.saveInfo();
+    }
+
+    /**
+     * Scrive le informazioni di scambio passate come parametro in un file .json
+     *
+     * @param info informazioni di scambio da salvare
+     */
+    private void printInfoOnFile(@NotNull InfoScambio info) {
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.create();
+
+        String file = DB_JSON_CONF_FILE;
+        try (FileWriter wr = new FileWriter(file)) {
+            wr.write(gson.toJson(info));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -250,34 +282,134 @@ public class Applicazione {
                 ((Nodo) padre.getCat()).addChild(cat);
             } else view.errorMessage(View.ErrorMessage.E_EXISTING_NAME_IN_HIERARCHY);
         }
-
-        this.addGerarchia(rootname, new Gerarchia(root));
+        Gerarchia h = new Gerarchia(root);
+        this.addGerarchia(rootname, h);
         if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
             this.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
             return;
         }
 
-        this.removeGerarchia(this.getHierarchies().get(rootname));
+        this.getHierarchies().remove(rootname);
     }
 
-    public void importHierarchy(@NotNull View view) throws IOException {
-        Gson gson = new Gson();
-        //todo: rendere possibile la modifica da parte dell'utente del path del file
-        Gerarchia h = gson.fromJson(new FileReader("./db/jsonFiles/gerarchie.json"), Gerarchia.class);
-        this.addGerarchia(h.getRoot().getNome(), h);
+    /**
+     * Scrive il contenuto di una gerarchia passata come parametro in un file .json
+     *
+     * @param hierarchy gerarchia da salvare
+     */
+    private void printHierarchyOnFile(@NotNull Gerarchia hierarchy) {
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.registerTypeAdapter(Categoria.class, (JsonSerializer<Categoria>) (categoria, type, jsonSerializationContext) -> {
+            JsonObject ret = new JsonObject();
+            ret.addProperty("nome", categoria.getNome());
+            ret.addProperty("descrizione", categoria.getDescrizione());
+            ret.add("campiNativi", jsonSerializationContext.serialize(categoria.getCampiNativi()));
+            if (categoria instanceof Nodo)
+                ret.add("figlie", jsonSerializationContext.serialize(((Nodo) categoria).getCategorieFiglie()));
+            return ret;
+        }).create();
 
-        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
-            this.saveData();
-            view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
-            return;
+        String file = DB_JSON_FILES + hierarchy.getRoot().getNome() + ".json";
+        try (FileWriter wr = new FileWriter(file)) {
+            wr.write(gson.toJson(hierarchy));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Importa da una lista di file .json il contenuto delle gerarchie da aggiungere all'applicazione, senza sovrascrivere
+     * eventuali gerarchie omonime.
+     *
+     * @param view view
+     * @throws IOException eccezione
+     */
+    public void importHierarchiesFromFile(View view) throws IOException {
+        Gerarchia h;
+        try {
+            List<Path> paths = this.generatePathList(DB_JSON_FILES);
+            Reader reader;
+
+            if (paths.isEmpty()) {
+                view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
+                return;
+            }
+
+            for (Path p : paths) {
+                reader = Files.newBufferedReader(p);
+                GsonBuilder builder = new GsonBuilder();
+                JsonDeserializer<Categoria> categoria_deserializer = (json, typeOfT, context) -> {
+                    JsonObject jsonObject = json.getAsJsonObject();
+                    if (jsonObject.get("figlie") != null && jsonObject.get("figlie").isJsonArray() && jsonObject.get("figlie").getAsJsonArray().size() > 1)
+                        return context.deserialize(jsonObject, Nodo.class);
+                    return context.deserialize(jsonObject, Foglia.class);
+                };
+
+                JsonDeserializer<Nodo> nodo_deserializer = (json, typeOfT, context) -> {
+                    JsonObject jsonObject = json.getAsJsonObject();
+                    var nodo = new Nodo(jsonObject.get("nome").getAsString(), jsonObject.get("descrizione").getAsString());
+                    var cn = new HashMap<String, CampoNativo>();
+
+                    var o = jsonObject.get("campiNativi").getAsJsonObject();
+                    o.keySet().forEach(e -> cn.put(e, context.deserialize(o.get(e), CampoNativo.class)));
+                    nodo.setCampiNativi(cn);
+                    jsonObject.get("figlie").getAsJsonArray().forEach(e -> nodo.addChild(context.deserialize(e, Categoria.class)));
+                    return nodo;
+                };
+
+                JsonDeserializer<Foglia> foglia_deserializer = (json, typeOfT, context) -> {
+                    JsonObject jsonObject = json.getAsJsonObject();
+                    var f = new Foglia(jsonObject.get("nome").getAsString(), jsonObject.get("descrizione").getAsString());
+                    var cn = new HashMap<String, CampoNativo>();
+
+                    var o = jsonObject.get("campiNativi").getAsJsonObject();
+                    o.keySet().forEach(e -> cn.put(e, context.deserialize(o.get(e), CampoNativo.class)));
+                    f.setCampiNativi(cn);
+                    return f;
+                };
+
+                Gson gson = builder
+                        .registerTypeAdapter(Categoria.class, categoria_deserializer)
+                        .registerTypeAdapter(Nodo.class, nodo_deserializer)
+                        .registerTypeAdapter(Foglia.class, foglia_deserializer)
+                        .create();
+
+                h = gson.fromJson(reader, Gerarchia.class);
+
+                if (!this.isHierarchyNameTaken(h.getRoot().getNome())) {//non sovrascrive nell'applicazione gerarchie omonime già esistenti
+                    this.hierarchies.put(h.getRoot().getNome(), h);
+                }
+
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        this.removeGerarchia(h);
+        this.saveData();
+        return;
     }
 
-    private void removeGerarchia(Gerarchia h) {
-        this.hierarchies.remove(h);
+    /**
+     * Genera una lista di oggetti {@link Path} da cui ricavare i file .json da leggere
+     *
+     * @param dir directory
+     * @return lista di {@link Path}
+     */
+    @Contract(pure = true)
+    private @NotNull List<Path> generatePathList(String dir) {
+        List<Path> path_list = new LinkedList<>();
+        try (Stream<Path> walk = Files.walk(Paths.get(DB_JSON_FILES))) {
+
+            path_list = walk
+                    .filter(Files::isRegularFile)
+                    .filter(e -> e.toString().endsWith(".json"))
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return path_list;
     }
 
     /**
@@ -301,6 +433,32 @@ public class Applicazione {
         } else {
             this.setOfferte(new LinkedList<>());
         }
+    }
+
+
+    /**
+     * @return offerte
+     */
+    public List<Offerta> getOfferte() {
+        return offerte;
+    }
+
+
+    /**
+     * @param offerte lista di offerte con cui impostare il valore del campo offerte
+     */
+    public void setOfferte(List<Offerta> offerte) {
+        this.offerte = offerte;
+    }
+
+    /**
+     * @param off offerta da restituire
+     * @return offerta cercata all'interno dell'applicazione
+     */
+    public Offerta getOfferta(Offerta off) {
+        if (this.offerte.contains(off))
+            return this.offerte.get(this.offerte.indexOf(off));
+        throw new RuntimeException("ERROR"); //should not happen
     }
 
     /**
@@ -377,6 +535,7 @@ public class Applicazione {
     /**
      * @param s scambi con cui inizializzare il campo scambi
      */
+    @Contract(mutates = "this")
     private void setScambi(List<Scambio> s) {
         this.scambi = s;
     }
@@ -415,4 +574,27 @@ public class Applicazione {
         objectOutputStream.writeObject(this.getScambi());
         objectOutputStream.close();
     }
+
+    /**
+     * @return scambi
+     */
+    public List<Scambio> getScambi() {
+        return scambi;
+    }
+
+    /**
+     * @param s scambio da aggiungere alla lista
+     */
+    public void addScambio(Scambio s) {
+        scambi.add(s);
+    }
+
+    /**
+     * @param s scambio da rimuovere dalla lista
+     */
+    public void removeScambio(Scambio s) {
+        scambi.remove(s);
+    }
+
+
 }
