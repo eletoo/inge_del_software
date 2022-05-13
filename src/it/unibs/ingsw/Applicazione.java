@@ -9,8 +9,9 @@ import java.util.stream.Collectors;
 
 /**
  * Applicazione: gestisce una mappa che associa a ogni nome della categoria radice la propria gerarchia,
- * un oggetto {@link InfoScambio} che contiene le informazioni di scambio e una lista di oggetti {@link Offerta}
- * che contiene le offerte presenti nell'applicazione.
+ * un oggetto {@link InfoScambio} che contiene le informazioni di scambio, una lista di oggetti {@link Offerta}
+ * che contiene le offerte presenti nell'applicazione e una lista di oggetti {@link Scambio} che contiene gli scambi
+ * presenti nell'applicazione.
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
  */
