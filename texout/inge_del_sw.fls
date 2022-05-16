@@ -847,6 +847,127 @@ INPUT ./Versione3/Use Cases/visualizzazioneOffertePersonali.tex
 INPUT Versione3/Use Cases/visualizzazioneOffertePersonali.tex
 INPUT ./Versione3/Use Cases/visualizzazioneOffertePersonali.tex
 INPUT Versione3/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione4/usecases.tex
+INPUT Versione4/usecases.tex
+INPUT ./Versione4/usecases.tex
+INPUT Versione4/usecases.tex
+INPUT ./Versione4/introTables.tex
+INPUT Versione4/introTables.tex
+INPUT ./Versione4/introTables.tex
+INPUT Versione4/introTables.tex
+INPUT ./images//imagesV4/Use case diagram-Version4.0.png
+INPUT ./images//imagesV4/Use case diagram-Version4.0.png
+INPUT ./images//imagesV4/Use case diagram-Version4.0.png
+INPUT ./images//imagesV4/Use case diagram-Version4.0.png
+INPUT ./images//imagesV4/Use case diagram-Version4.0.png
+INPUT ./Versione4/classdiagrams.tex
+INPUT Versione4/classdiagrams.tex
+INPUT ./Versione4/classdiagrams.tex
+INPUT Versione4/classdiagrams.tex
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Class Diagram - Versione 4.0.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./images//imagesV4/Vers4Parziale.png
+INPUT ./Versione4/behaviourdiagrams.tex
+INPUT Versione4/behaviourdiagrams.tex
+INPUT ./Versione4/behaviourdiagrams.tex
+INPUT Versione4/behaviourdiagrams.tex
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png
+INPUT ./Versione4/table.tex
+INPUT Versione4/table.tex
+INPUT ./Versione4/table.tex
+INPUT Versione4/table.tex
+INPUT ./Versione4/Use Cases/accessoConfiguratore.tex
+INPUT Versione4/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione4/Use Cases/accessoConfiguratore.tex
+INPUT Versione4/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione4/Use Cases/creazioneGerarchia.tex
+INPUT Versione4/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione4/Use Cases/creazioneGerarchia.tex
+INPUT Versione4/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione4/Use Cases/salvataggioDati.tex
+INPUT Versione4/Use Cases/salvataggioDati.tex
+INPUT ./Versione4/Use Cases/salvataggioDati.tex
+INPUT Versione4/Use Cases/salvataggioDati.tex
+INPUT ./Versione4/Use Cases/configurazioneParametri.tex
+INPUT Versione4/Use Cases/configurazioneParametri.tex
+INPUT ./Versione4/Use Cases/configurazioneParametri.tex
+INPUT Versione4/Use Cases/configurazioneParametri.tex
+INPUT ./Versione4/Use Cases/creazioneFruitore.tex
+INPUT Versione4/Use Cases/creazioneFruitore.tex
+INPUT ./Versione4/Use Cases/creazioneFruitore.tex
+INPUT Versione4/Use Cases/creazioneFruitore.tex
+INPUT ./Versione4/Use Cases/accessoFruitore.tex
+INPUT Versione4/Use Cases/accessoFruitore.tex
+INPUT ./Versione4/Use Cases/accessoFruitore.tex
+INPUT Versione4/Use Cases/accessoFruitore.tex
+INPUT ./Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione4/Use Cases/ritiraOfferta.tex
+INPUT Versione4/Use Cases/ritiraOfferta.tex
+INPUT ./Versione4/Use Cases/ritiraOfferta.tex
+INPUT Versione4/Use Cases/ritiraOfferta.tex
+INPUT ./Versione4/Use Cases/offertaBaratto.tex
+INPUT Versione4/Use Cases/offertaBaratto.tex
+INPUT ./Versione4/Use Cases/offertaBaratto.tex
+INPUT Versione4/Use Cases/offertaBaratto.tex
+INPUT ./Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione4/Use Cases/propostaScambio.tex
+INPUT Versione4/Use Cases/propostaScambio.tex
+INPUT ./Versione4/Use Cases/propostaScambio.tex
+INPUT Versione4/Use Cases/propostaScambio.tex
+INPUT ./Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione4/Use Cases/rispostaScambio.tex
+INPUT Versione4/Use Cases/rispostaScambio.tex
+INPUT ./Versione4/Use Cases/rispostaScambio.tex
+INPUT Versione4/Use Cases/rispostaScambio.tex
+INPUT ./Versione4/Use Cases/propostaAppuntamento.tex
+INPUT Versione4/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione4/Use Cases/propostaAppuntamento.tex
+INPUT Versione4/Use Cases/propostaAppuntamento.tex
 INPUT texout/inge_del_sw.aux
 INPUT texout/inge_del_sw.out
 INPUT texout/inge_del_sw.out
