@@ -1,0 +1,47 @@
+\subsection{Casi d'uso}
+In questa sezione sono riportati i casi d'uso relativi alla quinta versione dell'applicazione, sia in forma testuale che come diagramma UML.\bigskip 
+
+In questa sezione sono riportati anche i casi d'uso che non sono soggetti a modifiche nella transizione dalla prima alla quinta versione dell'applicazione, al fine di presentarne una descrizione completa della struttura e del funzionamento.\bigskip
+
+I casi d'uso specifici della quinta versione e non presenti nella quarta sono:
+\begin{itemize}
+    \item Visualizzazione delle offerte in scambio
+    \item Importazione delle informazioni
+\end{itemize} \bigskip
+
+Nella descrizione testuale di tutti i casi d'uso eccetto "Creazione configuratore", "Accesso configuratore", "Creazione fruitore" e "Accesso fruitore" è lasciato sottinteso il fatto che l'utente debba aver effettuato l'accesso al proprio profilo prima di poter proseguire con l'interazione descritta dal caso d'uso considerato: la scelta relativa all'azione da effettuare e di conseguenza del caso d'uso a cui far riferimento avviene infatti tramite un menu presentato all'utente solo dopo aver effettuato l'accesso, pertanto non sarebbe possibile richiedere di effettuare alcuna operazione che non sia la creazione di un nuovo profilo Configuratore o Fruitore o l'accesso a un profilo già esistente prima che venga presentato suddetto menu.\bigskip
+
+\input{Versione5/introTables.tex}
+
+In Figura \ref{fig:Use Case 5} è riportato il diagramma UML dei casi d'uso relativo alla quinta versione dell'applicazione. Dall'immagine possiamo ricavare facilmente che i casi d'uso \textit{sea-level}, ossia quelli corrispondenti agli obiettivi per cui l'utente interagisce con l'applicazione, sono:
+\begin{itemize}
+    \item Creazione di un nuovo profilo configuratore 
+    \item Accesso a un profilo configuratore già esistente
+    \item Creazione di una gerarchia di categorie
+    \item Visualizzazione di tutte le gerarchie di categorie presenti nell'applicazione
+    \item Salvataggio dei dati dell'applicazione
+    \item Configurazione delle informazioni di scambio
+    \item Visualizzazione delle offerte relative ad una specifica categoria
+    \item Creazione di un nuovo profilo fruitore
+    \item Accesso a un profilo fruitore già esistente
+    \item Visualizzazione delle informazioni di scambio
+    \item Visualizzazione delle offerte inserite personalmente dal fruitore
+    \item Offerta di baratto
+    \item Modifica dello stato dell'offerta  
+    \item Visualizzazione delle offerte chiuse
+    \item Proposta di scambio
+    \item Visualizzazione dell'ultimo messaggio
+    \item Risposta di scambio
+    \item Visualizzazione delle offerte in scambio
+    \item Importazione delle informazioni da file preesistenti
+\end{itemize}
+Alcuni di questi casi d'uso \textit{sea-level} sono interpretabili come casi d'uso \textit{fish-level} laddove vengano inclusi da un altro caso d'uso al fine del raggiungimento dell'obiettivo per cui l'utente interagisce con l'applicazione.
+
+Gli unici due casi d'uso che hanno natura esclusivamente \textit{fish-level} sono quelli relativi all'aggiunta di una nuova categoria a una gerarchia e della proposta di appuntamento per effettuare uno scambio, in quanto il primo dei due è incluso nel caso d'uso "Creazione gerarchia" mentre il secondo è incluso nel caso d'uso "Risposta scambio". Inoltre, i casi d'uso "Creazione configuratore", "Accesso configuratore" e "Salvataggio dati" sono inclusi in altri casi d'uso \textit{sea-level}, pertanto possono essere visti anche come casi d'uso \textit{fish-level} oltre che \textit{sea-level}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=17cm, height=5cm]{imagesV5/Use case diagram - Version 5.0.png}
+\caption{\label{fig:Use Case 5}Diagramma UML dei casi d'uso - Versione 5}
+\end{figure}\bigskip
+

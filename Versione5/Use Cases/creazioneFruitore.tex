@@ -1,0 +1,35 @@
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Creazione fruitore \\
+        \hline
+        Attore & Fruitore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                1. L’utente inserisce il proprio username\\
+                Precondizione: lo username inserito dall’utente non è presente nel sistema\\
+                2. L'utente inserisce la password da associare allo username appena inserito.\\
+                Postcondizione: viene creato un nuovo profilo fruitore.\\
+                Fine              
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: Lo username inserito dall'utente è già presente nel sistema\\
+                 2.a. Viene segnalato che è già presente un profilo assegnato allo username appena inserito\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: il profilo non viene creato correttamente\\
+                 Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Creazione Fruitore}
+    \label{tab:Use Case 5.8}
+\end{table}

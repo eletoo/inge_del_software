@@ -1,0 +1,52 @@
+
+\begin{table}[!]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Creazione configuratore \\
+        \hline
+        Attore & Configuratore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                 1. Vengono comunicate all'utente le credenziali (username e password) provvisorie con cui effettuare il primo accesso\\
+                 Postcondizione: viene creato un profilo configuratore con le credenziali provvisorie comunicate all'utente al punto 1\\
+                 2. L'utente inserisce le credenziali provvisorie\\
+                 Precondizione: le credenziali inserite sono corrette\\
+                 3. L'utente personalizza il proprio username\\
+                 Precondizione: lo username personalizzato non è associato ad alcun profilo\\
+                 4. L'utente personalizza la propria password\\
+                 Postcondizione: vengono modificate le credenziali associate al profilo\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: la creazione del profilo non è andata a buon fine\\
+                 Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: le credenziali inserite sono errate\\
+                 3.a Viene segnalato all'utente un errore\\
+                 3.b Torna al punto 2
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: lo username personalizzato è già associato a un profilo\\
+                 4.a. Viene segnalato all'utente un errore\\
+                 Torna al punto 3
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                 Precondizione: la modifica delle credenziali non è andata a buon fine\\
+                 Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Creazione Configuratore}
+    \label{tab:Use Case 5.2}
+\end{table}

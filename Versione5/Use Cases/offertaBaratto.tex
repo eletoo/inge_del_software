@@ -1,0 +1,30 @@
+
+\begin{table}[tp]
+    \centering
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Creazione Offerta \\
+        \hline
+        Attore & Fruitore \\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: esiste almeno una categoria a cui associare l'offerta
+                1. L'utente seleziona la categoria in cui pubblicare l'offerta\\
+                2. L'utente inserisce un nome da assegnare all'offerta\\
+                3. L'utente compila i campi descrittivi obbligatori e sceglie se compilare anche quelli facoltativi\\
+                Postcondizione: viene salvata la nuova offerta\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo &
+            \begin{tabular}{p{10cm}}
+                Precondizione: non esistono categorie a cui associare l'offerta\\
+                1.a. Viene segnalato un errore\\
+                Fine
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Creazione Offerta}
+    \label{tab:Use Case 5.12}
+\end{table}

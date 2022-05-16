@@ -44,7 +44,7 @@ La classe \texttt{CampoNativo} tiene traccia dell'obbligatorietà della compilaz
 
 La classe \texttt{CategoriaEntry} tiene traccia dell'associazione tra una categoria e la sua categoria padre; essa contiene pertanto i metodi necessari a recuperare le informazioni relative a tale relazione (percorso dalla categoria radice alla categoria corrente, categoria padre e categoria corrente) e dei metodi per trasformare una categoria da Foglia a Nodo e associarla alla propria categoria padre.
 
-La classe \texttt{Controller} contiene metodi per consentire l'accesso a un profilo Configuratore, differenziando tra il caso di registrazione e quello di accesso standard. Ognuno di questi metodi richiama poi uno o più ulteriori metodi che permettono l'utilizzo delle funzionalità a cui l'utente è autorizzato ad accedere.
+La classe \texttt{Controller} contiene metodi per consentire l'accesso a un profilo Configuratore, differenziando tra il caso di registrazione e quello di accesso standard. Ognuno di questi metodi richiama poi uno o più ulteriori metodi che permettono l'utilizzo delle funzionalità a cui l'utente è autorizzato ad accedere; contiene inoltre metodi per consentire l'accesso a un profilo Fruitore, differenziando come nel caso del configuratore tra il caso di registrazione e quello di accesso, richiamando uno o più metodi che consentono di utilizzare tutte le funzionalità a cui l'utente è autorizzato ad accedere.
 
 La classe \texttt{Main} contiene il solo metodo main che permette di interagire con l'applicazione selezionando l'azione da compiere tra accesso, registrazione o uscita dall'applicazione.
 

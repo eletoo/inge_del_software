@@ -1,0 +1,55 @@
+\begin{table}[h!]
+    \centering
+     \setlength{\leftmargini}{0.4cm}
+    \begin{tabular}{|p{3.5cm}|p{10.5cm}|}
+        \hline
+        Nome & Risposta scambio\\
+        \hline
+        Attore & Fruitore\\
+        \hline
+        Scenario principale & 
+            \begin{tabular}{p{10cm}}
+                1. Precondizione: l’utente ha almeno una proposta di scambio non ancora scaduta da gestire\\
+                2. Viene richiesto all’utente se gestire una proposta di scambio tra quelle in cui è coinvolto\\
+                Precondizione: l’utente sceglie di gestire una proposta di scambio\\
+                3. L’utente seleziona una proposta di scambio da gestire\\
+                Precondizione: non è ancora stato proposto alcun appuntamento relativo alla proposta di scambio selezionata al punto 2\\
+                4. $\langle\langle$include$\rangle\rangle$ Proposta appuntamento\\
+                5. Le offerte coinvolte nella proposta di scambio passano nello stato \textit{in Scambio}\\
+                6. Torna al punto 1\\
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: l’utente non ha alcuna proposta di scambio da gestire\\
+                2.a. Le offerte coinvolte in proposte di scambio scadute passano nello stato \textit{Aperta}\\
+                Fine                
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: l’utente sceglie di non gestire alcuna proposta di scambio\\
+                2.a. Le offerte coinvolte in proposte di scambio scadute passano nello stato \textit{Aperta}\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: è già stato proposto un appuntamento relativo alla proposta di scambio selezionata al punto 3\\
+                Precondizione: l’utente sceglie di accettare l’appuntamento proposto\\
+                3.a.a. Le offerte coinvolte nella proposta di scambio passano nello stato \textit{Chiusa}\\
+                3.a.b. Torna al punto 1\\
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: l’utente sceglie di rifiutare l’appuntamento proposto\\
+                3.b.a. $\langle\langle$include$\rangle\rangle$ Proposta appuntamento\\
+                3.b.b. Le offerte coinvolte nella proposta di scambio passano nello stato \textit{in Scambio}\\
+                3.b.c. Torna al punto 1\\
+            \end{tabular}\\
+        \hline
+    \end{tabular}
+    \caption{Caso d'uso: Risposta Scambio}
+    \label{tab:Use Case 5.18}
+\end{table}
