@@ -12,7 +12,7 @@ import java.util.stream.*;
 /**
  * Applicazione: gestisce una mappa che associa a ogni nome della categoria radice la propria gerarchia,
  * un oggetto {@link InfoScambio} che contiene le informazioni di scambio, una lista di oggetti {@link Offerta}
- * che contiene le offerte presenti nell'applicazione e una lista di offetti {@link Scambio} che contiene gli scambi
+ * che contiene le offerte presenti nell'applicazione e una lista di oggetti {@link Scambio} che contiene gli scambi
  * introdotti dagli utenti nell'applicazione.
  *
  * @author Elena Tonini, Mattia Pavlovic, Claudia Manfredi
@@ -21,6 +21,7 @@ public class Applicazione {
 
     public static final String DB_JSON_FILES = "./db/jsonFiles/";
     public static final String DB_JSON_CONF_FILE = "./db/conf/conf.json";
+    public static final String DB_CONF_DIR = "./db/conf/";
 
     private Map<String, Gerarchia> hierarchies;
     private InfoScambio informazioni;
@@ -144,6 +145,12 @@ public class Applicazione {
      * @throws IOException eccezione
      */
     public void importInfoFromFile(View view) throws IOException {
+        if(this.generatePathList(DB_CONF_DIR).size() != 1){
+            //se c'è un numero di file di configurazione diverso da 1 segnala un errore
+            view.errorMessage(View.ErrorMessage.E_WRONG_DIR_CONTENT);
+            return;
+        }
+
         Path p = Paths.get(DB_JSON_CONF_FILE);
 
         if (!p.toFile().exists()) {
@@ -377,7 +384,17 @@ public class Applicazione {
 
                 h = gson.fromJson(reader, Gerarchia.class);
 
-                if (!this.isHierarchyNameTaken(h.getRoot().getNome())) {//non sovrascrive nell'applicazione gerarchie omonime già esistenti
+                boolean valid = true;
+//todo: non funziona perché isNameTaken ritorna sempre true
+                if (h.getRoot() instanceof Nodo)
+                    for (Categoria c : ((Nodo) h.getRoot()).getCategorieFiglie()) {
+                        if (h.getRoot().isNameTaken(c.getNome())) {
+                            valid = false;
+                            break;
+                        }
+                    }
+
+                if (!this.isHierarchyNameTaken(h.getRoot().getNome()) && valid) {//non sovrascrive nell'applicazione gerarchie omonime già esistenti
                     this.hierarchies.put(h.getRoot().getNome(), h);
                 }
 

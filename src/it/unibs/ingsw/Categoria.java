@@ -90,7 +90,7 @@ public abstract class Categoria implements Serializable {
     }
 
     /**
-     * Ritorna true se e solo se il nome passato e' presente all'interno della struttura della categoria.
+     * Ritorna true se e solo se il nome passato e' presente all'interno della struttura della gerarchia.
      *
      * @param name nome
      * @return true se il nome è già stato utilizzato
