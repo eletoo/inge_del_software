@@ -385,14 +385,13 @@ public class Applicazione {
                 h = gson.fromJson(reader, Gerarchia.class);
 
                 boolean valid = true;
-//todo: non funziona perché isNameTaken ritorna sempre true
+
                 if (h.getRoot() instanceof Nodo)
-                    for (Categoria c : ((Nodo) h.getRoot()).getCategorieFiglie()) {
-                        if (h.getRoot().isNameTaken(c.getNome())) {
+                    for(Categoria c : ((Nodo) h.getRoot()).getCategorieFiglie())
+                        if(!c.isNameTakenOnlyOnce(h.getRoot())){
                             valid = false;
                             break;
                         }
-                    }
 
                 if (!this.isHierarchyNameTaken(h.getRoot().getNome()) && valid) {//non sovrascrive nell'applicazione gerarchie omonime già esistenti
                     this.hierarchies.put(h.getRoot().getNome(), h);

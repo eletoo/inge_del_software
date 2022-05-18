@@ -1,5 +1,6 @@
 package it.unibs.ingsw;
 
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
@@ -115,6 +116,35 @@ public abstract class Categoria implements Serializable {
                 if (isNameTaken(child, name))
                     return true;
         return false;
+    }
+
+    /**
+     * Funzione che verifica se un nome e' presente esattamente una volta all'interno della gerarchia
+     *
+     * @param root categoria radice del ramo di cui analizzare il numero di occorrenze di un nome
+     * @return true se il nome e' presente una sola volta nella gerarchia
+     */
+    public boolean isNameTakenOnlyOnce(@NotNull Categoria root) {
+        return this.countNameOccurences(0, root) == 1;
+    }
+
+    /**
+     * Funzione che computa il numero di occorrenze di un nome di categoria all'interno di una gerarchia
+     *
+     * @param count conteggio delle occorrenze
+     * @param c     categoria radice del ramo della gerarchia in cui cercare il nome
+     * @return numero di occorrenze del nome
+     */
+    @Contract(pure = true)
+    private int countNameOccurences(int count, @NotNull Categoria c) {
+        if (this.nome.equals(c.nome))
+            count++;
+
+        if (c instanceof Nodo)
+            for (var child : ((Nodo) c).getCategorieFiglie())
+                count = countNameOccurences(count, child);
+
+        return count;
     }
 
     /**
