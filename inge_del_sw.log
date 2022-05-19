@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.4.4)  16 MAY 2022 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.4.4)  19 MAY 2022 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -529,11 +529,11 @@ Overfull \hbox (28.56952pt too wide) in paragraph at lines 8--9
 []\OT1/cmr/m/n/10 In Figura [][]2.1[][] e riportato il diagramma UML dei casi d'uso relativo alla prima versione dell'applicazione.
  []
 
-<./images//imagesV1/Use case diagram-Version 1.0.png, id=265, 783.92876pt x 325.215pt>
+<./images//imagesV1/Use case diagram-Version 1.0.png, id=265, 871.255pt x 582.175pt>
 File: ./images//imagesV1/Use case diagram-Version 1.0.png Graphic file (type png)
 <use ./images//imagesV1/Use case diagram-Version 1.0.png>
 Package pdftex.def Info: ./images//imagesV1/Use case diagram-Version 1.0.png  used on input line 22.
-(pdftex.def)             Requested size: 384.1096pt x 159.35178pt.
+(pdftex.def)             Requested size: 384.1096pt x 256.65526pt.
 ) (Versione1/classdiagram.tex [12 <./images//imagesV1/Use case diagram-Version 1.0.png (PNG copy)>]
 Overfull \hbox (2.26434pt too wide) in paragraph at lines 14--15
 \OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
@@ -544,25 +544,25 @@ File: ./images//imagesV1/Initial class diagram - Version 1.0.png Graphic file (t
 <use ./images//imagesV1/Initial class diagram - Version 1.0.png>
 Package pdftex.def Info: ./images//imagesV1/Initial class diagram - Version 1.0.png  used on input line 18.
 (pdftex.def)             Requested size: 426.79135pt x 309.35007pt.
-<./images//imagesV1/Class diagram-Version1.0.png, id=278, 2825.55624pt x 3513.125pt>
-File: ./images//imagesV1/Class diagram-Version1.0.png Graphic file (type png)
-<use ./images//imagesV1/Class diagram-Version1.0.png>
-Package pdftex.def Info: ./images//imagesV1/Class diagram-Version1.0.png  used on input line 24.
-(pdftex.def)             Requested size: 426.79135pt x 530.64482pt.
+<./images//imagesV1/Class Diagram- Version 1.0.png, id=278, 1569.865pt x 1951.29pt>
+File: ./images//imagesV1/Class Diagram- Version 1.0.png Graphic file (type png)
+<use ./images//imagesV1/Class Diagram- Version 1.0.png>
+Package pdftex.def Info: ./images//imagesV1/Class Diagram- Version 1.0.png  used on input line 24.
+(pdftex.def)             Requested size: 426.79135pt x 530.48781pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <./images//imagesV1/Initial class diagram - Version 1.0.png (PNG copy)>] [14 <./images//imagesV1/Class diagram-Version1.0.png (PNG copy)>]
+[13 <./images//imagesV1/Initial class diagram - Version 1.0.png (PNG copy)>] [14 <./images//imagesV1/Class Diagram- Version 1.0.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 50.
 
-<./images//imagesV1/Class diagram simplified-Version1.0.png, id=291, 2082.78125pt x 2733.21124pt>
-File: ./images//imagesV1/Class diagram simplified-Version1.0.png Graphic file (type png)
-<use ./images//imagesV1/Class diagram simplified-Version1.0.png>
-Package pdftex.def Info: ./images//imagesV1/Class diagram simplified-Version1.0.png  used on input line 52.
+<./images//imagesV1/old images/Class diagram simplified-Version1.0.png, id=291, 2082.78125pt x 2733.21124pt>
+File: ./images//imagesV1/old images/Class diagram simplified-Version1.0.png Graphic file (type png)
+<use ./images//imagesV1/old images/Class diagram simplified-Version1.0.png>
+Package pdftex.def Info: ./images//imagesV1/old images/Class diagram simplified-Version1.0.png  used on input line 52.
 (pdftex.def)             Requested size: 426.79135pt x 560.0617pt.
-) (Versione1/behaviourdiagrams.tex [15] [16 <./images//imagesV1/Class diagram simplified-Version1.0.png (PNG copy)>]
+) (Versione1/behaviourdiagrams.tex [15] [16 <./images//imagesV1/old images/Class diagram simplified-Version1.0.png (PNG copy)>]
 Overfull \hbox (41.48723pt too wide) in paragraph at lines 7--9
 \OT1/cmr/m/n/10 l'interazione dell'utente con l'applicazione per consentire all'utente Configuratore di accedere all'applicazione. 
  []
@@ -571,18 +571,18 @@ Overfull \hbox (41.48723pt too wide) in paragraph at lines 7--9
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 29.
 
-<./images//imagesV1/Sequence diagram-Accesso configuratore.png, id=301, 579.16376pt x 872.25874pt>
-File: ./images//imagesV1/Sequence diagram-Accesso configuratore.png Graphic file (type png)
-<use ./images//imagesV1/Sequence diagram-Accesso configuratore.png>
-Package pdftex.def Info: ./images//imagesV1/Sequence diagram-Accesso configuratore.png  used on input line 31.
+<./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png, id=301, 579.16376pt x 872.25874pt>
+File: ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png Graphic file (type png)
+<use ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png>
+Package pdftex.def Info: ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png  used on input line 31.
 (pdftex.def)             Requested size: 256.07741pt x 385.67168pt.
-[17] [18 <./images//imagesV1/Sequence diagram-Accesso configuratore.png (PNG copy)>]
-<./images//imagesV1/State diagram - Ciclo di vita del configuratore.png, id=329, 709.65125pt x 735.74875pt>
-File: ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png Graphic file (type png)
-<use ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png>
-Package pdftex.def Info: ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png  used on input line 42.
-(pdftex.def)             Requested size: 298.75264pt x 309.7421pt.
-) (Versione1/table.tex [19 <./images//imagesV1/State diagram - Ciclo di vita del configuratore.png (PNG copy)>] (Versione1/UseCases/accessoConfiguratore.tex
+[17] [18 <./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png (PNG copy)>]
+<./images//imagesV1/State diagram - Version 1.0.png, id=329, 351.3125pt x 363.3575pt>
+File: ./images//imagesV1/State diagram - Version 1.0.png Graphic file (type png)
+<use ./images//imagesV1/State diagram - Version 1.0.png>
+Package pdftex.def Info: ./images//imagesV1/State diagram - Version 1.0.png  used on input line 42.
+(pdftex.def)             Requested size: 298.75264pt x 309.02165pt.
+) (Versione1/table.tex [19 <./images//imagesV1/State diagram - Version 1.0.png (PNG copy)>] (Versione1/UseCases/accessoConfiguratore.tex
 Underfull \hbox (badness 2384) in paragraph at lines 11--12
 []\OT1/cmr/m/n/10 Precondizione: esiste almeno un profilo Configuratore gia
  []
@@ -624,20 +624,20 @@ Overfull \hbox (15.6261pt too wide) in paragraph at lines 5--6
 [24
 
 ])
-<./images//imagesV2/Use case diagram-Version2.0.png, id=372, 1067.99pt x 438.63875pt>
+<./images//imagesV2/Use case diagram-Version2.0.png, id=372, 1110.1475pt x 438.63875pt>
 File: ./images//imagesV2/Use case diagram-Version2.0.png Graphic file (type png)
 <use ./images//imagesV2/Use case diagram-Version2.0.png>
 Package pdftex.def Info: ./images//imagesV2/Use case diagram-Version2.0.png  used on input line 36.
-(pdftex.def)             Requested size: 384.1096pt x 157.75587pt.
+(pdftex.def)             Requested size: 384.1096pt x 151.76558pt.
 ) (Versione2/classdiagram.tex [25]
 Overfull \hbox (2.26434pt too wide) in paragraph at lines 18--19
 \OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
  []
 
-<./images//imagesV2/Class diagram-Version2.0.png, id=386, 1880.02374pt x 2914.89pt>
-File: ./images//imagesV2/Class diagram-Version2.0.png Graphic file (type png)
-<use ./images//imagesV2/Class diagram-Version2.0.png>
-Package pdftex.def Info: ./images//imagesV2/Class diagram-Version2.0.png  used on input line 22.
+<./images//imagesV2/Class Diagram - Versione 2.0.png, id=386, 1880.02374pt x 2914.89pt>
+File: ./images//imagesV2/Class Diagram - Versione 2.0.png Graphic file (type png)
+<use ./images//imagesV2/Class Diagram - Versione 2.0.png>
+Package pdftex.def Info: ./images//imagesV2/Class Diagram - Versione 2.0.png  used on input line 22.
 (pdftex.def)             Requested size: 426.79135pt x 661.69301pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -651,31 +651,31 @@ Overfull \hbox (24.20001pt too wide) in paragraph at lines 30--31
 
 LaTeX Warning: Text page 27 contains only floats.
 
-[27 <./images//imagesV2/Class diagram-Version2.0.png (PNG copy)>]
+[27 <./images//imagesV2/Class Diagram - Versione 2.0.png (PNG copy)>]
 Overfull \hbox (5.20866pt too wide) in paragraph at lines 50--51
 []\OT1/cmr/m/n/10 La classe \OT1/cmtt/m/n/10 InfoScambio \OT1/cmr/m/n/10 gestisce le informazioni di scambio che devono essere impostate dall'utente
  []
 
-<./images//imagesV2/Partial class diagram-Version2.0.png, id=397, 1672.2475pt x 1912.14375pt>
-File: ./images//imagesV2/Partial class diagram-Version2.0.png Graphic file (type png)
-<use ./images//imagesV2/Partial class diagram-Version2.0.png>
-Package pdftex.def Info: ./images//imagesV2/Partial class diagram-Version2.0.png  used on input line 58.
+<./images//imagesV2/Vers2Parziale.png, id=397, 1672.2475pt x 1912.14375pt>
+File: ./images//imagesV2/Vers2Parziale.png Graphic file (type png)
+<use ./images//imagesV2/Vers2Parziale.png>
+Package pdftex.def Info: ./images//imagesV2/Vers2Parziale.png  used on input line 58.
 (pdftex.def)             Requested size: 426.79135pt x 488.01328pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (Versione2/behaviourdiagrams.tex [28] [29 <./images//imagesV2/Partial class diagram-Version2.0.png (PNG copy)>]
-<./images//imagesV2/State diagram-interazione configuratore v2.png, id=407, 1693.32625pt x 1275.76625pt>
-File: ./images//imagesV2/State diagram-interazione configuratore v2.png Graphic file (type png)
-<use ./images//imagesV2/State diagram-interazione configuratore v2.png>
-Package pdftex.def Info: ./images//imagesV2/State diagram-interazione configuratore v2.png  used on input line 14.
-(pdftex.def)             Requested size: 298.75264pt x 225.07283pt.
-<./images//imagesV2/State diagram-interazione fruitore v2.png, id=409, 478.78876pt x 686.565pt>
-File: ./images//imagesV2/State diagram-interazione fruitore v2.png Graphic file (type png)
-<use ./images//imagesV2/State diagram-interazione fruitore v2.png>
-Package pdftex.def Info: ./images//imagesV2/State diagram-interazione fruitore v2.png  used on input line 24.
-(pdftex.def)             Requested size: 213.39273pt x 294.48387pt.
-) (Versione2/table.tex [30 <./images//imagesV2/State diagram-interazione configuratore v2.png (PNG copy)>] (Versione2/Use Cases/accessoConfiguratore.tex
+) (Versione2/behaviourdiagrams.tex [28] [29 <./images//imagesV2/Vers2Parziale.png (PNG copy)>]
+<./images//imagesV2/State Diagram Configuratore - Versione 2.0.png, id=407, 752.8125pt x 567.11874pt>
+File: ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png Graphic file (type png)
+<use ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png>
+Package pdftex.def Info: ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png  used on input line 14.
+(pdftex.def)             Requested size: 298.75264pt x 225.06085pt.
+<./images//imagesV2/State Diagram Fruitore - Versione 2.0.png, id=409, 351.3125pt x 502.87875pt>
+File: ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png Graphic file (type png)
+<use ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png>
+Package pdftex.def Info: ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png  used on input line 24.
+(pdftex.def)             Requested size: 213.39972pt x 294.48598pt.
+) (Versione2/table.tex [30 <./images//imagesV2/State Diagram Configuratore - Versione 2.0.png (PNG copy)>] (Versione2/Use Cases/accessoConfiguratore.tex
 Underfull \hbox (badness 2384) in paragraph at lines 12--13
 []\OT1/cmr/m/n/10 Precondizione: esiste almeno un profilo Configuratore gia
  []
@@ -745,7 +745,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)) [31 <./images//imagesV2/State diagram-interazione fruitore v2.png (PNG copy)>]
+)) [31 <./images//imagesV2/State Diagram Fruitore - Versione 2.0.png (PNG copy)>]
 
 LaTeX Warning: Text page 32 contains only floats.
 
@@ -767,11 +767,11 @@ Overfull \hbox (29.6806pt too wide) in paragraph at lines 18--19
  []
 
 [39]
-<./images//imagesV3/Use case diagram-Version3.0.png, id=484, 1195.46625pt x 451.6875pt>
+<./images//imagesV3/Use case diagram-Version3.0.png, id=484, 1195.46625pt x 449.68pt>
 File: ./images//imagesV3/Use case diagram-Version3.0.png Graphic file (type png)
 <use ./images//imagesV3/Use case diagram-Version3.0.png>
 Package pdftex.def Info: ./images//imagesV3/Use case diagram-Version3.0.png  used on input line 40.
-(pdftex.def)             Requested size: 426.79222pt x 170.71947pt.
+(pdftex.def)             Requested size: 426.79222pt x 170.71548pt.
 ) (Versione3/classdiagrams.tex
 Overfull \hbox (2.98721pt too wide) in paragraph at lines 2--3
 \OT1/cmr/m/n/10 In questa sezione sono stati riportati due diagrammi delle classi: il primo, in Figura [][]2.13[][], rappresenta
@@ -814,23 +814,23 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 61--62
  []
 
 ) (Versione3/behaviourdiagrams.tex [43 <./images//imagesV3/Vers3Parziale.png (PNG copy)>]
-<./images//imagesV3/State Diagram Configuratore - Versione 3.0.png, id=509, 751.80875pt x 398.48875pt>
+<./images//imagesV3/State Diagram Configuratore - Versione 3.0.png, id=509, 752.8125pt x 377.41pt>
 File: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png Graphic file (type png)
 <use ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png>
 Package pdftex.def Info: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png  used on input line 13.
-(pdftex.def)             Requested size: 1503.6138pt x 796.97556pt.
+(pdftex.def)             Requested size: 1505.6213pt x 754.81815pt.
 
-Overfull \hbox (28.45012pt too wide) in paragraph at lines 13--14
+Overfull \hbox (28.46059pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<./images//imagesV3/State Diagram Fruitore - Versione 3.0.png, id=511, 752.8125pt x 269.005pt>
+<./images//imagesV3/State Diagram Fruitore - Versione 3.0.png, id=511, 1505.625pt x 536.0025pt>
 File: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png Graphic file (type png)
 <use ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png>
 Package pdftex.def Info: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png  used on input line 23.
-(pdftex.def)             Requested size: 1505.6213pt x 538.00867pt.
+(pdftex.def)             Requested size: 3011.24268pt x 1072.00238pt.
 
-Overfull \hbox (28.46059pt too wide) in paragraph at lines 23--24
+Overfull \hbox (28.41466pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
@@ -928,13 +928,13 @@ Overfull \hbox (3.0674pt too wide) in paragraph at lines 41--42
 []\OT1/cmr/m/n/10 Gli unici due casi d'uso che hanno natura esclusivamente \OT1/cmr/m/it/10 fish-level \OT1/cmr/m/n/10 sono quelli relativi all'aggiunta
  []
 
-<./images//imagesV4/Use case diagram-Version4.0.png, id=597, 2012.51875pt x 459.7175pt>
-File: ./images//imagesV4/Use case diagram-Version4.0.png Graphic file (type png)
-<use ./images//imagesV4/Use case diagram-Version4.0.png>
-Package pdftex.def Info: ./images//imagesV4/Use case diagram-Version4.0.png  used on input line 45.
-(pdftex.def)             Requested size: 483.68996pt x 142.26543pt.
+<./images//imagesV4/Use case diagram - Version 4.0.png, id=597, 1787.67876pt x 470.75874pt>
+File: ./images//imagesV4/Use case diagram - Version 4.0.png Graphic file (type png)
+<use ./images//imagesV4/Use case diagram - Version 4.0.png>
+Package pdftex.def Info: ./images//imagesV4/Use case diagram - Version 4.0.png  used on input line 45.
+(pdftex.def)             Requested size: 483.689pt x 142.26309pt.
 
-Overfull \hbox (56.8986pt too wide) in paragraph at lines 45--46
+Overfull \hbox (56.89764pt too wide) in paragraph at lines 45--46
  [][] 
  []
 
@@ -948,11 +948,11 @@ Overfull \hbox (2.26434pt too wide) in paragraph at lines 21--22
 \OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
  []
 
-<./images//imagesV4/Class Diagram - Versione 4.0.png, id=607, 3099.58pt x 3482.00874pt>
+<./images//imagesV4/Class Diagram - Versione 4.0.png, id=607, 3158.80125pt x 3732.94624pt>
 File: ./images//imagesV4/Class Diagram - Versione 4.0.png Graphic file (type png)
 <use ./images//imagesV4/Class Diagram - Versione 4.0.png>
 Package pdftex.def Info: ./images//imagesV4/Class Diagram - Versione 4.0.png  used on input line 25.
-(pdftex.def)             Requested size: 455.24408pt x 511.3869pt.
+(pdftex.def)             Requested size: 455.24408pt x 537.98814pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
  [][] 
@@ -961,7 +961,7 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56 <./images//imagesV4/Use case diagram-Version4.0.png (PNG copy)>]
+[56 <./images//imagesV4/Use case diagram - Version 4.0.png (PNG copy)>]
 Overfull \hbox (24.20001pt too wide) in paragraph at lines 33--34
 \OT1/cmr/m/n/10 relativamente alle informazioni private degli utenti. La classe \OT1/cmtt/m/n/10 User \OT1/cmr/m/n/10 e dotata di metodi per l'autenticazione
  []
@@ -972,32 +972,32 @@ Overfull \hbox (5.20866pt too wide) in paragraph at lines 53--54
  []
 
 [58]
-<./images//imagesV4/Vers4Parziale.png, id=622, 2379.89125pt x 2037.6125pt>
+<./images//imagesV4/Vers4Parziale.png, id=622, 2379.89125pt x 2163.08125pt>
 File: ./images//imagesV4/Vers4Parziale.png Graphic file (type png)
 <use ./images//imagesV4/Vers4Parziale.png>
 Package pdftex.def Info: ./images//imagesV4/Vers4Parziale.png  used on input line 67.
-(pdftex.def)             Requested size: 455.24408pt x 389.76208pt.
+(pdftex.def)             Requested size: 455.24408pt x 413.7622pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
 ) (Versione4/behaviourdiagrams.tex [59 <./images//imagesV4/Vers4Parziale.png (PNG copy)>]
-<./images//imagesV4/State Diagram Configuratore - Versione 4.0.png, id=628, 953.5625pt x 314.17375pt>
+<./images//imagesV4/State Diagram Configuratore - Versione 4.0.png, id=628, 1505.625pt x 495.8525pt>
 File: ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png Graphic file (type png)
 <use ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png>
 Package pdftex.def Info: ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png  used on input line 13.
-(pdftex.def)             Requested size: 1907.12036pt x 628.34595pt.
+(pdftex.def)             Requested size: 3011.24268pt x 991.70258pt.
 
-Overfull \hbox (28.45447pt too wide) in paragraph at lines 13--14
+Overfull \hbox (28.41466pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<./images//imagesV4/State Diagram Fruitore - Versione 4.0.png, id=630, 2007.5pt x 523.9575pt>
+<./images//imagesV4/State Diagram Fruitore - Versione 4.0.png, id=630, 2007.5pt x 521.95pt>
 File: ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png Graphic file (type png)
 <use ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png>
 Package pdftex.def Info: ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png  used on input line 23.
-(pdftex.def)             Requested size: 455.22131pt x 156.48491pt.
+(pdftex.def)             Requested size: 455.22131pt x 156.49063pt.
 
 Overfull \hbox (28.42996pt too wide) in paragraph at lines 23--24
  [][] 
@@ -1158,13 +1158,13 @@ Overfull \hbox (3.0674pt too wide) in paragraph at lines 40--41
 []\OT1/cmr/m/n/10 Gli unici due casi d'uso che hanno natura esclusivamente \OT1/cmr/m/it/10 fish-level \OT1/cmr/m/n/10 sono quelli relativi all'aggiunta
  []
 
-<./images//imagesV5/Use case diagram - Version 5.0.png, id=733, 1698.345pt x 464.73625pt>
+<./images//imagesV5/Use case diagram - Version 5.0.png, id=733, 1787.67876pt x 470.75874pt>
 File: ./images//imagesV5/Use case diagram - Version 5.0.png Graphic file (type png)
 <use ./images//imagesV5/Use case diagram - Version 5.0.png>
 Package pdftex.def Info: ./images//imagesV5/Use case diagram - Version 5.0.png  used on input line 44.
-(pdftex.def)             Requested size: 483.69647pt x 142.25845pt.
+(pdftex.def)             Requested size: 483.689pt x 142.26309pt.
 
-Overfull \hbox (56.90512pt too wide) in paragraph at lines 44--45
+Overfull \hbox (56.89764pt too wide) in paragraph at lines 44--45
  [][] 
  []
 
@@ -1178,10 +1178,11 @@ Overfull \hbox (2.26434pt too wide) in paragraph at lines 21--22
 \OT1/cmr/m/n/10 implementano l'interfaccia \OT1/cmtt/m/n/10 Serializable\OT1/cmr/m/n/10 , nonostante tale relazione non sia esplicitamente riportata
  []
 
-File: ./images//imagesV4/Class Diagram - Versione 4.0.png Graphic file (type png)
-<use ./images//imagesV4/Class Diagram - Versione 4.0.png>
-Package pdftex.def Info: ./images//imagesV4/Class Diagram - Versione 4.0.png  used on input line 25.
-(pdftex.def)             Requested size: 455.24408pt x 511.3869pt.
+<./images//imagesV5/Class Diagram - Versione 5.0.png, id=743, 3193.9325pt x 3486.02374pt>
+File: ./images//imagesV5/Class Diagram - Versione 5.0.png Graphic file (type png)
+<use ./images//imagesV5/Class Diagram - Versione 5.0.png>
+Package pdftex.def Info: ./images//imagesV5/Class Diagram - Versione 5.0.png  used on input line 25.
+(pdftex.def)             Requested size: 455.24408pt x 496.86993pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
  [][] 
@@ -1190,27 +1191,28 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[75 <./images//imagesV5/Use case diagram - Version 5.0.png>]
+[75 <./images//imagesV5/Use case diagram - Version 5.0.png (PNG copy)>]
 Overfull \hbox (24.20001pt too wide) in paragraph at lines 33--34
 \OT1/cmr/m/n/10 relativamente alle informazioni private degli utenti. La classe \OT1/cmtt/m/n/10 User \OT1/cmr/m/n/10 e dotata di metodi per l'autenticazione
  []
 
-[76]
+[76 <./images//imagesV5/Class Diagram - Versione 5.0.png (PNG copy)>]
 Overfull \hbox (5.20866pt too wide) in paragraph at lines 54--55
 []\OT1/cmr/m/n/10 La classe \OT1/cmtt/m/n/10 InfoScambio \OT1/cmr/m/n/10 gestisce le informazioni di scambio che devono essere impostate dall'utente
  []
 
 [77]
-File: ./images//imagesV4/Vers4Parziale.png Graphic file (type png)
-<use ./images//imagesV4/Vers4Parziale.png>
-Package pdftex.def Info: ./images//imagesV4/Vers4Parziale.png  used on input line 68.
-(pdftex.def)             Requested size: 455.24408pt x 389.76208pt.
+<./images//imagesV5/Vers5Parziale.png, id=758, 2384.91pt x 2232.34pt>
+File: ./images//imagesV5/Vers5Parziale.png Graphic file (type png)
+<use ./images//imagesV5/Vers5Parziale.png>
+Package pdftex.def Info: ./images//imagesV5/Vers5Parziale.png  used on input line 68.
+(pdftex.def)             Requested size: 455.24408pt x 426.12465pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 68--69
  [][] 
  []
 
-) (Versione5/behaviourdiagrams.tex [78]
+) (Versione5/behaviourdiagrams.tex [78 <./images//imagesV5/Vers5Parziale.png (PNG copy)>]
 <./images//imagesV5/State Diagram Configuratore - Versione 5.0.png, id=765, 1505.625pt x 495.8525pt>
 File: ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png Graphic file (type png)
 <use ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png>
@@ -1221,11 +1223,11 @@ Overfull \hbox (28.41466pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<./images//imagesV5/State Diagram Fruitore - Versione 5.0.png, id=767, 2007.5pt x 523.9575pt>
+<./images//imagesV5/State Diagram Fruitore - Versione 5.0.png, id=767, 2007.5pt x 521.95pt>
 File: ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png Graphic file (type png)
 <use ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png>
 Package pdftex.def Info: ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png  used on input line 23.
-(pdftex.def)             Requested size: 455.22131pt x 156.48491pt.
+(pdftex.def)             Requested size: 455.22131pt x 156.49063pt.
 
 Overfull \hbox (28.42996pt too wide) in paragraph at lines 23--24
  [][] 
@@ -1373,17 +1375,17 @@ Package rerunfilecheck Info: File `inge_del_sw.out' has not changed.
 (rerunfilecheck)             Checksum: 7B8308911C9FF3BC8F656C8C7BEC14A8;5816.
  ) 
 Here is how much of TeX's memory you used:
- 11657 strings out of 480517
- 218014 string characters out of 2893286
+ 11674 strings out of 480517
+ 218783 string characters out of 2893286
  550932 words of memory out of 3000000
- 28962 multiletter control sequences out of 15000+600000
+ 28976 multiletter control sequences out of 15000+600000
  476703 words of font info for 54 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  60i,19n,63p,1094b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on inge_del_sw.pdf (91 pages, 6319083 bytes).
+Output written on inge_del_sw.pdf (91 pages, 7225053 bytes).
 PDF statistics:
  914 PDF objects out of 1000 (max. 8388607)
  246 named destinations out of 1000 (max. 500000)
- 425 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
