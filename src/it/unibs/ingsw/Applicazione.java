@@ -416,7 +416,7 @@ public class Applicazione {
     @Contract(pure = true)
     private @NotNull List<Path> generatePathList(String dir) {
         List<Path> path_list = new LinkedList<>();
-        try (Stream<Path> walk = Files.walk(Paths.get(DB_JSON_FILES))) {
+        try (Stream<Path> walk = Files.walk(Paths.get(dir))) {
 
             path_list = walk
                     .filter(Files::isRegularFile)
