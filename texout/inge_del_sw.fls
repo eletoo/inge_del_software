@@ -574,6 +574,7 @@ INPUT texout/inge_del_sw.toc
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT texout/inge_del_sw.toc
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
@@ -583,7 +584,6 @@ INPUT ./specifiche.tex
 INPUT specifiche.tex
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./Versione1/usecases.tex
@@ -609,30 +609,30 @@ INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
 INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
 INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
 INPUT ./images//imagesV1/Initial class diagram - Version 1.0.png
-INPUT ./images//imagesV1/Class diagram-Version1.0.png
-INPUT ./images//imagesV1/Class diagram-Version1.0.png
-INPUT ./images//imagesV1/Class diagram-Version1.0.png
-INPUT ./images//imagesV1/Class diagram-Version1.0.png
-INPUT ./images//imagesV1/Class diagram-Version1.0.png
-INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
-INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
-INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
-INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
-INPUT ./images//imagesV1/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/Class Diagram- Version 1.0.png
+INPUT ./images//imagesV1/Class Diagram- Version 1.0.png
+INPUT ./images//imagesV1/Class Diagram- Version 1.0.png
+INPUT ./images//imagesV1/Class Diagram- Version 1.0.png
+INPUT ./images//imagesV1/Class Diagram- Version 1.0.png
+INPUT ./images//imagesV1/old images/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/old images/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/old images/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/old images/Class diagram simplified-Version1.0.png
+INPUT ./images//imagesV1/old images/Class diagram simplified-Version1.0.png
 INPUT ./Versione1/behaviourdiagrams.tex
 INPUT Versione1/behaviourdiagrams.tex
 INPUT ./Versione1/behaviourdiagrams.tex
 INPUT Versione1/behaviourdiagrams.tex
-INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
-INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
-INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
-INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
-INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore.png
-INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
-INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
-INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
-INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
-INPUT ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png
+INPUT ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png
+INPUT ./images//imagesV1/State diagram - Version 1.0.png
+INPUT ./images//imagesV1/State diagram - Version 1.0.png
+INPUT ./images//imagesV1/State diagram - Version 1.0.png
+INPUT ./images//imagesV1/State diagram - Version 1.0.png
+INPUT ./images//imagesV1/State diagram - Version 1.0.png
 INPUT ./Versione1/table.tex
 INPUT Versione1/table.tex
 INPUT ./Versione1/table.tex
@@ -678,30 +678,30 @@ INPUT ./Versione2/classdiagram.tex
 INPUT Versione2/classdiagram.tex
 INPUT ./Versione2/classdiagram.tex
 INPUT Versione2/classdiagram.tex
-INPUT ./images//imagesV2/Class diagram-Version2.0.png
-INPUT ./images//imagesV2/Class diagram-Version2.0.png
-INPUT ./images//imagesV2/Class diagram-Version2.0.png
-INPUT ./images//imagesV2/Class diagram-Version2.0.png
-INPUT ./images//imagesV2/Class diagram-Version2.0.png
-INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
-INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
-INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
-INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
-INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
+INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
+INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
+INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
+INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
+INPUT ./images//imagesV2/Vers2Parziale.png
+INPUT ./images//imagesV2/Vers2Parziale.png
+INPUT ./images//imagesV2/Vers2Parziale.png
+INPUT ./images//imagesV2/Vers2Parziale.png
+INPUT ./images//imagesV2/Vers2Parziale.png
 INPUT ./Versione2/behaviourdiagrams.tex
 INPUT Versione2/behaviourdiagrams.tex
 INPUT ./Versione2/behaviourdiagrams.tex
 INPUT Versione2/behaviourdiagrams.tex
-INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
-INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
-INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
-INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
-INPUT ./images//imagesV2/State diagram-interazione configuratore v2.png
-INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
-INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
-INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
-INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
-INPUT ./images//imagesV2/State diagram-interazione fruitore v2.png
+INPUT ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png
+INPUT ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png
 INPUT ./Versione2/table.tex
 INPUT Versione2/table.tex
 INPUT ./Versione2/table.tex
@@ -855,11 +855,11 @@ INPUT ./Versione4/introTables.tex
 INPUT Versione4/introTables.tex
 INPUT ./Versione4/introTables.tex
 INPUT Versione4/introTables.tex
-INPUT ./images//imagesV4/Use case diagram-Version4.0.png
-INPUT ./images//imagesV4/Use case diagram-Version4.0.png
-INPUT ./images//imagesV4/Use case diagram-Version4.0.png
-INPUT ./images//imagesV4/Use case diagram-Version4.0.png
-INPUT ./images//imagesV4/Use case diagram-Version4.0.png
+INPUT ./images//imagesV4/Use case diagram - Version 4.0.png
+INPUT ./images//imagesV4/Use case diagram - Version 4.0.png
+INPUT ./images//imagesV4/Use case diagram - Version 4.0.png
+INPUT ./images//imagesV4/Use case diagram - Version 4.0.png
+INPUT ./images//imagesV4/Use case diagram - Version 4.0.png
 INPUT ./Versione4/classdiagrams.tex
 INPUT Versione4/classdiagrams.tex
 INPUT ./Versione4/classdiagrams.tex
@@ -968,12 +968,151 @@ INPUT ./Versione4/Use Cases/propostaAppuntamento.tex
 INPUT Versione4/Use Cases/propostaAppuntamento.tex
 INPUT ./Versione4/Use Cases/propostaAppuntamento.tex
 INPUT Versione4/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione5/usecases.tex
+INPUT Versione5/usecases.tex
+INPUT ./Versione5/usecases.tex
+INPUT Versione5/usecases.tex
+INPUT ./Versione5/introTables.tex
+INPUT Versione5/introTables.tex
+INPUT ./Versione5/introTables.tex
+INPUT Versione5/introTables.tex
+INPUT ./images//imagesV5/Use case diagram - Version 5.0.png
+INPUT ./images//imagesV5/Use case diagram - Version 5.0.png
+INPUT ./images//imagesV5/Use case diagram - Version 5.0.png
+INPUT ./images//imagesV5/Use case diagram - Version 5.0.png
+INPUT ./images//imagesV5/Use case diagram - Version 5.0.png
+INPUT ./Versione5/classdiagrams.tex
+INPUT Versione5/classdiagrams.tex
+INPUT ./Versione5/classdiagrams.tex
+INPUT Versione5/classdiagrams.tex
+INPUT ./images//imagesV5/Class Diagram - Versione 5.0.png
+INPUT ./images//imagesV5/Class Diagram - Versione 5.0.png
+INPUT ./images//imagesV5/Class Diagram - Versione 5.0.png
+INPUT ./images//imagesV5/Class Diagram - Versione 5.0.png
+INPUT ./images//imagesV5/Class Diagram - Versione 5.0.png
+INPUT ./images//imagesV5/Vers5Parziale.png
+INPUT ./images//imagesV5/Vers5Parziale.png
+INPUT ./images//imagesV5/Vers5Parziale.png
+INPUT ./images//imagesV5/Vers5Parziale.png
+INPUT ./images//imagesV5/Vers5Parziale.png
+INPUT ./Versione5/behaviourdiagrams.tex
+INPUT Versione5/behaviourdiagrams.tex
+INPUT ./Versione5/behaviourdiagrams.tex
+INPUT Versione5/behaviourdiagrams.tex
+INPUT ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png
+INPUT ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png
+INPUT ./Versione5/table.tex
+INPUT Versione5/table.tex
+INPUT ./Versione5/table.tex
+INPUT Versione5/table.tex
+INPUT ./Versione5/Use Cases/accessoConfiguratore.tex
+INPUT Versione5/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione5/Use Cases/accessoConfiguratore.tex
+INPUT Versione5/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione5/Use Cases/creazioneGerarchia.tex
+INPUT Versione5/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione5/Use Cases/creazioneGerarchia.tex
+INPUT Versione5/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione5/Use Cases/salvataggioDati.tex
+INPUT Versione5/Use Cases/salvataggioDati.tex
+INPUT ./Versione5/Use Cases/salvataggioDati.tex
+INPUT Versione5/Use Cases/salvataggioDati.tex
+INPUT ./Versione5/Use Cases/configurazioneParametri.tex
+INPUT Versione5/Use Cases/configurazioneParametri.tex
+INPUT ./Versione5/Use Cases/configurazioneParametri.tex
+INPUT Versione5/Use Cases/configurazioneParametri.tex
+INPUT ./Versione5/Use Cases/creazioneFruitore.tex
+INPUT Versione5/Use Cases/creazioneFruitore.tex
+INPUT ./Versione5/Use Cases/creazioneFruitore.tex
+INPUT Versione5/Use Cases/creazioneFruitore.tex
+INPUT ./Versione5/Use Cases/accessoFruitore.tex
+INPUT Versione5/Use Cases/accessoFruitore.tex
+INPUT ./Versione5/Use Cases/accessoFruitore.tex
+INPUT Versione5/Use Cases/accessoFruitore.tex
+INPUT ./Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione5/Use Cases/ritiraOfferta.tex
+INPUT Versione5/Use Cases/ritiraOfferta.tex
+INPUT ./Versione5/Use Cases/ritiraOfferta.tex
+INPUT Versione5/Use Cases/ritiraOfferta.tex
+INPUT ./Versione5/Use Cases/offertaBaratto.tex
+INPUT Versione5/Use Cases/offertaBaratto.tex
+INPUT ./Versione5/Use Cases/offertaBaratto.tex
+INPUT Versione5/Use Cases/offertaBaratto.tex
+INPUT ./Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione5/Use Cases/propostaScambio.tex
+INPUT Versione5/Use Cases/propostaScambio.tex
+INPUT ./Versione5/Use Cases/propostaScambio.tex
+INPUT Versione5/Use Cases/propostaScambio.tex
+INPUT ./Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione5/Use Cases/rispostaScambio.tex
+INPUT Versione5/Use Cases/rispostaScambio.tex
+INPUT ./Versione5/Use Cases/rispostaScambio.tex
+INPUT Versione5/Use Cases/rispostaScambio.tex
+INPUT ./Versione5/Use Cases/propostaAppuntamento.tex
+INPUT Versione5/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione5/Use Cases/propostaAppuntamento.tex
+INPUT Versione5/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT ./Versione5/Use Cases/importaInformazioni.tex
+INPUT Versione5/Use Cases/importaInformazioni.tex
+INPUT ./Versione5/Use Cases/importaInformazioni.tex
+INPUT Versione5/Use Cases/importaInformazioni.tex
+INPUT ./manuale_installazione.tex
+INPUT manuale_installazione.tex
+INPUT ./manuale_installazione.tex
+INPUT manuale_installazione.tex
+INPUT ./manuale_uso.tex
+INPUT manuale_uso.tex
+INPUT ./manuale_uso.tex
+INPUT manuale_uso.tex
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT texout/inge_del_sw.aux
 INPUT texout/inge_del_sw.out
 INPUT texout/inge_del_sw.out
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb

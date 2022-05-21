@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.9)  13 MAY 2022 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.9)  21 MAY 2022 17:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -346,19 +346,19 @@ LaTeX Info: Redefining \nameref on input line 18.
 
  [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (texout/inge_del_sw.toc)
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (texout/inge_del_sw.tocpdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 ...casi d'uso testuali}{80}{subsection.2.5.4}
+                                                  % [1
+
+])
 \tf@toc=\write4
 \openout4 = `inge_del_sw.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.22 \chapter
-             {Specifiche tecniche} [1
-
-]
+ [2]
 Capitolo 1.
-(./specifiche.tex [2
+(./specifiche.tex [3
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
@@ -380,12 +380,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
-[3] [4]
+[4] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 155--157
 
  []
@@ -400,7 +400,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
@@ -410,7 +410,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
@@ -445,58 +445,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-[8]) [9]
+[9]) [10]
 Capitolo 2.
-(./Versione1/usecases.tex (./Versione1/introTables.tex [10
+(./Versione1/usecases.tex (./Versione1/introTables.tex [11
 
 ])
-<./images//imagesV1/Use case diagram-Version 1.0.png, id=238, 783.92876pt x 325.215pt>
+<./images//imagesV1/Use case diagram-Version 1.0.png, id=353, 871.255pt x 582.175pt>
 File: ./images//imagesV1/Use case diagram-Version 1.0.png Graphic file (type png)
 <use ./images//imagesV1/Use case diagram-Version 1.0.png>
 Package pdftex.def Info: ./images//imagesV1/Use case diagram-Version 1.0.png  used on input line 22.
-(pdftex.def)             Requested size: 384.1096pt x 159.35178pt.
-) (./Versione1/classdiagram.tex [11 <./images//imagesV1/Use case diagram-Version 1.0.png (PNG copy)>]
-<./images//imagesV1/Initial class diagram - Version 1.0.png, id=249, 1236.62pt x 896.34875pt>
+(pdftex.def)             Requested size: 384.1096pt x 256.65526pt.
+) (./Versione1/classdiagram.tex [12 <./images//imagesV1/Use case diagram-Version 1.0.png (PNG copy)>]
+<./images//imagesV1/Initial class diagram - Version 1.0.png, id=365, 1236.62pt x 896.34875pt>
 File: ./images//imagesV1/Initial class diagram - Version 1.0.png Graphic file (type png)
 <use ./images//imagesV1/Initial class diagram - Version 1.0.png>
 Package pdftex.def Info: ./images//imagesV1/Initial class diagram - Version 1.0.png  used on input line 18.
 (pdftex.def)             Requested size: 426.79135pt x 309.35007pt.
-<./images//imagesV1/Class diagram-Version1.0.png, id=250, 2825.55624pt x 3513.125pt>
-File: ./images//imagesV1/Class diagram-Version1.0.png Graphic file (type png)
-<use ./images//imagesV1/Class diagram-Version1.0.png>
-Package pdftex.def Info: ./images//imagesV1/Class diagram-Version1.0.png  used on input line 24.
-(pdftex.def)             Requested size: 426.79135pt x 530.64482pt.
+<./images//imagesV1/Class Diagram- Version 1.0.png, id=366, 1569.865pt x 1951.29pt>
+File: ./images//imagesV1/Class Diagram- Version 1.0.png Graphic file (type png)
+<use ./images//imagesV1/Class Diagram- Version 1.0.png>
+Package pdftex.def Info: ./images//imagesV1/Class Diagram- Version 1.0.png  used on input line 24.
+(pdftex.def)             Requested size: 426.79135pt x 530.48781pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./images//imagesV1/Initial class diagram - Version 1.0.png (PNG copy)>] [13 <./images//imagesV1/Class diagram-Version1.0.png (PNG copy)>]
+[13 <./images//imagesV1/Initial class diagram - Version 1.0.png (PNG copy)>] [14 <./images//imagesV1/Class Diagram- Version 1.0.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 50.
 
-<./images//imagesV1/Class diagram simplified-Version1.0.png, id=264, 2082.78125pt x 2733.21124pt>
-File: ./images//imagesV1/Class diagram simplified-Version1.0.png Graphic file (type png)
-<use ./images//imagesV1/Class diagram simplified-Version1.0.png>
-Package pdftex.def Info: ./images//imagesV1/Class diagram simplified-Version1.0.png  used on input line 52.
+<./images//imagesV1/old images/Class diagram simplified-Version1.0.png, id=379, 2082.78125pt x 2733.21124pt>
+File: ./images//imagesV1/old images/Class diagram simplified-Version1.0.png Graphic file (type png)
+<use ./images//imagesV1/old images/Class diagram simplified-Version1.0.png>
+Package pdftex.def Info: ./images//imagesV1/old images/Class diagram simplified-Version1.0.png  used on input line 52.
 (pdftex.def)             Requested size: 426.79135pt x 560.0617pt.
-) (./Versione1/behaviourdiagrams.tex [14] [15 <./images//imagesV1/Class diagram simplified-Version1.0.png (PNG copy)>]
+) (./Versione1/behaviourdiagrams.tex [15] [16 <./images//imagesV1/old images/Class diagram simplified-Version1.0.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 29.
 
-<./images//imagesV1/Sequence diagram-Accesso configuratore.png, id=274, 579.16376pt x 872.25874pt>
-File: ./images//imagesV1/Sequence diagram-Accesso configuratore.png Graphic file (type png)
-<use ./images//imagesV1/Sequence diagram-Accesso configuratore.png>
-Package pdftex.def Info: ./images//imagesV1/Sequence diagram-Accesso configuratore.png  used on input line 31.
+<./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png, id=389, 579.16376pt x 872.25874pt>
+File: ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png Graphic file (type png)
+<use ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png>
+Package pdftex.def Info: ./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png  used on input line 31.
 (pdftex.def)             Requested size: 256.07741pt x 385.67168pt.
-[16] [17 <./images//imagesV1/Sequence diagram-Accesso configuratore.png (PNG copy)>]
-<./images//imagesV1/State diagram - Ciclo di vita del configuratore.png, id=302, 709.65125pt x 735.74875pt>
-File: ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png Graphic file (type png)
-<use ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png>
-Package pdftex.def Info: ./images//imagesV1/State diagram - Ciclo di vita del configuratore.png  used on input line 42.
-(pdftex.def)             Requested size: 298.75264pt x 309.7421pt.
-) (./Versione1/table.tex [18 <./images//imagesV1/State diagram - Ciclo di vita del configuratore.png (PNG copy)>] (./Versione1/UseCases/accessoConfiguratore.tex) (./Versione1/UseCases/creazioneConfiguratore.tex
+[17] [18 <./images//imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png (PNG copy)>]
+<./images//imagesV1/State diagram - Version 1.0.png, id=417, 351.3125pt x 363.3575pt>
+File: ./images//imagesV1/State diagram - Version 1.0.png Graphic file (type png)
+<use ./images//imagesV1/State diagram - Version 1.0.png>
+Package pdftex.def Info: ./images//imagesV1/State diagram - Version 1.0.png  used on input line 42.
+(pdftex.def)             Requested size: 298.75264pt x 309.02165pt.
+) (./Versione1/table.tex [19 <./images//imagesV1/State diagram - Version 1.0.png (PNG copy)>] (./Versione1/UseCases/accessoConfiguratore.tex) (./Versione1/UseCases/creazioneConfiguratore.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 2.
@@ -520,50 +520,50 @@ LaTeX Warning: No positions in optional float specifier.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)) [19] [20] [21] [22] (./Versione2/usecases.tex (./Versione2/introTables.tex [23
+)) [20] [21] [22] [23] (./Versione2/usecases.tex (./Versione2/introTables.tex [24
 
 ])
-<./images//imagesV2/Use case diagram-Version2.0.png, id=345, 1067.99pt x 438.63875pt>
+<./images//imagesV2/Use case diagram-Version2.0.png, id=461, 1110.1475pt x 438.63875pt>
 File: ./images//imagesV2/Use case diagram-Version2.0.png Graphic file (type png)
 <use ./images//imagesV2/Use case diagram-Version2.0.png>
 Package pdftex.def Info: ./images//imagesV2/Use case diagram-Version2.0.png  used on input line 36.
-(pdftex.def)             Requested size: 384.1096pt x 157.75587pt.
-) (./Versione2/classdiagram.tex [24]
-<./images//imagesV2/Class diagram-Version2.0.png, id=360, 1880.02374pt x 2914.89pt>
-File: ./images//imagesV2/Class diagram-Version2.0.png Graphic file (type png)
-<use ./images//imagesV2/Class diagram-Version2.0.png>
-Package pdftex.def Info: ./images//imagesV2/Class diagram-Version2.0.png  used on input line 22.
+(pdftex.def)             Requested size: 384.1096pt x 151.76558pt.
+) (./Versione2/classdiagram.tex [25]
+<./images//imagesV2/Class Diagram - Versione 2.0.png, id=475, 1880.02374pt x 2914.89pt>
+File: ./images//imagesV2/Class Diagram - Versione 2.0.png Graphic file (type png)
+<use ./images//imagesV2/Class Diagram - Versione 2.0.png>
+Package pdftex.def Info: ./images//imagesV2/Class Diagram - Versione 2.0.png  used on input line 22.
 (pdftex.def)             Requested size: 426.79135pt x 661.69301pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25 <./images//imagesV2/Use case diagram-Version2.0.png (PNG copy)>]
+[26 <./images//imagesV2/Use case diagram-Version2.0.png (PNG copy)>]
 
-LaTeX Warning: Text page 26 contains only floats.
+LaTeX Warning: Text page 27 contains only floats.
 
-[26 <./images//imagesV2/Class diagram-Version2.0.png (PNG copy)>]
-<./images//imagesV2/Partial class diagram-Version2.0.png, id=371, 1672.2475pt x 1912.14375pt>
-File: ./images//imagesV2/Partial class diagram-Version2.0.png Graphic file (type png)
-<use ./images//imagesV2/Partial class diagram-Version2.0.png>
-Package pdftex.def Info: ./images//imagesV2/Partial class diagram-Version2.0.png  used on input line 58.
+[27 <./images//imagesV2/Class Diagram - Versione 2.0.png (PNG copy)>]
+<./images//imagesV2/Vers2Parziale.png, id=486, 1672.2475pt x 1912.14375pt>
+File: ./images//imagesV2/Vers2Parziale.png Graphic file (type png)
+<use ./images//imagesV2/Vers2Parziale.png>
+Package pdftex.def Info: ./images//imagesV2/Vers2Parziale.png  used on input line 58.
 (pdftex.def)             Requested size: 426.79135pt x 488.01328pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Versione2/behaviourdiagrams.tex [27] [28 <./images//imagesV2/Partial class diagram-Version2.0.png (PNG copy)>]
-<./images//imagesV2/State diagram-interazione configuratore v2.png, id=381, 1693.32625pt x 1275.76625pt>
-File: ./images//imagesV2/State diagram-interazione configuratore v2.png Graphic file (type png)
-<use ./images//imagesV2/State diagram-interazione configuratore v2.png>
-Package pdftex.def Info: ./images//imagesV2/State diagram-interazione configuratore v2.png  used on input line 14.
-(pdftex.def)             Requested size: 298.75264pt x 225.07283pt.
-<./images//imagesV2/State diagram-interazione fruitore v2.png, id=383, 478.78876pt x 686.565pt>
-File: ./images//imagesV2/State diagram-interazione fruitore v2.png Graphic file (type png)
-<use ./images//imagesV2/State diagram-interazione fruitore v2.png>
-Package pdftex.def Info: ./images//imagesV2/State diagram-interazione fruitore v2.png  used on input line 24.
-(pdftex.def)             Requested size: 213.39273pt x 294.48387pt.
-) (./Versione2/table.tex [29 <./images//imagesV2/State diagram-interazione configuratore v2.png (PNG copy)>] (./Versione2/Use Cases/accessoConfiguratore.tex
+) (./Versione2/behaviourdiagrams.tex [28] [29 <./images//imagesV2/Vers2Parziale.png (PNG copy)>]
+<./images//imagesV2/State Diagram Configuratore - Versione 2.0.png, id=496, 752.8125pt x 567.11874pt>
+File: ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png Graphic file (type png)
+<use ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png>
+Package pdftex.def Info: ./images//imagesV2/State Diagram Configuratore - Versione 2.0.png  used on input line 14.
+(pdftex.def)             Requested size: 298.75264pt x 225.06085pt.
+<./images//imagesV2/State Diagram Fruitore - Versione 2.0.png, id=498, 351.3125pt x 502.87875pt>
+File: ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png Graphic file (type png)
+<use ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png>
+Package pdftex.def Info: ./images//imagesV2/State Diagram Fruitore - Versione 2.0.png  used on input line 24.
+(pdftex.def)             Requested size: 213.39972pt x 294.48598pt.
+) (./Versione2/table.tex [30 <./images//imagesV2/State Diagram Configuratore - Versione 2.0.png (PNG copy)>] (./Versione2/Use Cases/accessoConfiguratore.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -609,20 +609,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)) [30 <./images//imagesV2/State diagram-interazione fruitore v2.png (PNG copy)>]
+)) [31 <./images//imagesV2/State Diagram Fruitore - Versione 2.0.png (PNG copy)>]
 
-LaTeX Warning: Text page 31 contains only floats.
+LaTeX Warning: Text page 32 contains only floats.
 
-[31] [32] [33] [34] [35] [36] (./Versione3/usecases.tex (./Versione3/introTables.tex [37
+[32] [33] [34] [35] [36] [37] (./Versione3/usecases.tex (./Versione3/introTables.tex [38
 
-]) [38]
-<./images//imagesV3/Use case diagram-Version3.0.png, id=459, 1195.46625pt x 451.6875pt>
+]) [39]
+<./images//imagesV3/Use case diagram-Version3.0.png, id=574, 1195.46625pt x 449.68pt>
 File: ./images//imagesV3/Use case diagram-Version3.0.png Graphic file (type png)
 <use ./images//imagesV3/Use case diagram-Version3.0.png>
 Package pdftex.def Info: ./images//imagesV3/Use case diagram-Version3.0.png  used on input line 40.
-(pdftex.def)             Requested size: 426.79222pt x 170.71947pt.
-) (./Versione3/classdiagrams.tex [39 <./images//imagesV3/Use case diagram-Version3.0.png (PNG copy)>]
-<./images//imagesV3/Class Diagram - Versione 3.png, id=468, 2776.3725pt x 3164.82375pt>
+(pdftex.def)             Requested size: 426.79222pt x 170.71548pt.
+) (./Versione3/classdiagrams.tex [40 <./images//imagesV3/Use case diagram-Version3.0.png (PNG copy)>]
+<./images//imagesV3/Class Diagram - Versione 3.png, id=583, 2776.3725pt x 3164.82375pt>
 File: ./images//imagesV3/Class Diagram - Versione 3.png Graphic file (type png)
 <use ./images//imagesV3/Class Diagram - Versione 3.png>
 Package pdftex.def Info: ./images//imagesV3/Class Diagram - Versione 3.png  used on input line 23.
@@ -632,8 +632,8 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
-[40 <./images//imagesV3/Class Diagram - Versione 3.png (PNG copy)>] [41]
-<./images//imagesV3/Vers3Parziale.png, id=477, 1973.3725pt x 2037.6125pt>
+[41 <./images//imagesV3/Class Diagram - Versione 3.png (PNG copy)>] [42]
+<./images//imagesV3/Vers3Parziale.png, id=593, 1973.3725pt x 2037.6125pt>
 File: ./images//imagesV3/Vers3Parziale.png Graphic file (type png)
 <use ./images//imagesV3/Vers3Parziale.png>
 Package pdftex.def Info: ./images//imagesV3/Vers3Parziale.png  used on input line 61.
@@ -643,28 +643,28 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 61--62
  [][] 
  []
 
-) (./Versione3/behaviourdiagrams.tex [42 <./images//imagesV3/Vers3Parziale.png (PNG copy)>]
-<./images//imagesV3/State Diagram Configuratore - Versione 3.0.png, id=484, 751.80875pt x 398.48875pt>
+) (./Versione3/behaviourdiagrams.tex [43 <./images//imagesV3/Vers3Parziale.png (PNG copy)>]
+<./images//imagesV3/State Diagram Configuratore - Versione 3.0.png, id=599, 752.8125pt x 377.41pt>
 File: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png Graphic file (type png)
 <use ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png>
 Package pdftex.def Info: ./images//imagesV3/State Diagram Configuratore - Versione 3.0.png  used on input line 13.
-(pdftex.def)             Requested size: 1503.6138pt x 796.97556pt.
+(pdftex.def)             Requested size: 1505.6213pt x 754.81815pt.
 
-Overfull \hbox (28.45012pt too wide) in paragraph at lines 13--14
+Overfull \hbox (28.46059pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<./images//imagesV3/State Diagram Fruitore - Versione 3.0.png, id=486, 752.8125pt x 269.005pt>
+<./images//imagesV3/State Diagram Fruitore - Versione 3.0.png, id=601, 1505.625pt x 536.0025pt>
 File: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png Graphic file (type png)
 <use ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png>
 Package pdftex.def Info: ./images//imagesV3/State Diagram Fruitore - Versione 3.0.png  used on input line 23.
-(pdftex.def)             Requested size: 1505.6213pt x 538.00867pt.
+(pdftex.def)             Requested size: 3011.24268pt x 1072.00238pt.
 
-Overfull \hbox (28.46059pt too wide) in paragraph at lines 23--24
+Overfull \hbox (28.41466pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
-) (./Versione3/table.tex [43 <./images//imagesV3/State Diagram Configuratore - Versione 3.0.png (PNG copy)>] (./Versione3/Use Cases/accessoConfiguratore.tex) (./Versione3/Use Cases/creazioneConfiguratore.tex
+) (./Versione3/table.tex [44 <./images//imagesV3/State Diagram Configuratore - Versione 3.0.png (PNG copy)>] (./Versione3/Use Cases/accessoConfiguratore.tex) (./Versione3/Use Cases/creazioneConfiguratore.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 2.
@@ -706,25 +706,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./Versione3/Use Cases/ritiraOfferta.tex) (./Versione3/Use Cases/offertaBaratto.tex) (./Versione3/Use Cases/visualizzaOfferteCategoria.tex) (./Versione3/Use Cases/visualizzazioneOffertePersonali.tex)) [44 <./images//imagesV3/State Diagram Fruitore - Versione 3.0.png (PNG copy)>] [45] [46] [47] [48] [49] [50] [51] (./Versione4/usecases.tex (./Versione4/introTables.tex [52
+) (./Versione3/Use Cases/ritiraOfferta.tex) (./Versione3/Use Cases/offertaBaratto.tex) (./Versione3/Use Cases/visualizzaOfferteCategoria.tex) (./Versione3/Use Cases/visualizzazioneOffertePersonali.tex)) [45 <./images//imagesV3/State Diagram Fruitore - Versione 3.0.png (PNG copy)>] [46] [47] [48] [49] [50] [51] [52] (./Versione4/usecases.tex (./Versione4/introTables.tex [53
 
-]) [53]
-<./images//imagesV4/Use case diagram-Version4.0.png, id=572, 2012.51875pt x 459.7175pt>
-File: ./images//imagesV4/Use case diagram-Version4.0.png Graphic file (type png)
-<use ./images//imagesV4/Use case diagram-Version4.0.png>
-Package pdftex.def Info: ./images//imagesV4/Use case diagram-Version4.0.png  used on input line 45.
-(pdftex.def)             Requested size: 483.68996pt x 142.26543pt.
+]) [54]
+<./images//imagesV4/Use case diagram - Version 4.0.png, id=687, 1787.67876pt x 470.75874pt>
+File: ./images//imagesV4/Use case diagram - Version 4.0.png Graphic file (type png)
+<use ./images//imagesV4/Use case diagram - Version 4.0.png>
+Package pdftex.def Info: ./images//imagesV4/Use case diagram - Version 4.0.png  used on input line 45.
+(pdftex.def)             Requested size: 483.689pt x 142.26309pt.
 
-Overfull \hbox (56.8986pt too wide) in paragraph at lines 45--46
+Overfull \hbox (56.89764pt too wide) in paragraph at lines 45--46
  [][] 
  []
 
-) (./Versione4/classdiagrams.tex [54]
-<./images//imagesV4/Class Diagram - Versione 4.0.png, id=583, 3099.58pt x 3482.00874pt>
+) (./Versione4/classdiagrams.tex [55]
+<./images//imagesV4/Class Diagram - Versione 4.0.png, id=697, 3158.80125pt x 3732.94624pt>
 File: ./images//imagesV4/Class Diagram - Versione 4.0.png Graphic file (type png)
 <use ./images//imagesV4/Class Diagram - Versione 4.0.png>
 Package pdftex.def Info: ./images//imagesV4/Class Diagram - Versione 4.0.png  used on input line 25.
-(pdftex.def)             Requested size: 455.24408pt x 511.3869pt.
+(pdftex.def)             Requested size: 455.24408pt x 537.98814pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
  [][] 
@@ -733,39 +733,39 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[55 <./images//imagesV4/Use case diagram-Version4.0.png (PNG copy)>] [56 <./images//imagesV4/Class Diagram - Versione 4.0.png (PNG copy)>]
-<./images//imagesV4/Vers4Parziale.png, id=594, 2379.89125pt x 2037.6125pt>
+[56 <./images//imagesV4/Use case diagram - Version 4.0.png (PNG copy)>] [57 <./images//imagesV4/Class Diagram - Versione 4.0.png (PNG copy)>] [58]
+<./images//imagesV4/Vers4Parziale.png, id=713, 2379.89125pt x 2163.08125pt>
 File: ./images//imagesV4/Vers4Parziale.png Graphic file (type png)
 <use ./images//imagesV4/Vers4Parziale.png>
 Package pdftex.def Info: ./images//imagesV4/Vers4Parziale.png  used on input line 67.
-(pdftex.def)             Requested size: 455.24408pt x 389.76208pt.
+(pdftex.def)             Requested size: 455.24408pt x 413.7622pt.
 
 Overfull \hbox (28.45273pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
-) (./Versione4/behaviourdiagrams.tex [57]
-<./images//imagesV4/State Diagram Configuratore - Versione 4.0.png, id=600, 953.5625pt x 314.17375pt>
+) (./Versione4/behaviourdiagrams.tex [59 <./images//imagesV4/Vers4Parziale.png (PNG copy)>]
+<./images//imagesV4/State Diagram Configuratore - Versione 4.0.png, id=719, 1505.625pt x 495.8525pt>
 File: ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png Graphic file (type png)
 <use ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png>
 Package pdftex.def Info: ./images//imagesV4/State Diagram Configuratore - Versione 4.0.png  used on input line 13.
-(pdftex.def)             Requested size: 1907.12036pt x 628.34595pt.
+(pdftex.def)             Requested size: 3011.24268pt x 991.70258pt.
 
-Overfull \hbox (28.45447pt too wide) in paragraph at lines 13--14
+Overfull \hbox (28.41466pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<./images//imagesV4/State Diagram Fruitore - Versione 4.0.png, id=602, 2007.5pt x 523.9575pt>
+<./images//imagesV4/State Diagram Fruitore - Versione 4.0.png, id=721, 2007.5pt x 521.95pt>
 File: ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png Graphic file (type png)
 <use ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png>
 Package pdftex.def Info: ./images//imagesV4/State Diagram Fruitore - Versione 4.0.png  used on input line 23.
-(pdftex.def)             Requested size: 455.22131pt x 156.48491pt.
+(pdftex.def)             Requested size: 455.22131pt x 156.49063pt.
 
 Overfull \hbox (28.42996pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
-) (./Versione4/table.tex [58] (./Versione4/Use Cases/accessoConfiguratore.tex) (./Versione4/Use Cases/creazioneConfiguratore.tex
+) (./Versione4/table.tex [60 <./images//imagesV4/State Diagram Configuratore - Versione 4.0.png (PNG copy)>] (./Versione4/Use Cases/accessoConfiguratore.tex) (./Versione4/Use Cases/creazioneConfiguratore.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 2.
@@ -825,23 +825,159 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 2.
 
-)) [59] [60] [61] [62] [63 <./images//imagesV4/Vers4Parziale.png (PNG copy)> <./images//imagesV4/State Diagram Configuratore - Versione 4.0.png (PNG copy)>] [64 <./images//imagesV4/State Diagram Fruitore - Versione 4.0.png (PNG copy)>] [65] [66] [67] [68] [69] [70] (texout/inge_del_sw.aux)
+)) [61 <./images//imagesV4/State Diagram Fruitore - Versione 4.0.png (PNG copy)>] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] (./Versione5/usecases.tex (./Versione5/introTables.tex [72
+
+] [73])
+<./images//imagesV5/Use case diagram - Version 5.0.png, id=825, 1787.67876pt x 470.75874pt>
+File: ./images//imagesV5/Use case diagram - Version 5.0.png Graphic file (type png)
+<use ./images//imagesV5/Use case diagram - Version 5.0.png>
+Package pdftex.def Info: ./images//imagesV5/Use case diagram - Version 5.0.png  used on input line 44.
+(pdftex.def)             Requested size: 483.689pt x 142.26309pt.
+
+Overfull \hbox (56.89764pt too wide) in paragraph at lines 44--45
+ [][] 
+ []
+
+) (./Versione5/classdiagrams.tex [74]
+<./images//imagesV5/Class Diagram - Versione 5.0.png, id=835, 3193.9325pt x 3486.02374pt>
+File: ./images//imagesV5/Class Diagram - Versione 5.0.png Graphic file (type png)
+<use ./images//imagesV5/Class Diagram - Versione 5.0.png>
+Package pdftex.def Info: ./images//imagesV5/Class Diagram - Versione 5.0.png  used on input line 25.
+(pdftex.def)             Requested size: 455.24408pt x 496.86993pt.
+
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 25--26
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[75 <./images//imagesV5/Use case diagram - Version 5.0.png (PNG copy)>] [76 <./images//imagesV5/Class Diagram - Versione 5.0.png (PNG copy)>] [77]
+<./images//imagesV5/Vers5Parziale.png, id=850, 2384.91pt x 2232.34pt>
+File: ./images//imagesV5/Vers5Parziale.png Graphic file (type png)
+<use ./images//imagesV5/Vers5Parziale.png>
+Package pdftex.def Info: ./images//imagesV5/Vers5Parziale.png  used on input line 68.
+(pdftex.def)             Requested size: 455.24408pt x 426.12465pt.
+
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 68--69
+ [][] 
+ []
+
+) (./Versione5/behaviourdiagrams.tex [78 <./images//imagesV5/Vers5Parziale.png (PNG copy)>]
+<./images//imagesV5/State Diagram Configuratore - Versione 5.0.png, id=857, 1505.625pt x 495.8525pt>
+File: ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png Graphic file (type png)
+<use ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png>
+Package pdftex.def Info: ./images//imagesV5/State Diagram Configuratore - Versione 5.0.png  used on input line 13.
+(pdftex.def)             Requested size: 3011.24268pt x 991.70258pt.
+
+Overfull \hbox (28.41466pt too wide) in paragraph at lines 13--14
+ [][] 
+ []
+
+<./images//imagesV5/State Diagram Fruitore - Versione 5.0.png, id=859, 2007.5pt x 521.95pt>
+File: ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png Graphic file (type png)
+<use ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png>
+Package pdftex.def Info: ./images//imagesV5/State Diagram Fruitore - Versione 5.0.png  used on input line 23.
+(pdftex.def)             Requested size: 455.22131pt x 156.49063pt.
+
+Overfull \hbox (28.42996pt too wide) in paragraph at lines 23--24
+ [][] 
+ []
+
+) (./Versione5/table.tex [79 <./images//imagesV5/State Diagram Configuratore - Versione 5.0.png (PNG copy)>] (./Versione5/Use Cases/accessoConfiguratore.tex) (./Versione5/Use Cases/creazioneConfiguratore.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/creazioneGerarchia.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/visualizzazioneGerarchie.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/aggiuntaCategoria.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/salvataggioDati.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./Versione5/Use Cases/configurazioneParametri.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/creazioneFruitore.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/accessoFruitore.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./Versione5/Use Cases/visualizzazioneInfoApp.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./Versione5/Use Cases/ritiraOfferta.tex) (./Versione5/Use Cases/offertaBaratto.tex) (./Versione5/Use Cases/visualizzaOfferteCategoria.tex) (./Versione5/Use Cases/visualizzazioneOffertePersonali.tex) (./Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./Versione5/Use Cases/propostaScambio.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex) (./Versione5/Use Cases/rispostaScambio.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./Versione5/Use Cases/propostaAppuntamento.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 2.
+
+) (./Versione5/Use Cases/visualizzazioneOfferteInScambio.tex) (./Versione5/Use Cases/importaInformazioni.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)) [80 <./images//imagesV5/State Diagram Fruitore - Versione 5.0.png (PNG copy)>] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]
+Capitolo 3.
+(./manuale_installazione.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+) [91
+
+] [92]
+Capitolo 4.
+(./manuale_uso.tex) [93
+
+] (texout/inge_del_sw.aux)
 Package rerunfilecheck Info: File `inge_del_sw.out' has not changed.
-(rerunfilecheck)             Checksum: 5C90E8444190244AE0246FAAA207670E;4950.
+(rerunfilecheck)             Checksum: C55A3045E5EA1858531FD11B6082013F;8770.
  ) 
 Here is how much of TeX's memory you used:
- 11420 strings out of 479390
- 191712 string characters out of 5870921
- 549679 words of memory out of 5000000
- 28939 multiletter control sequences out of 15000+600000
- 476703 words of font info for 54 fonts, out of 8000000 for 9000
+ 11702 strings out of 479390
+ 200481 string characters out of 5870921
+ 555367 words of memory out of 5000000
+ 29080 multiletter control sequences out of 15000+600000
+ 477062 words of font info for 55 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 60i,19n,63p,1040b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on texout/inge_del_sw.pdf (71 pages, 5901388 bytes).
+ 60i,19n,63p,1040b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on texout/inge_del_sw.pdf (94 pages, 7166718 bytes).
 PDF statistics:
- 745 PDF objects out of 1000 (max. 8388607)
- 626 compressed objects within 7 object streams
- 195 named destinations out of 1000 (max. 500000)
- 370 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1032 PDF objects out of 1200 (max. 8388607)
+ 881 compressed objects within 9 object streams
+ 266 named destinations out of 1000 (max. 500000)
+ 571 words of extra memory for PDF output out of 10000 (max. 10000000)
 
