@@ -3,6 +3,7 @@ package it.unibs.ingsw;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
+import java.net.URL;
 import java.util.*;
 import java.security.*;
 
@@ -227,8 +228,9 @@ public class UserDataStore implements Serializable {
     private void save() {
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
+        String currentDir = System.getProperty("user.dir");
         try {
-            fileOutputStream = new FileOutputStream(new File("./db/users.dat"));
+            fileOutputStream = new FileOutputStream(new File(currentDir + "/db/users.dat"));
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(userMap);
             objectOutputStream.close();
@@ -245,7 +247,12 @@ public class UserDataStore implements Serializable {
      * @throws IOException eccezione I/O
      */
     public void load() throws IOException {
-        var uf = new File("./db/users.dat");
+        String currentDir = System.getProperty("user.dir");
+        var db = new File(currentDir + "/db");
+        assert db.exists() || db.mkdir();
+
+        var uf = new File(currentDir + "/db/users.dat");
+
         if (uf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(uf));
             try {

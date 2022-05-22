@@ -27,6 +27,7 @@ public class Main {
                 case "1": {
                     controller.dataStore.load();
                     if (controller.dataStore.isEmpty()) {
+                        view.message("Non c'è alcun utente registrato -- crea un primo profilo Configuratore");
                         controller.firstAccessAsConfiguratore();
                     } else {
                         String username = view.askUsername();
@@ -43,18 +44,24 @@ public class Main {
                 }
                 break;
                 case "2": {
-                    String choice = view.in("Seleziona la modalità con cui vuoi registrarti:\n1. Configuratore\n2. Fruitore");
-                    switch (choice) {
-                        case "1": {
-                            controller.firstAccessAsConfiguratore();
+                    controller.dataStore.load();
+                    if (controller.dataStore.isEmpty()) {
+                        view.message("Non c'è alcun utente registrato -- crea un primo profilo Configuratore");
+                        controller.firstAccessAsConfiguratore();
+                    } else {
+                        String choice = view.in("Seleziona la modalità con cui vuoi registrarti:\n1. Configuratore\n2. Fruitore");
+                        switch (choice) {
+                            case "1": {
+                                controller.firstAccessAsConfiguratore();
+                            }
+                            break;
+                            case "2": {
+                                controller.firstAccessAsFruitore();
+                            }
+                            break;
+                            default:
+                                view.errorMessage(View.ErrorMessage.E_UNAUTHORIZED_CHOICE);
                         }
-                        break;
-                        case "2": {
-                            controller.firstAccessAsFruitore();
-                        }
-                        break;
-                        default:
-                            view.errorMessage(View.ErrorMessage.E_UNAUTHORIZED_CHOICE);
                     }
                 }
                 break;

@@ -19,9 +19,9 @@ import java.util.stream.*;
  */
 public class Applicazione {
 
-    public static final String DB_JSON_FILES = "./db/jsonFiles/";
-    public static final String DB_JSON_CONF_FILE = "./db/conf/conf.json";
-    public static final String DB_CONF_DIR = "./db/conf/";
+    public static final String DB_JSON_FILES = System.getProperty("user.dir") + "/db/jsonFiles/";
+    public static final String DB_JSON_CONF_FILE = System.getProperty("user.dir") + "/db/conf/conf.json";
+    public static final String DB_CONF_DIR = System.getProperty("user.dir") + "/db/conf/";
 
     private Map<String, Gerarchia> hierarchies;
     private InfoScambio informazioni;
@@ -91,7 +91,7 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void saveData() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/gerarchie.dat"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/gerarchie.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getHierarchies());
         objectOutputStream.close();
@@ -106,10 +106,10 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void prepareDirectoryStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var gf = new File("./db/gerarchie.dat");
+        var gf = new File(System.getProperty("user.dir") + "/db/gerarchie.dat");
         if (gf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(gf));
             try {
@@ -131,7 +131,7 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void saveInfo() throws IOException {
-        FileOutputStream fos = new FileOutputStream(new File("./db/info.dat"));
+        FileOutputStream fos = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/info.dat"));
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(this.getInformazioni());
         oos.close();
@@ -145,9 +145,15 @@ public class Applicazione {
      * @throws IOException eccezione
      */
     public void importInfoFromFile(View view) throws IOException {
-        if(this.generatePathList(DB_CONF_DIR).size() != 1){
-            //se c'è un numero di file di configurazione diverso da 1 segnala un errore
+        if (this.generatePathList(DB_CONF_DIR).size() > 1) {
+            //se c'è un numero di file di configurazione maggiore di 1 segnala un errore
             view.errorMessage(View.ErrorMessage.E_WRONG_DIR_CONTENT);
+            return;
+        }
+
+        if (this.generatePathList(DB_CONF_DIR).size() == 0) {
+            //se non ci sono file di configurazione segnala un errore
+            view.errorMessage(View.ErrorMessage.E_NO_CONF_FILE);
             return;
         }
 
@@ -163,7 +169,7 @@ public class Applicazione {
         Gson gson = builder.create();
         InfoScambio info = gson.fromJson(reader, InfoScambio.class);
 
-        if (info.getPiazza().isEmpty() || info.getPiazza() == null) {
+        if (info.getPiazza() == null || info.getPiazza().isEmpty()) {
             view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
             return;
         }
@@ -198,7 +204,7 @@ public class Applicazione {
      *
      * @param info informazioni di scambio da salvare
      */
-    private void printInfoOnFile(@NotNull InfoScambio info) {
+    private void printInfoOnFile(InfoScambio info) {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
 
@@ -217,10 +223,10 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void prepareInfoStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var info = new File("./db/info.dat");
+        var info = new File(System.getProperty("user.dir") + "/db/info.dat");
         if (info.exists()) {
             ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream(info));
             try {
@@ -387,8 +393,8 @@ public class Applicazione {
                 boolean valid = true;
 
                 if (h.getRoot() instanceof Nodo)
-                    for(Categoria c : ((Nodo) h.getRoot()).getCategorieFiglie())
-                        if(!c.isNameTakenOnlyOnce(h.getRoot())){
+                    for (Categoria c : ((Nodo) h.getRoot()).getCategorieFiglie())
+                        if (!c.isNameTakenOnlyOnce(h.getRoot())) {
                             valid = false;
                             break;
                         }
@@ -435,10 +441,10 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void prepareOffersStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var of = new File("./db/offerte.dat");
+        var of = new File(System.getProperty("user.dir") + "/db/offerte.dat");
         if (of.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(of));
             try {
@@ -562,10 +568,10 @@ public class Applicazione {
      * @throws IOException eccezione
      */
     public void prepareExchangesStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var exchanges = new File("./db/scambi.dat");
+        var exchanges = new File(System.getProperty("user.dir") + "/db/scambi.dat");
         if (exchanges.exists()) {
             ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream(exchanges));
             try {
@@ -585,7 +591,7 @@ public class Applicazione {
      */
     public void saveExchanges() throws IOException {
         this.saveOfferte();
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/scambi.dat"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/scambi.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getScambi());
         objectOutputStream.close();
