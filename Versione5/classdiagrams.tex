@@ -33,7 +33,7 @@ La classe \texttt{UserDataStore} contiene i metodi necessari per la gestione dei
 La classe \texttt{User} è una classe astratta estesa dalla classe \texttt{Configuratore} e dalla classe \texttt{Fruitore}: ogni utente sarà dotato di username e password. La password, in particolare, viene salvata direttamente dopo aver effettuato l'hashing, in modo da garantire un livello di sicurezza basilare relativamente alle informazioni private degli utenti. La classe \texttt{User} è dotata di metodi per l'autenticazione dell'utente e per la modifica delle credenziali.
 
 La classe \texttt{Applicazione} permette di tenere traccia delle gerarchie contenute nell'applicazione. 
-Essa contiene infatti un metodo che verifica se il nome di una categoria radice di una gerarchia è già utilizzato dalla categoria radice di un'altra gerarchia, uno che permette di aggiungere una nuova gerarchia, metodi che permettono di ottenere le gerarchie presenti nell'applicazione o di assegnare loro i valori desiderati, metodi che permettono di salvare i dati contenuti nelle gerarchie e di caricare i dati salvati durante gli utilizzi precedenti dell'applicazione. 
+Essa contiene infatti un metodo che verifica se il nome di una categoria radice di una gerarchia è già utilizzato dalla categoria radice di un'altra gerarchia, un metodo che permette di aggiungere una nuova gerarchia, metodi che permettono di ottenere le gerarchie presenti nell'applicazione o di assegnare loro i valori desiderati, metodi che permettono di salvare i dati contenuti nelle gerarchie e di caricare i dati salvati durante gli utilizzi precedenti dell'applicazione. 
 La classe contiene anche dei metodi che permettono l'immissione di informazioni dal back-end tramite file preesistenti. 
 
 La classe \texttt{Gerarchia} permette di tenere traccia del contenuto di ogni gerarchia: ogni gerarchia è caratterizzata da una categoria radice che, a seconda che sia istanza della classe \texttt{Foglia} o \texttt{Nodo}, può avere o meno delle sottocategorie (a loro volta istanze della classe \texttt{Foglia} o \texttt{Nodo}). 
@@ -41,7 +41,7 @@ La classe \texttt{Gerarchia} permette di tenere traccia del contenuto di ogni ge
 La classe \texttt{Categoria} è una classe astratta che è estesa dalla classe \texttt{Foglia} e dalla classe \texttt{Nodo}. Ogni categoria è dotata di nome obbligatorio, descrizione facoltativa e un insieme di campi nativi (due dei quali presenti di default per la categoria radice di una gerarchia) ereditati poi da ogni categoria figlia di un nodo.
 La classe \texttt{Nodo}, in particolare, è dotata di una lista di categorie figlie che possono a loro volta essere foglie o nodi. Per questo motivo la classe \texttt{Nodo} è dotata di metodi che permettono di aggiungere o rimuovere una categoria figlia e di un metodo che permette di ottenere tutte le categorie figlie.
 
-La classe \texttt{CampoNativo} tiene traccia dell'obbligatorietà della compilazione di un campo nativo o ereditato relativo a una categoria e del tipo del campo (di default si tratta di stringhe). 
+La classe \texttt{CampoNativo} tiene traccia dell'obbligatorietà della compilazione di un campo, nativo o ereditato, relativo a una categoria e del tipo del campo (di default si tratta di stringhe). 
 
 La classe \texttt{CategoriaEntry} tiene traccia dell'associazione tra una categoria e la sua categoria padre; essa contiene pertanto i metodi necessari a recuperare le informazioni relative a tale relazione (percorso dalla categoria radice alla categoria corrente, categoria padre e categoria corrente) e dei metodi per trasformare una categoria da Foglia a Nodo e associarla alla propria categoria padre.
 
@@ -61,7 +61,7 @@ La classe \texttt{Offerta} contiene metodi per la gestione delle offerte, in par
 
 La classe \texttt{ExchangeMessage} contiene metodi per la gestione di messaggi associati a specifici scambi effettuati tra due utenti.
 
-La classe \texttt{Scambio} contiene metodi per la gestione degli scambi tra gli utenti, in particolare contiene metodi che permettono all'utente di selezionare un'offerta aperta di cui è proprietario e un'altra appartenente ad un altro utente con cui effettuare lo scambio, i metodi si occupano di gestire correttamente l'operazione di scambio garantendo la possibilità di fissare un appuntamento per effettuare lo stesso. Inoltre la classe si occupa di gestire il cambiamento di stato cui l'offerta è soggetta nel corso dello scambio.
+La classe \texttt{Scambio} contiene metodi per la gestione degli scambi tra gli utenti, in particolare contiene metodi che permettono all'utente di selezionare un'offerta aperta di cui è proprietario e un'altra appartenente ad un altro utente con cui effettuare lo scambio. I metodi si occupano di gestire correttamente l'operazione di scambio garantendo la possibilità di fissare un appuntamento per effettuare lo stesso. Inoltre la classe si occupa di gestire il cambiamento di stato cui l'offerta è soggetta nel corso dello scambio.
 
 \begin{figure}[bh]
     \centering
