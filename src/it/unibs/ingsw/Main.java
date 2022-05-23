@@ -1,6 +1,9 @@
 package it.unibs.ingsw;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Classe contenente il metodo main
@@ -19,6 +22,14 @@ public class Main {
     public static void main(String args[]) throws IOException {
         Controller controller = new Controller();
         View view = new View();
+
+        Path path1 = Paths.get(System.getProperty("user.dir") + "/db/conf");
+        Path path2 = Paths.get(System.getProperty("user.dir") + "/db/jsonFiles");
+
+        if (!Files.isDirectory(path1) || !Files.isDirectory(path2)) {
+            Files.createDirectories(path1);
+            Files.createDirectories(path2);
+        }
 
         String val;
         do {

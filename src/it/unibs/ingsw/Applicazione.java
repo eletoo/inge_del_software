@@ -169,6 +169,11 @@ public class Applicazione {
         Gson gson = builder.create();
         InfoScambio info = gson.fromJson(reader, InfoScambio.class);
 
+        if (info == null){
+            view.errorMessage(View.ErrorMessage.E_NO_CONF_FILE);
+            return;
+        }
+
         if (info.getPiazza() == null || info.getPiazza().isEmpty()) {
             view.errorMessage(View.ErrorMessage.E_INVALID_FILE_CONTENT);
             return;
