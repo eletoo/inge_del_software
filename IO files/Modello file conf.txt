@@ -1,0 +1,34 @@
+{
+  "piazza": "Brescia",
+  "luoghi": [
+    "Piazzale Arnaldo",
+    "Piazzale della stazione"
+  ],
+  "giorni": [
+    "LUNEDI",
+    "MERCOLEDI"
+  ],
+  "intervalliOrari": [
+    {
+      "start": {
+        "hour": 10,
+        "minutes": 0
+      },
+      "end": {
+        "hour": 13,
+        "minutes": 30
+      }
+    },
+    {
+      "start": {
+        "hour": 15,
+        "minutes": 30
+      },
+      "end": {
+        "hour": 18,
+        "minutes": 0
+      }
+    }
+  ],
+  "scadenza": 10
+}

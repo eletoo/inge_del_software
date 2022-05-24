@@ -1,0 +1,58 @@
+	Inserisci il numero corrispondente all'azione che vuoi eseguire:
+	1. Crea una nuova gerarchia
+	2. Visualizza il contenuto delle gerarchie attualmente presenti nel sistema
+	3. Salva
+	4. Configura informazioni di scambio
+	5. Visualizza offerte
+	6. Visualizza offerte in scambio
+	7. Visualizza offerte chiuse
+	8. Configura gerarchie da file
+	9. Configura informazioni di scambio da file
+	10. Logout
+(in)	4
+	Piazza (N.B. Non modificabile in futuro): 
+(in)	Brescia
+	Luogo: 
+(in)	Piazzale Arnaldo
+	Inserire un altro luogo per lo scambio? [Y/N]
+(in)	y
+	Luogo: 
+(in)	Piazzale della stazione
+	Inserire un altro luogo per lo scambio? [Y/N]
+(in)	n
+	Giorno: 
+(in)	lunedi
+	Inserire un altro giorno per lo scambio? [Y/N]
+(in)	y
+	Giorno: 
+(in)	merc
+	Inserire un altro giorno per lo scambio? [Y/N]
+(in)	n
+
+	Gli scambi potranno avvenire allo scoccare dell'ora o della mezz'ora all'interno della fascia oraria specificata
+	Ora di inizio [hh] [00-24]: 
+(in)	10
+	Minuti di inizio [mm] [00 o 30]: 
+(in)	00
+	Ora di fine [hh] [00-24]: 
+(in)	13
+	Minuti di fine [mm] [00 o 30]: 
+(in)	30
+	Inserire un altra fascia oraria per lo scambio? [Y/N]
+(in)	y
+
+	Gli scambi potranno avvenire allo scoccare dell'ora o della mezz'ora all'interno della fascia oraria specificata
+	Ora di inizio [hh] [00-24]: 
+(in)	15
+	Minuti di inizio [mm] [00 o 30]: 
+(in)	30
+	Ora di fine [hh] [00-24]: 
+(in)	18
+	Minuti di fine [mm] [00 o 30]: 
+(in)	00
+	Inserire un altra fascia oraria per lo scambio? [Y/N]
+(in)	n
+	Scadenza dell'offerta dopo un numero di giorni pari a (inserire un numero maggiore di 0): 
+(in)	10
+
+	Salvataggio eseguito

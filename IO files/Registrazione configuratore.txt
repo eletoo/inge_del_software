@@ -1,0 +1,23 @@
+        Seleziona un'opzione: 
+        1. Accedi
+        2. Registrati
+        3. Esci
+(in)    2
+        Non c'e' alcun utente registrato -- crea un primo profilo Configuratore
+
+        Puoi accedere al tuo profilo usando le seguenti credenziali:
+        Username: xKdaEOSt8H
+        Password: GzaCgl$$gU
+        Inserisci il tuo username: 
+(in)    xKdaEOSt8H
+        Inserisci la tua password: 
+(in)    GzaCgl$$gU
+
+        ACCESSO EFFETTUATO
+        Personalizza le tue credenziali:
+        Inserisci il nuovo username: 
+(in)    admin_01
+        Inserisci la nuova password:
+(in)    admin_pw
+        Conferma la nuova password: 
+(in)    admin_pw

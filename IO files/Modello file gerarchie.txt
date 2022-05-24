@@ -1,0 +1,136 @@
+{
+  "root": {
+    "nome": "Libri",
+    "descrizione": "Gerarchia contenente libri di vario genere",
+    "campiNativi": {
+      "Descrizione Libera": {
+        "obbligatorio": false,
+        "type": "STRING"
+      },
+      "Autore": {
+        "obbligatorio": true,
+        "type": "STRING"
+      },
+      "Casa editrice": {
+        "obbligatorio": false,
+        "type": "STRING"
+      },
+      "Titolo": {
+        "obbligatorio": true,
+        "type": "STRING"
+      },
+      "Stato Conservazione": {
+        "obbligatorio": true,
+        "type": "STRING"
+      }
+    },
+    "figlie": [
+      {
+        "nome": "Saggi",
+        "descrizione": "Categoria contenente opere di saggistica",
+        "campiNativi": {
+          "Descrizione Libera": {
+            "obbligatorio": false,
+            "type": "STRING"
+          },
+          "Autore": {
+            "obbligatorio": true,
+            "type": "STRING"
+          },
+          "Casa editrice": {
+            "obbligatorio": false,
+            "type": "STRING"
+          },
+          "Titolo": {
+            "obbligatorio": true,
+            "type": "STRING"
+          },
+          "Stato Conservazione": {
+            "obbligatorio": true,
+            "type": "STRING"
+          }
+        }
+      },
+      {
+        "categorieFiglie": [
+          {
+            "nome": "Rosa",
+            "descrizione": "Romanzi rosa",
+            "campiNativi": {
+              "Descrizione Libera": {
+                "obbligatorio": false,
+                "type": "STRING"
+              },
+              "Autore": {
+                "obbligatorio": true,
+                "type": "STRING"
+              },
+              "Casa editrice": {
+                "obbligatorio": false,
+                "type": "STRING"
+              },
+              "Titolo": {
+                "obbligatorio": true,
+                "type": "STRING"
+              },
+              "Stato Conservazione": {
+                "obbligatorio": true,
+                "type": "STRING"
+              }
+            }
+          },
+          {
+            "nome": "Gialli",
+            "descrizione": "",
+            "campiNativi": {
+              "Descrizione Libera": {
+                "obbligatorio": false,
+                "type": "STRING"
+              },
+              "Autore": {
+                "obbligatorio": true,
+                "type": "STRING"
+              },
+              "Casa editrice": {
+                "obbligatorio": false,
+                "type": "STRING"
+              },
+              "Titolo": {
+                "obbligatorio": true,
+                "type": "STRING"
+              },
+              "Stato Conservazione": {
+                "obbligatorio": true,
+                "type": "STRING"
+              }
+            }
+          }
+        ],
+        "nome": "Romanzi",
+        "descrizione": "",
+        "campiNativi": {
+          "Descrizione Libera": {
+            "obbligatorio": false,
+            "type": "STRING"
+          },
+          "Autore": {
+            "obbligatorio": true,
+            "type": "STRING"
+          },
+          "Casa editrice": {
+            "obbligatorio": false,
+            "type": "STRING"
+          },
+          "Titolo": {
+            "obbligatorio": true,
+            "type": "STRING"
+          },
+          "Stato Conservazione": {
+            "obbligatorio": true,
+            "type": "STRING"
+          }
+        }
+      }
+    ]
+  }
+}

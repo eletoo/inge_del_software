@@ -1,0 +1,31 @@
+	Inserisci il numero corrispondente all'azione che vuoi eseguire:
+	1. Visualizza il contenuto dell'applicazione e le informazioni di scambio
+	2. Visualizza offerte personali
+	3. Visualizza offerte per categoria
+	4. Crea offerta
+	5. Ritira offerta
+	6. Crea proposta di scambio
+	7. Visualizza ultimi messaggi relativi ai tuoi scambi
+	8. Logout
+(in)	4
+	Selezionare una categoria dove pubblicare l'offerta
+
+	Selezionare un indice.
+	0) Categoria Gialli
+	1) Categoria Rosa
+	2) Categoria Saggi
+(in)	1
+	Nome: 
+(in)	Offerta romanzo rosa
+	Configurare un valore per Descrizione Libera? [Y/N]
+(in)	n
+	Valore per Autore (Obbligatorio) 
+(in)	Jane Austen
+	Configurare un valore per Casa editrice? [Y/N]
+(in)	y
+	Valore per Casa editrice
+(in)	Penguin Books
+	Valore per Titolo (Obbligatorio) 
+(in)	Orgoglio e Pregiudizio
+	Valore per Stato Conservazione (Obbligatorio) 
+(in)	Usato

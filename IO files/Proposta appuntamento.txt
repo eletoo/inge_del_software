@@ -1,0 +1,36 @@
+	Le tue nuove proposte di scambio:
+	Offerta di un romanzo giallo <--> Offerta romanzo giallo
+
+	Selezionare uno scambio da accettare dalla lista? [Y/N]
+(in)	y
+
+	Selezionare un indice.
+	0) Offerta di un romanzo giallo <--> Offerta romanzo giallo
+(in)	0
+
+	Selezionare un indice.
+	0) Piazzale Arnaldo
+	1) Piazzale della stazione
+(in)	0
+
+	Selezionare un indice.
+	0) LUNEDI
+	1) MERCOLEDI
+(in)0
+
+	Selezionare un indice.
+	0) 10:00
+	1) 10:30
+	2) 11:00
+	3) 11:30
+	4) 12:00
+	5) 12:30
+	6) 13:00
+	7) 13:30
+	8) 15:30
+	9) 16:00
+	10) 16:30
+	11) 17:00
+	12) 17:30
+	13) 18:00
+(in)	6

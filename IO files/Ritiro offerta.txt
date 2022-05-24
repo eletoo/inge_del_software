@@ -1,0 +1,32 @@
+	Inserisci il numero corrispondente all'azione che vuoi eseguire:
+	1. Visualizza il contenuto dell'applicazione e le informazioni di scambio
+	2. Visualizza offerte personali
+	3. Visualizza offerte per categoria
+	4. Crea offerta
+	5. Ritira offerta
+	6. Crea proposta di scambio
+	7. Visualizza ultimi messaggi relativi ai tuoi scambi
+	8. Logout
+(in)	5
+
+	Selezionare un indice.
+	0) Offerta Offerta romanzo giallo
+		Categoria > Categoria Gialli
+		Proprietario > customer_01
+		Stato > APERTA
+		Campi > 
+			Autore> Agatha Christie
+			Titolo> Assassinio sull'Orient Express
+			Stato Conservazione> Nuovo
+
+	1) Offerta Offerta romanzo rosa
+		Categoria > Categoria Rosa
+		Proprietario > customer_01
+		Stato > APERTA
+		Campi > 
+			Autore> Jane Austen
+			Casa editrice> Penguin Books
+			Titolo> Orgoglio e Pregiudizio
+			Stato Conservazione> Usato
+
+(in)	1

@@ -1,0 +1,47 @@
+\section{Profilo Fruitore}
+
+\subsection{Registrazione e accesso}
+Se l'insieme degli utenti Configuratori non è vuoto l'utente può selezionare dal menu principale l'opzione \texttt{Registrati} al fine di creare un nuovo profilo Fruitore. 
+
+Se l'utente è già munito di credenziali può invece selezionare l'opzione \texttt{Accedi} e inserirle direttamente.
+
+Di seguito si mostra l'interazione dell'utente con l'applicazione per la creazione di un nuovo profilo Fruitore:
+\lstinputlisting{IO files/Registrazione fruitore.txt}
+
+Di seguito si mostra l'interazione dell'utente con l'applicazione per l'accesso al proprio profilo Fruitore:
+\lstinputlisting{IO files/Accesso fruitore.txt}
+
+\subsection{Visualizzazione contenuto gerarchie e informazioni di scambio}
+Di seguito si mostra l'interazione dell'utente con l'applicazione per la visualizzazione del contenuto delle gerarchie e delle informazioni di scambio:
+\lstinputlisting{IO files/Visualizzazione info.txt}
+
+\subsection{Visualizzazione offerte personali e per categoria}
+Di seguito si mostra l'interazione dell'utente con l'applicazione per la visualizzazione delle offerte personali inserite nell'applicazione:
+\lstinputlisting{IO files/Visualizzazione offerte - fruitore.txt}
+
+Di seguito si mostra l'interazione dell'utente con l'applicazione per la visualizzazione delle offerte inserite nell'applicazione filtrate per categoria:
+\lstinputlisting{IO files/Visualizzazione offerte per categoria - fruitore.txt} 
+
+\subsection{Creazione offerta}
+Di seguito si mostra l'interazione dell'utente con l'applicazione per la creazione di un'offerta di un prodotto da scambiare:
+\lstinputlisting{IO files/Creazione offerta.txt}
+
+\subsection{Ritiro offerta}
+Di seguito si mostra l'interazione dell'utente con l'applicazione per il ritiro di un'offerta di un prodotto; il prodotto ritirato non potrà più essere selezionato per lo scambio né dall'utente che ne è autore né da altri utenti.
+\lstinputlisting{IO files/Ritiro offerta.txt}
+
+\subsection{Creazione proposta di scambio}
+Di seguito si mostra l'interazione dell'utente con l'applicazione per la creazione di una proposta di scambio. 
+L'utente è tenuto a selezionare (se esistente) un'offerta delle proprie e (se esistente) un'offerta di un altro utente appartenente alla stessa categoria foglia della propria offerta. 
+Automaticamente lo stato delle due offerte verrà modificato ed esse terranno traccia l'una dell'altra.
+\lstinputlisting{IO files/Creazione proposta scambio.txt}
+
+\subsection{Visualizzazione ultimi messaggi relativi agli scambi}
+Se uno scambio è ancora in corso è possibile visualizzare l'ultimo messaggio (ossia l'ultima proposta di appuntamento) introdotto dalla controparte dello scambio.
+Di seguito si mostra l'interazione dell'utente con l'applicazione:
+\lstinputlisting{IO files/Visualizzazione messaggio.txt}
+
+\subsection{Proposta appuntamento per lo scambio}
+Non appena l'utente fruitore effettua l'accesso all'applicazione inserendo le proprie credenziali gli vengono presentati gli elenchi delle nuove proposte di scambio accumulate durante la sua assenza e delle proposte di scambio arretrate (in attesa di un accordo relativamente all'appuntamento per lo scambio). 
+L'utente interagisce con l'applicazione nel seguente modo per accettare uno scambio e proporre un nuovo appuntamento:
+\lstinputlisting{IO files/Proposta appuntamento.txt}

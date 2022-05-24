@@ -1,0 +1,16 @@
+	Seleziona un'opzione: 
+	1. Accedi
+	2. Registrati
+	3. Esci
+(in)	2
+	Seleziona la modalita' con cui vuoi registrarti:
+	1. Configuratore
+	2. Fruitore
+(in)	2
+	Inserisci il tuo username: 
+(in)	customer_01
+	Inserisci la nuova password: 
+(in)	customer_pw
+	Conferma la nuova password: 
+(in)	customer_pw
+

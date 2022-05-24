@@ -1,0 +1,104 @@
+	Inserisci il numero corrispondente all'azione che vuoi eseguire:
+	1. Crea una nuova gerarchia
+	2. Visualizza il contenuto delle gerarchie attualmente presenti nel sistema
+	3. Salva
+	4. Configura informazioni di scambio
+	5. Visualizza offerte
+	6. Visualizza offerte in scambio
+	7. Visualizza offerte chiuse
+	8. Configura gerarchie da file
+	9. Configura informazioni di scambio da file
+	10. Logout
+(in)	1
+	Inserisci il nome della categoria: 
+(in)	Libri
+	Inserire la descrizione della categoria: 
+(in)	Gerarchia contenente libri di vario genere
+	Inserire un altro campo descrittivo alla categoria Libri? (Y/N)
+(in)	y
+	Nome campo: 
+(in)	Titolo
+	Campo a compilazione obbligatoria? (Y/N)
+(in)	y
+	Inserire un altro campo descrittivo alla categoria Libri? (Y/N)
+(in)	y
+	Nome campo: 
+(in)	Autore
+	Campo a compilazione obbligatoria? (Y/N)
+(in)	y
+	Inserire un altro campo descrittivo alla categoria Libri? (Y/N)
+(in)	y
+	Nome campo: 
+(in)	Casa editrice
+	Campo a compilazione obbligatoria? (Y/N)
+(in)	n
+	Inserire un altro campo descrittivo alla categoria Libri? (Y/N)
+(in)	n
+	Aggiungere una nuova categoria? [Y/N]
+(in)	y
+
+	N.B. Ogni categoria nodo deve avere almeno due sotto-categorie
+
+	Scegliere una categoria
+	0) Libri
+	Effettuare una scelta
+(in)	0
+	Inserisci il nome della categoria: 
+(in)	Romanzi
+	Inserire la descrizione della categoria: 
+(in)	
+	Inserire un altro campo descrittivo alla categoria Romanzi? (Y/N)
+(in)	n
+
+	N.B. Ogni categoria nodo deve avere almeno due sotto-categorie
+
+	Scegliere una categoria
+	0) Libri
+	1) Libri->Romanzi
+	Effettuare una scelta
+(in)	0
+	Inserisci il nome della categoria: 
+(in)	Saggi
+	Inserire la descrizione della categoria: 
+(in)	Categoria contenente opere di saggistica
+	Inserire un altro campo descrittivo alla categoria Saggi? (Y/N)
+(in)	n
+	Aggiungere una nuova categoria? [Y/N]
+(in)	y
+
+	N.B. Ogni categoria nodo deve avere almeno due sotto-categorie
+
+	Scegliere una categoria
+	0) Libri
+	1) Libri->Romanzi
+	2) Libri->Saggi
+	Effettuare una scelta
+(in)	1
+	Inserisci il nome della categoria: 
+(in)	Rosa
+	Inserire la descrizione della categoria: 
+(in)	Romanzi rosa
+	Inserire un altro campo descrittivo alla categoria Rosa? (Y/N)
+(in)	n
+
+	N.B. Ogni categoria nodo deve avere almeno due sotto-categorie
+
+	Scegliere una categoria
+	0) Libri
+	1) Libri->Saggi
+	2) Libri->Romanzi
+	3) Libri->Romanzi->Rosa
+	Effettuare una scelta
+(in)	2
+	Inserisci il nome della categoria: 
+(in)	Gialli
+	Inserire la descrizione della categoria: 
+(in)	
+	Inserire un altro campo descrittivo alla categoria Gialli? (Y/N)
+(in)	n
+	Aggiungere una nuova categoria? [Y/N]
+(in)	n
+	Salvare la gerarchia creata? [Y/N]
+(in)	y
+
+	Salvataggio eseguito

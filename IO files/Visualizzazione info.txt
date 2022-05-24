@@ -1,0 +1,23 @@
+	Inserisci il numero corrispondente all'azione che vuoi eseguire:
+	1. Visualizza il contenuto dell'applicazione e le informazioni di scambio
+	2. Visualizza offerte personali
+	3. Visualizza offerte per categoria
+	4. Crea offerta
+	5. Ritira offerta
+	6. Crea proposta di scambio
+	7. Visualizza ultimi messaggi relativi ai tuoi scambi
+	8. Logout
+(in)	1
+	GERARCHIE:
+
+	Gerarchia: Libri
+	Descrizione: Gerarchia contenente libri di vario genere
+
+	INFORMAZIONI SCAMBI:
+	Piazza: Brescia
+	Luoghi: 
+	 -> Piazzale Arnaldo
+	 -> Piazzale della stazione
+	Giorni: Lunedi, Mercoledi
+	Intervalli Orari: 10:00-13:30, 15:30-18:00
+	Scadenza offerte dopo 10 giorni

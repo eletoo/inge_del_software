@@ -1,0 +1,9 @@
+	Seleziona un'opzione: 
+	1. Accedi
+	2. Registrati
+	3. Esci
+(in)	1
+	Inserisci il tuo username: 
+(in)	admin_01
+	Inserisci la tua password: 
+(in)	admin_pw
