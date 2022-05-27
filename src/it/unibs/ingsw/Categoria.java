@@ -192,7 +192,7 @@ public abstract class Categoria implements Serializable {
                 CampoNativo nuovo = new CampoNativo(obbligatorio, CampoNativo.Tipo.STRING);
                 campi.put(nome, nuovo);
             }
-        } while (!ans);
+        } while (ans);
 
         return campi;
     }
