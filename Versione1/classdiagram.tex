@@ -4,12 +4,12 @@ In questa sezione sono stati riportati tre diagrammi delle classi: il primo, in 
 
 Si tenga inoltre conto del fatto che le classi:
 \begin{itemize}
-    \item CampoNativo
-    \item Categoria
-    \item Configuratore
-    \item Gerarchia
-    \item User
-    \item UserDataStore
+    \item \texttt{CampoNativo}
+    \item \texttt{Categoria}
+    \item \texttt{Configuratore}
+    \item \texttt{Gerarchia}
+    \item \texttt{User}
+    \item \texttt{UserDataStore}
 \end{itemize}
 implementano l'interfaccia \texttt{Serializable}, nonostante tale relazione non sia esplicitamente riportata nei diagrammi delle classi al fine di semplificare il layout dei diagrammi stessi.
 
@@ -21,18 +21,18 @@ implementano l'interfaccia \texttt{Serializable}, nonostante tale relazione non 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{imagesV1/Class Diagram- Version 1.0.png}
+    \includegraphics[width=\textwidth]{imagesV1/Final Class diagram-Version1.0.png}
     \caption{\label{fig:Class diagram - v1}Diagramma UML delle classi - Versione 1}
 \end{figure}    
 
-La classe \texttt{View} contiene tutti i metodi (non indicati per esteso nel diagramma delle classi realizzato prima dell'effettiva stesura del codice) necessari per interagire e comunicare con l'utente, ricevendo i dati da lui inseriti oppure comunicando messaggi da parte del sistema.
+La classe \texttt{View} contiene i metodi (non indicati per esteso nel diagramma delle classi realizzato prima dell'effettiva stesura del codice) necessari per interagire e comunicare con l'utente, ricevendo i dati da lui inseriti oppure comunicando messaggi da parte del sistema.
 
 La classe \texttt{Model}, presente con questo nome nell'UML iniziale ma rinominata \texttt{UserDataStore} nel codice finale, contiene i metodi necessari per la gestione dei dati relativi agli utenti che dovranno poi essere salvati in modo persistente. La classe ha il compito di gestire la registrazione di un nuovo utente Configuratore, l'aggiornamento delle credenziali e la verifica della correttezza delle informazioni introdotte in fase di login, oltre al salvataggio e al caricamento dei dati. 
 
 La classe \texttt{User} è una classe astratta estesa dalla classe \texttt{Configuratore}: ogni Configuratore sarà dotato di username e password. La password, in particolare, viene salvata direttamente dopo aver effettuato l'hashing, in modo da garantire un livello di sicurezza basilare relativamente alle informazioni private degli utenti. La classe \texttt{User} è dotata di metodi per l'autenticazione dell'utente e per la modifica delle credenziali.
 
 La classe \texttt{Applicazione} permette di tenere traccia delle gerarchie contenute nell'applicazione. 
-Essa contiene infatti un metodo che verifica se il nome di una categoria radice di una gerarchia è già utilizzato dalla categoria radice di un'altra gerarchia, un metodo che permette di aggiungere una nuova gerarchia, metodi che permettono di ottenere le gerarchie presenti nell'applicazione o di assegnare loro i valori desiderati, metodi che permettono di salvare i dati contenuti nelle gerarchie e di caricare i dati salvati durante gli utilizzi precedenti dell'applicazione.
+Essa contiene infatti un metodo che verifica se il nome di una categoria radice di una gerarchia è già utilizzato dalla categoria radice di un'altra gerarchia, un metodo che permette di creare e aggiungere una nuova gerarchia, metodi che permettono di ottenere le gerarchie presenti nell'applicazione o di assegnare loro i valori desiderati, metodi che permettono di salvare i dati contenuti nelle gerarchie e di caricare i dati salvati durante gli utilizzi precedenti dell'applicazione.
 
 La classe \texttt{Gerarchia} permette di tenere traccia del contenuto di ogni gerarchia: ogni gerarchia è caratterizzata da una categoria radice che, a seconda che sia istanza della classe \texttt{Foglia} o \texttt{Nodo}, può avere o meno delle sottocategorie (a loro volta istanze della classe \texttt{Foglia} o \texttt{Nodo}). 
 
@@ -49,6 +49,6 @@ La classe \texttt{Main} contiene il solo metodo main che permette di interagire 
 
 \begin{figure}[!]
     \centering
-    \includegraphics[width=\textwidth]{imagesV1/old images/Class diagram simplified-Version1.0.png}
+    \includegraphics[width=\textwidth]{imagesV1/old images/Class diagram simplified-Version1.png}
     \caption{\label{fig:Simplified Class Diagram - v1}Diagramma UML delle classi semplificato - Versione 1}
 \end{figure}

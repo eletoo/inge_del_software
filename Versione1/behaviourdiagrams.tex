@@ -11,34 +11,34 @@ In Figura \ref{fig:Sequence diagram 1.1} è riportato il diagramma di sequenza c
     \item L'utente richiede di accedere al proprio profilo
     \item L'applicazione richiede all'utente di inserire il proprio username nell'interfaccia presentatagli
     \item L'utente inserisce il proprio username
-    \item L'interfaccia comunica al Controller dell'applicazione lo username inserito dall'utente
-    \item Il Controller verifica l'esistenza dello username all'interno dell'elenco degli utenti
-    \item Se lo username esiste all'interno dell'elenco degli utenti il Controller manda un messaggio di conferma della correttezza dei dati inseriti all'interfaccia
+    \item L'interfaccia comunica allo UserDataStore dell'applicazione lo username inserito dall'utente
+    \item Lo UserDataStore verifica l'esistenza dello username all'interno dell'elenco degli utenti
+    \item Se lo username esiste all'interno dell'elenco degli utenti lo UserDataStore manda un messaggio di conferma della correttezza dei dati inseriti all'interfaccia
     \item L'interfaccia dell'applicazione richiede all'utente la password
     \item L'utente inserisce la propria password
-    \item L'interfaccia comunica al Controller dell'applicazione la password inserita dall'utente
-    \item Il Controller verifica la correttezza della password
-    \item Se la password è corretta il Controller comunica all'interfaccia che il login è stato effettuato correttamente
+    \item L'interfaccia comunica allo UserDataStore dell'applicazione la password inserita dall'utente
+    \item Lo UserDataStore verifica la correttezza della password
+    \item Se la password è corretta lo UserDataStore comunica all'interfaccia che il login è stato effettuato correttamente
     \item L'interfaccia comunica all'utente che il login è stato effettuato correttamente
-    \item Se la password è errata il Controller comunica all'interfaccia che il login è fallito
+    \item Se la password è errata lo UserDataStore comunica all'interfaccia che il login è fallito
     \item L'interfaccia comunica all'utente che il login è fallito
-    \item Se lo username è inesistente il Controller comunica all'interfaccia che il login è fallito
+    \item Se lo username è inesistente lo UserDataStore comunica all'interfaccia che il login è fallito
     \item L'interfaccia comunica all'utente che il login è fallito
 \end{enumerate}
 
 \begin{figure}[!]
 \centering
-\includegraphics[width=0.6\textwidth]{imagesV1/Sequence diagram-Accesso configuratore-Accesso_Configuratore.png}
+\includegraphics[width=0.6\textwidth]{imagesV1/Sequence diagram-Accesso_Configuratore.png}
 \caption{\label{fig:Sequence diagram 1.1}Diagramma di sequenza: Accesso configuratore - Versione 1}
 \end{figure}\bigskip
 
 \newpage
 \textbf{Diagramma degli Stati: Ciclo di vita dell'utente Configuratore}\newline
-In Figura \ref{fig:State diagram 1.1} è rappresentato il ciclo di vita dell'utente Configuratore: a seconda dell'azione che esso intraprende nei confronti dell'applicazione il Configuratore si trova in un determinato stato.\newline L'accesso all'applicazione può avvenire o in qualità di primo accesso oppure come accesso ordinario: nel caso si tratti di un primo accesso il configuratore si riconduce allo stato "CreazioneProfilo" in cui avviene la creazione di un nuovo profilo Configuratore a cui segue un necessario cambio delle credenziali, mentre nel caso si tratti di un login ordinario l'utente accede direttamente al menù principale. \newline 
-In tutti i passaggi di stato si considera la situazione ideale in cui non vi siano errori nell'esecuzione delle operazioni. Nel caso in cui si verifichino errori di esecuzione allora è lasciato sottinteso il passaggio attraverso uno stato di Errore prima di tornare al menù principale.
+In Figura \ref{fig:State diagram 1.1} è rappresentato il ciclo di vita dell'utente Configuratore: a seconda dell'azione che esso intraprende nei confronti dell'applicazione il Configuratore si trova in un determinato stato.\newline L'accesso all'applicazione può avvenire o in qualità di primo accesso oppure come accesso ordinario: nel caso si tratti di un primo accesso il configuratore si riconduce allo stato ``CreazioneProfilo" in cui avviene la creazione di un nuovo profilo Configuratore a cui segue un necessario cambio delle credenziali, mentre nel caso si tratti di un login ordinario l'utente accede direttamente al menù principale. \newline 
+In tutti i passaggi di stato si considera la situazione ideale in cui non vi siano errori nell'esecuzione delle operazioni. Nel caso in cui si verifichino errori di esecuzione allora è lasciato sottinteso il passaggio attraverso uno stato di \texttt{Errore} prima di tornare al menù principale.
 
 \begin{figure}[b!]
 \centering
-\includegraphics[width=0.7\textwidth]{imagesV1/State diagram - Version 1.0.png}
+\includegraphics[width=0.7\textwidth]{imagesV1/State diagram - Ciclo di vita del configuratore.png}
 \caption{\label{fig:State diagram 1.1}Ciclo di vita del Configuratore - Versione 1}
 \end{figure}\bigskip
