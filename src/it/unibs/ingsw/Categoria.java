@@ -176,16 +176,15 @@ public abstract class Categoria implements Serializable {
             campi.putAll(parent.getCampiNativi());
         }
 
-        String ans;
+        boolean ans;
         do {
             ans = view.yesOrNoQuestion("Inserire un altro campo descrittivo alla categoria " + this.getNome() + "? (Y/N)");
 
-            if (ans.equalsIgnoreCase("y")) {
+            if (ans) {
                 String nome = view.insertFieldName();
                 boolean obbligatorio;
-                String ans2 = view.yesOrNoQuestion("Campo a compilazione obbligatoria? (Y/N)");
 
-                if (ans2.equalsIgnoreCase("y")) {
+                if (view.yesOrNoQuestion("Campo a compilazione obbligatoria? (Y/N)")) {
                     obbligatorio = true;
                 } else {
                     obbligatorio = false;
@@ -193,7 +192,7 @@ public abstract class Categoria implements Serializable {
                 CampoNativo nuovo = new CampoNativo(obbligatorio, CampoNativo.Tipo.STRING);
                 campi.put(nome, nuovo);
             }
-        } while (!ans.equalsIgnoreCase("n"));
+        } while (!ans);
 
         return campi;
     }

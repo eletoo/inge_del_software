@@ -123,7 +123,7 @@ public class Applicazione {
 
         //Se la struttura non è valida l'utente dovrà proseguire nell'aggiunta al fine di renderla tale (oppure se ha sbagliato ricomincia)
         //altrimenti chiediamo se vuole aggiungere una categoria
-        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]").equalsIgnoreCase("y")) {
+        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]")) {
             view.interactionMessage(View.InteractionMessage.AT_LEAST_TWO_CHILDREN);
             CategoriaEntry padre = view.findCategory(root); //Prompt per l'utente in modo che scelga una categoria
 
@@ -144,7 +144,7 @@ public class Applicazione {
         }
 
         this.addGerarchia(rootname, new Gerarchia(root));
-        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
+        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]")) {
             this.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
             return;
