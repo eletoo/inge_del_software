@@ -17,7 +17,7 @@ class Applicazione{
 class CampoNativo{
 - obbligatorio: boolean
 - type: Tipo
-+ <<constructor>> CampoNativo
++ <<constructor>> CampoNativo(boolean, Tipo)
 + isObbligatorio(): boolean
 + getType(): Tipo
 }
@@ -73,7 +73,7 @@ class CategoriaEntry{
 - cat: Categoria
 - father: Nodo
 - displayName: String
-+ <<constructor>> CategoriaEntry
++ <<constructor>> CategoriaEntry(Categoria, Nodo, String)
 + getCat(): Categoria
 + getFather(): Nodo
 + getDisplayName(): String
@@ -97,10 +97,10 @@ class Nodo{
 
 class View{
 + <<constructor>> View()
-+ interacrionMessage(InteractionMessage): void
++ interactionMessage(InteractionMessage): void
 + askUsername(): String
 + askNewUsername(): String
-+ askPassword: String
++ askPassword(): String
 + message(String): void
 + errorMessage(ErrorMessage): void
 + in(String): String
@@ -111,10 +111,10 @@ class View{
 + askDescription(): String
 + askCategoryName(): String
 + insertFieldName(): String
-+ yesOrNoQuestion(String): String
++ yesOrNoQuestion(String): boolean
 + findCategory(Categoria): CategoriaEntry
-- getCategorieAsList(Categoria): List<CategoriaEntry>
-- getCategorieAsList(Categoria, Nodo, List<CategoriaEntry>, String): List<CategoriaEntry>
+- getCategoriesAsList(Categoria): List<CategoriaEntry>
+- getCategoriesAsList(Categoria, Nodo, List<CategoriaEntry>, String): List<CategoriaEntry>
 }
 
 enum ErrorMessage{
@@ -146,10 +146,10 @@ CHOOSE_CATEGORY
 }
 
 class UserDataStore{
-- {static}instance: UserDataStore
+- {static}STD_USERNAME_LEN: int = 10
+- {static}STD_PW_LEN: int = 10
 - userMap: Map<String, User>
 + <<constructor>> UserDataStore()
-+ {static}getInstance(): UserDataStore
 + isUsernameTaken(String): boolean
 + registerNewConfiguratore(String, String): void
 + updateUser(String, String, String): void
@@ -166,7 +166,7 @@ class UserDataStore{
 }
 
 class Controller{
-- dataStore: UserDataStore
++ dataStore: UserDataStore
 - view: View
 - app: Applicazione
 + <<constructor>> Controller()
@@ -176,7 +176,7 @@ class Controller{
 }
 
 class Main{
-+ main(String): void
++ {static}main(String): void
 }
 
 CampoNativo +-- Tipo
@@ -203,13 +203,12 @@ UserDataStore --> "0.. * "  User
 Controller --> "0.. 1 " UserDataStore
 Controller --> "0.. 1 " View
 Controller --> "0.. 1 " Applicazione
-UserDataStore --> "0.. 1 " UserDataStore
 CategoriaEntry --> "0.. 1 " Categoria
 CategoriaEntry --> "0.. 1 " Nodo
-Categoria --> "0.. * " CampoNativo
+Categoria --> "2.. * " CampoNativo
 Gerarchia --> "0.. 1 " Categoria
 Applicazione --> "0.. * " Gerarchia
-Nodo --> "0.. * " Categoria
+Nodo --> "2.. * " Categoria
 Categoria <|-- Nodo
 Categoria <|-- Foglia
 User <|-- Configuratore

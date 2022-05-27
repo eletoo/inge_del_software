@@ -1,6 +1,9 @@
 package it.unibs.ingsw;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Classe contenente il metodo main
@@ -20,6 +23,11 @@ public class Main {
         Controller controller = new Controller();
         View view = new View();
 
+        Path path = Paths.get(System.getProperty("user.dir") + "/db");
+
+        if (!Files.isDirectory(path))
+            Files.createDirectories(path);
+
         String val;
         do {
             val = view.in("Seleziona un'opzione: \n1. Accedi\n2. Registrati\n3. Esci");
@@ -27,6 +35,7 @@ public class Main {
                 case "1": {
                     controller.dataStore.load();
                     if (controller.dataStore.isEmpty()) {
+                        view.message("Non c'è alcun utente registrato -- crea un primo profilo Configuratore");
                         controller.firstAccessAsConfiguratore();
                     } else {
                         String username = view.askUsername();
@@ -41,14 +50,20 @@ public class Main {
                 }
                 break;
                 case "2": {
-                    String choice = view.in("Seleziona la modalità con cui vuoi registrarti:\n1.Configuratore");
-                    switch (choice) {
-                        case "1": {
-                            controller.firstAccessAsConfiguratore();
+                    controller.dataStore.load();
+                    if(controller.dataStore.isEmpty()){
+                        view.message("Non c'è alcun utente registrato -- crea un primo profilo Configuratore");
+                        controller.firstAccessAsConfiguratore();
+                    }else{
+                        String choice = view.in("Seleziona la modalità con cui vuoi registrarti:\n1.Configuratore");
+                        switch (choice) {
+                            case "1": {
+                                controller.firstAccessAsConfiguratore();
+                            }
+                            break;
+                            default:
+                                view.errorMessage(View.ErrorMessage.E_UNAUTHORIZED_CHOICE);
                         }
-                        break;
-                        default:
-                            view.errorMessage(View.ErrorMessage.E_UNAUTHORIZED_CHOICE);
                     }
                 }
                 break;

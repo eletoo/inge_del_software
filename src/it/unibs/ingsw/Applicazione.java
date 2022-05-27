@@ -73,7 +73,7 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void saveData() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/gerarchie.dat"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/gerarchie.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getHierarchies());
         objectOutputStream.close();
@@ -85,10 +85,10 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void prepareDirectoryStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var gf = new File("./db/gerarchie.dat");
+        var gf = new File(System.getProperty("user.dir") + "/db/gerarchie.dat");
 
         if (gf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(gf));

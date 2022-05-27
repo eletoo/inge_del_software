@@ -15,32 +15,14 @@ public class UserDataStore implements Serializable {
 
     private static final int STD_USERNAME_LEN = 10;
     private static final int STD_PW_LEN = 10;
-    private static UserDataStore instance;
-
-    static {
-        try {
-            instance = new UserDataStore();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
 
     private Map<String, User> userMap;
 
     /**
      * Costruttore.
-     *
-     * @throws NoSuchAlgorithmException eccezione
      */
-    public UserDataStore() throws NoSuchAlgorithmException {
+    public UserDataStore() {
         userMap = new HashMap<>();
-    }
-
-    /**
-     * @return instance
-     */
-    public static UserDataStore getInstance() {
-        return instance;
     }
 
     /**
@@ -59,6 +41,7 @@ public class UserDataStore implements Serializable {
      */
     public void registerNewConfiguratore(String nome, String pw) {
         userMap.put(nome, new Configuratore(nome, pw));
+        this.save();
     }
 
     /**
@@ -73,6 +56,7 @@ public class UserDataStore implements Serializable {
         userMap.get(oldname).changePassword(newpw);
         userMap.put(newname, userMap.get(oldname));
         userMap.remove(oldname);
+        this.save();
     }
 
     /**
@@ -156,8 +140,11 @@ public class UserDataStore implements Serializable {
         do {
             username = this.generateRandomString(STD_USERNAME_LEN);
         } while (this.isUsernameTaken(username));
+
         String password = this.generateRandomPassword(STD_PW_LEN);
+
         view.communicateCredentials(username, password);
+
         this.registerNewConfiguratore(username, password);
     }
 
@@ -177,11 +164,11 @@ public class UserDataStore implements Serializable {
                 view.errorMessage(View.ErrorMessage.E_USERNAME_TAKEN);
             }
         } while (this.isUsernameTaken(username));
+
         String password = view.askCustomPassword();
 
         if (password != null && username != null) {
             this.updateUser(currentUsername, username, password);
-            this.save();
         } else {
             view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
         }
@@ -193,8 +180,9 @@ public class UserDataStore implements Serializable {
     public void save() {
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
+        String currentDir = System.getProperty("user.dir");
         try {
-            fileOutputStream = new FileOutputStream(new File("./db/users.dat"));
+            fileOutputStream = new FileOutputStream(new File(currentDir + "/db/users.dat"));
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(userMap);
             objectOutputStream.close();
@@ -211,7 +199,11 @@ public class UserDataStore implements Serializable {
      * @throws IOException eccezione I/O
      */
     public void load() throws IOException {
-        var uf = new File("./db/users.dat");
+        String currentDir = System.getProperty("user.dir");
+        var db = new File(currentDir + "/db");
+        assert db.exists() || db.mkdir();
+
+        var uf = new File(currentDir + "/db/users.dat");
         if (uf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(uf));
             try {

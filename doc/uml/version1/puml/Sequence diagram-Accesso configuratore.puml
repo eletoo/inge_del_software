@@ -5,31 +5,31 @@ title Accesso Configuratore
 
 actor Configuratore
 participant View
-participant Controller
+participant UserDataStore
 Configuratore -> View: Richiesta accesso al profilo
 View -> Configuratore: Richiesta username
 Configuratore -> View: Inserimento username
-View -> Controller: Invio username
-Controller ->Controller: Controllo esistenza \nusername
+View -> UserDataStore: Invio username
+UserDataStore ->UserDataStore: Controllo esistenza \nusername
 
 alt Username esistente
-    Controller --> View: Username esistente
+    UserDataStore --> View: Username esistente
     View -> Configuratore: Richiesta password
     Configuratore -> View: Inserimento password
-    View -> Controller: Invio password
-    Controller -> Controller: Autenticazione\npassword
+    View -> UserDataStore: Invio password
+    UserDataStore -> UserDataStore: Autenticazione\npassword
 
     alt Password corretta
-        Controller --> View: Password corretta
+        UserDataStore --> View: Password corretta
         View --> Configuratore: Login effettuato
 
     else Password errata
-        Controller --> View: Password errata
+        UserDataStore --> View: Password errata
         View --> Configuratore: Login fallito
     end
 
 else Username inesistente
-    Controller --> View: Username inesistente
+    UserDataStore --> View: Username inesistente
     View --> Configuratore: Autenticazione fallita
 
 

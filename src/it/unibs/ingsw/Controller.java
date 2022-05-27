@@ -19,11 +19,7 @@ public class Controller {
      * Costruttore.
      */
     public Controller() {
-        try {
-            dataStore = new UserDataStore();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        dataStore = new UserDataStore();
     }
 
     /**
