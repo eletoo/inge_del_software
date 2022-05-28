@@ -106,7 +106,7 @@ public class Scambio implements Serializable {
         }
 
         view.message(this.messageA.getMessage());
-        if (view.yesOrNoQuestion("\nAccettare l'appuntamento? [Y/N]").equalsIgnoreCase("y")) {
+        if (view.yesOrNoQuestion("\nAccettare l'appuntamento? [Y/N]")) {
             app.getOfferta(this.selectedOffer).setStato(Offerta.StatoOfferta.CHIUSA);
             app.getOfferta(this.ownOffer).setStato(Offerta.StatoOfferta.CHIUSA);
             view.message("\n\nOfferta chiusa\n");
@@ -225,7 +225,7 @@ public class Scambio implements Serializable {
             Scambio toAccept;
             view.message(existingExchanges);
             view.showList(userExchanges);
-            if (view.yesOrNoQuestion(selectExchange).equalsIgnoreCase("y")) {
+            if (view.yesOrNoQuestion(selectExchange)) {
                 toAccept = view.choose(userExchanges, null);
                 toAccept.manageExchange(view, app, f);
                 userExchanges.remove(toAccept);

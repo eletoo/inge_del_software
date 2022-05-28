@@ -15,32 +15,14 @@ public class UserDataStore implements Serializable {
 
     public static final int STD_USERNAME_LEN = 10;
     public static final int STD_PW_LEN = 10;
-    private static UserDataStore instance;
-
-    static {
-        try {
-            instance = new UserDataStore();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
 
     private Map<String, User> userMap;
 
     /**
      * Costruttore.
-     *
-     * @throws NoSuchAlgorithmException eccezione
      */
-    public UserDataStore() throws NoSuchAlgorithmException {
+    public UserDataStore() {
         userMap = new HashMap<>();
-    }
-
-    /**
-     * @return instance
-     */
-    public static UserDataStore getInstance() {
-        return instance;
     }
 
     /**
@@ -228,7 +210,7 @@ public class UserDataStore implements Serializable {
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
         try {
-            fileOutputStream = new FileOutputStream(new File("./db/users.dat"));
+            fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/users.dat"));
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(userMap);
             objectOutputStream.close();
@@ -245,7 +227,7 @@ public class UserDataStore implements Serializable {
      * @throws IOException eccezione I/O
      */
     public void load() throws IOException {
-        var uf = new File("./db/users.dat");
+        var uf = new File(System.getProperty("user.dir") + "/db/users.dat");
         if (uf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(uf));
             try {

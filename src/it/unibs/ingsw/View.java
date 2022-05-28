@@ -361,12 +361,12 @@ public class View {
      * @param prompt domanda con risposta si'/no da presentare all'utente
      * @return risposta dell'utente
      */
-    public String yesOrNoQuestion(String prompt) {
+    public boolean yesOrNoQuestion(String prompt) {
         String ans;
         do {
             ans = in(prompt);
         } while (!ans.equalsIgnoreCase("y") && !ans.equalsIgnoreCase("n"));
-        return ans;
+        return ans.equalsIgnoreCase("y") ? true : false;
     }
 
     /**

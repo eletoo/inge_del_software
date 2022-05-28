@@ -129,7 +129,7 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void saveData() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/gerarchie.dat"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/gerarchie.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getHierarchies());
         objectOutputStream.close();
@@ -141,7 +141,7 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void saveInfo() throws IOException {
-        FileOutputStream fos = new FileOutputStream(new File("./db/info.dat"));
+        FileOutputStream fos = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/info.dat"));
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(this.getInformazioni());
         oos.close();
@@ -153,10 +153,10 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void prepareDirectoryStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var gf = new File("./db/gerarchie.dat");
+        var gf = new File(System.getProperty("user.dir") + "/db/gerarchie.dat");
         if (gf.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(gf));
             try {
@@ -178,10 +178,10 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void prepareInfoStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var info = new File("./db/info.dat");
+        var info = new File(System.getProperty("user.dir") + "/db/info.dat");
         if (info.exists()) {
             ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream(info));
             try {
@@ -232,7 +232,7 @@ public class Applicazione {
 
         //Se la struttura non è valida l'utente dovrà proseguire nell'aggiunta al fine di renderla tale (oppure se ha sbagliato ricomincia)
         //altrimenti chiediamo se vuole aggiungere una categoria
-        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]").equalsIgnoreCase("y")) {
+        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]")) {
             view.interactionMessage(View.InteractionMessage.AT_LEAST_TWO_CHILDREN);
             CategoriaEntry padre = view.findCategory(root); //Prompt per l'utente in modo che scelga una categoria
 
@@ -252,7 +252,7 @@ public class Applicazione {
         }
 
         this.addGerarchia(rootname, new Gerarchia(root));
-        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
+        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]")) {
             this.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
             return;
@@ -268,10 +268,10 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void prepareOffersStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var of = new File("./db/offerte.dat");
+        var of = new File(System.getProperty("user.dir") + "/db/offerte.dat");
         if (of.exists()) {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(of));
             try {
@@ -341,7 +341,7 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void saveOfferte() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/offerte.dat"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/offerte.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getOfferte());
         objectOutputStream.close();
@@ -368,10 +368,10 @@ public class Applicazione {
      * @throws IOException eccezione
      */
     public void prepareExchangesStructure() throws IOException {
-        var db = new File("./db");
+        var db = new File(System.getProperty("user.dir") + "/db");
         assert db.exists() || db.mkdir();
 
-        var exchanges = new File("./db/scambi.dat");
+        var exchanges = new File(System.getProperty("user.dir") + "/db/scambi.dat");
         if (exchanges.exists()) {
             ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream(exchanges));
             try {
@@ -391,7 +391,7 @@ public class Applicazione {
      */
     public void saveExchanges() throws IOException {
         this.saveOfferte();
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/scambi.dat"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/scambi.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getScambi());
         objectOutputStream.close();
