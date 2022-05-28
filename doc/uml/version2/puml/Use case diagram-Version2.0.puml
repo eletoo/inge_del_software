@@ -8,7 +8,6 @@
 Admin -left-> (UseF3)
 Admin -up-> (UseF1)
 Admin -up-> (UseF2)
-(UseF1) .right.> (UseF2): <<include>>
 
 (Accesso configuratore) as (Use1)
 (Creazione configuratore) as (Use2)

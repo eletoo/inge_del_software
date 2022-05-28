@@ -11,6 +11,7 @@ class Applicazione{
 + setHierarchies(Map<String, Gerarchia>): void
 + getHierarchy(String): Gerarchia
 + saveData(): void
++ saveInfo(): void
 + prepareDirectoryStructure(): void
 + prepareInfoStructure(): void
 + setInfoScambio(InfoScambio): void
@@ -21,7 +22,7 @@ class Applicazione{
 class CampoNativo{
 - obbligatorio: boolean
 - type: Tipo
-+ <<constructor>> CampoNativo
++ <<constructor>> CampoNativo(boolean, Tipo)
 + isObbligatorio(): boolean
 + getType(): Tipo
 }
@@ -82,7 +83,7 @@ class InfoScambio{
 + getPiazza(): String
 - configureExchangeSettings(Applicazione, View): void
 - configureExpiration(View): void
-- configureTimeRange(View): void
+- configureTimeRanges(View): void
 - configureDays(View): void
 - configurePlaces(View): void
 - configurePiazza(Applicazione, View): void
@@ -122,7 +123,7 @@ class CategoriaEntry{
 - cat: Categoria
 - father: Nodo
 - displayName: String
-+ <<constructor>> CategoriaEntry
++ <<constructor>> CategoriaEntry(Categoria, Nodo, String)
 + getCat(): Categoria
 + getFather(): Nodo
 + getDisplayName(): String
@@ -163,12 +164,12 @@ START
 END
 - startOrEnd: String
 <<constructor>> StartOrEnd(String)
-+ toString(): String
++ getStartOrEnd(): String
 }
 
 class View{
 + <<constructor>> View()
-+ interacrionMessage(InteractionMessage): void
++ interactionMessage(InteractionMessage): void
 + askUsername(): String
 + askNewUsername(): String
 + askPassword(): String
@@ -187,10 +188,10 @@ class View{
 + askDescription(): String
 + askCategoryName(): String
 + insertFieldName(): String
-+ yesOrNoQuestion(String): String
++ yesOrNoQuestion(String): boolean
 + findCategory(Categoria): CategoriaEntry
-- getCategorieAsList(Categoria): List<CategoriaEntry>
-- getCategorieAsList(Categoria, Nodo, List<CategoriaEntry>, String): List<CategoriaEntry>
+- getCategoriesAsList(Categoria): List<CategoriaEntry>
+- getCategoriesAsList(Categoria, Nodo, List<CategoriaEntry>, String): List<CategoriaEntry>
 }
 
 enum ErrorMessage{
@@ -230,10 +231,10 @@ NO_HIERARCHIES_YET
 }
 
 class UserDataStore{
-- {static}instance: UserDataStore
++ {static}STD_USERNAME_LENGTH: int = 10
++ {static}STD_PW_LENGTH: int = 10
 - userMap: Map<String, User>
 + <<constructor>> UserDataStore()
-+ {static}getInstance(): UserDataStore
 + isUsernameTaken(String): boolean
 + registerNewConfiguratore(String, String): void
 + registerNewFruitore(String, String): void
@@ -247,7 +248,7 @@ class UserDataStore{
 + addNewConfiguratore(View): void
 + addedNewFruitore(View): boolean
 + customizeConfiguratore(String, View): void
-+ save(): void
+- save(): void
 + load(): void
 }
 
@@ -258,20 +259,21 @@ class Controller{
 + <<constructor>> Controller()
 + firstAccessAsConfiguratore(): void
 + secondAccessAsConfiguratore(String): void
-+ firstAccessAsFruitore(String): void
-+ secondAccessAsFruitore(): void
++ firstAccessAsFruitore(): void
++ secondAccessAsFruitore(String): void
 - useAsFruitore(): void
 - useAsConfiguratore(): void
 }
 
 class Main{
-+ main(String): void
++ {static}main(String): void
 }
 
 CampoNativo +-- Tipo
 View +-- InteractionMessage
 View +-- ErrorMessage
 Orario +-- StartOrEnd
+
 Main ..> View
 Main ..> Controller
 Main ..> UserDataStore
@@ -279,21 +281,19 @@ UserDataStore --> "0.. * "  User
 Controller --> "0.. 1 " UserDataStore
 Controller --> "0.. 1 " View
 Controller --> "0.. 1 " Applicazione
-UserDataStore --> "0.. 1 " UserDataStore
 CategoriaEntry --> "0.. 1 " Categoria
 CategoriaEntry --> "0.. 1 " Nodo
-Categoria --> "0.. * " CampoNativo
+Categoria --> "2.. * " CampoNativo
 Gerarchia --> "0.. 1 " Categoria
 Applicazione --> "0.. * " Gerarchia
-IntervalloOrario --> "0.. 1 " Orario
-Nodo --> "0.. * " Categoria
-InfoScambio --> "0.. * " Giorno
+IntervalloOrario --> "2 " Orario
+Nodo --> "2.. * " Categoria
+InfoScambio --> "1.. * " Giorno
 Applicazione --> "0.. 1 " InfoScambio
-InfoScambio --> "0.. * " IntervalloOrario
+InfoScambio --> "1.. * " IntervalloOrario
 Categoria <|-- Nodo
 Categoria <|-- Foglia
 User <|-- Configuratore
 User <|-- Fruitore
-
 
 @enduml

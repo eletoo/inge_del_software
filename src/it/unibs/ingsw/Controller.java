@@ -1,10 +1,6 @@
 package it.unibs.ingsw;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.*;
-import java.security.NoSuchAlgorithmException;
-import java.util.*;
 
 /**
  * Controller: gestisce l'accesso degli utenti e l'interazione con l'applicazione mettendo in comunicazione {@link UserDataStore},
@@ -22,11 +18,7 @@ public class Controller {
      * Costruttore.
      */
     public Controller() {
-        try {
-            dataStore = new UserDataStore();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        dataStore = new UserDataStore();
     }
 
     /**
@@ -83,7 +75,7 @@ public class Controller {
      * @throws IOException eccezione I/O
      */
     public void firstAccessAsFruitore() throws IOException {
-        if(dataStore.addedNewFruitore(view))
+        if (dataStore.addedNewFruitore(view))
             this.useAsFruitore();
     }
 
@@ -132,9 +124,9 @@ public class Controller {
                 case "1": {
                     //visualizza contenuto gerarchie e informazioni applicazione
 
-                    if(app.getHierarchies().isEmpty()){
+                    if (app.getHierarchies().isEmpty()) {
                         view.interactionMessage(View.InteractionMessage.NO_HIERARCHIES_YET);
-                    }else{
+                    } else {
                         System.out.println("GERARCHIE:");
                     }
                     for (String r : app.getHierarchies().keySet()) {
@@ -207,12 +199,12 @@ public class Controller {
                 case "4": {
                     //configura informazioni di scambio
 
-                    if(app.getInformazioni()==null){
+                    if (app.getInformazioni() == null) {
                         app.setInfoScambio(new InfoScambio(app, view));
-                    }else{
+                    } else {
                         view.interactionMessage(View.InteractionMessage.CURRENT_INFO);
                         System.out.println(app.getInformazioni().toString());
-                        if(view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")){
+                        if (view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]")) {
                             app.setInfoScambio(new InfoScambio(app, view));
                         }
                     }
