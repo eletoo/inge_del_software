@@ -325,38 +325,16 @@ View +-- InteractionMessage
 View +-- ErrorMessage
 Orario +-- StartOrEnd
 Offerta +-- StatoOfferta
-View ..> CategoriaEntry
-View ..> Nodo
-Applicazione ..> CategoriaEntry
-Applicazione ..> View
-Applicazione ..> Nodo
 Main ..> View
-View ..> Categoria
-UserDataStore ..> View
-UserDataStore ..> Configuratore
-Main ..> User
-Main ..> Configuratore
 Main ..> Controller
 Main ..> UserDataStore
-Controller ..> Gerarchia
-Controller ..> Categoria
-Applicazione ..> Categoria
-Applicazione ..> Foglia
-Main ..> Fruitore
-UserDataStore ..>Fruitore
-Controller ..> InfoScambio
-InfoScambio ..> View
-View ..> Giorno
-IntervalloOrario ..> Orario
-InfoScambio ..> Orario
-Orario ..> View
 Offerta --> "0..1 "Fruitore
 Applicazione --> "0.. * " Offerta
-Offerta --> "0.. 1 " Foglia
 UserDataStore --> "0.. * "  User
 Controller --> "0.. 1 " UserDataStore
 Controller --> "0.. 1 " View
 Controller --> "0.. 1 " Applicazione
+Offerta --> "0.. 1 " Foglia
 CategoriaEntry --> "0.. 1 " Categoria
 CategoriaEntry --> "0.. 1 " Nodo
 Categoria --> "2.. * " CampoNativo

@@ -19,11 +19,7 @@ public class Controller {
      * Costruttore.
      */
     public Controller() {
-        try {
-            dataStore = new UserDataStore();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        dataStore = new UserDataStore();
     }
 
     /**
@@ -43,7 +39,7 @@ public class Controller {
 
             if (auth) {
                 dataStore.customizeConfiguratore(username, view);
-                this.useAsConfiguratore((Configuratore) dataStore.getUserMap().get(username));
+                this.useAsConfiguratore();
             } else {
                 view.errorMessage(View.ErrorMessage.E_CREDENTIALS_ERROR);
             }
@@ -64,7 +60,7 @@ public class Controller {
             auth = dataStore.isLoginCorrect(username, view.askPassword());
 
             if (auth) {
-                this.useAsConfiguratore((Configuratore) dataStore.getUserMap().get(username));
+                this.useAsConfiguratore();
             } else {
                 view.errorMessage(View.ErrorMessage.E_WRONG_PASSWORD);
             }
@@ -194,10 +190,9 @@ public class Controller {
      * - visualizzare le offerte per categoria
      * - uscire
      *
-     * @param configuratore utente configuratore
      * @throws IOException eccezione I/O
      */
-    private void useAsConfiguratore(Configuratore configuratore) throws IOException {
+    private void useAsConfiguratore() throws IOException {
         boolean end = false;
         String choice = "0";
         do {
@@ -236,7 +231,7 @@ public class Controller {
                     } else {
                         view.interactionMessage(View.InteractionMessage.CURRENT_INFO);
                         System.out.println(app.getInformazioni().toString());
-                        if (view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")) {
+                        if (view.yesOrNoQuestion("Sovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]")) {
                             app.setInfoScambio(new InfoScambio(app, view));
                         }
                     }

@@ -6,8 +6,8 @@
 (Visualizzazione informazioni app) as (UseF3)
 (Visualizzazione offerte categoria) as (UseF5)
 (Visualizzazione offerte personali) as (UseF6)
-(Offerta di baratto) as (UseF7)
-(Modifica stato offerta) as (UseF8)
+(Creazione offerta) as (UseF7)
+(Ritiro offerta) as (UseF8)
 
 Admin -left-> (UseF3)
 Admin -up-> (UseF1)

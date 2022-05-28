@@ -1,0 +1,19 @@
+@startuml
+scale 1500 width
+[*] --> CreazioneProfilo : Primo accesso
+CreazioneProfilo --> MenuPrincipale: Accesso all'applicazione
+[*] --> MenuPrincipale: Accesso\ngenerico
+MenuPrincipale --> VisualizzazioneInformazioni: Richiesta\nvisualizzazione\ninfo
+VisualizzazioneInformazioni --> MenuPrincipale: Success
+VisualizzazioneOffertePersonali --> MenuPrincipale: Success
+MenuPrincipale --> VisualizzazioneOffertePersonali: Richiesta visualizzazione\nofferte personali
+CreazioneOfferta --> MenuPrincipale: Success
+MenuPrincipale --> CreazioneOfferta: Inserimento proposta di baratto
+RitiroOfferta --> MenuPrincipale: Success
+MenuPrincipale --> RitiroOfferta: Richiesta ritiro\n offerta
+VisualizzazioneOfferteCategoria --> MenuPrincipale: Success
+MenuPrincipale --> VisualizzazioneOfferteCategoria: Richiesta visualizzazione\nofferte categoria
+
+
+MenuPrincipale -right-> [*]: Esci
+@enduml

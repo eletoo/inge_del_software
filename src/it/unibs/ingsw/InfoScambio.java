@@ -98,7 +98,7 @@ public class InfoScambio implements Serializable {
      * @param view view
      */
     private void configureTimeRanges(View view) {
-        while (this.intervalliOrari.isEmpty() || view.yesOrNoQuestion("Inserire un altra fascia oraria per lo scambio? [Y/N]").equalsIgnoreCase("y")) {
+        while (this.intervalliOrari.isEmpty() || view.yesOrNoQuestion("Inserire un altra fascia oraria per lo scambio? [Y/N]")) {
             view.interactionMessage(View.InteractionMessage.EXCHANGE_HOURS_EVERY_30_MINS);
             //chiede l'orario di inizio
             Orario start = Orario.askOrario(Orario.StartOrEnd.START, view);
@@ -119,7 +119,7 @@ public class InfoScambio implements Serializable {
      * @param view view
      */
     private void configureDays(View view) {
-        while (this.giorni.isEmpty() || view.yesOrNoQuestion("Inserire un altro giorno per lo scambio? [Y/N]").equalsIgnoreCase("y")) {
+        while (this.giorni.isEmpty() || view.yesOrNoQuestion("Inserire un altro giorno per lo scambio? [Y/N]")) {
             Giorno g = view.askGiorno();
             if (g != null && !this.giorni.contains(g))
                 this.giorni.add(g);
@@ -132,7 +132,7 @@ public class InfoScambio implements Serializable {
      * @param view view
      */
     private void configurePlaces(View view) {
-        while (this.luoghi.isEmpty() || view.yesOrNoQuestion("Inserire un altro luogo per lo scambio? [Y/N]").equalsIgnoreCase("y")) {
+        while (this.luoghi.isEmpty() || view.yesOrNoQuestion("Inserire un altro luogo per lo scambio? [Y/N]")) {
             this.luoghi.add(view.askLuogo());
         }
     }
