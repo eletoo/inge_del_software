@@ -19,9 +19,9 @@ import java.util.stream.*;
  */
 public class Applicazione {
 
-    public static final String DB_JSON_FILES = System.getProperty("user.dir") + "/db/jsonFiles/";
-    public static final String DB_JSON_CONF_FILE = System.getProperty("user.dir") + "/db/conf/conf.json";
-    public static final String DB_CONF_DIR = System.getProperty("user.dir") + "/db/conf/";
+    private static final String DB_JSON_FILES = System.getProperty("user.dir") + "/db/jsonFiles/";
+    private static final String DB_JSON_CONF_FILE = System.getProperty("user.dir") + "/db/conf/conf.json";
+    private static final String DB_CONF_DIR = System.getProperty("user.dir") + "/db/conf/";
 
     private Map<String, Gerarchia> hierarchies;
     private InfoScambio informazioni;

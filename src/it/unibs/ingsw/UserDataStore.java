@@ -3,9 +3,7 @@ package it.unibs.ingsw;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
-import java.net.URL;
 import java.util.*;
-import java.security.*;
 
 /**
  * UserDataStore: classe che contiene tutti i dati degli utenti
