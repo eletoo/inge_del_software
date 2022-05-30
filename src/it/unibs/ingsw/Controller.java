@@ -1,7 +1,6 @@
 package it.unibs.ingsw;
 
 import java.io.*;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * Controller: gestisce l'accesso degli utenti e l'interazione con l'applicazione mettendo in comunicazione {@link UserDataStore},
@@ -20,11 +19,7 @@ public class Controller {
      * Costruttore.
      */
     public Controller() {
-        try {
-            dataStore = new UserDataStore();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        dataStore = new UserDataStore();
     }
 
     /**
@@ -191,7 +186,7 @@ public class Controller {
                     }
 
                     var sc = Scambio.createExchange(app, view, fruitore);
-                    if(sc != null) {
+                    if (sc != null) {
                         app.addScambio(sc);
                         app.saveExchanges();
                     }
@@ -281,7 +276,7 @@ public class Controller {
                     } else {
                         view.interactionMessage(View.InteractionMessage.CURRENT_INFO);
                         System.out.println(app.getInformazioni().toString());
-                        if (view.yesOrNoQuestion("\nSovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]").equalsIgnoreCase("y")) {
+                        if (view.yesOrNoQuestion("\nSovrascrivere le informazioni di scambio presenti (N.B. La piazza non è modificabile)? [Y/N]")) {
                             app.setInfoScambio(new InfoScambio(app, view));
                         }
                     }

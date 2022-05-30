@@ -169,7 +169,7 @@ public class Applicazione {
         Gson gson = builder.create();
         InfoScambio info = gson.fromJson(reader, InfoScambio.class);
 
-        if (info == null){
+        if (info == null) {
             view.errorMessage(View.ErrorMessage.E_NO_CONF_FILE);
             return;
         }
@@ -282,7 +282,7 @@ public class Applicazione {
 
         //Se la struttura non è valida l'utente dovrà proseguire nell'aggiunta al fine di renderla tale (oppure se ha sbagliato ricomincia)
         //altrimenti chiediamo se vuole aggiungere una categoria
-        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]").equalsIgnoreCase("y")) {
+        while (!root.isStructureValid() || view.yesOrNoQuestion("Aggiungere una nuova categoria? [Y/N]")) {
             view.interactionMessage(View.InteractionMessage.AT_LEAST_TWO_CHILDREN);
             CategoriaEntry padre = view.findCategory(root); //Prompt per l'utente in modo che scelga una categoria
 
@@ -302,7 +302,7 @@ public class Applicazione {
         }
         Gerarchia h = new Gerarchia(root);
         this.addGerarchia(rootname, h);
-        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]").equalsIgnoreCase("y")) {
+        if (view.yesOrNoQuestion("Salvare la gerarchia creata? [Y/N]")) {
             this.saveData();
             view.interactionMessage(View.InteractionMessage.SAVED_CORRECTLY);
             return;
@@ -545,7 +545,7 @@ public class Applicazione {
      * @throws IOException eccezione I/O
      */
     public void saveOfferte() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("./db/offerte.dat"));
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(System.getProperty("user.dir") + "/db/offerte.dat"));
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(this.getOfferte());
         objectOutputStream.close();

@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * View: gestisce l'interazione con l'utente
@@ -153,21 +154,7 @@ public class View {
      * @return giorno inserito dall'utente
      */
     public Giorno askGiorno() {
-        String giorno = inLine("Giorno: ");
-        LinkedList<Giorno> list = new LinkedList<>();
-        for (Giorno g : Giorno.values()) {
-            if (giorno.equalsIgnoreCase(g.getGiorno())
-                    || giorno.equalsIgnoreCase(g.getUnaccentedGiorno())
-                    || g.getGiorno().toUpperCase().startsWith(giorno.toUpperCase())) {
-                list.add(g);
-            }
-        }
-
-        if (list.size() == 1)
-            return list.get(0);
-        errorMessage(ErrorMessage.E_INVALID_DAY);
-
-        return null;
+        return this.choose(Arrays.stream(Giorno.values()).collect(Collectors.toList()), Giorno::getGiorno);
     }
 
     /**
@@ -213,7 +200,6 @@ public class View {
         E_EXISTING_NAME_IN_HIERARCHY("ERRORE: Nome già presente nella gerarchia"),
         E_UNAUTHORIZED_CHOICE("ERRORE: Azione non consentita"),
         E_WRONG_FORMAT("ERRORE: formato errato, inserire un numero"),
-        E_INVALID_DAY("ERRORE: giorno non valido o ambiguo"),
         E_INVALID_TIME("ERRORE: uno degli orari inseriti non è valido"),
         E_INVALID_TIME_RANGE("ERRORE: intervallo orario invalido"),
         E_INVALID_INPUT("ERRORE: Input invalido"),
@@ -318,7 +304,7 @@ public class View {
                 "\n5. Visualizza offerte" +
                 "\n6. Visualizza offerte in scambio" +
                 "\n7. Visualizza offerte chiuse" +
-                "\n8. Configura gerarchie da file"+
+                "\n8. Configura gerarchie da file" +
                 "\n9. Configura informazioni di scambio da file" +
                 "\n10. Logout");
         return (new Scanner(System.in)).next();
@@ -368,12 +354,12 @@ public class View {
      * @param prompt domanda con risposta si'/no da presentare all'utente
      * @return risposta dell'utente
      */
-    public String yesOrNoQuestion(String prompt) {
+    public boolean yesOrNoQuestion(String prompt) {
         String ans;
         do {
             ans = in(prompt);
         } while (!ans.equalsIgnoreCase("y") && !ans.equalsIgnoreCase("n"));
-        return ans;
+        return ans.equalsIgnoreCase("y") ? true : false;
     }
 
     /**

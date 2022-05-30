@@ -215,7 +215,7 @@ public class Offerta implements Serializable {
         for (var field : cat.getCampiNativi().entrySet()) {
             if (field.getValue().isObbligatorio())
                 inputField(offer, field, view);
-            else if (view.yesOrNoQuestion("Configurare un valore per " + field.getKey() + "? [Y/N]").equalsIgnoreCase("y"))
+            else if (view.yesOrNoQuestion("Configurare un valore per " + field.getKey() + "? [Y/N]"))
                 inputField(offer, field, view);
         }
         try {

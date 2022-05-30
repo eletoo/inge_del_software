@@ -16,32 +16,14 @@ public class UserDataStore implements Serializable {
 
     public static final int STD_USERNAME_LEN = 10;
     public static final int STD_PW_LEN = 10;
-    private static UserDataStore instance;
-
-    static {
-        try {
-            instance = new UserDataStore();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
 
     private Map<String, User> userMap;
 
     /**
      * Costruttore.
-     *
-     * @throws NoSuchAlgorithmException eccezione
      */
-    public UserDataStore() throws NoSuchAlgorithmException {
+    public UserDataStore() {
         userMap = new HashMap<>();
-    }
-
-    /**
-     * @return instance
-     */
-    public static UserDataStore getInstance() {
-        return instance;
     }
 
     /**
