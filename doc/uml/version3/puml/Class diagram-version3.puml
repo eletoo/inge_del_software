@@ -83,7 +83,6 @@ DOMENICA
 - giorno: String
 <<constructor>> Giorno(String)
 + getGiorno(): String
-+ getUnaccentedGiorno(): String
 }
 
 class InfoScambio{
@@ -253,7 +252,6 @@ E_EXISTING_ROOT_CATEGORY
 E_EXISTING_NAME_IN_HIERARCHY
 E_UNAUTHORIZED_CHOICE
 E_WRONG_FORMAT
-E_INVALID_DAY
 E_INVALID_TIME
 E_INVALID_TIME_RANGE
 E_INVALID_INPUT
