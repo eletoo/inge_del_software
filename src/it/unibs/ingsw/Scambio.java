@@ -130,7 +130,7 @@ public class Scambio implements Serializable {
         StringBuilder sb = new StringBuilder();
         sb.append("\n\nInformazioni appuntamento per lo scambio:");
         sb.append("\nLuogo: " + view.choose(app.getInformazioni().getLuoghi(), null));
-        sb.append("\nGiorno: " + view.choose(app.getInformazioni().getGiorni(), null));
+        sb.append("\nGiorno: " + view.choose(app.getInformazioni().getGiorni(), Giorno::getGiorno));
 
         List<Orario> orari = new LinkedList<>();
         app.getInformazioni().getIntervalliOrari().stream().forEach(e -> orari.addAll(e.getSingoliOrari()));
