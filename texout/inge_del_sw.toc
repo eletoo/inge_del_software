@@ -53,14 +53,14 @@
 \contentsline {subsection}{\numberline {4.1.5}Configurazione informazioni di scambio}{95}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Visualizzazione offerte, offerte in scambio e offerte chiuse}{96}{subsection.4.1.6}%
 \contentsline {subsection}{\numberline {4.1.7}Caricamento gerarchie e informazioni di scambio in modalità \textit {batch}}{98}{subsection.4.1.7}%
-\contentsline {section}{\numberline {4.2}Profilo Fruitore}{102}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Registrazione e accesso}{102}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.2}Profilo Fruitore}{103}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Registrazione e accesso}{103}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Visualizzazione contenuto gerarchie e informazioni di scambio}{103}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Visualizzazione offerte personali e per categoria}{103}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Creazione offerta}{104}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Ritiro offerta}{105}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Creazione proposta di scambio}{106}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.3}Visualizzazione offerte personali e per categoria}{104}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Creazione offerta}{105}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Ritiro offerta}{106}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Creazione proposta di scambio}{107}{subsection.4.2.6}%
 \contentsline {subsection}{\numberline {4.2.7}Visualizzazione ultimi messaggi relativi agli scambi}{107}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}Proposta appuntamento per lo scambio}{107}{subsection.4.2.8}%
-\contentsline {chapter}{\numberline {5}Librerie}{109}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Librerie utilizzate}{109}{section.5.1}%
+\contentsline {subsection}{\numberline {4.2.8}Proposta appuntamento per lo scambio}{108}{subsection.4.2.8}%
+\contentsline {chapter}{\numberline {5}Librerie}{110}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Librerie utilizzate}{110}{section.5.1}%

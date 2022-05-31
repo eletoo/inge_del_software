@@ -1,10 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1653992704 "c:/Users/Elena Tonini/OneDrive/Desktop/Latex/inge_del_sw/inge_del_sw.tex" "texout/inge_del_sw.pdf" "inge_del_sw" 1653992707
+["pdflatex"] 1653999174 "c:/Users/Elena Tonini/OneDrive/Desktop/Latex/inge_del_sw/inge_del_sw.tex" "texout/inge_del_sw.pdf" "inge_del_sw" 1653999178
   "IO files/Accesso configuratore.txt" 1653384663 159 fd1b313973747d92dac4f1c2f565ae9d ""
   "IO files/Accesso fruitore.txt" 1653410182 167 6ac55c97bb463e6701ace01af5a5359f ""
   "IO files/Creazione gerarchia.txt" 1653385325 2743 58da00a949011e2f32b4f77f029f759b ""
   "IO files/Creazione offerta.txt" 1653411179 893 b6661f2e216ef111aa303be3d7dab2fd ""
   "IO files/Creazione proposta scambio.txt" 1653411947 998 1ee69f73bb29d6946b0d8b61817f171c ""
+  "IO files/Import gerarchie.txt" 1653999151 539 bf2c1b05d204e00d48abb4485b3754a0 ""
+  "IO files/Import info scambio.txt" 1653999037 540 c0c85637820795ac5b33c2ca5119be6f ""
   "IO files/Impostazione infoscambio.txt" 1653980298 1851 a1a138d6b8f0c86072e3871a359e4afc ""
   "IO files/Modello file conf.txt" 1653416724 515 bcecc92e19c2d9b662227bb97008eab0 ""
   "IO files/Modello file gerarchie.txt" 1653416787 3541 cb015db5d63f373ee76eb779804ccfcf ""
@@ -246,12 +248,12 @@
   "inge_del_sw.tex" 1653988408 1813 7e7b58e0f3e3b0307ee93d8f16224033 ""
   "libraries.tex" 1653417956 233 780f577c7f2230c8560261167ddf33e5 ""
   "manuale_installazione.tex" 1653304400 2286 16c6b05b2c5d9ffe833e64cf20fd0127 ""
-  "manuale_uso_conf.tex" 1653992701 5388 7a26d29bff6833bd92fd3b612ac0394c ""
+  "manuale_uso_conf.tex" 1653999166 5749 2bba6c2e1370b5e8aee539daff4bac5a ""
   "manuale_uso_fruitore.tex" 1653412600 3427 dbabc1670ed710a2f8b23541c7250cd4 ""
   "specifiche.tex" 1649235054 24761 5ac66370546242f2be1dd25c9d8f8f94 ""
-  "texout/inge_del_sw.aux" 1653992707 36285 81c392ce3ac8ede0b822015d5efbdffe "pdflatex"
-  "texout/inge_del_sw.out" 1653992707 10959 61700b18c843bb5c415483195fa4d61a "pdflatex"
-  "texout/inge_del_sw.toc" 1653992707 5751 2036ebbe202e2816ede41ee4ef8e51c0 "pdflatex"
+  "texout/inge_del_sw.aux" 1653999178 36534 321c7a3f591ec6d5523708b163816fe4 "pdflatex"
+  "texout/inge_del_sw.out" 1653999178 10959 61700b18c843bb5c415483195fa4d61a "pdflatex"
+  "texout/inge_del_sw.toc" 1653999178 5751 b7357fd982b1ed806d8ae08379ac510c "pdflatex"
   (generated)
   "texout/inge_del_sw.aux"
   "texout/inge_del_sw.log"

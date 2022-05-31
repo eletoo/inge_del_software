@@ -1207,6 +1207,18 @@ INPUT ./IO files/Modello file conf.txt
 INPUT IO files/Modello file conf.txt
 INPUT ./IO files/Modello file conf.txt
 INPUT IO files/Modello file conf.txt
+INPUT ./IO files/Import info scambio.txt
+INPUT IO files/Import info scambio.txt
+INPUT ./IO files/Import info scambio.txt
+INPUT IO files/Import info scambio.txt
+INPUT ./IO files/Import info scambio.txt
+INPUT IO files/Import info scambio.txt
+INPUT ./IO files/Import gerarchie.txt
+INPUT IO files/Import gerarchie.txt
+INPUT ./IO files/Import gerarchie.txt
+INPUT IO files/Import gerarchie.txt
+INPUT ./IO files/Import gerarchie.txt
+INPUT IO files/Import gerarchie.txt
 INPUT ./manuale_uso_fruitore.tex
 INPUT manuale_uso_fruitore.tex
 INPUT ./manuale_uso_fruitore.tex

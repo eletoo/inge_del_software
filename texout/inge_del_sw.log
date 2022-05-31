@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.9)  31 MAY 2022 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.9)  31 MAY 2022 14:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1013,27 +1013,27 @@ File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ]) (./IO files/Accesso configuratore.txt) (./IO files/Creazione gerarchia.txt [91] [92]) (./IO files/Visualizzazione gerarchie.txt [93]) [94] (./IO files/Salvataggio dati.txt) (./IO files/Impostazione infoscambio.txt [95]) (./IO files/Visualizzazione offerte aperte.txt [96]) (./IO files/Visualizzazione offerte in scambio.txt [97]) (./IO files/Visualizzazione offerte chiuse.txt) [98] (./IO files/Modello file gerarchie.txt
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 7.
- [99] [100]) (./IO files/Modello file conf.txt [101])) (./manuale_uso_fruitore.tex (./IO files/Registrazione fruitore.txt) (./IO files/Accesso fruitore.txt) [102] (./IO files/Visualizzazione info.txt) (./IO files/Visualizzazione offerte - fruitore.txt [103]) (./IO files/Visualizzazione offerte per categoria - fruitore.txt) (./IO files/Creazione offerta.txt [104]) (./IO files/Ritiro offerta.txt [105]) (./IO files/Creazione proposta scambio.txt [106]) (./IO files/Visualizzazione messaggio.txt) (./IO files/Proposta appuntamento.txt [107])) [108]
+ [99] [100]) (./IO files/Modello file conf.txt [101]) (./IO files/Import info scambio.txt) (./IO files/Import gerarchie.txt)) (./manuale_uso_fruitore.tex [102] (./IO files/Registrazione fruitore.txt) (./IO files/Accesso fruitore.txt) (./IO files/Visualizzazione info.txt [103]) (./IO files/Visualizzazione offerte - fruitore.txt) (./IO files/Visualizzazione offerte per categoria - fruitore.txt [104]) (./IO files/Creazione offerta.txt [105]) (./IO files/Ritiro offerta.txt) [106] (./IO files/Creazione proposta scambio.txt) (./IO files/Visualizzazione messaggio.txt [107]) (./IO files/Proposta appuntamento.txt [108])) [109]
 Capitolo 5.
-(./libraries.tex) [109
+(./libraries.tex) [110
 
 ] (texout/inge_del_sw.aux)
 Package rerunfilecheck Info: File `inge_del_sw.out' has not changed.
 (rerunfilecheck)             Checksum: 61700B18C843BB5C415483195FA4D61A;10959.
  ) 
 Here is how much of TeX's memory you used:
- 14589 strings out of 479390
- 242502 string characters out of 5870921
+ 14628 strings out of 479390
+ 243251 string characters out of 5870921
  910096 words of memory out of 5000000
- 31000 multiletter control sequences out of 15000+600000
+ 31004 multiletter control sequences out of 15000+600000
  477825 words of font info for 58 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  60i,19n,63p,1040b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on texout/inge_del_sw.pdf (110 pages, 6862904 bytes).
+Output written on texout/inge_del_sw.pdf (111 pages, 6865076 bytes).
 PDF statistics:
- 2194 PDF objects out of 2487 (max. 8388607)
- 2011 compressed objects within 21 object streams
- 1143 named destinations out of 1200 (max. 500000)
+ 2232 PDF objects out of 2487 (max. 8388607)
+ 2048 compressed objects within 21 object streams
+ 1172 named destinations out of 1200 (max. 500000)
  643 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,13 @@
+        Inserisci il numero corrispondente all'azione che vuoi eseguire:
+        1. Crea una nuova gerarchia
+        2. Visualizza il contenuto delle gerarchie attualmente presenti nel sistema
+        3. Salva
+        4. Configura informazioni di scambio
+        5. Visualizza offerte
+        6. Visualizza offerte in scambio
+        7. Visualizza offerte chiuse
+        8. Configura gerarchie da file
+        9. Configura informazioni di scambio da file
+        10. Logout
+(in)    8
+        Gerarchie importate correttamente
