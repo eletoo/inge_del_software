@@ -120,6 +120,7 @@ public class InfoScambio implements Serializable {
      */
     private void configureDays(View view) {
         while (this.giorni.isEmpty() || view.yesOrNoQuestion("Inserire un altro giorno per lo scambio? [Y/N]")) {
+            view.message("Giorno: ");
             Giorno g = view.askGiorno();
             if (g != null && !this.giorni.contains(g))
                 this.giorni.add(g);
