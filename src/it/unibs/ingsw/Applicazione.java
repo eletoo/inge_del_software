@@ -200,7 +200,7 @@ public class Applicazione {
         }
 
         this.setInfoScambio(info);
-
+        view.message("Informazioni importate correttamente");
         this.saveInfo();
     }
 
@@ -413,7 +413,7 @@ public class Applicazione {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        view.message("Gerarchie importate correttamente");
         this.saveData();
         return;
     }
