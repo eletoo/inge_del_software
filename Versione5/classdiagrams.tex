@@ -17,13 +17,12 @@ Si tenga inoltre conto del fatto che le classi:
     \item \texttt{Scambio}
     \item \texttt{User}
     \item \texttt{UserDataStore}
-    \item \textcolor{red}{CI SONO ALTRE CLASSI???}
 \end{itemize}
 implementano l'interfaccia \texttt{Serializable}, nonostante tale relazione non sia esplicitamente riportata nei diagrammi delle classi al fine di semplificare il layout dei diagrammi stessi.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=16cm]{imagesV5/Class Diagram - Versione 5.0.png}
+    \includegraphics[width=16cm]{imagesV5/diagramma classi.png}
     \caption{\label{fig:Class Diagram - v5}Diagramma UML delle classi - Versione 5}
 \end{figure} 
 
@@ -35,7 +34,7 @@ La classe \texttt{User} è una classe astratta estesa dalla classe \texttt{Confi
 
 La classe \texttt{Applicazione} permette di tenere traccia delle gerarchie contenute nell'applicazione. 
 Essa contiene infatti un metodo che verifica se il nome di una categoria radice di una gerarchia è già utilizzato dalla categoria radice di un'altra gerarchia, un metodo che permette di creare e aggiungere una nuova gerarchia, metodi che permettono di ottenere le gerarchie presenti nell'applicazione o di assegnare loro i valori desiderati, metodi che permettono di salvare i dati contenuti nelle gerarchie e di caricare i dati salvati durante gli utilizzi precedenti dell'applicazione. 
-La classe contiene anche dei metodi che permettono l'immissione di informazioni dal back-end tramite file preesistenti. 
+La classe contiene anche dei metodi che permettono l'introduzione di informazioni dal \textit{back-end} tramite file preesistenti. 
 
 La classe \texttt{Gerarchia} permette di tenere traccia del contenuto di ogni gerarchia: ogni gerarchia è caratterizzata da una categoria radice che, a seconda che sia istanza della classe \texttt{Foglia} o \texttt{Nodo}, può avere o meno delle sottocategorie (a loro volta istanze della classe \texttt{Foglia} o \texttt{Nodo}). 
 
@@ -50,23 +49,19 @@ La classe \texttt{Controller} contiene metodi per consentire l'accesso a un prof
 
 La classe \texttt{Main} contiene il solo metodo main che permette di interagire con l'applicazione selezionando l'azione da compiere tra accesso, registrazione o uscita dall'applicazione.
 
-L'\textit{enum} \texttt{Giorno} gestisce l'elenco dei giorni della settimana.
-
 La classe \texttt{InfoScambio} gestisce le informazioni di scambio che devono essere impostate dall'utente Configuratore.
 
 La classe \texttt{IntervalloOrario} contiene metodi per validare la correttezza di un intervallo orario introdotto dall'utente, assicurandosi che l'intervallo non sia ancora stato inserito tra le informazioni di scambio e che non si sovrapponga ad altri intervalli già presenti.
 
 La classe \texttt{Orario} contiene metodi per validare la correttezza di un singolo orario introdotto dall'utente, assicurando che esso sia nel formato \textit{[hh:mm]} e che i minuti possano essere o 00 oppure 30, in quanto gli scambi possono avvenire solo allo scoccare dell'ora o della mezz'ora.
 
-La classe \texttt{Offerta} contiene metodi per la gestione delle offerte, in particolare ne consente la creazione da parte dell'utente selezionando la categoria foglia di appartenenza, impostando un nome e dei campi nativi (obbligatori e facoltativi); permette inoltre di gestire lo stato delle offerte che possono essere opportunamente modificate a seconda delle esigenze dell'utente oppure ritirate. Contiene inoltre dei metodi che permettono di ottenere informazioni sulle offerte presenti nell'applicazione.
-
-La classe \texttt{ExchangeMessage} contiene metodi per la gestione di messaggi associati a specifici scambi effettuati tra due utenti.
+La classe \texttt{Offerta} contiene metodi per la gestione delle offerte; in particolare ne consente la creazione da parte dell'utente selezionando la categoria foglia di appartenenza, impostando un nome e il valore dei campi nativi (obbligatori e facoltativi); permette inoltre di gestire lo stato delle offerte e visualizzare informazioni sulle offerte presenti nell'applicazione.
 
 La classe \texttt{Scambio} contiene metodi per la gestione degli scambi tra gli utenti, in particolare contiene metodi che permettono all'utente di selezionare un'offerta aperta di cui è proprietario e un'altra appartenente ad un altro utente con cui effettuare lo scambio. I metodi si occupano di gestire correttamente l'operazione di scambio garantendo la possibilità di fissare un appuntamento per effettuare lo stesso. Inoltre la classe si occupa di gestire il cambiamento di stato cui l'offerta è soggetta nel corso dello scambio.
 
-\begin{figure}[bh]
+\begin{figure}[!]
     \centering
-    \includegraphics[width=16cm]{imagesV5/Vers5Parziale.png}
+    \includegraphics[width=16cm]{imagesV5/partial class diagram.png}
     \caption{\label{fig:Simplified Class Diagram - v5}Diagramma UML delle classi semplificato - Versione 5}
 \end{figure}
 \bigskip

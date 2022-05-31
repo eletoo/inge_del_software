@@ -9,8 +9,31 @@
         \hline
         Scenario principale & 
             \begin{tabular}{p{10cm}}
-                1. L’utente richiede di importare gli ingressi del back-end da un file preesistente \\
-                2. Il sistema importa tali ingressi \\
+                Precondizione: L’utente richiede di importare le informazioni di scambio da un file preesistente \\
+                Precondizione: è presente esattamente un file contenente le informazioni di scambio nel formato corretto\\
+                1.a. Vengono importate le informazioni di scambio da file\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: è presente un numero errato di file contenenti le informazioni di scambio oppure le informazioni sono riportate nel formato errato\\
+                1.a.a. Viene segnalato un errore\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: L’utente richiede di importare il contenuto delle gerarchie da un file preesistente \\
+                Precondizione: è presente almeno un file contenente una gerarchia da importare\\
+                1.b. Viene importato il contenuto delle gerarchie da file\\
+                Fine
+            \end{tabular}\\
+        \hline
+        Scenario alternativo & 
+            \begin{tabular}{p{10cm}}
+                Precondizione: non è presente nessun file contenente gerarchie da importare\\
+                1.b.a. Viene segnalato un errore\\
                 Fine
             \end{tabular}\\
         \hline

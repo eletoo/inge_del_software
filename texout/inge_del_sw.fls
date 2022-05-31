@@ -598,6 +598,7 @@ INPUT texout/inge_del_sw.toc
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT texout/inge_del_sw.toc
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
@@ -607,7 +608,6 @@ INPUT ./specifiche.tex
 INPUT specifiche.tex
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./Versione1/usecases.tex
@@ -702,16 +702,16 @@ INPUT ./Versione2/classdiagram.tex
 INPUT Versione2/classdiagram.tex
 INPUT ./Versione2/classdiagram.tex
 INPUT Versione2/classdiagram.tex
-INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
-INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
-INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
-INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
-INPUT ./images//imagesV2/Class Diagram - Versione 2.0.png
-INPUT ./images//imagesV2/Vers2Parziale.png
-INPUT ./images//imagesV2/Vers2Parziale.png
-INPUT ./images//imagesV2/Vers2Parziale.png
-INPUT ./images//imagesV2/Vers2Parziale.png
-INPUT ./images//imagesV2/Vers2Parziale.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
+INPUT ./images//imagesV2/Partial class diagram-Version2.0.png
 INPUT ./Versione2/behaviourdiagrams.tex
 INPUT Versione2/behaviourdiagrams.tex
 INPUT ./Versione2/behaviourdiagrams.tex
@@ -770,20 +770,524 @@ INPUT ./Versione2/Use Cases/visualizzazioneInfoApp.tex
 INPUT Versione2/Use Cases/visualizzazioneInfoApp.tex
 INPUT ./Versione2/Use Cases/visualizzazioneInfoApp.tex
 INPUT Versione2/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione3/usecases.tex
+INPUT Versione3/usecases.tex
+INPUT ./Versione3/usecases.tex
+INPUT Versione3/usecases.tex
+INPUT ./Versione3/introTables.tex
+INPUT Versione3/introTables.tex
+INPUT ./Versione3/introTables.tex
+INPUT Versione3/introTables.tex
+INPUT ./images//imagesV3/Use case diagram-Version3.0.png
+INPUT ./images//imagesV3/Use case diagram-Version3.0.png
+INPUT ./images//imagesV3/Use case diagram-Version3.0.png
+INPUT ./images//imagesV3/Use case diagram-Version3.0.png
+INPUT ./images//imagesV3/Use case diagram-Version3.0.png
+INPUT ./Versione3/classdiagrams.tex
+INPUT Versione3/classdiagrams.tex
+INPUT ./Versione3/classdiagrams.tex
+INPUT Versione3/classdiagrams.tex
+INPUT ./images//imagesV3/Class diagram-version3.png
+INPUT ./images//imagesV3/Class diagram-version3.png
+INPUT ./images//imagesV3/Class diagram-version3.png
+INPUT ./images//imagesV3/Class diagram-version3.png
+INPUT ./images//imagesV3/Class diagram-version3.png
+INPUT ./images//imagesV3/partial class diagram.png
+INPUT ./images//imagesV3/partial class diagram.png
+INPUT ./images//imagesV3/partial class diagram.png
+INPUT ./images//imagesV3/partial class diagram.png
+INPUT ./images//imagesV3/partial class diagram.png
+INPUT ./Versione3/behaviourdiagrams.tex
+INPUT Versione3/behaviourdiagrams.tex
+INPUT ./Versione3/behaviourdiagrams.tex
+INPUT Versione3/behaviourdiagrams.tex
+INPUT ./images//imagesV3/State diagram - configuratore.png
+INPUT ./images//imagesV3/State diagram - configuratore.png
+INPUT ./images//imagesV3/State diagram - configuratore.png
+INPUT ./images//imagesV3/State diagram - configuratore.png
+INPUT ./images//imagesV3/State diagram - configuratore.png
+INPUT ./images//imagesV3/State diagram - fruitore.png
+INPUT ./images//imagesV3/State diagram - fruitore.png
+INPUT ./images//imagesV3/State diagram - fruitore.png
+INPUT ./images//imagesV3/State diagram - fruitore.png
+INPUT ./images//imagesV3/State diagram - fruitore.png
+INPUT ./Versione3/table.tex
+INPUT Versione3/table.tex
+INPUT ./Versione3/table.tex
+INPUT Versione3/table.tex
+INPUT ./Versione3/Use Cases/accessoConfiguratore.tex
+INPUT Versione3/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione3/Use Cases/accessoConfiguratore.tex
+INPUT Versione3/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione3/Use Cases/creazioneConfiguratore.tex
+INPUT Versione3/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione3/Use Cases/creazioneConfiguratore.tex
+INPUT Versione3/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione3/Use Cases/creazioneGerarchia.tex
+INPUT Versione3/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione3/Use Cases/creazioneGerarchia.tex
+INPUT Versione3/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione3/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione3/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione3/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione3/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione3/Use Cases/aggiuntaCategoria.tex
+INPUT Versione3/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione3/Use Cases/aggiuntaCategoria.tex
+INPUT Versione3/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione3/Use Cases/salvataggioDati.tex
+INPUT Versione3/Use Cases/salvataggioDati.tex
+INPUT ./Versione3/Use Cases/salvataggioDati.tex
+INPUT Versione3/Use Cases/salvataggioDati.tex
+INPUT ./Versione3/Use Cases/configurazioneParametri.tex
+INPUT Versione3/Use Cases/configurazioneParametri.tex
+INPUT ./Versione3/Use Cases/configurazioneParametri.tex
+INPUT Versione3/Use Cases/configurazioneParametri.tex
+INPUT ./Versione3/Use Cases/creazioneFruitore.tex
+INPUT Versione3/Use Cases/creazioneFruitore.tex
+INPUT ./Versione3/Use Cases/creazioneFruitore.tex
+INPUT Versione3/Use Cases/creazioneFruitore.tex
+INPUT ./Versione3/Use Cases/accessoFruitore.tex
+INPUT Versione3/Use Cases/accessoFruitore.tex
+INPUT ./Versione3/Use Cases/accessoFruitore.tex
+INPUT Versione3/Use Cases/accessoFruitore.tex
+INPUT ./Versione3/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione3/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione3/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione3/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione3/Use Cases/ritiraOfferta.tex
+INPUT Versione3/Use Cases/ritiraOfferta.tex
+INPUT ./Versione3/Use Cases/ritiraOfferta.tex
+INPUT Versione3/Use Cases/ritiraOfferta.tex
+INPUT ./Versione3/Use Cases/offertaBaratto.tex
+INPUT Versione3/Use Cases/offertaBaratto.tex
+INPUT ./Versione3/Use Cases/offertaBaratto.tex
+INPUT Versione3/Use Cases/offertaBaratto.tex
+INPUT ./Versione3/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione3/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione3/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione3/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione3/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione3/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione3/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione3/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione4/usecases.tex
+INPUT Versione4/usecases.tex
+INPUT ./Versione4/usecases.tex
+INPUT Versione4/usecases.tex
+INPUT ./Versione4/introTables.tex
+INPUT Versione4/introTables.tex
+INPUT ./Versione4/introTables.tex
+INPUT Versione4/introTables.tex
+INPUT ./images//imagesV4/casi d'uso.png
+INPUT ./images//imagesV4/casi d'uso.png
+INPUT ./images//imagesV4/casi d'uso.png
+INPUT ./images//imagesV4/casi d'uso.png
+INPUT ./images//imagesV4/casi d'uso.png
+INPUT ./Versione4/classdiagrams.tex
+INPUT Versione4/classdiagrams.tex
+INPUT ./Versione4/classdiagrams.tex
+INPUT Versione4/classdiagrams.tex
+INPUT ./images//imagesV4/Class diagram.png
+INPUT ./images//imagesV4/Class diagram.png
+INPUT ./images//imagesV4/Class diagram.png
+INPUT ./images//imagesV4/Class diagram.png
+INPUT ./images//imagesV4/Class diagram.png
+INPUT ./images//imagesV4/Partial class diagram.png
+INPUT ./images//imagesV4/Partial class diagram.png
+INPUT ./images//imagesV4/Partial class diagram.png
+INPUT ./images//imagesV4/Partial class diagram.png
+INPUT ./images//imagesV4/Partial class diagram.png
+INPUT ./Versione4/behaviourdiagrams.tex
+INPUT Versione4/behaviourdiagrams.tex
+INPUT ./Versione4/behaviourdiagrams.tex
+INPUT Versione4/behaviourdiagrams.tex
+INPUT ./images//imagesV4/state diagram configuratore.png
+INPUT ./images//imagesV4/state diagram configuratore.png
+INPUT ./images//imagesV4/state diagram configuratore.png
+INPUT ./images//imagesV4/state diagram configuratore.png
+INPUT ./images//imagesV4/state diagram configuratore.png
+INPUT ./images//imagesV4/state diagram fruitore.png
+INPUT ./images//imagesV4/state diagram fruitore.png
+INPUT ./images//imagesV4/state diagram fruitore.png
+INPUT ./images//imagesV4/state diagram fruitore.png
+INPUT ./images//imagesV4/state diagram fruitore.png
+INPUT ./Versione4/table.tex
+INPUT Versione4/table.tex
+INPUT ./Versione4/table.tex
+INPUT Versione4/table.tex
+INPUT ./Versione4/Use Cases/accessoConfiguratore.tex
+INPUT Versione4/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione4/Use Cases/accessoConfiguratore.tex
+INPUT Versione4/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT Versione4/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione4/Use Cases/creazioneGerarchia.tex
+INPUT Versione4/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione4/Use Cases/creazioneGerarchia.tex
+INPUT Versione4/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione4/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT Versione4/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione4/Use Cases/salvataggioDati.tex
+INPUT Versione4/Use Cases/salvataggioDati.tex
+INPUT ./Versione4/Use Cases/salvataggioDati.tex
+INPUT Versione4/Use Cases/salvataggioDati.tex
+INPUT ./Versione4/Use Cases/configurazioneParametri.tex
+INPUT Versione4/Use Cases/configurazioneParametri.tex
+INPUT ./Versione4/Use Cases/configurazioneParametri.tex
+INPUT Versione4/Use Cases/configurazioneParametri.tex
+INPUT ./Versione4/Use Cases/creazioneFruitore.tex
+INPUT Versione4/Use Cases/creazioneFruitore.tex
+INPUT ./Versione4/Use Cases/creazioneFruitore.tex
+INPUT Versione4/Use Cases/creazioneFruitore.tex
+INPUT ./Versione4/Use Cases/accessoFruitore.tex
+INPUT Versione4/Use Cases/accessoFruitore.tex
+INPUT ./Versione4/Use Cases/accessoFruitore.tex
+INPUT Versione4/Use Cases/accessoFruitore.tex
+INPUT ./Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione4/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione4/Use Cases/ritiraOfferta.tex
+INPUT Versione4/Use Cases/ritiraOfferta.tex
+INPUT ./Versione4/Use Cases/ritiraOfferta.tex
+INPUT Versione4/Use Cases/ritiraOfferta.tex
+INPUT ./Versione4/Use Cases/offertaBaratto.tex
+INPUT Versione4/Use Cases/offertaBaratto.tex
+INPUT ./Versione4/Use Cases/offertaBaratto.tex
+INPUT Versione4/Use Cases/offertaBaratto.tex
+INPUT ./Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione4/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione4/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione4/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione4/Use Cases/propostaScambio.tex
+INPUT Versione4/Use Cases/propostaScambio.tex
+INPUT ./Versione4/Use Cases/propostaScambio.tex
+INPUT Versione4/Use Cases/propostaScambio.tex
+INPUT ./Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione4/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione4/Use Cases/rispostaScambio.tex
+INPUT Versione4/Use Cases/rispostaScambio.tex
+INPUT ./Versione4/Use Cases/rispostaScambio.tex
+INPUT Versione4/Use Cases/rispostaScambio.tex
+INPUT ./Versione4/Use Cases/propostaAppuntamento.tex
+INPUT Versione4/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione4/Use Cases/propostaAppuntamento.tex
+INPUT Versione4/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT Versione4/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT ./Versione4/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT Versione4/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT ./Versione5/usecases.tex
+INPUT Versione5/usecases.tex
+INPUT ./Versione5/usecases.tex
+INPUT Versione5/usecases.tex
+INPUT ./Versione5/introTables.tex
+INPUT Versione5/introTables.tex
+INPUT ./Versione5/introTables.tex
+INPUT Versione5/introTables.tex
+INPUT ./images//imagesV5/casi d'uso.png
+INPUT ./images//imagesV5/casi d'uso.png
+INPUT ./images//imagesV5/casi d'uso.png
+INPUT ./images//imagesV5/casi d'uso.png
+INPUT ./images//imagesV5/casi d'uso.png
+INPUT ./Versione5/classdiagrams.tex
+INPUT Versione5/classdiagrams.tex
+INPUT ./Versione5/classdiagrams.tex
+INPUT Versione5/classdiagrams.tex
+INPUT ./images//imagesV5/diagramma classi.png
+INPUT ./images//imagesV5/diagramma classi.png
+INPUT ./images//imagesV5/diagramma classi.png
+INPUT ./images//imagesV5/diagramma classi.png
+INPUT ./images//imagesV5/diagramma classi.png
+INPUT ./images//imagesV5/partial class diagram.png
+INPUT ./images//imagesV5/partial class diagram.png
+INPUT ./images//imagesV5/partial class diagram.png
+INPUT ./images//imagesV5/partial class diagram.png
+INPUT ./images//imagesV5/partial class diagram.png
+INPUT ./Versione5/behaviourdiagrams.tex
+INPUT Versione5/behaviourdiagrams.tex
+INPUT ./Versione5/behaviourdiagrams.tex
+INPUT Versione5/behaviourdiagrams.tex
+INPUT ./images//imagesV5/state diagram configuratore.png
+INPUT ./images//imagesV5/state diagram configuratore.png
+INPUT ./images//imagesV5/state diagram configuratore.png
+INPUT ./images//imagesV5/state diagram configuratore.png
+INPUT ./images//imagesV5/state diagram configuratore.png
+INPUT ./images//imagesV5/state diagram fruitore.png
+INPUT ./images//imagesV5/state diagram fruitore.png
+INPUT ./images//imagesV5/state diagram fruitore.png
+INPUT ./images//imagesV5/state diagram fruitore.png
+INPUT ./images//imagesV5/state diagram fruitore.png
+INPUT ./Versione5/table.tex
+INPUT Versione5/table.tex
+INPUT ./Versione5/table.tex
+INPUT Versione5/table.tex
+INPUT ./Versione5/Use Cases/accessoConfiguratore.tex
+INPUT Versione5/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione5/Use Cases/accessoConfiguratore.tex
+INPUT Versione5/Use Cases/accessoConfiguratore.tex
+INPUT ./Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT Versione5/Use Cases/creazioneConfiguratore.tex
+INPUT ./Versione5/Use Cases/creazioneGerarchia.tex
+INPUT Versione5/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione5/Use Cases/creazioneGerarchia.tex
+INPUT Versione5/Use Cases/creazioneGerarchia.tex
+INPUT ./Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT Versione5/Use Cases/visualizzazioneGerarchie.tex
+INPUT ./Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT Versione5/Use Cases/aggiuntaCategoria.tex
+INPUT ./Versione5/Use Cases/salvataggioDati.tex
+INPUT Versione5/Use Cases/salvataggioDati.tex
+INPUT ./Versione5/Use Cases/salvataggioDati.tex
+INPUT Versione5/Use Cases/salvataggioDati.tex
+INPUT ./Versione5/Use Cases/configurazioneParametri.tex
+INPUT Versione5/Use Cases/configurazioneParametri.tex
+INPUT ./Versione5/Use Cases/configurazioneParametri.tex
+INPUT Versione5/Use Cases/configurazioneParametri.tex
+INPUT ./Versione5/Use Cases/creazioneFruitore.tex
+INPUT Versione5/Use Cases/creazioneFruitore.tex
+INPUT ./Versione5/Use Cases/creazioneFruitore.tex
+INPUT Versione5/Use Cases/creazioneFruitore.tex
+INPUT ./Versione5/Use Cases/accessoFruitore.tex
+INPUT Versione5/Use Cases/accessoFruitore.tex
+INPUT ./Versione5/Use Cases/accessoFruitore.tex
+INPUT Versione5/Use Cases/accessoFruitore.tex
+INPUT ./Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT Versione5/Use Cases/visualizzazioneInfoApp.tex
+INPUT ./Versione5/Use Cases/ritiraOfferta.tex
+INPUT Versione5/Use Cases/ritiraOfferta.tex
+INPUT ./Versione5/Use Cases/ritiraOfferta.tex
+INPUT Versione5/Use Cases/ritiraOfferta.tex
+INPUT ./Versione5/Use Cases/offertaBaratto.tex
+INPUT Versione5/Use Cases/offertaBaratto.tex
+INPUT ./Versione5/Use Cases/offertaBaratto.tex
+INPUT Versione5/Use Cases/offertaBaratto.tex
+INPUT ./Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT Versione5/Use Cases/visualizzaOfferteCategoria.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT Versione5/Use Cases/visualizzazioneOffertePersonali.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteChiuse.tex
+INPUT ./Versione5/Use Cases/propostaScambio.tex
+INPUT Versione5/Use Cases/propostaScambio.tex
+INPUT ./Versione5/Use Cases/propostaScambio.tex
+INPUT Versione5/Use Cases/propostaScambio.tex
+INPUT ./Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT Versione5/Use Cases/visualizzazioneUltimoMessaggio.tex
+INPUT ./Versione5/Use Cases/rispostaScambio.tex
+INPUT Versione5/Use Cases/rispostaScambio.tex
+INPUT ./Versione5/Use Cases/rispostaScambio.tex
+INPUT Versione5/Use Cases/rispostaScambio.tex
+INPUT ./Versione5/Use Cases/propostaAppuntamento.tex
+INPUT Versione5/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione5/Use Cases/propostaAppuntamento.tex
+INPUT Versione5/Use Cases/propostaAppuntamento.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT ./Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT Versione5/Use Cases/visualizzazioneOfferteInScambio.tex
+INPUT ./Versione5/Use Cases/importaInformazioni.tex
+INPUT Versione5/Use Cases/importaInformazioni.tex
+INPUT ./Versione5/Use Cases/importaInformazioni.tex
+INPUT Versione5/Use Cases/importaInformazioni.tex
 INPUT ./manuale_installazione.tex
 INPUT manuale_installazione.tex
 INPUT ./manuale_installazione.tex
 INPUT manuale_installazione.tex
+INPUT ./manuale_uso_conf.tex
+INPUT manuale_uso_conf.tex
+INPUT ./manuale_uso_conf.tex
+INPUT manuale_uso_conf.tex
+INPUT ./IO files/Registrazione configuratore.txt
+INPUT IO files/Registrazione configuratore.txt
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
+INPUT ./IO files/Registrazione configuratore.txt
+INPUT IO files/Registrazione configuratore.txt
+INPUT ./IO files/Registrazione configuratore.txt
+INPUT IO files/Registrazione configuratore.txt
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
+INPUT c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tctt0900.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT ./IO files/Accesso configuratore.txt
+INPUT IO files/Accesso configuratore.txt
+INPUT ./IO files/Accesso configuratore.txt
+INPUT IO files/Accesso configuratore.txt
+INPUT ./IO files/Accesso configuratore.txt
+INPUT IO files/Accesso configuratore.txt
+INPUT ./IO files/Creazione gerarchia.txt
+INPUT IO files/Creazione gerarchia.txt
+INPUT ./IO files/Creazione gerarchia.txt
+INPUT IO files/Creazione gerarchia.txt
+INPUT ./IO files/Creazione gerarchia.txt
+INPUT IO files/Creazione gerarchia.txt
+INPUT ./IO files/Visualizzazione gerarchie.txt
+INPUT IO files/Visualizzazione gerarchie.txt
+INPUT ./IO files/Visualizzazione gerarchie.txt
+INPUT IO files/Visualizzazione gerarchie.txt
+INPUT ./IO files/Visualizzazione gerarchie.txt
+INPUT IO files/Visualizzazione gerarchie.txt
+INPUT ./IO files/Salvataggio dati.txt
+INPUT IO files/Salvataggio dati.txt
+INPUT ./IO files/Salvataggio dati.txt
+INPUT IO files/Salvataggio dati.txt
+INPUT ./IO files/Salvataggio dati.txt
+INPUT IO files/Salvataggio dati.txt
+INPUT ./IO files/Impostazione infoscambio.txt
+INPUT IO files/Impostazione infoscambio.txt
+INPUT ./IO files/Impostazione infoscambio.txt
+INPUT IO files/Impostazione infoscambio.txt
+INPUT ./IO files/Impostazione infoscambio.txt
+INPUT IO files/Impostazione infoscambio.txt
+INPUT ./IO files/Visualizzazione offerte aperte.txt
+INPUT IO files/Visualizzazione offerte aperte.txt
+INPUT ./IO files/Visualizzazione offerte aperte.txt
+INPUT IO files/Visualizzazione offerte aperte.txt
+INPUT ./IO files/Visualizzazione offerte aperte.txt
+INPUT IO files/Visualizzazione offerte aperte.txt
+INPUT ./IO files/Visualizzazione offerte in scambio.txt
+INPUT IO files/Visualizzazione offerte in scambio.txt
+INPUT ./IO files/Visualizzazione offerte in scambio.txt
+INPUT IO files/Visualizzazione offerte in scambio.txt
+INPUT ./IO files/Visualizzazione offerte in scambio.txt
+INPUT IO files/Visualizzazione offerte in scambio.txt
+INPUT ./IO files/Visualizzazione offerte chiuse.txt
+INPUT IO files/Visualizzazione offerte chiuse.txt
+INPUT ./IO files/Visualizzazione offerte chiuse.txt
+INPUT IO files/Visualizzazione offerte chiuse.txt
+INPUT ./IO files/Visualizzazione offerte chiuse.txt
+INPUT IO files/Visualizzazione offerte chiuse.txt
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./IO files/Modello file gerarchie.txt
+INPUT IO files/Modello file gerarchie.txt
+INPUT ./IO files/Modello file gerarchie.txt
+INPUT IO files/Modello file gerarchie.txt
+INPUT ./IO files/Modello file gerarchie.txt
+INPUT IO files/Modello file gerarchie.txt
+INPUT ./IO files/Modello file conf.txt
+INPUT IO files/Modello file conf.txt
+INPUT ./IO files/Modello file conf.txt
+INPUT IO files/Modello file conf.txt
+INPUT ./IO files/Modello file conf.txt
+INPUT IO files/Modello file conf.txt
+INPUT ./manuale_uso_fruitore.tex
+INPUT manuale_uso_fruitore.tex
+INPUT ./manuale_uso_fruitore.tex
+INPUT manuale_uso_fruitore.tex
+INPUT ./IO files/Registrazione fruitore.txt
+INPUT IO files/Registrazione fruitore.txt
+INPUT ./IO files/Registrazione fruitore.txt
+INPUT IO files/Registrazione fruitore.txt
+INPUT ./IO files/Registrazione fruitore.txt
+INPUT IO files/Registrazione fruitore.txt
+INPUT ./IO files/Accesso fruitore.txt
+INPUT IO files/Accesso fruitore.txt
+INPUT ./IO files/Accesso fruitore.txt
+INPUT IO files/Accesso fruitore.txt
+INPUT ./IO files/Accesso fruitore.txt
+INPUT IO files/Accesso fruitore.txt
+INPUT ./IO files/Visualizzazione info.txt
+INPUT IO files/Visualizzazione info.txt
+INPUT ./IO files/Visualizzazione info.txt
+INPUT IO files/Visualizzazione info.txt
+INPUT ./IO files/Visualizzazione info.txt
+INPUT IO files/Visualizzazione info.txt
+INPUT ./IO files/Visualizzazione offerte - fruitore.txt
+INPUT IO files/Visualizzazione offerte - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte - fruitore.txt
+INPUT IO files/Visualizzazione offerte - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte - fruitore.txt
+INPUT IO files/Visualizzazione offerte - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT ./IO files/Creazione offerta.txt
+INPUT IO files/Creazione offerta.txt
+INPUT ./IO files/Creazione offerta.txt
+INPUT IO files/Creazione offerta.txt
+INPUT ./IO files/Creazione offerta.txt
+INPUT IO files/Creazione offerta.txt
+INPUT ./IO files/Ritiro offerta.txt
+INPUT IO files/Ritiro offerta.txt
+INPUT ./IO files/Ritiro offerta.txt
+INPUT IO files/Ritiro offerta.txt
+INPUT ./IO files/Ritiro offerta.txt
+INPUT IO files/Ritiro offerta.txt
+INPUT ./IO files/Creazione proposta scambio.txt
+INPUT IO files/Creazione proposta scambio.txt
+INPUT ./IO files/Creazione proposta scambio.txt
+INPUT IO files/Creazione proposta scambio.txt
+INPUT ./IO files/Creazione proposta scambio.txt
+INPUT IO files/Creazione proposta scambio.txt
+INPUT ./IO files/Visualizzazione messaggio.txt
+INPUT IO files/Visualizzazione messaggio.txt
+INPUT ./IO files/Visualizzazione messaggio.txt
+INPUT IO files/Visualizzazione messaggio.txt
+INPUT ./IO files/Visualizzazione messaggio.txt
+INPUT IO files/Visualizzazione messaggio.txt
+INPUT ./IO files/Proposta appuntamento.txt
+INPUT IO files/Proposta appuntamento.txt
+INPUT ./IO files/Proposta appuntamento.txt
+INPUT IO files/Proposta appuntamento.txt
+INPUT ./IO files/Proposta appuntamento.txt
+INPUT IO files/Proposta appuntamento.txt
+INPUT ./libraries.tex
+INPUT libraries.tex
+INPUT ./libraries.tex
+INPUT libraries.tex
 INPUT texout/inge_del_sw.aux
 INPUT texout/inge_del_sw.out
 INPUT texout/inge_del_sw.out
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb

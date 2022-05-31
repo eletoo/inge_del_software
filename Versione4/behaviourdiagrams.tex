@@ -2,24 +2,26 @@
 \subsection{Diagrammi UML comportamentali}
 In questa sezione sono riportati alcuni diagrammi comportamentali a corredo dei diagrammi dei casi d'uso e UML delle classi che illustrano il funzionamento della quarta versione dell'applicazione.
 
-I diagrammi UML riportati di seguito sono altamente descrittivi, in modo da essere utilizzabili per mostrare all'utente in maniera intuitiva il funzionamento dell'applicazione, pur rispettando le direttive UML.\bigskip
+I diagrammi UML riportati di seguito sono altamente descrittivi, in modo da essere utilizzabili per mostrare all'utente in maniera intuitiva il funzionamento dell'applicazione, pur rispettando le direttive UML.
+
+Questi diagrammi non sono altro che l'estensione dei loro analoghi presenti nella documentazione delle versioni precedenti dell'applicazione. Si è scelto di riportarli ugualmente per sottolineare le aggiunte apportate alle funzionalità.\bigskip
 
 \textbf{Diagramma degli Stati: Ciclo di vita dell'utente Configuratore}\newline
-In Figura \ref{fig:State diagram 4.1} è rappresentato il ciclo di vita dell'utente Configuratore: a seconda dell'azione che esso intraprende nei confronti dell'applicazione il Configuratore si trova in un determinato stato.\newline L'accesso all'applicazione può avvenire o in qualità di primo accesso oppure come accesso ordinario: nel caso si tratti di un primo accesso, il configuratore si riconduce allo stato \texttt{CreazioneProfilo} in cui avviene la creazione di un nuovo profilo Configuratore a cui segue un necessario cambio delle credenziali, mentre nel caso si tratti di un login ordinario, l'utente accede direttamente al menù principale. \newline 
+In Figura \ref{fig:State diagram 4.1} è rappresentato il ciclo di vita dell'utente Configuratore: a seconda dell'azione che egli intraprende nei confronti dell'applicazione il Configuratore si trova in un determinato stato.\newline L'accesso all'applicazione può avvenire o in qualità di primo accesso oppure come accesso ordinario: nel caso si tratti di un primo accesso, il configuratore si riconduce allo stato \texttt{CreazioneProfilo} in cui avviene la creazione di un nuovo profilo Configuratore a cui segue un necessario cambio delle credenziali, mentre nel caso si tratti di un login ordinario, l'utente accede direttamente al menù principale. \newline 
 In tutti i passaggi di stato si considera la situazione ideale in cui non vi siano errori nell'esecuzione delle operazioni. Nel caso in cui si verifichino errori di esecuzione allora è lasciato sottinteso il passaggio attraverso uno stato di \texttt{Errore} prima di tornare al menù principale.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
-\includegraphics[width=16cm,scale=2.0]{imagesV4/State Diagram Configuratore - Versione 4.0.png}
+\includegraphics[width=16cm,scale=2.0]{imagesV4/state diagram configuratore.png}
 \caption{\label{fig:State diagram 4.1}Ciclo di vita del Configuratore - Versione 4}
 \end{figure}\bigskip
 
 \textbf{Diagramma degli Stati: Ciclo di vita dell'utente Fruitore}\newline
-In Figura \ref{fig:State diagram 4.2} è rappresentato il ciclo di vita dell'utente Fruitore: a seconda dell'azione che esso intraprende nei confronti dell'applicazione il Fruitore si trova in un determinato stato.\newline L'accesso all'applicazione può avvenire o in qualità di primo accesso oppure come accesso ordinario: nel caso si tratti di un primo accesso, il Fruitore si riconduce allo stato \texttt{CreazioneProfilo} in cui avviene la creazione di un nuovo profilo Fruitore, mentre nel caso si tratti di un login ordinario, l'utente accede direttamente al menù principale. \newline 
+In Figura \ref{fig:State diagram 4.2} è rappresentato il ciclo di vita dell'utente Fruitore: a seconda dell'azione che egli intraprende nei confronti dell'applicazione il Fruitore si trova in un determinato stato.\newline L'accesso all'applicazione può avvenire o in qualità di primo accesso oppure come accesso ordinario: nel caso si tratti di un primo accesso, il Fruitore si riconduce allo stato \texttt{CreazioneProfilo} in cui avviene la creazione di un nuovo profilo Fruitore, mentre nel caso si tratti di un login ordinario, l'utente accede direttamente all'applicazione; in entrambi i casi, prima di accedere al menù principale l'utente è tenuto a gestire le proprie proposte di scambio, eventualmente accettando quelle desiderate e proponendo un appuntamento per effettuare lo scambio.\newline 
 In tutti i passaggi di stato si considera la situazione ideale in cui non vi siano errori nell'esecuzione delle operazioni. Nel caso in cui si verifichino errori di esecuzione allora è lasciato sottinteso il passaggio attraverso uno stato di \texttt{Errore} prima di tornare al menù principale.
 
-\begin{figure}[t!]
+\begin{figure}[!]
 \centering
-\includegraphics[width=16cm,height=5.5cm]{imagesV4/State Diagram Fruitore - Versione 4.0.png}
+\includegraphics[width=16cm,height=5.5cm]{imagesV4/state diagram fruitore.png}
 \caption{\label{fig:State diagram 4.2}Ciclo di vita del Fruitore - Versione 4}
 \end{figure}\bigskip

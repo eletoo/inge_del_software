@@ -20,12 +20,26 @@
 (in)	Piazzale della stazione
 	Inserire un altro luogo per lo scambio? [Y/N]
 (in)	n
-	Giorno: 
-(in)	lunedi
+	Selezionare un indice.
+	0) Lunedi'
+	1) Martedi'
+	2) Mercoledi'
+	3) Giovedi'
+	4) Venerdi'
+	5) Sabato
+	6) Domenica
+	2
 	Inserire un altro giorno per lo scambio? [Y/N]
 (in)	y
-	Giorno: 
-(in)	merc
+	Selezionare un indice.
+	0) Lunedi'
+	1) Martedi'
+	2) Mercoledi'
+	3) Giovedi'
+	4) Venerdi'
+	5) Sabato
+	6) Domenica
+(in)	5
 	Inserire un altro giorno per lo scambio? [Y/N]
 (in)	n
 
