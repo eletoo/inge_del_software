@@ -459,6 +459,30 @@ INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/te
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstmisc.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstmisc.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstmisc.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstmisc.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.cfg
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.cfg
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.cfg
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.cfg
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
@@ -579,6 +603,7 @@ INPUT inge_del_sw.toc
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT inge_del_sw.toc
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr17.tfm
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
@@ -588,7 +613,6 @@ INPUT ./specifiche.tex
 INPUT specifiche.tex
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmti10.tfm
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./Versione1/usecases.tex
@@ -1154,15 +1178,169 @@ INPUT ./Versione5/Use Cases/importaInformazioni.tex
 INPUT Versione5/Use Cases/importaInformazioni.tex
 INPUT ./Versione5/Use Cases/importaInformazioni.tex
 INPUT Versione5/Use Cases/importaInformazioni.tex
+INPUT ./manuale_installazione.tex
+INPUT manuale_installazione.tex
+INPUT ./manuale_installazione.tex
+INPUT manuale_installazione.tex
+INPUT ./manuale_uso_conf.tex
+INPUT manuale_uso_conf.tex
+INPUT ./manuale_uso_conf.tex
+INPUT manuale_uso_conf.tex
+INPUT ./IO files/Registrazione configuratore.txt
+INPUT IO files/Registrazione configuratore.txt
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmtt9.tfm
+INPUT ./IO files/Registrazione configuratore.txt
+INPUT IO files/Registrazione configuratore.txt
+INPUT ./IO files/Registrazione configuratore.txt
+INPUT IO files/Registrazione configuratore.txt
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/ts1cmtt.fd
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/ts1cmtt.fd
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/ts1cmtt.fd
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/ts1cmtt.fd
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tctt0900.tfm
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr9.tfm
+INPUT ./IO files/Accesso configuratore.txt
+INPUT IO files/Accesso configuratore.txt
+INPUT ./IO files/Accesso configuratore.txt
+INPUT IO files/Accesso configuratore.txt
+INPUT ./IO files/Accesso configuratore.txt
+INPUT IO files/Accesso configuratore.txt
+INPUT ./IO files/Creazione gerarchia.txt
+INPUT IO files/Creazione gerarchia.txt
+INPUT ./IO files/Creazione gerarchia.txt
+INPUT IO files/Creazione gerarchia.txt
+INPUT ./IO files/Creazione gerarchia.txt
+INPUT IO files/Creazione gerarchia.txt
+INPUT ./IO files/Visualizzazione gerarchie.txt
+INPUT IO files/Visualizzazione gerarchie.txt
+INPUT ./IO files/Visualizzazione gerarchie.txt
+INPUT IO files/Visualizzazione gerarchie.txt
+INPUT ./IO files/Visualizzazione gerarchie.txt
+INPUT IO files/Visualizzazione gerarchie.txt
+INPUT ./IO files/Salvataggio dati.txt
+INPUT IO files/Salvataggio dati.txt
+INPUT ./IO files/Salvataggio dati.txt
+INPUT IO files/Salvataggio dati.txt
+INPUT ./IO files/Salvataggio dati.txt
+INPUT IO files/Salvataggio dati.txt
+INPUT ./IO files/Impostazione infoscambio.txt
+INPUT IO files/Impostazione infoscambio.txt
+INPUT ./IO files/Impostazione infoscambio.txt
+INPUT IO files/Impostazione infoscambio.txt
+INPUT ./IO files/Impostazione infoscambio.txt
+INPUT IO files/Impostazione infoscambio.txt
+INPUT ./IO files/Visualizzazione offerte aperte.txt
+INPUT IO files/Visualizzazione offerte aperte.txt
+INPUT ./IO files/Visualizzazione offerte aperte.txt
+INPUT IO files/Visualizzazione offerte aperte.txt
+INPUT ./IO files/Visualizzazione offerte aperte.txt
+INPUT IO files/Visualizzazione offerte aperte.txt
+INPUT ./IO files/Visualizzazione offerte in scambio.txt
+INPUT IO files/Visualizzazione offerte in scambio.txt
+INPUT ./IO files/Visualizzazione offerte in scambio.txt
+INPUT IO files/Visualizzazione offerte in scambio.txt
+INPUT ./IO files/Visualizzazione offerte in scambio.txt
+INPUT IO files/Visualizzazione offerte in scambio.txt
+INPUT ./IO files/Visualizzazione offerte chiuse.txt
+INPUT IO files/Visualizzazione offerte chiuse.txt
+INPUT ./IO files/Visualizzazione offerte chiuse.txt
+INPUT IO files/Visualizzazione offerte chiuse.txt
+INPUT ./IO files/Visualizzazione offerte chiuse.txt
+INPUT IO files/Visualizzazione offerte chiuse.txt
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./IO files/Modello file conf.txt
+INPUT IO files/Modello file conf.txt
+INPUT ./IO files/Modello file conf.txt
+INPUT IO files/Modello file conf.txt
+INPUT ./IO files/Modello file conf.txt
+INPUT IO files/Modello file conf.txt
+INPUT ./IO files/Modello file gerarchie.txt
+INPUT IO files/Modello file gerarchie.txt
+INPUT ./IO files/Modello file gerarchie.txt
+INPUT IO files/Modello file gerarchie.txt
+INPUT ./IO files/Modello file gerarchie.txt
+INPUT IO files/Modello file gerarchie.txt
+INPUT ./manuale_uso_fruitore.tex
+INPUT manuale_uso_fruitore.tex
+INPUT ./manuale_uso_fruitore.tex
+INPUT manuale_uso_fruitore.tex
+INPUT ./IO files/Registrazione fruitore.txt
+INPUT IO files/Registrazione fruitore.txt
+INPUT ./IO files/Registrazione fruitore.txt
+INPUT IO files/Registrazione fruitore.txt
+INPUT ./IO files/Registrazione fruitore.txt
+INPUT IO files/Registrazione fruitore.txt
+INPUT ./IO files/Accesso fruitore.txt
+INPUT IO files/Accesso fruitore.txt
+INPUT ./IO files/Accesso fruitore.txt
+INPUT IO files/Accesso fruitore.txt
+INPUT ./IO files/Accesso fruitore.txt
+INPUT IO files/Accesso fruitore.txt
+INPUT ./IO files/Visualizzazione info.txt
+INPUT IO files/Visualizzazione info.txt
+INPUT ./IO files/Visualizzazione info.txt
+INPUT IO files/Visualizzazione info.txt
+INPUT ./IO files/Visualizzazione info.txt
+INPUT IO files/Visualizzazione info.txt
+INPUT ./IO files/Visualizzazione offerte - fruitore.txt
+INPUT IO files/Visualizzazione offerte - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte - fruitore.txt
+INPUT IO files/Visualizzazione offerte - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte - fruitore.txt
+INPUT IO files/Visualizzazione offerte - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT ./IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT IO files/Visualizzazione offerte per categoria - fruitore.txt
+INPUT ./IO files/Creazione offerta.txt
+INPUT IO files/Creazione offerta.txt
+INPUT ./IO files/Creazione offerta.txt
+INPUT IO files/Creazione offerta.txt
+INPUT ./IO files/Creazione offerta.txt
+INPUT IO files/Creazione offerta.txt
+INPUT ./IO files/Ritiro offerta.txt
+INPUT IO files/Ritiro offerta.txt
+INPUT ./IO files/Ritiro offerta.txt
+INPUT IO files/Ritiro offerta.txt
+INPUT ./IO files/Ritiro offerta.txt
+INPUT IO files/Ritiro offerta.txt
+INPUT ./IO files/Creazione proposta scambio.txt
+INPUT IO files/Creazione proposta scambio.txt
+INPUT ./IO files/Creazione proposta scambio.txt
+INPUT IO files/Creazione proposta scambio.txt
+INPUT ./IO files/Creazione proposta scambio.txt
+INPUT IO files/Creazione proposta scambio.txt
+INPUT ./IO files/Visualizzazione messaggio.txt
+INPUT IO files/Visualizzazione messaggio.txt
+INPUT ./IO files/Visualizzazione messaggio.txt
+INPUT IO files/Visualizzazione messaggio.txt
+INPUT ./IO files/Visualizzazione messaggio.txt
+INPUT IO files/Visualizzazione messaggio.txt
+INPUT ./IO files/Proposta appuntamento.txt
+INPUT IO files/Proposta appuntamento.txt
+INPUT ./IO files/Proposta appuntamento.txt
+INPUT IO files/Proposta appuntamento.txt
+INPUT ./IO files/Proposta appuntamento.txt
+INPUT IO files/Proposta appuntamento.txt
+INPUT ./libraries.tex
+INPUT libraries.tex
+INPUT ./libraries.tex
+INPUT libraries.tex
 INPUT inge_del_sw.aux
 INPUT ./inge_del_sw.out
 INPUT ./inge_del_sw.out
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt0900.pk
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt0900.pk
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
@@ -1175,3 +1353,5 @@ INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fo
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb
+INPUT /Users/mattiapavlovic/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb
