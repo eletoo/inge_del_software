@@ -10,21 +10,25 @@ class UserTest {
     Configuratore c = new Configuratore("nome", "password");
 
     @Test
-    void authenticate() {
+    void canAuthenticateUser() {
         assertTrue(c.authenticate("password"));
     }
 
     @Test
-    void changePassword() {
+    void afterChangedPasswordCanAuthenticateWithNewPassword() {
         c.changePassword("newpassword");
         assertTrue(c.authenticate("newpassword"));
+    }
+
+    @Test
+    void afterChangedPasswordCannotAuthenticateWithOldPassword() {
+        c.changePassword("newpassword");
         assertFalse(c.authenticate("password"));
     }
 
     @Test
-    void changeUsername() {
+    void canChangeUsername() {
         c.changeUsername("newnome");
         assertTrue(c.getUsername().equals("newnome"));
-        assertFalse(c.getUsername().equals("nome"));
     }
 }
